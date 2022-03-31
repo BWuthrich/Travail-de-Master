@@ -27,11 +27,11 @@ inline const char * name<xsens_msgs::msg::PosPL>()
 
 template<>
 struct has_fixed_size<xsens_msgs::msg::PosPL>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<xsens_msgs::msg::PosPL>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<xsens_msgs::msg::PosPL>

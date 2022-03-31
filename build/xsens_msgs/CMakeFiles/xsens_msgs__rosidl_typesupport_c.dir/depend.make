@@ -29,6 +29,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
@@ -40,6 +41,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
@@ -51,6 +53,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h

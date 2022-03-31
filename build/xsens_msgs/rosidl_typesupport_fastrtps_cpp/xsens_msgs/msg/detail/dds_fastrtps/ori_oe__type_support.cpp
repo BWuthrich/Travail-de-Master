@@ -32,6 +32,10 @@ cdr_serialize(
   const xsens_msgs::msg::OriOE & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: stamp
+  {
+    cdr << ros_message.stamp;
+  }
   // Member: roll
   cdr << ros_message.roll;
   // Member: pitch
@@ -47,6 +51,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   xsens_msgs::msg::OriOE & ros_message)
 {
+  // Member: stamp
+  {
+    cdr >> ros_message.stamp;
+  }
+
   // Member: roll
   cdr >> ros_message.roll;
 
@@ -72,6 +81,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: stamp
+  {
+    size_t array_size = ros_message.stamp.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t item_size = sizeof(ros_message.stamp[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: roll
   {
     size_t item_size = sizeof(ros_message.roll);
@@ -108,6 +127,17 @@ max_serialized_size_OriOE(
   (void)wchar_size;
   (void)full_bounded;
 
+
+  // Member: stamp
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   // Member: roll
   {

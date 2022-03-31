@@ -1,11 +1,9 @@
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py
-/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure_save.py
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/__init__.py
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdevice.py
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdef.py
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/__init__.py
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/__pycache__/xsens_measure.cpython-38.pyc
-/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/__pycache__/xsens_measure_save.cpython-38.pyc
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/__pycache__/__init__.cpython-38.pyc
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/__pycache__/mtdevice.cpython-38.pyc
 /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/__pycache__/mtdef.cpython-38.pyc

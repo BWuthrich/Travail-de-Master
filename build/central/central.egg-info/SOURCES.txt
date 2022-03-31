@@ -10,6 +10,7 @@ setup.py
 ../../build/central/central.egg-info/zip-safe
 central/__init__.py
 central/central_config.py
+central/central_data.py
 resource/central
 test/test_copyright.py
 test/test_flake8.py

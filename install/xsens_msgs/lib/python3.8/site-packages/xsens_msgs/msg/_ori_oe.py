@@ -5,6 +5,9 @@
 
 # Import statements for member types
 
+# Member 'stamp'
+import array  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -53,18 +56,21 @@ class OriOE(metaclass=Metaclass_OriOE):
     """Message class 'OriOE'."""
 
     __slots__ = [
+        '_stamp',
         '_roll',
         '_pitch',
         '_yaw',
     ]
 
     _fields_and_field_types = {
+        'stamp': 'sequence<int32>',
         'roll': 'double',
         'pitch': 'double',
         'yaw': 'double',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -74,6 +80,7 @@ class OriOE(metaclass=Metaclass_OriOE):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.stamp = array.array('i', kwargs.get('stamp', []))
         self.roll = kwargs.get('roll', float())
         self.pitch = kwargs.get('pitch', float())
         self.yaw = kwargs.get('yaw', float())
@@ -107,6 +114,8 @@ class OriOE(metaclass=Metaclass_OriOE):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.stamp != other.stamp:
+            return False
         if self.roll != other.roll:
             return False
         if self.pitch != other.pitch:
@@ -119,6 +128,34 @@ class OriOE(metaclass=Metaclass_OriOE):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @property
+    def stamp(self):
+        """Message field 'stamp'."""
+        return self._stamp
+
+    @stamp.setter
+    def stamp(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'i', \
+                "The 'stamp' array.array() must have the type code of 'i'"
+            self._stamp = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, int) for v in value) and
+                 all(val >= -2147483648 and val < 2147483648 for val in value)), \
+                "The 'stamp' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
+        self._stamp = array.array('i', value)
 
     @property
     def roll(self):

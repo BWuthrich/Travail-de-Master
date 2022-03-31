@@ -3,10 +3,12 @@
 import rclpy
 from rclpy.node import Node
 
+import time
+
 from xsens_msgs.msg import ConfigXsens, ConfigNtrip
 
 class MasterConfig(Node):
-	RTCMv3_PREAMBLE = bytes.fromhex("D300")
+
 	
 	def __init__(self):
 		super().__init__('MasterConfig')
@@ -23,7 +25,7 @@ class MasterConfig(Node):
 		self.mountpoint = 'M_04'
 		self.username = 'Ecole01'
 		self.password = '365heig'
-		self.rtcm_timer = 1
+		self.rtcm_timer = 5.0		# RTCM refrsh rate [s]
 		
 		# Create publishers
 		self.xsens_config_pub = self.create_publisher(ConfigXsens, 'config/xsens', 10)
@@ -44,6 +46,7 @@ class MasterConfig(Node):
 		ntrip_config_msg.mountpoint = self.mountpoint
 		ntrip_config_msg.username = self.username
 		ntrip_config_msg.password = self.password
+		ntrip_config_msg.rtcm_timer = self.rtcm_timer
 		self.ntrip_config_pub.publish(ntrip_config_msg)
 
 
@@ -51,12 +54,18 @@ class MasterConfig(Node):
 def main(args=None):
 
 	rclpy.init(args=args)
+	need_update = True
 	mc = MasterConfig()
 	
 	# A terme pas d'update en continu juste quand une nouvelle config est reçue
+	# Envoi la nouvelle config pendent 5 secondes
 	while True:
-		mc.updateXsens()
-		mc.updateNtrip()
+		if need_update:
+			need_update = False
+			t_end = time.time() + 3
+			while time.time() < t_end:
+				mc.updateXsens()
+				mc.updateNtrip()
 	
 	mc.destroy_node()
 	rclpy.shutdown()

@@ -9,10 +9,19 @@
 #include <string.h>
 
 
+// Include directives for member types
+// Member `stamp`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 xsens_msgs__msg__PosPL__init(xsens_msgs__msg__PosPL * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // stamp
+  if (!rosidl_runtime_c__int32__Sequence__init(&msg->stamp, 0)) {
+    xsens_msgs__msg__PosPL__fini(msg);
     return false;
   }
   // longitude
@@ -26,6 +35,8 @@ xsens_msgs__msg__PosPL__fini(xsens_msgs__msg__PosPL * msg)
   if (!msg) {
     return;
   }
+  // stamp
+  rosidl_runtime_c__int32__Sequence__fini(&msg->stamp);
   // longitude
   // latitude
 }

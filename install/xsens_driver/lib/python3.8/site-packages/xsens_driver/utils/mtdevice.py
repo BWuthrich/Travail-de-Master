@@ -48,7 +48,7 @@ class MTDevice(object):
     def write_msg(self, mid, data=b''):
         """Low-level message sending function."""
         length = len(data)
-        print('mrdevice: write')
+        print('mtdevice: write')
         if length > 254:
             lendat = b'\xFF' + struct.pack('!H', length)
         else:

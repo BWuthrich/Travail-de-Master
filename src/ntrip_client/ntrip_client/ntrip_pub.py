@@ -43,7 +43,6 @@ class ntripClient(Node):
 
 
 	def updateConfig(self, msg):
-		
 		self.mountpoint = msg.mountpoint
 		if self.RTCMtimer != msg.rtcm_timer:
 			self.RTCMtimer = msg.rtcm_timer
@@ -178,8 +177,6 @@ class ntripClient(Node):
 			self.socket.sendall(self.getGGABytes())
 		self.i += 1
 		data = self.socket.recv(1024)
-		#print('raw')
-		#print(data)
 		return data
 	
 	

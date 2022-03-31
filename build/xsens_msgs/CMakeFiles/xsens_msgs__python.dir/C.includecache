@@ -55,6 +55,10 @@ xsens_msgs/msg/detail/ori_oe__struct.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/ori_oe__struct.h
 xsens_msgs/msg/detail/ori_oe__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/ori_oe__functions.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c
 Python.h
@@ -69,6 +73,10 @@ xsens_msgs/msg/detail/pos_pa__struct.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/pos_pa__struct.h
 xsens_msgs/msg/detail/pos_pa__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/pos_pa__functions.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c
 Python.h
@@ -83,6 +91,10 @@ xsens_msgs/msg/detail/pos_pl__struct.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/pos_pl__struct.h
 xsens_msgs/msg/detail/pos_pl__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/pos_pl__functions.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c
 Python.h
@@ -803,6 +815,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.h
 stdbool.h
@@ -823,6 +837,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.h
 stdbool.h
@@ -843,6 +859,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__functions.h
 stdbool.h

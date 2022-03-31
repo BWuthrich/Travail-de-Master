@@ -219,6 +219,8 @@ CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_xse
  rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c.o
  /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /usr/include/python3.8/Python.h
  /usr/include/python3.8/abstract.h
@@ -324,6 +326,8 @@ CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c
  rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c.o
  /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /usr/include/python3.8/Python.h
  /usr/include/python3.8/abstract.h
@@ -429,6 +433,8 @@ CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c
  rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c.o
  /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /usr/include/python3.8/Python.h
  /usr/include/python3.8/abstract.h

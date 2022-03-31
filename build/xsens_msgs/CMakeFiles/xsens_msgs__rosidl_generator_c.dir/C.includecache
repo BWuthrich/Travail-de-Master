@@ -45,6 +45,8 @@ stdlib.h
 -
 string.h
 -
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c
 xsens_msgs/msg/detail/pos_pa__functions.h
@@ -57,6 +59,8 @@ stdlib.h
 -
 string.h
 -
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c
 xsens_msgs/msg/detail/pos_pl__functions.h
@@ -69,6 +73,8 @@ stdlib.h
 -
 string.h
 -
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__functions.c
 xsens_msgs/msg/detail/rtc_mcorr__functions.h
@@ -207,6 +213,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.h
 stdbool.h
@@ -227,6 +235,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.h
 stdbool.h
@@ -247,6 +257,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__functions.h
 stdbool.h

@@ -53,7 +53,7 @@ class XSensDriver(Node):
 		self.RTCMreq = RTCMdata.Request()
 	
 				
-	def connect_device (self):
+	def connect_device(self):
 		if self.portName is None:
 			self.autoConnect()
 		else:
@@ -75,10 +75,18 @@ class XSensDriver(Node):
 		if data is None:
 			return
 		
+		# Get timestamp information
+		Timestamp = []
+		Timestamp.append(data.get('Timestamp')['Hour'])
+		Timestamp.append(data.get('Timestamp')['Minute'])
+		Timestamp.append(data.get('Timestamp')['Second'])
+		Timestamp.append(data.get('Timestamp')['ns'])
+		
 		# Publication - Orientation Euler's angles	
 		if self.ori_oe:
 			ori_oe_msg = OriOE()
 			ori_oe_data = data.get('Orientation Data')
+			ori_oe_msg.stamp = Timestamp
 			ori_oe_msg.roll = ori_oe_data['Roll']
 			ori_oe_msg.pitch = ori_oe_data['Pitch']
 			ori_oe_msg.yaw = ori_oe_data['Yaw']
@@ -89,6 +97,7 @@ class XSensDriver(Node):
 			if 'Position' in data:
 				pos_pl_msg = PosPL()
 				pos_pl_data = data.get('Position')
+				pos_pl_msg.stamp = Timestamp
 				pos_pl_msg.latitude = pos_pl_data['lat']
 				pos_pl_msg.longitude = pos_pl_data['lon']
 				self.pos_pl_pub.publish(pos_pl_msg)
@@ -97,7 +106,6 @@ class XSensDriver(Node):
 				latlon = (pos_pl_data['lat'], pos_pl_data['lon'])
 				d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
 				# Check for RTCM update
-				print(self.lastPos3D)
 				print('d: ' + str(d))
 				if d > self.rtcmRefreshDist:
 					self.get_logger().info('Send new position to ntrip client')
@@ -115,6 +123,7 @@ class XSensDriver(Node):
 			if 'Position' in data:
 				pos_pa_msg = PosPA()
 				pos_pa_data = data.get('Position')
+				pos_pa_msg.stamp = Timestamp
 				pos_pa_msg.alt_ell = pos_pa_data['altEllipsoid']
 				self.pos_pa_pub.publish(pos_pa_msg)
 		
@@ -153,17 +162,19 @@ class XSensDriver(Node):
 	
 	def updateRTCM(self, msg):
 		rtcm_data_unflat = self.buildResponse(msg)
+		print('len' + str(len(rtcm_data_unflat)))
 		for d in rtcm_data_unflat:
-			try:
-    				self.device.ForwardGnssData(d)
-    				print('forward')
-			except Exception as e:
-			    	driver.get_logger().error(f"{e}")
-			break
+			#try:
+			print('forward')
+			self.device.ForwardGnssData(d)
+			#except Exception as e:
+			    	#driver.get_logger().error(f"{e}")
+			#break
 		self.get_logger().info('RTCM correction updated')
 
 	
 	def updateConfig(self, msg):	
+		self.test=False
 		self.portName = msg.port_name
 		self.baudrate = msg.baudrate
 		self.configuration = msg.configuration
@@ -232,11 +243,11 @@ def main(args=None):
 	driver.connect_device()
 		
 	while True:
-		rclpy.spin_once(driver, timeout_sec=0)
 		data = driver.device.read_measurement()
+		rclpy.spin_once(driver, timeout_sec=0)
 		if data:
 			driver.getOneMeasure()
-			print(data)
+			#print(data)
 		
 
 

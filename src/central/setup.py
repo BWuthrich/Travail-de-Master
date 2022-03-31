@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'main = central.central_config:main',
+        	'config = central.central_config:main',
+        	'collect_data = central.central_data:main',
         ],
     },
 )

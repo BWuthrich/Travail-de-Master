@@ -6,6 +6,8 @@
 module xsens_msgs {
   module msg {
     struct PosPL {
+      sequence<int32> stamp;
+
       double longitude;
 
       double latitude;

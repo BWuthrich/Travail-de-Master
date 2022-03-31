@@ -1,0 +1,452 @@
+[0.000000] (-) TimerEvent: {}
+[0.001174] (central) JobQueued: {'identifier': 'central', 'dependencies': OrderedDict()}
+[0.001557] (ntrip_client) JobQueued: {'identifier': 'ntrip_client', 'dependencies': OrderedDict()}
+[0.002487] (xsens_msgs) JobQueued: {'identifier': 'xsens_msgs', 'dependencies': OrderedDict()}
+[0.003227] (xsens_driver) JobQueued: {'identifier': 'xsens_driver', 'dependencies': OrderedDict([('xsens_msgs', '/app/dev_ws/install/xsens_msgs')])}
+[0.004436] (xsens_msgs) JobStarted: {'identifier': 'xsens_msgs'}
+[0.051111] (central) JobStarted: {'identifier': 'central'}
+[0.100160] (-) TimerEvent: {}
+[0.104758] (ntrip_client) JobStarted: {'identifier': 'ntrip_client'}
+[0.181813] (xsens_msgs) JobProgress: {'identifier': 'xsens_msgs', 'progress': 'cmake'}
+[0.186146] (xsens_msgs) JobProgress: {'identifier': 'xsens_msgs', 'progress': 'build'}
+[0.189991] (xsens_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/app/dev_ws/build/xsens_msgs', '--', '-j4', '-l4'], 'cwd': '/app/dev_ws/build/xsens_msgs', 'env': OrderedDict([('HOSTNAME', '9483c603acb9'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/app/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':10.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy'), ('PWD', '/app/dev_ws/build/xsens_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy')]), 'shell': False}
+[0.202242] (-) TimerEvent: {}
+[0.307221] (-) TimerEvent: {}
+[0.413766] (-) TimerEvent: {}
+[0.518222] (-) TimerEvent: {}
+[0.622029] (-) TimerEvent: {}
+[0.725192] (-) TimerEvent: {}
+[0.828837] (-) TimerEvent: {}
+[0.932167] (-) TimerEvent: {}
+[1.034995] (-) TimerEvent: {}
+[1.135859] (-) TimerEvent: {}
+[1.236678] (-) TimerEvent: {}
+[1.337576] (-) TimerEvent: {}
+[1.438386] (-) TimerEvent: {}
+[1.539312] (-) TimerEvent: {}
+[1.594424] (xsens_msgs) StdoutLine: {'line': b'[  1%] Built target xsens_msgs__cpp\n'}
+[1.595805] (xsens_msgs) StdoutLine: {'line': b'[ 12%] Built target xsens_msgs__rosidl_generator_c\n'}
+[1.596474] (xsens_msgs) StdoutLine: {'line': b'[ 24%] Built target xsens_msgs__rosidl_typesupport_introspection_c\n'}
+[1.597088] (xsens_msgs) StdoutLine: {'line': b'[ 35%] Built target xsens_msgs__rosidl_typesupport_cpp\n'}
+[1.597826] (xsens_msgs) StdoutLine: {'line': b'[ 47%] Built target xsens_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.598600] (xsens_msgs) StdoutLine: {'line': b'[ 58%] Built target xsens_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.599400] (xsens_msgs) StdoutLine: {'line': b'[ 70%] Built target xsens_msgs__rosidl_typesupport_c\n'}
+[1.600145] (xsens_msgs) StdoutLine: {'line': b'[ 81%] Built target xsens_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.600848] (xsens_msgs) StdoutLine: {'line': b'[ 81%] Built target xsens_msgs\n'}
+[1.601551] (xsens_msgs) StdoutLine: {'line': b'[ 82%] Built target xsens_msgs__py\n'}
+[1.614368] (xsens_msgs) StdoutLine: {'line': b'[ 93%] Built target xsens_msgs__python\n'}
+[1.639627] (-) TimerEvent: {}
+[1.743769] (-) TimerEvent: {}
+[1.786725] (xsens_msgs) StdoutLine: {'line': b'[ 95%] Built target xsens_msgs__rosidl_typesupport_c__pyext\n'}
+[1.794737] (xsens_msgs) StdoutLine: {'line': b'[ 97%] Built target xsens_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.797650] (xsens_msgs) StdoutLine: {'line': b'[100%] Built target xsens_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.843958] (-) TimerEvent: {}
+[1.944787] (-) TimerEvent: {}
+[2.045550] (-) TimerEvent: {}
+[2.146287] (-) TimerEvent: {}
+[2.246992] (-) TimerEvent: {}
+[2.347696] (-) TimerEvent: {}
+[2.448420] (-) TimerEvent: {}
+[2.549149] (-) TimerEvent: {}
+[2.649903] (-) TimerEvent: {}
+[2.669234] (xsens_msgs) CommandEnded: {'returncode': 0}
+[2.750274] (-) TimerEvent: {}
+[2.851532] (-) TimerEvent: {}
+[2.953730] (-) TimerEvent: {}
+[3.057370] (-) TimerEvent: {}
+[3.161626] (-) TimerEvent: {}
+[3.264825] (-) TimerEvent: {}
+[3.367025] (-) TimerEvent: {}
+[3.470803] (-) TimerEvent: {}
+[3.574553] (-) TimerEvent: {}
+[3.675320] (-) TimerEvent: {}
+[3.776570] (-) TimerEvent: {}
+[3.800687] (xsens_msgs) JobProgress: {'identifier': 'xsens_msgs', 'progress': 'install'}
+[3.862473] (xsens_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/app/dev_ws/build/xsens_msgs'], 'cwd': '/app/dev_ws/build/xsens_msgs', 'env': OrderedDict([('HOSTNAME', '9483c603acb9'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/app/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':10.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy'), ('PWD', '/app/dev_ws/build/xsens_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy')]), 'shell': False}
+[3.876788] (-) TimerEvent: {}
+[3.921092] (xsens_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.922779] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/ament_index/resource_index/rosidl_interfaces/xsens_msgs\n'}
+[3.924190] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[3.925646] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[3.926328] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_xsens.h\n'}
+[3.927791] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rtc_mcorr.h\n'}
+[3.929188] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.h\n'}
+[3.930889] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/sta_sw.h\n'}
+[3.932328] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.934107] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[3.935458] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__functions.h\n'}
+[3.936791] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__struct.h\n'}
+[3.938502] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.h\n'}
+[3.939603] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__struct.h\n'}
+[3.940729] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__functions.c\n'}
+[3.941703] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__functions.c\n'}
+[3.942774] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.h\n'}
+[3.943421] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__functions.c\n'}
+[3.944277] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.h\n'}
+[3.944886] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__functions.c\n'}
+[3.945742] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__struct.h\n'}
+[3.946905] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.h\n'}
+[3.948087] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.h\n'}
+[3.949644] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__struct.h\n'}
+[3.950648] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__functions.h\n'}
+[3.952090] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__functions.h\n'}
+[3.953064] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__type_support.h\n'}
+[3.954124] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__functions.c\n'}
+[3.955970] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__struct.h\n'}
+[3.957146] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__functions.h\n'}
+[3.959942] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.h\n'}
+[3.962530] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__functions.h\n'}
+[3.966516] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.c\n'}
+[3.967703] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__functions.c\n'}
+[3.968316] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__struct.h\n'}
+[3.968874] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__functions.h\n'}
+[3.969961] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__struct.h\n'}
+[3.970561] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.h\n'}
+[3.971191] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/pos_pa.h\n'}
+[3.972183] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/pos_pl.h\n'}
+[3.973345] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/ori_oe.h\n'}
+[3.975027] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[3.976441] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[3.977966] (-) TimerEvent: {}
+[3.979235] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__functions.h\n'}
+[3.982909] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__functions.c\n'}
+[3.984037] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__struct.h\n'}
+[3.985271] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.h\n'}
+[3.986046] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/rtc_mdata.h\n'}
+[3.986681] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/library_path.sh\n'}
+[3.987784] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/library_path.dsv\n'}
+[3.988506] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_generator_c.so\n'}
+[3.989270] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[3.990842] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[3.991588] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[3.993140] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_c.h\n'}
+[3.994325] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__rosidl_typesupport_fastrtps_c.h\n'}
+[3.995507] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_fastrtps_c.h\n'}
+[3.996607] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_fastrtps_c.h\n'}
+[3.997730] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_fastrtps_c.h\n'}
+[3.999067] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_fastrtps_c.h\n'}
+[4.000313] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_fastrtps_c.h\n'}
+[4.001736] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.002880] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[4.003712] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[4.004866] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_fastrtps_c.h\n'}
+[4.005731] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.006623] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[4.007281] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[4.009537] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[4.012155] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.013328] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.014488] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.015350] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.016268] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.016807] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.017408] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/dds_fastrtps\n'}
+[4.018282] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.018833] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.019492] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[4.020044] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[4.020592] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.021616] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/dds_fastrtps\n'}
+[4.022287] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.022963] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[4.023937] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[4.025454] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.026022] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[4.026510] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.c\n'}
+[4.027304] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h\n'}
+[4.027811] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.c\n'}
+[4.028379] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__type_support.c\n'}
+[4.028931] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__rosidl_typesupport_introspection_c.h\n'}
+[4.029531] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_c.h\n'}
+[4.030140] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.c\n'}
+[4.030639] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_c.h\n'}
+[4.031242] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_introspection_c.h\n'}
+[4.031759] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_introspection_c.h\n'}
+[4.032353] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_introspection_c.h\n'}
+[4.032904] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.c\n'}
+[4.033517] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.c\n'}
+[4.034218] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.c\n'}
+[4.034825] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[4.035440] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[4.035985] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_c.h\n'}
+[4.036535] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.c\n'}
+[4.037147] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.037875] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_c.so\n'}
+[4.038534] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[4.039356] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[4.039973] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/sta_sw.hpp\n'}
+[4.040579] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/ori_oe.hpp\n'}
+[4.041143] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/pos_pa.hpp\n'}
+[4.041744] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.hpp\n'}
+[4.042293] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_xsens.hpp\n'}
+[4.042775] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/rtc_mcorr.hpp\n'}
+[4.043260] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[4.043734] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__builder.hpp\n'}
+[4.044248] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__struct.hpp\n'}
+[4.044729] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__struct.hpp\n'}
+[4.045224] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__struct.hpp\n'}
+[4.045820] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__builder.hpp\n'}
+[4.046454] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__traits.hpp\n'}
+[4.047014] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__struct.hpp\n'}
+[4.047582] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__builder.hpp\n'}
+[4.048234] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__traits.hpp\n'}
+[4.048851] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__builder.hpp\n'}
+[4.049405] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__struct.hpp\n'}
+[4.049985] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__traits.hpp\n'}
+[4.050463] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__traits.hpp\n'}
+[4.050935] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__struct.hpp\n'}
+[4.051447] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__traits.hpp\n'}
+[4.051981] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__struct.hpp\n'}
+[4.052440] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__traits.hpp\n'}
+[4.052844] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__builder.hpp\n'}
+[4.053242] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__builder.hpp\n'}
+[4.053768] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__traits.hpp\n'}
+[4.054255] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__builder.hpp\n'}
+[4.054714] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/pos_pl.hpp\n'}
+[4.055095] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[4.055448] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/rtc_mdata.hpp\n'}
+[4.055794] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[4.056183] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__builder.hpp\n'}
+[4.056594] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__traits.hpp\n'}
+[4.057087] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__struct.hpp\n'}
+[4.057660] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs\n'}
+[4.058261] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg\n'}
+[4.058795] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail\n'}
+[4.059280] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.059841] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.cpp\n'}
+[4.060406] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__type_support.cpp\n'}
+[4.060968] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/rtc_mcorr__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.061544] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.cpp\n'}
+[4.062059] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.cpp\n'}
+[4.062476] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.cpp\n'}
+[4.062878] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.063348] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.cpp\n'}
+[4.066168] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.cpp\n'}
+[4.066825] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.067475] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.068044] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.068591] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.069087] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv\n'}
+[4.069861] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail\n'}
+[4.070400] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp\n'}
+[4.070951] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.071488] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.072284] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_cpp.so\n'}
+[4.073360] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/pythonpath.sh\n'}
+[4.074546] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/pythonpath.dsv\n'}
+[4.075476] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/__init__.py\n'}
+[4.078164] (-) TimerEvent: {}
+[4.179184] (-) TimerEvent: {}
+[4.249595] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg\n'}
+[4.250335] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_xsens.py\n'}
+[4.251694] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_sw_s.c\n'}
+[4.252572] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ori_oe.py\n'}
+[4.253649] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pl_s.c\n'}
+[4.254462] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ori_oe_s.c\n'}
+[4.255276] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pa_s.c\n'}
+[4.256052] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_rtc_mcorr.py\n'}
+[4.257140] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_sw.py\n'}
+[4.258374] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pa.py\n'}
+[4.259130] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pl.py\n'}
+[4.260069] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_ntrip_s.c\n'}
+[4.260692] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_ntrip.py\n'}
+[4.261230] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/__init__.py\n'}
+[4.261987] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_xsens_s.c\n'}
+[4.262811] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_rtc_mcorr_s.c\n'}
+[4.263449] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv\n'}
+[4.264028] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/_rtc_mdata.py\n'}
+[4.264628] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/_rtc_mdata_s.c\n'}
+[4.265218] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/__init__.py\n'}
+[4.265882] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[4.266971] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[4.271310] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[4.274972] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/lib/libxsens_msgs__python.so\n'}
+[4.277172] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/OriOE.idl\n'}
+[4.278273] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosPA.idl\n'}
+[4.279223] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosPL.idl\n'}
+[4.280017] (-) TimerEvent: {}
+[4.283389] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/StaSW.idl\n'}
+[4.284334] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/RTCMcorr.idl\n'}
+[4.285256] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/ConfigXsens.idl\n'}
+[4.286427] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/ConfigNtrip.idl\n'}
+[4.287623] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.idl\n'}
+[4.288562] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/OriOE.msg\n'}
+[4.289548] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosPA.msg\n'}
+[4.291042] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosPL.msg\n'}
+[4.292356] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/StaSW.msg\n'}
+[4.295381] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/RTCMcorr.msg\n'}
+[4.296324] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/ConfigXsens.msg\n'}
+[4.297291] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/ConfigNtrip.msg\n'}
+[4.298358] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.srv\n'}
+[4.299816] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Request.msg\n'}
+[4.301312] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Response.msg\n'}
+[4.302613] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/ament_index/resource_index/package_run_dependencies/xsens_msgs\n'}
+[4.303735] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/ament_index/resource_index/parent_prefix_path/xsens_msgs\n'}
+[4.304411] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/ament_prefix_path.sh\n'}
+[4.305078] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/ament_prefix_path.dsv\n'}
+[4.306183] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/path.sh\n'}
+[4.306936] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/environment/path.dsv\n'}
+[4.308091] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/local_setup.bash\n'}
+[4.309073] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/local_setup.sh\n'}
+[4.312049] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/local_setup.zsh\n'}
+[4.312891] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/local_setup.dsv\n'}
+[4.313902] (xsens_msgs) StdoutLine: {'line': b'-- Installing: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/package.dsv\n'}
+[4.314699] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/ament_index/resource_index/packages/xsens_msgs\n'}
+[4.315525] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cExport.cmake\n'}
+[4.316367] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.317660] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.318491] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.319494] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.320187] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.321289] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.322456] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.323328] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.324463] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.325687] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.326763] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.327852] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.329346] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.330467] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.331680] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.332850] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.333956] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.334786] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgsConfig.cmake\n'}
+[4.335573] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgsConfig-version.cmake\n'}
+[4.336509] (xsens_msgs) StdoutLine: {'line': b'-- Up-to-date: /app/dev_ws/install/xsens_msgs/share/xsens_msgs/package.xml\n'}
+[4.344971] (xsens_msgs) CommandEnded: {'returncode': 0}
+[4.380563] (-) TimerEvent: {}
+[4.484482] (-) TimerEvent: {}
+[4.586972] (-) TimerEvent: {}
+[4.689316] (-) TimerEvent: {}
+[4.737851] (ntrip_client) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/ntrip_client', 'build', '--build-base', '/app/dev_ws/build/ntrip_client/build', 'install', '--prefix', '/app/dev_ws/install/ntrip_client', '--record', '/app/dev_ws/build/ntrip_client/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/ntrip_client', 'env': {'HOSTNAME': '9483c603acb9', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/ntrip_client', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs'}, 'shell': False}
+[4.774647] (central) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central', 'build', '--build-base', '/app/dev_ws/build/central/build', 'install', '--prefix', '/app/dev_ws/install/central', '--record', '/app/dev_ws/build/central/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/central', 'env': {'HOSTNAME': '9483c603acb9', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/central', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/central/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs'}, 'shell': False}
+[4.790747] (-) TimerEvent: {}
+[4.891788] (-) TimerEvent: {}
+[4.995724] (-) TimerEvent: {}
+[5.101081] (-) TimerEvent: {}
+[5.205088] (-) TimerEvent: {}
+[5.308628] (-) TimerEvent: {}
+[5.412361] (-) TimerEvent: {}
+[5.515840] (-) TimerEvent: {}
+[5.618920] (-) TimerEvent: {}
+[5.722439] (-) TimerEvent: {}
+[5.786245] (xsens_msgs) JobEnded: {'identifier': 'xsens_msgs', 'rc': 0}
+[5.793878] (xsens_driver) JobStarted: {'identifier': 'xsens_driver'}
+[5.822643] (-) TimerEvent: {}
+[5.925885] (-) TimerEvent: {}
+[6.027946] (central) StdoutLine: {'line': b'running egg_info\n'}
+[6.029408] (-) TimerEvent: {}
+[6.032807] (ntrip_client) StdoutLine: {'line': b'running egg_info\n'}
+[6.046833] (ntrip_client) StdoutLine: {'line': b'writing ../../build/ntrip_client/ntrip_client.egg-info/PKG-INFO\n'}
+[6.047472] (ntrip_client) StdoutLine: {'line': b'writing dependency_links to ../../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt\n'}
+[6.048223] (ntrip_client) StdoutLine: {'line': b'writing entry points to ../../build/ntrip_client/ntrip_client.egg-info/entry_points.txt\n'}
+[6.048907] (ntrip_client) StdoutLine: {'line': b'writing requirements to ../../build/ntrip_client/ntrip_client.egg-info/requires.txt\n'}
+[6.066184] (ntrip_client) StdoutLine: {'line': b'writing top-level names to ../../build/ntrip_client/ntrip_client.egg-info/top_level.txt\n'}
+[6.066979] (central) StdoutLine: {'line': b'writing ../../build/central/central.egg-info/PKG-INFO\n'}
+[6.090995] (central) StdoutLine: {'line': b'writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt\n'}
+[6.091879] (central) StdoutLine: {'line': b'writing entry points to ../../build/central/central.egg-info/entry_points.txt\n'}
+[6.092877] (central) StdoutLine: {'line': b'writing requirements to ../../build/central/central.egg-info/requires.txt\n'}
+[6.093772] (central) StdoutLine: {'line': b'writing top-level names to ../../build/central/central.egg-info/top_level.txt\n'}
+[6.129600] (-) TimerEvent: {}
+[6.230857] (-) TimerEvent: {}
+[6.248020] (ntrip_client) StdoutLine: {'line': b"reading manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'\n"}
+[6.248821] (ntrip_client) StdoutLine: {'line': b"writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'\n"}
+[6.249842] (ntrip_client) StdoutLine: {'line': b'running build\n'}
+[6.250662] (ntrip_client) StdoutLine: {'line': b'running build_py\n'}
+[6.251586] (ntrip_client) StdoutLine: {'line': b'running install\n'}
+[6.255242] (ntrip_client) StdoutLine: {'line': b'running install_lib\n'}
+[6.264144] (ntrip_client) StdoutLine: {'line': b'running install_data\n'}
+[6.266761] (ntrip_client) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.275945] (ntrip_client) StdoutLine: {'line': b"removing '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[6.278379] (ntrip_client) StdoutLine: {'line': b'Copying ../../build/ntrip_client/ntrip_client.egg-info to /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info\n'}
+[6.287316] (ntrip_client) StdoutLine: {'line': b'running install_scripts\n'}
+[6.296938] (central) StdoutLine: {'line': b"reading manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[6.303176] (central) StdoutLine: {'line': b"writing manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[6.305512] (central) StdoutLine: {'line': b'running build\n'}
+[6.306295] (central) StdoutLine: {'line': b'running build_py\n'}
+[6.307155] (central) StdoutLine: {'line': b'copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central\n'}
+[6.308468] (central) StdoutLine: {'line': b'copying central/central_config.py -> /app/dev_ws/build/central/build/lib/central\n'}
+[6.310952] (central) StdoutLine: {'line': b'running install\n'}
+[6.315868] (central) StdoutLine: {'line': b'running install_lib\n'}
+[6.322054] (central) StdoutLine: {'line': b'copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central\n'}
+[6.323547] (central) StdoutLine: {'line': b'copying /app/dev_ws/build/central/build/lib/central/central_config.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central\n'}
+[6.327723] (central) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc\n'}
+[6.331083] (-) TimerEvent: {}
+[6.338629] (central) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_config.py to central_config.cpython-38.pyc\n'}
+[6.342858] (central) StdoutLine: {'line': b'running install_data\n'}
+[6.347456] (central) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.357859] (central) StdoutLine: {'line': b"removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[6.363231] (central) StdoutLine: {'line': b'Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info\n'}
+[6.377257] (central) StdoutLine: {'line': b'running install_scripts\n'}
+[6.386150] (ntrip_client) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/ntrip_client/lib/ntrip_client\n'}
+[6.388368] (ntrip_client) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/ntrip_client/install.log'\n"}
+[6.431350] (-) TimerEvent: {}
+[6.516381] (central) StdoutLine: {'line': b'Installing collect_data script to /app/dev_ws/install/central/lib/central\n'}
+[6.517865] (central) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/central/lib/central\n'}
+[6.519564] (central) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/central/install.log'\n"}
+[6.531562] (-) TimerEvent: {}
+[6.636177] (-) TimerEvent: {}
+[6.736866] (-) TimerEvent: {}
+[6.837622] (-) TimerEvent: {}
+[6.938338] (-) TimerEvent: {}
+[7.039110] (-) TimerEvent: {}
+[7.140008] (-) TimerEvent: {}
+[7.197623] (ntrip_client) CommandEnded: {'returncode': 0}
+[7.233875] (ntrip_client) JobEnded: {'identifier': 'ntrip_client', 'rc': 0}
+[7.237179] (central) CommandEnded: {'returncode': 0}
+[7.240099] (-) TimerEvent: {}
+[7.272243] (central) JobEnded: {'identifier': 'central', 'rc': 0}
+[7.340504] (-) TimerEvent: {}
+[7.441717] (-) TimerEvent: {}
+[7.542668] (-) TimerEvent: {}
+[7.643919] (-) TimerEvent: {}
+[7.744649] (-) TimerEvent: {}
+[7.845356] (-) TimerEvent: {}
+[7.946095] (-) TimerEvent: {}
+[8.046780] (-) TimerEvent: {}
+[8.147436] (-) TimerEvent: {}
+[8.248108] (-) TimerEvent: {}
+[8.348781] (-) TimerEvent: {}
+[8.449543] (-) TimerEvent: {}
+[8.550247] (-) TimerEvent: {}
+[8.650951] (-) TimerEvent: {}
+[8.751768] (-) TimerEvent: {}
+[8.852962] (-) TimerEvent: {}
+[8.922276] (xsens_driver) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/xsens_driver', 'build', '--build-base', '/app/dev_ws/build/xsens_driver/build', 'install', '--prefix', '/app/dev_ws/install/xsens_driver', '--record', '/app/dev_ws/build/xsens_driver/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/xsens_driver', 'env': {'HOSTNAME': '9483c603acb9', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/xsens_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs'}, 'shell': False}
+[8.953153] (-) TimerEvent: {}
+[9.054019] (-) TimerEvent: {}
+[9.154709] (-) TimerEvent: {}
+[9.255410] (-) TimerEvent: {}
+[9.356107] (-) TimerEvent: {}
+[9.456784] (-) TimerEvent: {}
+[9.557482] (-) TimerEvent: {}
+[9.658150] (-) TimerEvent: {}
+[9.758842] (-) TimerEvent: {}
+[9.860003] (-) TimerEvent: {}
+[9.866878] (xsens_driver) StdoutLine: {'line': b'running egg_info\n'}
+[9.869306] (xsens_driver) StdoutLine: {'line': b'writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO\n'}
+[9.870594] (xsens_driver) StdoutLine: {'line': b'writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt\n'}
+[9.871690] (xsens_driver) StdoutLine: {'line': b'writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt\n'}
+[9.872764] (xsens_driver) StdoutLine: {'line': b'writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt\n'}
+[9.873577] (xsens_driver) StdoutLine: {'line': b'writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt\n'}
+[9.960156] (-) TimerEvent: {}
+[10.031038] (xsens_driver) StdoutLine: {'line': b"reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'\n"}
+[10.035504] (xsens_driver) StdoutLine: {'line': b"writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'\n"}
+[10.036208] (xsens_driver) StdoutLine: {'line': b'running build\n'}
+[10.036744] (xsens_driver) StdoutLine: {'line': b'running build_py\n'}
+[10.039560] (xsens_driver) StdoutLine: {'line': b'running install\n'}
+[10.042961] (xsens_driver) StdoutLine: {'line': b'running install_lib\n'}
+[10.051387] (xsens_driver) StdoutLine: {'line': b'running install_data\n'}
+[10.053877] (xsens_driver) StdoutLine: {'line': b'copying launch/xsens_driver_launch.py -> /app/dev_ws/install/xsens_driver/share/xsens_driver/launch\n'}
+[10.054987] (xsens_driver) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.060326] (-) TimerEvent: {}
+[10.062443] (xsens_driver) StdoutLine: {'line': b"removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[10.064249] (xsens_driver) StdoutLine: {'line': b'Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info\n'}
+[10.070078] (xsens_driver) StdoutLine: {'line': b'running install_scripts\n'}
+[10.143799] (xsens_driver) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver\n'}
+[10.146209] (xsens_driver) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'\n"}
+[10.160582] (-) TimerEvent: {}
+[10.244808] (xsens_driver) CommandEnded: {'returncode': 0}
+[10.260850] (-) TimerEvent: {}
+[10.278514] (xsens_driver) JobEnded: {'identifier': 'xsens_driver', 'rc': 0}
+[10.282233] (-) EventReactorShutdown: {}

@@ -32,12 +32,22 @@ def generate_launch_description():
     central_config_node=Node(
         package = 'central',
         name = 'central_config',
-        executable = 'main',
+        executable = 'config',
+        output='screen',
+	emulate_tty=True
+    )
+    
+    central_data_node=Node(
+        package = 'central',
+        name = 'central_data',
+        executable = 'collect_data',
         output='screen',
 	emulate_tty=True
     )
 
+
     ld.add_action(Xsens_node)
     ld.add_action(ntrip_node)
     ld.add_action(central_config_node)
+    ld.add_action(central_data_node)
     return ld

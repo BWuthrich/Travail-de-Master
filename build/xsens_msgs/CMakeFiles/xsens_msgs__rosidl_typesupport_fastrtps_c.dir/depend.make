@@ -61,6 +61,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fast
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/fastcdr/fastcdr_dll.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/u16string.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_fastrtps_c/identifier.h
@@ -84,6 +85,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fast
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/fastcdr/fastcdr_dll.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/u16string.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_fastrtps_c/identifier.h
@@ -107,6 +109,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fast
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/fastcdr/fastcdr_dll.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/u16string.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o: /opt/ros/foxy/include/rosidl_typesupport_fastrtps_c/identifier.h

@@ -23,13 +23,29 @@ namespace builder
 class Init_PosPA_alt_ell
 {
 public:
-  Init_PosPA_alt_ell()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_PosPA_alt_ell(::xsens_msgs::msg::PosPA & msg)
+  : msg_(msg)
   {}
   ::xsens_msgs::msg::PosPA alt_ell(::xsens_msgs::msg::PosPA::_alt_ell_type arg)
   {
     msg_.alt_ell = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::PosPA msg_;
+};
+
+class Init_PosPA_stamp
+{
+public:
+  Init_PosPA_stamp()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_PosPA_alt_ell stamp(::xsens_msgs::msg::PosPA::_stamp_type arg)
+  {
+    msg_.stamp = std::move(arg);
+    return Init_PosPA_alt_ell(msg_);
   }
 
 private:
@@ -47,7 +63,7 @@ template<>
 inline
 auto build<::xsens_msgs::msg::PosPA>()
 {
-  return xsens_msgs::msg::builder::Init_PosPA_alt_ell();
+  return xsens_msgs::msg::builder::Init_PosPA_stamp();
 }
 
 }  // namespace xsens_msgs

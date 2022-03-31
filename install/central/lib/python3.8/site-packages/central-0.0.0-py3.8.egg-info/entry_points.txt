@@ -1,3 +1,4 @@
 [console_scripts]
-main = central.central_config:main
+collect_data = central.central_data:main
+config = central.central_config:main
 

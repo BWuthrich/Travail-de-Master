@@ -16,7 +16,6 @@ test/test_flake8.py
 test/test_pep257.py
 xsens_driver/__init__.py
 xsens_driver/xsens_measure.py
-xsens_driver/xsens_measure_save.py
 xsens_driver/utils/__init__.py
 xsens_driver/utils/mtdef.py
 xsens_driver/utils/mtdevice.py

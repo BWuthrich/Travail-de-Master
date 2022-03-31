@@ -1,0 +1,21 @@
+[4.599s] Invoking command in '/app/dev_ws/src/ntrip_client': PYTHONPATH=/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ntrip_client build --build-base /app/dev_ws/build/ntrip_client/build install --prefix /app/dev_ws/install/ntrip_client --record /app/dev_ws/build/ntrip_client/install.log --single-version-externally-managed
+[5.792s] running egg_info
+[5.797s] writing ../../build/ntrip_client/ntrip_client.egg-info/PKG-INFO
+[5.803s] writing dependency_links to ../../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt
+[5.805s] writing entry points to ../../build/ntrip_client/ntrip_client.egg-info/entry_points.txt
+[5.820s] writing requirements to ../../build/ntrip_client/ntrip_client.egg-info/requires.txt
+[5.821s] writing top-level names to ../../build/ntrip_client/ntrip_client.egg-info/top_level.txt
+[6.062s] reading manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[6.075s] writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[6.078s] running build
+[6.080s] running build_py
+[6.083s] running install
+[6.087s] running install_lib
+[6.096s] running install_data
+[6.099s] running install_egg_info
+[6.108s] removing '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info' (and everything under it)
+[6.111s] Copying ../../build/ntrip_client/ntrip_client.egg-info to /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info
+[6.126s] running install_scripts
+[6.235s] Installing main script to /app/dev_ws/install/ntrip_client/lib/ntrip_client
+[6.245s] writing list of installed files to '/app/dev_ws/build/ntrip_client/install.log'
+[7.144s] Invoked command in '/app/dev_ws/src/ntrip_client' returned '0': PYTHONPATH=/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ntrip_client build --build-base /app/dev_ws/build/ntrip_client/build install --prefix /app/dev_ws/install/ntrip_client --record /app/dev_ws/build/ntrip_client/install.log --single-version-externally-managed

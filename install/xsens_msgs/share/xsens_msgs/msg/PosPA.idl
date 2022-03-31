@@ -6,6 +6,8 @@
 module xsens_msgs {
   module msg {
     struct PosPA {
+      sequence<int32> stamp;
+
       double alt_ell;
     };
   };

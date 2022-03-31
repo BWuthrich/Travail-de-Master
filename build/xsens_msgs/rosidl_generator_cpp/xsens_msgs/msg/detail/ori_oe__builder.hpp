@@ -55,13 +55,29 @@ private:
 class Init_OriOE_roll
 {
 public:
-  Init_OriOE_roll()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_OriOE_roll(::xsens_msgs::msg::OriOE & msg)
+  : msg_(msg)
   {}
   Init_OriOE_pitch roll(::xsens_msgs::msg::OriOE::_roll_type arg)
   {
     msg_.roll = std::move(arg);
     return Init_OriOE_pitch(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::OriOE msg_;
+};
+
+class Init_OriOE_stamp
+{
+public:
+  Init_OriOE_stamp()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_OriOE_roll stamp(::xsens_msgs::msg::OriOE::_stamp_type arg)
+  {
+    msg_.stamp = std::move(arg);
+    return Init_OriOE_roll(msg_);
   }
 
 private:
@@ -79,7 +95,7 @@ template<>
 inline
 auto build<::xsens_msgs::msg::OriOE>()
 {
-  return xsens_msgs::msg::builder::Init_OriOE_roll();
+  return xsens_msgs::msg::builder::Init_OriOE_stamp();
 }
 
 }  // namespace xsens_msgs

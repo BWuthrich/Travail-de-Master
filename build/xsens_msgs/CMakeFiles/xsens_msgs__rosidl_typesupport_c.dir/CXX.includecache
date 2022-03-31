@@ -249,6 +249,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__struct.h
 stdbool.h
@@ -257,6 +259,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__struct.h
 stdbool.h
@@ -265,6 +269,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__struct.h
 stdbool.h

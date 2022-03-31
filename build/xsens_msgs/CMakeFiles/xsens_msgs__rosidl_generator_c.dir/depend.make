@@ -20,18 +20,24 @@ CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.o: rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__struct.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o: rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__struct.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o: rosidl_generator_c/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
 
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__struct.h

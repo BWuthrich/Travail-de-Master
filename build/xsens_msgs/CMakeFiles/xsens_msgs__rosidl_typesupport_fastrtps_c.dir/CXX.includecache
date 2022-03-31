@@ -85,6 +85,10 @@ xsens_msgs/msg/detail/ori_oe__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/xsens_msgs/msg/detail/ori_oe__functions.h
 fastcdr/Cdr.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/fastcdr/Cdr.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp
 xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_c.h
@@ -109,6 +113,10 @@ xsens_msgs/msg/detail/pos_pa__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/xsens_msgs/msg/detail/pos_pa__functions.h
 fastcdr/Cdr.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/fastcdr/Cdr.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp
 xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_fastrtps_c.h
@@ -133,6 +141,10 @@ xsens_msgs/msg/detail/pos_pl__functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/xsens_msgs/msg/detail/pos_pl__functions.h
 fastcdr/Cdr.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/fastcdr/Cdr.h
+rosidl_runtime_c/primitives_sequence.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/rtc_mcorr__type_support_c.cpp
 xsens_msgs/msg/detail/rtc_mcorr__rosidl_typesupport_fastrtps_c.h
@@ -719,6 +731,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.h
 stdbool.h
@@ -739,6 +753,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.h
 stdbool.h
@@ -759,6 +775,8 @@ stddef.h
 -
 stdint.h
 -
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__functions.h
 stdbool.h

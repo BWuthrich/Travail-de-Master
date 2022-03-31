@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client/ntrip_pub.py", line 35
-    if self.host != msg.host or self.port = msg.port:
-                                          ^
-SyntaxError: invalid syntax
-

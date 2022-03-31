@@ -1,0 +1,73 @@
+[0.000000] (-) TimerEvent: {}
+[0.001156] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.001514] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.002348] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.003194] (central) JobQueued: {'identifier': 'central', 'dependencies': OrderedDict()}
+[0.004404] (central) JobStarted: {'identifier': 'central'}
+[0.099207] (-) TimerEvent: {}
+[0.200492] (-) TimerEvent: {}
+[0.309987] (-) TimerEvent: {}
+[0.411160] (-) TimerEvent: {}
+[0.511887] (-) TimerEvent: {}
+[0.612562] (-) TimerEvent: {}
+[0.713236] (-) TimerEvent: {}
+[0.813903] (-) TimerEvent: {}
+[0.914586] (-) TimerEvent: {}
+[1.015274] (-) TimerEvent: {}
+[1.116505] (-) TimerEvent: {}
+[1.217338] (-) TimerEvent: {}
+[1.318346] (-) TimerEvent: {}
+[1.419035] (-) TimerEvent: {}
+[1.519819] (-) TimerEvent: {}
+[1.620603] (-) TimerEvent: {}
+[1.721276] (-) TimerEvent: {}
+[1.821961] (-) TimerEvent: {}
+[1.922623] (-) TimerEvent: {}
+[2.023291] (-) TimerEvent: {}
+[2.124026] (-) TimerEvent: {}
+[2.224733] (-) TimerEvent: {}
+[2.325442] (-) TimerEvent: {}
+[2.426153] (-) TimerEvent: {}
+[2.526842] (-) TimerEvent: {}
+[2.627596] (-) TimerEvent: {}
+[2.712110] (central) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central', 'build', '--build-base', '/app/dev_ws/build/central/build', 'install', '--prefix', '/app/dev_ws/install/central', '--record', '/app/dev_ws/build/central/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/central', 'env': {'HOSTNAME': '9483c603acb9', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/central', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/central/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs'}, 'shell': False}
+[2.728535] (-) TimerEvent: {}
+[2.830955] (-) TimerEvent: {}
+[2.931668] (-) TimerEvent: {}
+[3.032386] (-) TimerEvent: {}
+[3.133034] (-) TimerEvent: {}
+[3.233693] (-) TimerEvent: {}
+[3.334432] (-) TimerEvent: {}
+[3.435081] (-) TimerEvent: {}
+[3.535808] (-) TimerEvent: {}
+[3.636563] (-) TimerEvent: {}
+[3.658448] (central) StdoutLine: {'line': b'running egg_info\n'}
+[3.660800] (central) StdoutLine: {'line': b'writing ../../build/central/central.egg-info/PKG-INFO\n'}
+[3.661999] (central) StdoutLine: {'line': b'writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt\n'}
+[3.663046] (central) StdoutLine: {'line': b'writing entry points to ../../build/central/central.egg-info/entry_points.txt\n'}
+[3.663976] (central) StdoutLine: {'line': b'writing requirements to ../../build/central/central.egg-info/requires.txt\n'}
+[3.665093] (central) StdoutLine: {'line': b'writing top-level names to ../../build/central/central.egg-info/top_level.txt\n'}
+[3.736732] (-) TimerEvent: {}
+[3.819633] (central) StdoutLine: {'line': b"reading manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[3.823868] (central) StdoutLine: {'line': b"writing manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[3.824568] (central) StdoutLine: {'line': b'running build\n'}
+[3.825097] (central) StdoutLine: {'line': b'running build_py\n'}
+[3.825725] (central) StdoutLine: {'line': b'copying central/central_config.py -> /app/dev_ws/build/central/build/lib/central\n'}
+[3.827354] (central) StdoutLine: {'line': b'running install\n'}
+[3.830979] (central) StdoutLine: {'line': b'running install_lib\n'}
+[3.835515] (central) StdoutLine: {'line': b'copying /app/dev_ws/build/central/build/lib/central/central_config.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central\n'}
+[3.836836] (-) TimerEvent: {}
+[3.838958] (central) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_config.py to central_config.cpython-38.pyc\n'}
+[3.845856] (central) StdoutLine: {'line': b'running install_data\n'}
+[3.848101] (central) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.854854] (central) StdoutLine: {'line': b"removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[3.856686] (central) StdoutLine: {'line': b'Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info\n'}
+[3.862287] (central) StdoutLine: {'line': b'running install_scripts\n'}
+[3.935448] (central) StdoutLine: {'line': b'Installing collect_data script to /app/dev_ws/install/central/lib/central\n'}
+[3.936432] (central) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/central/lib/central\n'}
+[3.936920] (-) TimerEvent: {}
+[3.938461] (central) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/central/install.log'\n"}
+[4.034695] (central) CommandEnded: {'returncode': 0}
+[4.038125] (-) TimerEvent: {}
+[4.093307] (central) JobEnded: {'identifier': 'central', 'rc': 0}
+[4.096783] (-) EventReactorShutdown: {}

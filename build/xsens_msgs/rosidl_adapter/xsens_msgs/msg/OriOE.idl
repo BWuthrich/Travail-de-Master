@@ -6,6 +6,8 @@
 module xsens_msgs {
   module msg {
     struct OriOE {
+      sequence<int32> stamp;
+
       double roll;
 
       double pitch;

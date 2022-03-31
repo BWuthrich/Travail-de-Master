@@ -9,10 +9,19 @@
 #include <string.h>
 
 
+// Include directives for member types
+// Member `stamp`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 xsens_msgs__msg__OriOE__init(xsens_msgs__msg__OriOE * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // stamp
+  if (!rosidl_runtime_c__int32__Sequence__init(&msg->stamp, 0)) {
+    xsens_msgs__msg__OriOE__fini(msg);
     return false;
   }
   // roll
@@ -27,6 +36,8 @@ xsens_msgs__msg__OriOE__fini(xsens_msgs__msg__OriOE * msg)
   if (!msg) {
     return;
   }
+  // stamp
+  rosidl_runtime_c__int32__Sequence__fini(&msg->stamp);
   // roll
   // pitch
   // yaw

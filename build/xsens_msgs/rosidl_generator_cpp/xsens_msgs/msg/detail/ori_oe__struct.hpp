@@ -56,6 +56,9 @@ struct OriOE_
   }
 
   // field types and members
+  using _stamp_type =
+    std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other>;
+  _stamp_type stamp;
   using _roll_type =
     double;
   _roll_type roll;
@@ -67,6 +70,12 @@ struct OriOE_
   _yaw_type yaw;
 
   // setters for named parameter idiom
+  Type & set__stamp(
+    const std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other> & _arg)
+  {
+    this->stamp = _arg;
+    return *this;
+  }
   Type & set__roll(
     const double & _arg)
   {
@@ -128,6 +137,9 @@ struct OriOE_
   // comparison operators
   bool operator==(const OriOE_ & other) const
   {
+    if (this->stamp != other.stamp) {
+      return false;
+    }
     if (this->roll != other.roll) {
       return false;
     }

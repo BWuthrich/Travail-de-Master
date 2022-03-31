@@ -17,9 +17,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'stamp'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 // Struct defined in msg/OriOE in the package xsens_msgs.
 typedef struct xsens_msgs__msg__OriOE
 {
+  rosidl_runtime_c__int32__Sequence stamp;
   double roll;
   double pitch;
   double yaw;

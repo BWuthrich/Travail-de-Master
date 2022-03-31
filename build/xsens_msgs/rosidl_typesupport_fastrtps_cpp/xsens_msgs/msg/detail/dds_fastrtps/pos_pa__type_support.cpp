@@ -32,6 +32,10 @@ cdr_serialize(
   const xsens_msgs::msg::PosPA & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: stamp
+  {
+    cdr << ros_message.stamp;
+  }
   // Member: alt_ell
   cdr << ros_message.alt_ell;
   return true;
@@ -43,6 +47,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   xsens_msgs::msg::PosPA & ros_message)
 {
+  // Member: stamp
+  {
+    cdr >> ros_message.stamp;
+  }
+
   // Member: alt_ell
   cdr >> ros_message.alt_ell;
 
@@ -62,6 +71,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: stamp
+  {
+    size_t array_size = ros_message.stamp.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t item_size = sizeof(ros_message.stamp[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: alt_ell
   {
     size_t item_size = sizeof(ros_message.alt_ell);
@@ -86,6 +105,17 @@ max_serialized_size_PosPA(
   (void)wchar_size;
   (void)full_bounded;
 
+
+  // Member: stamp
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
 
   // Member: alt_ell
   {

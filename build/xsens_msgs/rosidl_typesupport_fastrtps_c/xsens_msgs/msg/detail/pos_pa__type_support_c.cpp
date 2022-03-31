@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/primitives_sequence.h"  // stamp
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // stamp
 
 // forward declare type support functions
 
@@ -49,6 +51,14 @@ static bool _PosPA__cdr_serialize(
     return false;
   }
   const _PosPA__ros_msg_type * ros_message = static_cast<const _PosPA__ros_msg_type *>(untyped_ros_message);
+  // Field name: stamp
+  {
+    size_t size = ros_message->stamp.size;
+    auto array_ptr = ros_message->stamp.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
   // Field name: alt_ell
   {
     cdr << ros_message->alt_ell;
@@ -66,6 +76,21 @@ static bool _PosPA__cdr_deserialize(
     return false;
   }
   _PosPA__ros_msg_type * ros_message = static_cast<_PosPA__ros_msg_type *>(untyped_ros_message);
+  // Field name: stamp
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->stamp.data) {
+      rosidl_runtime_c__int32__Sequence__fini(&ros_message->stamp);
+    }
+    if (!rosidl_runtime_c__int32__Sequence__init(&ros_message->stamp, size)) {
+      return "failed to create array for field 'stamp'";
+    }
+    auto array_ptr = ros_message->stamp.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
   // Field name: alt_ell
   {
     cdr >> ros_message->alt_ell;
@@ -88,6 +113,17 @@ size_t get_serialized_size_xsens_msgs__msg__PosPA(
   (void)padding;
   (void)wchar_size;
 
+  // field.name stamp
+  {
+    size_t array_size = ros_message->stamp.size;
+    auto array_ptr = ros_message->stamp.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name alt_ell
   {
     size_t item_size = sizeof(ros_message->alt_ell);
@@ -118,6 +154,16 @@ size_t max_serialized_size_xsens_msgs__msg__PosPA(
   (void)wchar_size;
   (void)full_bounded;
 
+  // member: stamp
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // member: alt_ell
   {
     size_t array_size = 1;
