@@ -1,0 +1,4 @@
+string configuration
+uint32 baudrate
+string port_name
+uint16 rtcm_refresh_dist

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from xsens_msgs/srv/RTCMdata.srv
+// generated code does not contain a copyright notice
+
+
+module xsens_msgs {
+  module srv {
+    struct RTCMdata_Request {
+      double longitude;
+
+      double latitude;
+
+      double alti_ell;
+    };
+    struct RTCMdata_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

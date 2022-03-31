@@ -1,0 +1,22 @@
+[5.756s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[8.072s] running egg_info
+[8.075s] writing ../../build/central/central.egg-info/PKG-INFO
+[8.078s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[8.080s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[8.083s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[8.085s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[8.376s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[8.382s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[8.396s] running build
+[8.397s] running build_py
+[8.398s] running install
+[8.400s] running install_lib
+[8.409s] running install_data
+[8.427s] copying resource/central -> /app/dev_ws/install/central/share/ament_index/resource_index/packages
+[8.440s] copying package.xml -> /app/dev_ws/install/central/share/central
+[8.442s] running install_egg_info
+[8.500s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[8.542s] running install_scripts
+[8.720s] Installing main script to /app/dev_ws/install/central/lib/central
+[8.725s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[8.971s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed

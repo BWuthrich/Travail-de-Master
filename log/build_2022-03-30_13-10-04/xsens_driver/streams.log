@@ -1,0 +1,22 @@
+[2.771s] Invoking command in '/app/dev_ws/src/xsens_driver': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
+[3.712s] running egg_info
+[3.714s] writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+[3.716s] writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+[3.717s] writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+[3.718s] writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+[3.718s] writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+[3.875s] reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[3.880s] writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[3.880s] running build
+[3.881s] running build_py
+[3.884s] running install
+[3.887s] running install_lib
+[3.896s] running install_data
+[3.898s] copying launch/xsens_driver_launch.py -> /app/dev_ws/install/xsens_driver/share/xsens_driver/launch
+[3.899s] running install_egg_info
+[3.907s] removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)
+[3.908s] Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+[3.914s] running install_scripts
+[3.989s] Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+[3.991s] writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'
+[4.085s] Invoked command in '/app/dev_ws/src/xsens_driver' returned '0': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed

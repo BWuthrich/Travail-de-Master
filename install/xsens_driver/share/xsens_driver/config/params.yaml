@@ -1,0 +1,6 @@
+xsens_measure:
+  ros__parameters:
+    portName: "/dev/ttyS0"
+    baudrate: 115200
+    configure_on_startup: True
+    config: "ip10,iu10,oe10be,pl10ae,pa10ae,sw10"

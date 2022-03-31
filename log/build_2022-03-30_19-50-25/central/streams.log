@@ -1,0 +1,21 @@
+[4.571s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[5.782s] running egg_info
+[5.784s] writing ../../build/central/central.egg-info/PKG-INFO
+[5.786s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[5.787s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[5.789s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[5.790s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[5.972s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[5.977s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[5.978s] running build
+[5.979s] running build_py
+[5.980s] running install
+[5.987s] running install_lib
+[5.995s] running install_data
+[5.997s] running install_egg_info
+[6.005s] removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)
+[6.008s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[6.017s] running install_scripts
+[6.108s] Installing main script to /app/dev_ws/install/central/lib/central
+[6.110s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[6.256s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed

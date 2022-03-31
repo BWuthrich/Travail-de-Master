@@ -1,0 +1,5 @@
+  File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py", line 102
+    if d > self.rtcmRefreshDist
+                              ^
+SyntaxError: invalid syntax
+

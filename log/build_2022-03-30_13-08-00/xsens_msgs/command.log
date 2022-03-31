@@ -1,0 +1,1 @@
+Invoking command in '/app/dev_ws/build/xsens_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/opt/ros/foxy /usr/bin/cmake /app/dev_ws/src/xsens_msgs -DCMAKE_INSTALL_PREFIX=/app/dev_ws/install/xsens_msgs

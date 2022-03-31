@@ -1,0 +1,56 @@
+[0.209s] Invoking command in '/app/dev_ws/build/xsens_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/build/xsens_msgs -- -j4 -l4
+[1.472s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.475s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.484s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.557s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[1.703s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.722s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.722s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.970s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[3.029s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.727s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.828s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[4.829s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[4.830s]   xsens_msgs --arguments-file
+[4.830s]   /app/dev_ws/build/xsens_msgs/rosidl_adapter__arguments__xsens_msgs.json
+[4.831s]   --output-dir /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs
+[4.832s]   --output-file /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs.idls)
+[4.832s]   returned error code 1:
+[4.833s] 
+[4.833s]   Error processing 'float16 rtcm_timer' of 'xsens_msgs/ConfigNtrip':
+[4.834s]   ''float16' is an invalid message name.  It should have the pattern
+[4.834s]   '^[A-Z][A-Za-z0-9]*$''
+[4.835s] 
+[4.836s]   Traceback (most recent call last):
+[4.836s] 
+[4.837s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[4.838s]       return _run_code(code, main_globals, None,
+[4.838s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[4.839s]       exec(code, run_globals)
+[4.839s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[4.840s]       sys.exit(main())
+[4.841s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[4.841s]       abs_idl_file = convert_to_idl(
+[4.842s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[4.842s]       return convert_msg_to_idl(
+[4.843s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[4.843s]       msg = parse_message_string(package_name, input_file.stem, content)
+[4.844s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[4.845s]       Type(type_string, context_package_name=pkg_name),
+[4.845s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[4.846s]       super(Type, self).__init__(
+[4.846s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[4.847s]       raise InvalidResourceName(
+[4.847s] 
+[4.848s]   rosidl_adapter.parser.InvalidResourceName: 'float16' is an invalid message
+[4.848s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[4.849s] 
+[4.850s] Call Stack (most recent call first):
+[4.851s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[4.852s]   CMakeLists.txt:36 (rosidl_generate_interfaces)
+[4.852s] 
+[4.853s] 
+[4.854s] -- Configuring incomplete, errors occurred!
+[4.854s] See also "/app/dev_ws/build/xsens_msgs/CMakeFiles/CMakeOutput.log".
+[4.882s] make: *** [Makefile:2188: cmake_check_build_system] Error 1
+[4.888s] Invoked command in '/app/dev_ws/build/xsens_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/build/xsens_msgs -- -j4 -l4

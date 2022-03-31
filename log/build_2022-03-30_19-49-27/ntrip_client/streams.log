@@ -1,0 +1,24 @@
+[4.527s] Invoking command in '/app/dev_ws/src/ntrip_client': PYTHONPATH=/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ntrip_client build --build-base /app/dev_ws/build/ntrip_client/build install --prefix /app/dev_ws/install/ntrip_client --record /app/dev_ws/build/ntrip_client/install.log --single-version-externally-managed
+[5.763s] running egg_info
+[5.765s] writing ../../build/ntrip_client/ntrip_client.egg-info/PKG-INFO
+[5.770s] writing dependency_links to ../../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt
+[5.772s] writing entry points to ../../build/ntrip_client/ntrip_client.egg-info/entry_points.txt
+[5.774s] writing requirements to ../../build/ntrip_client/ntrip_client.egg-info/requires.txt
+[5.774s] writing top-level names to ../../build/ntrip_client/ntrip_client.egg-info/top_level.txt
+[5.975s] reading manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[5.977s] writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[5.978s] running build
+[5.978s] running build_py
+[5.979s] copying ntrip_client/ntrip_pub.py -> /app/dev_ws/build/ntrip_client/build/lib/ntrip_client
+[5.980s] running install
+[5.980s] running install_lib
+[5.982s] copying /app/dev_ws/build/ntrip_client/build/lib/ntrip_client/ntrip_pub.py -> /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client
+[5.985s] byte-compiling /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client/ntrip_pub.py to ntrip_pub.cpython-38.pyc
+[5.991s] Sorry: TabError: inconsistent use of tabs and spaces in indentation (ntrip_pub.py, line 38)
+[5.991s] running install_data
+[5.997s] running install_egg_info
+[6.004s] removing '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info' (and everything under it)
+[6.008s] Copying ../../build/ntrip_client/ntrip_client.egg-info to /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info
+[6.016s] running install_scripts
+[6.171s] Installing main script to /app/dev_ws/install/ntrip_client/lib/ntrip_client
+[6.174s] writing list of installed files to '/app/dev_ws/build/ntrip_client/install.log'

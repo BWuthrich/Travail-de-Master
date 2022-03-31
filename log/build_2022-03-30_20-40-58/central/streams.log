@@ -1,0 +1,24 @@
+[2.754s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[3.696s] running egg_info
+[3.698s] writing ../../build/central/central.egg-info/PKG-INFO
+[3.699s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[3.700s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[3.701s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[3.702s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[3.857s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[3.861s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[3.862s] running build
+[3.863s] running build_py
+[3.863s] copying central/central_config.py -> /app/dev_ws/build/central/build/lib/central
+[3.864s] running install
+[3.868s] running install_lib
+[3.872s] copying /app/dev_ws/build/central/build/lib/central/central_config.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central
+[3.875s] byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_config.py to central_config.cpython-38.pyc
+[3.882s] running install_data
+[3.884s] running install_egg_info
+[3.891s] removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)
+[3.893s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[3.898s] running install_scripts
+[3.972s] Installing main script to /app/dev_ws/install/central/lib/central
+[3.974s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[4.073s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed

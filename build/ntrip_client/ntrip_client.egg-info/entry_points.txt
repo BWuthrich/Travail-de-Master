@@ -1,0 +1,3 @@
+[console_scripts]
+main = ntrip_client.ntrip_pub:main
+

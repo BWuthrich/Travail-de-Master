@@ -1,0 +1,53 @@
+running egg_info
+creating ../../build/xsens_driver/xsens_driver.egg-info
+writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /app/dev_ws/build/xsens_driver/build
+creating /app/dev_ws/build/xsens_driver/build/lib
+creating /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+copying xsens_driver/xsens_measure.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+copying xsens_driver/xsens_measure_save.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+copying xsens_driver/__init__.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+creating /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils
+copying xsens_driver/utils/mtdevice.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils
+copying xsens_driver/utils/mtdef.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils
+copying xsens_driver/utils/__init__.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils
+running install
+running install_lib
+creating /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/xsens_measure.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+creating /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils/mtdevice.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils/mtdef.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils/__init__.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/xsens_measure_save.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/__init__.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py to xsens_measure.cpython-38.pyc
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdevice.py to mtdevice.cpython-38.pyc
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdef.py to mtdef.cpython-38.pyc
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/__init__.py to __init__.cpython-38.pyc
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure_save.py to xsens_measure_save.cpython-38.pyc
+byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /app/dev_ws/install/xsens_driver/share/ament_index
+creating /app/dev_ws/install/xsens_driver/share/ament_index/resource_index
+creating /app/dev_ws/install/xsens_driver/share/ament_index/resource_index/packages
+copying resource/xsens_driver -> /app/dev_ws/install/xsens_driver/share/ament_index/resource_index/packages
+copying package.xml -> /app/dev_ws/install/xsens_driver/share/xsens_driver
+creating /app/dev_ws/install/xsens_driver/share/xsens_driver/launch
+copying launch/xsens_driver_launch.py -> /app/dev_ws/install/xsens_driver/share/xsens_driver/launch
+creating /app/dev_ws/install/xsens_driver/share/xsens_driver/config
+copying config/params.yaml -> /app/dev_ws/install/xsens_driver/share/xsens_driver/config
+running install_egg_info
+Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+running install_scripts
+Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'

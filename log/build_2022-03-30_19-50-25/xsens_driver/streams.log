@@ -1,0 +1,29 @@
+[2.727s] Invoking command in '/app/dev_ws/src/xsens_driver': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
+[3.653s] running egg_info
+[3.655s] writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+[3.656s] writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+[3.657s] writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+[3.658s] writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+[3.659s] writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+[3.816s] reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[3.821s] writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[3.821s] running build
+[3.822s] running build_py
+[3.822s] copying xsens_driver/xsens_measure.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+[3.826s] running install
+[3.829s] running install_lib
+[3.834s] copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/xsens_measure.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+[3.838s] byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py to xsens_measure.cpython-38.pyc
+[3.844s]   File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py", line 102
+[3.844s]     if d > self.rtcmRefreshDist
+[3.845s]                               ^
+[3.845s] SyntaxError: invalid syntax
+[3.846s] 
+[3.846s] running install_data
+[3.847s] running install_egg_info
+[3.854s] removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)
+[3.856s] Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+[3.862s] running install_scripts
+[3.936s] Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+[3.938s] writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'
+[4.040s] Invoked command in '/app/dev_ws/src/xsens_driver' returned '0': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
