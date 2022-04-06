@@ -9,7 +9,7 @@ class CollectData(Node):
 	
 	def __init__(self):
 		super().__init__('CollectData')
-		print('AGGSAGDFDFDFDFDFD')
+
 		# Create data subscriber
 		# Orientation Euler's angles
 		self.ori_oe_sub = self.create_subscription(OriOE,

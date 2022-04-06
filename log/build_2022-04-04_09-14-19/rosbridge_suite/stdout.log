@@ -1,0 +1,22 @@
+-- Found ament_cmake_core: 0.9.9 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /app/dev_ws/build/rosbridge_suite
+-- Install configuration: ""
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/ament_index/resource_index/package_run_dependencies/rosbridge_suite
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/ament_index/resource_index/parent_prefix_path/rosbridge_suite
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/environment/ament_prefix_path.sh
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/environment/ament_prefix_path.dsv
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/environment/path.sh
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/environment/path.dsv
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/local_setup.bash
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/local_setup.sh
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/local_setup.zsh
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/local_setup.dsv
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/package.dsv
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/ament_index/resource_index/packages/rosbridge_suite
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/cmake/rosbridge_suiteConfig.cmake
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/cmake/rosbridge_suiteConfig-version.cmake
+-- Installing: /app/dev_ws/install/rosbridge_suite/share/rosbridge_suite/package.xml

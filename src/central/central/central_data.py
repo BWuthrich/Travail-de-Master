@@ -46,22 +46,22 @@ class CollectData(Node):
 	
 	def getOriOE(self, msg):
 		time_new = time.time()
-		#print('OriOE - freq: ' + str(1/(time_new-self.time_old1)) + 'hz')
+		print('OriOE - freq: ' + str(1/(time_new-self.time_old1)) + 'hz')
 		self.time_old1 = time_new
 	
 	def getPosPL(self, msg):
 		time_new = time.time()
-		#print('PosPL - freq: ' + str(1/(time_new-self.time_old2)) + 'hz')
+		print('PosPL - freq: ' + str(1/(time_new-self.time_old2)) + 'hz')
 		self.time_old2 = time_new	
 	
 	def getPosPA(self, msg):
 		time_new = time.time()
-		#print('PosPA - freq: ' + str(1/(time_new-self.time_old3)) + 'hz')
+		print('PosPA - freq: ' + str(1/(time_new-self.time_old3)) + 'hz')
 		self.time_old3 = time_new
 			
 	def getStaSW(self, msg):
 		time_new = time.time()
-		#print('StaSW - freq: ' + str(1/(time_new-self.time_old4)) + 'hz')
+		print('StaSW - freq: ' + str(1/(time_new-self.time_old4)) + 'hz')
 		self.time_old4 = time_new		
 
 

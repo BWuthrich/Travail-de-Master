@@ -106,7 +106,6 @@ class XSensDriver(Node):
 				latlon = (pos_pl_data['lat'], pos_pl_data['lon'])
 				d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
 				# Check for RTCM update
-				print('d: ' + str(d))
 				if d > self.rtcmRefreshDist:
 					self.get_logger().info('Send new position to ntrip client')
 					# Build and send service request
@@ -162,7 +161,7 @@ class XSensDriver(Node):
 	
 	def updateRTCM(self, msg):
 		rtcm_data_unflat = self.buildResponse(msg)
-		print('len' + str(len(rtcm_data_unflat)))
+		print('len RTCM: ' + str(len(rtcm_data_unflat)))
 		for d in rtcm_data_unflat:
 			#try:
 			print('forward')
