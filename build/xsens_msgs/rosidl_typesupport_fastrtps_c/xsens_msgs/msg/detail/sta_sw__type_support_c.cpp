@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // clock_sync, filter_mode, filter_valid, gnss_fix, rtk_status, sync_in, sync_out
-#include "rosidl_runtime_c/string_functions.h"  // clock_sync, filter_mode, filter_valid, gnss_fix, rtk_status, sync_in, sync_out
+#include "rosidl_runtime_c/string.h"  // clock_sync, filter_mode, filter_valid, gnss_fix, rtk_status, sync_in, sync_out, xsens_status
+#include "rosidl_runtime_c/string_functions.h"  // clock_sync, filter_mode, filter_valid, gnss_fix, rtk_status, sync_in, sync_out, xsens_status
 
 // forward declare type support functions
 
@@ -51,6 +51,20 @@ static bool _StaSW__cdr_serialize(
     return false;
   }
   const _StaSW__ros_msg_type * ros_message = static_cast<const _StaSW__ros_msg_type *>(untyped_ros_message);
+  // Field name: xsens_status
+  {
+    const rosidl_runtime_c__String * str = &ros_message->xsens_status;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   // Field name: filter_valid
   {
     const rosidl_runtime_c__String * str = &ros_message->filter_valid;
@@ -161,6 +175,22 @@ static bool _StaSW__cdr_deserialize(
     return false;
   }
   _StaSW__ros_msg_type * ros_message = static_cast<_StaSW__ros_msg_type *>(untyped_ros_message);
+  // Field name: xsens_status
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->xsens_status.data) {
+      rosidl_runtime_c__String__init(&ros_message->xsens_status);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->xsens_status,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'xsens_status'\n");
+      return false;
+    }
+  }
+
   // Field name: filter_valid
   {
     std::string tmp;
@@ -290,6 +320,10 @@ size_t get_serialized_size_xsens_msgs__msg__StaSW(
   (void)padding;
   (void)wchar_size;
 
+  // field.name xsens_status
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->xsens_status.size + 1);
   // field.name filter_valid
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -342,6 +376,17 @@ size_t max_serialized_size_xsens_msgs__msg__StaSW(
   (void)wchar_size;
   (void)full_bounded;
 
+  // member: xsens_status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
   // member: filter_valid
   {
     size_t array_size = 1;

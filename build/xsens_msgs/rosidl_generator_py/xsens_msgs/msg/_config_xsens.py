@@ -5,6 +5,9 @@
 
 # Import statements for member types
 
+# Member 'sync_config'
+import array  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -53,17 +56,19 @@ class ConfigXsens(metaclass=Metaclass_ConfigXsens):
     """Message class 'ConfigXsens'."""
 
     __slots__ = [
-        '_configuration',
+        '_output_config',
         '_baudrate',
         '_port_name',
         '_rtcm_refresh_dist',
+        '_sync_config',
     ]
 
     _fields_and_field_types = {
-        'configuration': 'string',
+        'output_config': 'string',
         'baudrate': 'uint32',
         'port_name': 'string',
         'rtcm_refresh_dist': 'uint16',
+        'sync_config': 'sequence<uint32>',
     }
 
     SLOT_TYPES = (
@@ -71,16 +76,18 @@ class ConfigXsens(metaclass=Metaclass_ConfigXsens):
         rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('uint32')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.configuration = kwargs.get('configuration', str())
+        self.output_config = kwargs.get('output_config', str())
         self.baudrate = kwargs.get('baudrate', int())
         self.port_name = kwargs.get('port_name', str())
         self.rtcm_refresh_dist = kwargs.get('rtcm_refresh_dist', int())
+        self.sync_config = array.array('I', kwargs.get('sync_config', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -111,13 +118,15 @@ class ConfigXsens(metaclass=Metaclass_ConfigXsens):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.configuration != other.configuration:
+        if self.output_config != other.output_config:
             return False
         if self.baudrate != other.baudrate:
             return False
         if self.port_name != other.port_name:
             return False
         if self.rtcm_refresh_dist != other.rtcm_refresh_dist:
+            return False
+        if self.sync_config != other.sync_config:
             return False
         return True
 
@@ -127,17 +136,17 @@ class ConfigXsens(metaclass=Metaclass_ConfigXsens):
         return copy(cls._fields_and_field_types)
 
     @property
-    def configuration(self):
-        """Message field 'configuration'."""
-        return self._configuration
+    def output_config(self):
+        """Message field 'output_config'."""
+        return self._output_config
 
-    @configuration.setter
-    def configuration(self, value):
+    @output_config.setter
+    def output_config(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'configuration' field must be of type 'str'"
-        self._configuration = value
+                "The 'output_config' field must be of type 'str'"
+        self._output_config = value
 
     @property
     def baudrate(self):
@@ -181,3 +190,31 @@ class ConfigXsens(metaclass=Metaclass_ConfigXsens):
             assert value >= 0 and value < 65536, \
                 "The 'rtcm_refresh_dist' field must be an unsigned integer in [0, 65535]"
         self._rtcm_refresh_dist = value
+
+    @property
+    def sync_config(self):
+        """Message field 'sync_config'."""
+        return self._sync_config
+
+    @sync_config.setter
+    def sync_config(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'I', \
+                "The 'sync_config' array.array() must have the type code of 'I'"
+            self._sync_config = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, int) for v in value) and
+                 all(val >= 0 and val < 4294967296 for val in value)), \
+                "The 'sync_config' field must be a set or sequence and each value of type 'int' and each unsigned integer in [0, 4294967295]"
+        self._sync_config = array.array('I', value)

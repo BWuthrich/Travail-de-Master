@@ -10,6 +10,7 @@
 
 
 // Include directives for member types
+// Member `xsens_status`
 // Member `filter_valid`
 // Member `gnss_fix`
 // Member `clock_sync`
@@ -23,6 +24,11 @@ bool
 xsens_msgs__msg__StaSW__init(xsens_msgs__msg__StaSW * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // xsens_status
+  if (!rosidl_runtime_c__String__init(&msg->xsens_status)) {
+    xsens_msgs__msg__StaSW__fini(msg);
     return false;
   }
   // filter_valid
@@ -69,6 +75,8 @@ xsens_msgs__msg__StaSW__fini(xsens_msgs__msg__StaSW * msg)
   if (!msg) {
     return;
   }
+  // xsens_status
+  rosidl_runtime_c__String__fini(&msg->xsens_status);
   // filter_valid
   rosidl_runtime_c__String__fini(&msg->filter_valid);
   // gnss_fix

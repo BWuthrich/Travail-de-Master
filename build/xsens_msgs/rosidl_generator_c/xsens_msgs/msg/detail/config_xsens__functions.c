@@ -10,9 +10,11 @@
 
 
 // Include directives for member types
-// Member `configuration`
+// Member `output_config`
 // Member `port_name`
 #include "rosidl_runtime_c/string_functions.h"
+// Member `sync_config`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 bool
 xsens_msgs__msg__ConfigXsens__init(xsens_msgs__msg__ConfigXsens * msg)
@@ -20,8 +22,8 @@ xsens_msgs__msg__ConfigXsens__init(xsens_msgs__msg__ConfigXsens * msg)
   if (!msg) {
     return false;
   }
-  // configuration
-  if (!rosidl_runtime_c__String__init(&msg->configuration)) {
+  // output_config
+  if (!rosidl_runtime_c__String__init(&msg->output_config)) {
     xsens_msgs__msg__ConfigXsens__fini(msg);
     return false;
   }
@@ -32,6 +34,11 @@ xsens_msgs__msg__ConfigXsens__init(xsens_msgs__msg__ConfigXsens * msg)
     return false;
   }
   // rtcm_refresh_dist
+  // sync_config
+  if (!rosidl_runtime_c__uint32__Sequence__init(&msg->sync_config, 0)) {
+    xsens_msgs__msg__ConfigXsens__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -41,12 +48,14 @@ xsens_msgs__msg__ConfigXsens__fini(xsens_msgs__msg__ConfigXsens * msg)
   if (!msg) {
     return;
   }
-  // configuration
-  rosidl_runtime_c__String__fini(&msg->configuration);
+  // output_config
+  rosidl_runtime_c__String__fini(&msg->output_config);
   // baudrate
   // port_name
   rosidl_runtime_c__String__fini(&msg->port_name);
   // rtcm_refresh_dist
+  // sync_config
+  rosidl_runtime_c__uint32__Sequence__fini(&msg->sync_config);
 }
 
 xsens_msgs__msg__ConfigXsens *

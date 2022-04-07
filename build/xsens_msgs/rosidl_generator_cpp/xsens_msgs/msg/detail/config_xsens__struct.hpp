@@ -37,7 +37,7 @@ struct ConfigXsens_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->configuration = "";
+      this->output_config = "";
       this->baudrate = 0ul;
       this->port_name = "";
       this->rtcm_refresh_dist = 0;
@@ -45,13 +45,13 @@ struct ConfigXsens_
   }
 
   explicit ConfigXsens_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : configuration(_alloc),
+  : output_config(_alloc),
     port_name(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->configuration = "";
+      this->output_config = "";
       this->baudrate = 0ul;
       this->port_name = "";
       this->rtcm_refresh_dist = 0;
@@ -59,9 +59,9 @@ struct ConfigXsens_
   }
 
   // field types and members
-  using _configuration_type =
+  using _output_config_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
-  _configuration_type configuration;
+  _output_config_type output_config;
   using _baudrate_type =
     uint32_t;
   _baudrate_type baudrate;
@@ -71,12 +71,15 @@ struct ConfigXsens_
   using _rtcm_refresh_dist_type =
     uint16_t;
   _rtcm_refresh_dist_type rtcm_refresh_dist;
+  using _sync_config_type =
+    std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other>;
+  _sync_config_type sync_config;
 
   // setters for named parameter idiom
-  Type & set__configuration(
+  Type & set__output_config(
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
-    this->configuration = _arg;
+    this->output_config = _arg;
     return *this;
   }
   Type & set__baudrate(
@@ -95,6 +98,12 @@ struct ConfigXsens_
     const uint16_t & _arg)
   {
     this->rtcm_refresh_dist = _arg;
+    return *this;
+  }
+  Type & set__sync_config(
+    const std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other> & _arg)
+  {
+    this->sync_config = _arg;
     return *this;
   }
 
@@ -140,7 +149,7 @@ struct ConfigXsens_
   // comparison operators
   bool operator==(const ConfigXsens_ & other) const
   {
-    if (this->configuration != other.configuration) {
+    if (this->output_config != other.output_config) {
       return false;
     }
     if (this->baudrate != other.baudrate) {
@@ -150,6 +159,9 @@ struct ConfigXsens_
       return false;
     }
     if (this->rtcm_refresh_dist != other.rtcm_refresh_dist) {
+      return false;
+    }
+    if (this->sync_config != other.sync_config) {
       return false;
     }
     return true;

@@ -9,6 +9,7 @@ import time
 from haversine import haversine, Unit
 
 from .utils.mtdevice import find_devices, find_baudrate, MTDevice, get_output_config
+from .utils.mtdef import SyncSetting
 
 from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, ConfigXsens, RTCMcorr
 from xsens_msgs.srv import RTCMdata
@@ -19,13 +20,23 @@ class XSensDriver(Node):
 		super().__init__('XSensDriver')
 		
 		# Parameters
+		self.portName = None
+		self.baudrate = None
+		self.outputConfig = None
+		self.syncConfig = None
 		self.lastPos3D = (0, 0, 0)	# Position of last RTCM refresh
-		
-		# Publication choices
-		self.ori_oe = False
-		self.pos_pl = False
-		self.pos_pa = False
-				
+		self.xsens_status = "Inactive"
+		# Initial status message
+		self.sta_sw_msg = StaSW()
+		self.sta_sw_msg.xsens_status = self.xsens_status
+		self.sta_sw_msg.filter_valid = "0"
+		self.sta_sw_msg.gnss_fix = "0"
+		self.sta_sw_msg.clock_sync = "0"
+		self.sta_sw_msg.sync_in = "0"
+		self.sta_sw_msg.sync_out = "0"
+		self.sta_sw_msg.filter_mode = "000"
+		self.sta_sw_msg.rtk_status = "00"
+
 		# Create Publishers
 		self.ori_oe_pub = self.create_publisher(OriOE, 'mti/orientation_Euler', 10)
 		self.pos_pl_pub = self.create_publisher(PosPL, 'mti/position_lonLat', 10)
@@ -35,7 +46,7 @@ class XSensDriver(Node):
 		# Create parameters subscriber
 		self.xsens_config_sub = self.create_subscription(ConfigXsens,
 			'config/xsens',
-			self.updateConfig,
+			self.setConfig,
 			10)
 		self.xsens_config_sub
 		
@@ -47,22 +58,82 @@ class XSensDriver(Node):
 		self.RTCM_sub
 		
 		# Create service client
-		self.RTCMcli = self.create_client(RTCMdata, 'RTCM_data')
-		while not self.RTCMcli.wait_for_service(timeout_sec=1.0):
-			self.get_logger().info('service not available, waiting again...')
-		self.RTCMreq = RTCMdata.Request()
+		#self.RTCMcli = self.create_client(RTCMdata, 'RTCM_data')
+		#while not self.RTCMcli.wait_for_service(timeout_sec=1.0):
+		#	self.get_logger().info('service not available, waiting again...')
+		#self.RTCMreq = RTCMdata.Request()
+		
+		# Publish status "Inactive"
+		self.sta_sw_pub.publish(self.sta_sw_msg)
 	
-				
-	def connect_device(self):
-		if self.portName is None:
-			self.autoConnect()
-		else:
+	
+	def setConfig(self, msg):
+		if self.portName != msg.port_name or self.baudrate != msg.baudrate:
+			self.portName = msg.port_name 
+			self.baudrate = msg.baudrate
+			self.xsens_status = "Connecting"
+			self.sta_sw_pub.publish(self.sta_sw_msg)
 			self.connect()
+		if self.outputConfig != msg.output_config:
+			self.outputConfig = msg.output_config
+			self.baudrate = msg.baudrate
+			self.xsens_status = "Configuring"
+			self.sta_sw_pub.publish(self.sta_sw_msg)
+			self.configOutput()
+		if self.syncConfig != msg.sync_config:
+			self.syncConfig = msg.sync_config
+			self.baudrate = msg.baudrate
+			self.xsens_status = "Configuring"
+			self.sta_sw_pub.publish(self.sta_sw_msg)
+			self.configSync()
+		
+		self.rtcmRefreshDist = msg.rtcm_refresh_dist
+		print(msg)
+		self.xsens_status = "Active"
+		self.sta_sw_pub.publish(self.sta_sw_msg)
+		self.get_logger().info('Xsens configuration updated')			
+	
+		
+	def connect(self):
+		# autoconnect
+		if self.portName is None:
+			self.get_logger().info("xsensClient - autoConnect")
+			devs = find_devices()
+			if devs:
+				  self.portName, self.baudrate = devs[0]
+				  self.get_logger().info(f"Detected MT device on port {self.portName}\
+				        @ {self.baudrate} bps")
+			else:
+				  self.get_logger().fatal("Fatal: could not find proper MT device.")
+				  self.get_logger().fatal("Could not find proper MT device.")
+				  return
+			if not self.baudrate:
+				  self.baudrate = find_baudrate(self.portName)
+			if not self.baudrate:
+				  self.get_logger().fatal("Fatal: could not find proper baudrate.")
+				  self.get_logger().fatal("Could not find proper baudrate.")
+				  return
+		# normal connect
+		else:
+			self.get_logger().info("xsensClient - connect")
+			self.device = MTDevice(self.portName, self.baudrate)
+			
+				
+	def configOutput(self):
+		self.get_logger().info("xsensClient - config")
+		output_config = get_output_config(self.outputConfig)
+		self.device.SetOutputConfiguration(output_config)
+		self.get_logger().info("xsensClient - config : System is Ok, Ready to Record.")
 
-		self.config(self.configuration)
-	
-	
-	
+
+	def configSync(self):
+		self.get_logger().info("xsensClient - syncSetting")
+		lst = self.syncConfig
+		# clear list of sync settings (msg with polarity at 0)
+		self.device.SetSyncSettings([SyncSetting(3, 2, 0, 1, 0, 0, 0, 0)])
+		self.device.SetSyncSettings([SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7])])
+
+
 	def getOneMeasure(self):
 		data = None
 		try:
@@ -83,7 +154,7 @@ class XSensDriver(Node):
 		Timestamp.append(data.get('Timestamp')['ns'])
 		
 		# Publication - Orientation Euler's angles	
-		if self.ori_oe:
+		if 'oe' in self.outputConfig:
 			ori_oe_msg = OriOE()
 			ori_oe_data = data.get('Orientation Data')
 			ori_oe_msg.stamp = Timestamp
@@ -93,7 +164,7 @@ class XSensDriver(Node):
 			self.ori_oe_pub.publish(ori_oe_msg)		
 		
 		# Publication - Postion longitude/latitude
-		if self.pos_pl:
+		if 'pl' in self.outputConfig:
 			if 'Position' in data:
 				pos_pl_msg = PosPL()
 				pos_pl_data = data.get('Position')
@@ -118,7 +189,7 @@ class XSensDriver(Node):
 				
 		
 		# Publication - Ellipsoidal height	
-		if self.pos_pa:
+		if 'pa' in self.outputConfig:
 			if 'Position' in data:
 				pos_pa_msg = PosPA()
 				pos_pa_data = data.get('Position')
@@ -128,9 +199,9 @@ class XSensDriver(Node):
 		
 		# Publication - Xsens status
 		if 'Status' in data:
-			sta_sw_msg = StaSW()
-			sta_sw_msg = self.readStatus(data['Status']['StatusWord'], sta_sw_msg)
-			self.sta_sw_pub.publish(sta_sw_msg)
+			self.sta_sw_msg.xsens_status = self.xsens_status
+			self.sta_sw_msg = self.readStatus(data['Status']['StatusWord'], self.sta_sw_msg)
+			self.sta_sw_pub.publish(self.sta_sw_msg)
 	
 	def readStatus(self, status, msg):
 		# https://www.xsens.com/hubfs/Downloads/Manuals/MT_Low-Level_Documentation.pdf
@@ -172,56 +243,6 @@ class XSensDriver(Node):
 		self.get_logger().info('RTCM correction updated')
 
 	
-	def updateConfig(self, msg):	
-		self.test=False
-		self.portName = msg.port_name
-		self.baudrate = msg.baudrate
-		self.configuration = msg.configuration
-		self.rtcmRefreshDist = msg.rtcm_refresh_dist
-		
-		# Publication of all measurement
-		if 'oe' in self.configuration:
-			self.ori_oe = True
-		else:
-			self.ori_oe = False
-		if 'pl' in self.configuration:
-			self.pos_pl = True
-		else:
-			self.pos_pl = False
-		if 'pa' in self.configuration:
-			self.pos_pa = True
-		else:
-			self.pos_pa = False
-		self.get_logger().info('Xsens configuration updated')			
-				
-	def autoConnect(self):
-		self.get_logger().info("xsensClient - autoConnect")
-		devs = find_devices()
-		if devs:
-		    self.portName, self.baudrate = devs[0]
-		    self.get_logger().info(f"Detected MT device on port {self.portName}\
-		          @ {self.baudrate} bps")
-		else:
-		    self.get_logger().fatal("Fatal: could not find proper MT device.")
-		    self.get_logger().fatal("Could not find proper MT device.")
-		    return
-		if not self.baudrate:
-		    self.baudrate = find_baudrate(self.portName)
-		if not self.baudrate:
-		    self.get_logger().fatal("Fatal: could not find proper baudrate.")
-		    self.get_logger().fatal("Could not find proper baudrate.")
-		    return
-		
-	def connect(self):
-		self.get_logger().info("xsensClient - connect")
-		self.device = MTDevice(self.portName, self.baudrate)
-	
-	def config(self, config='ip10,iu10,oe10be,pl10ae,pa10ae,sw10'):
-		self.get_logger().info("xsensClient - config")
-		output_config = get_output_config(config)
-		self.device.SetOutputConfiguration(output_config)
-		self.get_logger().info("xsensClient - config : System is Ok, Ready to Record.")
-
 	def buildResponse(self, msg):
 		rtcm_data_unflat = []
 		id_i = 0
@@ -238,16 +259,21 @@ def main(args=None):
 
 	rclpy.init(args=args)
 	driver = XSensDriver()
-	rclpy.spin_once(driver, timeout_sec=5)
-	driver.connect_device()
-		
+	
 	while True:
-		data = driver.device.read_measurement()
-		rclpy.spin_once(driver, timeout_sec=0)
-		if data:
-			driver.getOneMeasure()
-			#print(data)
 		
+		# Waiting for connection and configuration data
+		while driver.xsens_status == "Inactive":
+			rclpy.spin_once(driver, timeout_sec=5)
+		driver.connect()
+			
+		while driver.xsens_status == "Active":
+			data = driver.device.read_measurement()
+			rclpy.spin_once(driver, timeout_sec=0)
+			if data:
+				driver.getOneMeasure()
+				#print(data)
+			
 
 
 	driver.destroy_node()

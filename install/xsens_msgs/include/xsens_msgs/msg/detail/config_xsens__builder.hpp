@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ConfigXsens_sync_config
+{
+public:
+  explicit Init_ConfigXsens_sync_config(::xsens_msgs::msg::ConfigXsens & msg)
+  : msg_(msg)
+  {}
+  ::xsens_msgs::msg::ConfigXsens sync_config(::xsens_msgs::msg::ConfigXsens::_sync_config_type arg)
+  {
+    msg_.sync_config = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::ConfigXsens msg_;
+};
+
 class Init_ConfigXsens_rtcm_refresh_dist
 {
 public:
   explicit Init_ConfigXsens_rtcm_refresh_dist(::xsens_msgs::msg::ConfigXsens & msg)
   : msg_(msg)
   {}
-  ::xsens_msgs::msg::ConfigXsens rtcm_refresh_dist(::xsens_msgs::msg::ConfigXsens::_rtcm_refresh_dist_type arg)
+  Init_ConfigXsens_sync_config rtcm_refresh_dist(::xsens_msgs::msg::ConfigXsens::_rtcm_refresh_dist_type arg)
   {
     msg_.rtcm_refresh_dist = std::move(arg);
-    return std::move(msg_);
+    return Init_ConfigXsens_sync_config(msg_);
   }
 
 private:
@@ -68,15 +84,15 @@ private:
   ::xsens_msgs::msg::ConfigXsens msg_;
 };
 
-class Init_ConfigXsens_configuration
+class Init_ConfigXsens_output_config
 {
 public:
-  Init_ConfigXsens_configuration()
+  Init_ConfigXsens_output_config()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_ConfigXsens_baudrate configuration(::xsens_msgs::msg::ConfigXsens::_configuration_type arg)
+  Init_ConfigXsens_baudrate output_config(::xsens_msgs::msg::ConfigXsens::_output_config_type arg)
   {
-    msg_.configuration = std::move(arg);
+    msg_.output_config = std::move(arg);
     return Init_ConfigXsens_baudrate(msg_);
   }
 
@@ -95,7 +111,7 @@ template<>
 inline
 auto build<::xsens_msgs::msg::ConfigXsens>()
 {
-  return xsens_msgs::msg::builder::Init_ConfigXsens_configuration();
+  return xsens_msgs::msg::builder::Init_ConfigXsens_output_config();
 }
 
 }  // namespace xsens_msgs

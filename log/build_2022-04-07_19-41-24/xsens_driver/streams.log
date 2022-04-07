@@ -1,0 +1,24 @@
+[2.915s] Invoking command in '/app/dev_ws/src/xsens_driver': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
+[3.956s] running egg_info
+[3.958s] writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+[3.959s] writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+[3.960s] writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+[3.961s] writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+[3.962s] writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+[4.126s] reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.130s] writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.138s] running build
+[4.138s] running build_py
+[4.139s] copying xsens_driver/xsens_measure.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+[4.141s] running install
+[4.145s] running install_lib
+[4.149s] copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/xsens_measure.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+[4.154s] byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py to xsens_measure.cpython-38.pyc
+[4.167s] running install_data
+[4.169s] running install_egg_info
+[4.177s] removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)
+[4.179s] Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+[4.185s] running install_scripts
+[4.263s] Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+[4.266s] writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'
+[4.366s] Invoked command in '/app/dev_ws/src/xsens_driver' returned '0': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed

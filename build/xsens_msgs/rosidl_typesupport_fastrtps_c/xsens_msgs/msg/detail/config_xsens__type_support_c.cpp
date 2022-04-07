@@ -34,8 +34,10 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // configuration, port_name
-#include "rosidl_runtime_c/string_functions.h"  // configuration, port_name
+#include "rosidl_runtime_c/primitives_sequence.h"  // sync_config
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // sync_config
+#include "rosidl_runtime_c/string.h"  // output_config, port_name
+#include "rosidl_runtime_c/string_functions.h"  // output_config, port_name
 
 // forward declare type support functions
 
@@ -51,9 +53,9 @@ static bool _ConfigXsens__cdr_serialize(
     return false;
   }
   const _ConfigXsens__ros_msg_type * ros_message = static_cast<const _ConfigXsens__ros_msg_type *>(untyped_ros_message);
-  // Field name: configuration
+  // Field name: output_config
   {
-    const rosidl_runtime_c__String * str = &ros_message->configuration;
+    const rosidl_runtime_c__String * str = &ros_message->output_config;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -89,6 +91,14 @@ static bool _ConfigXsens__cdr_serialize(
     cdr << ros_message->rtcm_refresh_dist;
   }
 
+  // Field name: sync_config
+  {
+    size_t size = ros_message->sync_config.size;
+    auto array_ptr = ros_message->sync_config.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -101,18 +111,18 @@ static bool _ConfigXsens__cdr_deserialize(
     return false;
   }
   _ConfigXsens__ros_msg_type * ros_message = static_cast<_ConfigXsens__ros_msg_type *>(untyped_ros_message);
-  // Field name: configuration
+  // Field name: output_config
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->configuration.data) {
-      rosidl_runtime_c__String__init(&ros_message->configuration);
+    if (!ros_message->output_config.data) {
+      rosidl_runtime_c__String__init(&ros_message->output_config);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->configuration,
+      &ros_message->output_config,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'configuration'\n");
+      fprintf(stderr, "failed to assign string into field 'output_config'\n");
       return false;
     }
   }
@@ -143,6 +153,21 @@ static bool _ConfigXsens__cdr_deserialize(
     cdr >> ros_message->rtcm_refresh_dist;
   }
 
+  // Field name: sync_config
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->sync_config.data) {
+      rosidl_runtime_c__uint32__Sequence__fini(&ros_message->sync_config);
+    }
+    if (!rosidl_runtime_c__uint32__Sequence__init(&ros_message->sync_config, size)) {
+      return "failed to create array for field 'sync_config'";
+    }
+    auto array_ptr = ros_message->sync_config.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -160,10 +185,10 @@ size_t get_serialized_size_xsens_msgs__msg__ConfigXsens(
   (void)padding;
   (void)wchar_size;
 
-  // field.name configuration
+  // field.name output_config
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->configuration.size + 1);
+    (ros_message->output_config.size + 1);
   // field.name baudrate
   {
     size_t item_size = sizeof(ros_message->baudrate);
@@ -178,6 +203,17 @@ size_t get_serialized_size_xsens_msgs__msg__ConfigXsens(
   {
     size_t item_size = sizeof(ros_message->rtcm_refresh_dist);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name sync_config
+  {
+    size_t array_size = ros_message->sync_config.size;
+    auto array_ptr = ros_message->sync_config.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -204,7 +240,7 @@ size_t max_serialized_size_xsens_msgs__msg__ConfigXsens(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: configuration
+  // member: output_config
   {
     size_t array_size = 1;
 
@@ -239,6 +275,16 @@ size_t max_serialized_size_xsens_msgs__msg__ConfigXsens(
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+  // member: sync_config
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;

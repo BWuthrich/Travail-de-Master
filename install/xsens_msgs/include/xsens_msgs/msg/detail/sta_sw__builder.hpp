@@ -119,13 +119,29 @@ private:
 class Init_StaSW_filter_valid
 {
 public:
-  Init_StaSW_filter_valid()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_StaSW_filter_valid(::xsens_msgs::msg::StaSW & msg)
+  : msg_(msg)
   {}
   Init_StaSW_gnss_fix filter_valid(::xsens_msgs::msg::StaSW::_filter_valid_type arg)
   {
     msg_.filter_valid = std::move(arg);
     return Init_StaSW_gnss_fix(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::StaSW msg_;
+};
+
+class Init_StaSW_xsens_status
+{
+public:
+  Init_StaSW_xsens_status()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_StaSW_filter_valid xsens_status(::xsens_msgs::msg::StaSW::_xsens_status_type arg)
+  {
+    msg_.xsens_status = std::move(arg);
+    return Init_StaSW_filter_valid(msg_);
   }
 
 private:
@@ -143,7 +159,7 @@ template<>
 inline
 auto build<::xsens_msgs::msg::StaSW>()
 {
-  return xsens_msgs::msg::builder::Init_StaSW_filter_valid();
+  return xsens_msgs::msg::builder::Init_StaSW_xsens_status();
 }
 
 }  // namespace xsens_msgs

@@ -37,16 +37,43 @@ void ConfigXsens_fini_function(void * message_memory)
   typed_message->~ConfigXsens();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_message_member_array[4] = {
+size_t size_function__ConfigXsens__sync_config(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<uint32_t> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__ConfigXsens__sync_config(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<uint32_t> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ConfigXsens__sync_config(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<uint32_t> *>(untyped_member);
+  return &member[index];
+}
+
+void resize_function__ConfigXsens__sync_config(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<uint32_t> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_message_member_array[5] = {
   {
-    "configuration",  // name
+    "output_config",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(xsens_msgs::msg::ConfigXsens, configuration),  // bytes offset in struct
+    offsetof(xsens_msgs::msg::ConfigXsens, output_config),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -97,13 +124,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_m
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "sync_config",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs::msg::ConfigXsens, sync_config),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__ConfigXsens__sync_config,  // size() function pointer
+    get_const_function__ConfigXsens__sync_config,  // get_const(index) function pointer
+    get_function__ConfigXsens__sync_config,  // get(index) function pointer
+    resize_function__ConfigXsens__sync_config  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ConfigXsens_message_members = {
   "xsens_msgs::msg",  // message namespace
   "ConfigXsens",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(xsens_msgs::msg::ConfigXsens),
   ConfigXsens_message_member_array,  // message members
   ConfigXsens_init_function,  // function to initialize message memory (memory has to be allocated)

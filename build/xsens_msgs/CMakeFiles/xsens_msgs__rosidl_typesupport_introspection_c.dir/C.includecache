@@ -45,6 +45,8 @@ xsens_msgs/msg/detail/config_xsens__struct.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/xsens_msgs/msg/detail/config_xsens__struct.h
 rosidl_runtime_c/string_functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/rosidl_runtime_c/string_functions.h
+rosidl_runtime_c/primitives_sequence_functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence_functions.h
 
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.c
 stddef.h
@@ -297,6 +299,8 @@ stdint.h
 -
 rosidl_runtime_c/string.h
 rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/string.h
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.h
 stdbool.h

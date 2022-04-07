@@ -53,6 +53,21 @@ bool xsens_msgs__msg__sta_sw__convert_from_py(PyObject * _pymsg, void * _ros_mes
     assert(strncmp("xsens_msgs.msg._sta_sw.StaSW", full_classname_dest, 28) == 0);
   }
   xsens_msgs__msg__StaSW * ros_message = _ros_message;
+  {  // xsens_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "xsens_status");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->xsens_status, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // filter_valid
     PyObject * field = PyObject_GetAttrString(_pymsg, "filter_valid");
     if (!field) {
@@ -180,6 +195,23 @@ PyObject * xsens_msgs__msg__sta_sw__convert_to_py(void * raw_ros_message)
     }
   }
   xsens_msgs__msg__StaSW * ros_message = (xsens_msgs__msg__StaSW *)raw_ros_message;
+  {  // xsens_status
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->xsens_status.data,
+      strlen(ros_message->xsens_status.data),
+      "strict");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "xsens_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // filter_valid
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(

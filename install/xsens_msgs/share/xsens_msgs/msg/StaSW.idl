@@ -6,6 +6,8 @@
 module xsens_msgs {
   module msg {
     struct StaSW {
+      string xsens_status;
+
       string filter_valid;
 
       string gnss_fix;

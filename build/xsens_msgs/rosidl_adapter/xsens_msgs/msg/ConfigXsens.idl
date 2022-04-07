@@ -6,13 +6,15 @@
 module xsens_msgs {
   module msg {
     struct ConfigXsens {
-      string configuration;
+      string output_config;
 
       uint32 baudrate;
 
       string port_name;
 
       uint16 rtcm_refresh_dist;
+
+      sequence<uint32> sync_config;
     };
   };
 };

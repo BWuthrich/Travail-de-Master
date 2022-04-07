@@ -32,14 +32,18 @@ cdr_serialize(
   const xsens_msgs::msg::ConfigXsens & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: configuration
-  cdr << ros_message.configuration;
+  // Member: output_config
+  cdr << ros_message.output_config;
   // Member: baudrate
   cdr << ros_message.baudrate;
   // Member: port_name
   cdr << ros_message.port_name;
   // Member: rtcm_refresh_dist
   cdr << ros_message.rtcm_refresh_dist;
+  // Member: sync_config
+  {
+    cdr << ros_message.sync_config;
+  }
   return true;
 }
 
@@ -49,8 +53,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   xsens_msgs::msg::ConfigXsens & ros_message)
 {
-  // Member: configuration
-  cdr >> ros_message.configuration;
+  // Member: output_config
+  cdr >> ros_message.output_config;
 
   // Member: baudrate
   cdr >> ros_message.baudrate;
@@ -60,6 +64,11 @@ cdr_deserialize(
 
   // Member: rtcm_refresh_dist
   cdr >> ros_message.rtcm_refresh_dist;
+
+  // Member: sync_config
+  {
+    cdr >> ros_message.sync_config;
+  }
 
   return true;
 }
@@ -77,10 +86,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: configuration
+  // Member: output_config
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.configuration.size() + 1);
+    (ros_message.output_config.size() + 1);
   // Member: baudrate
   {
     size_t item_size = sizeof(ros_message.baudrate);
@@ -95,6 +104,16 @@ get_serialized_size(
   {
     size_t item_size = sizeof(ros_message.rtcm_refresh_dist);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: sync_config
+  {
+    size_t array_size = ros_message.sync_config.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t item_size = sizeof(ros_message.sync_config[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -116,7 +135,7 @@ max_serialized_size_ConfigXsens(
   (void)full_bounded;
 
 
-  // Member: configuration
+  // Member: output_config
   {
     size_t array_size = 1;
 
@@ -154,6 +173,17 @@ max_serialized_size_ConfigXsens(
 
     current_alignment += array_size * sizeof(uint16_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
+  // Member: sync_config
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;

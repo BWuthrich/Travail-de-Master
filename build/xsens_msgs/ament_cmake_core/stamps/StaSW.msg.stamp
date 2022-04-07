@@ -1,3 +1,4 @@
+string xsens_status
 string filter_valid
 string gnss_fix
 string clock_sync

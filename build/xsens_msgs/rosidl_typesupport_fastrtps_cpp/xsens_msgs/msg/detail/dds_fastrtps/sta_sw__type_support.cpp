@@ -32,6 +32,8 @@ cdr_serialize(
   const xsens_msgs::msg::StaSW & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: xsens_status
+  cdr << ros_message.xsens_status;
   // Member: filter_valid
   cdr << ros_message.filter_valid;
   // Member: gnss_fix
@@ -55,6 +57,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   xsens_msgs::msg::StaSW & ros_message)
 {
+  // Member: xsens_status
+  cdr >> ros_message.xsens_status;
+
   // Member: filter_valid
   cdr >> ros_message.filter_valid;
 
@@ -92,6 +97,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: xsens_status
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.xsens_status.size() + 1);
   // Member: filter_valid
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
@@ -138,6 +147,18 @@ max_serialized_size_StaSW(
   (void)wchar_size;
   (void)full_bounded;
 
+
+  // Member: xsens_status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   // Member: filter_valid
   {

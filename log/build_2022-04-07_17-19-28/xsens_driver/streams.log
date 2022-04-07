@@ -1,0 +1,29 @@
+[2.926s] Invoking command in '/app/dev_ws/src/xsens_driver': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
+[3.959s] running egg_info
+[3.961s] writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+[3.963s] writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+[3.964s] writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+[3.964s] writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+[3.965s] writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+[4.128s] reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.131s] writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.132s] running build
+[4.132s] running build_py
+[4.133s] copying xsens_driver/xsens_measure.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver
+[4.136s] running install
+[4.140s] running install_lib
+[4.145s] copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/xsens_measure.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver
+[4.149s] byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py to xsens_measure.cpython-38.pyc
+[4.157s]   File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py", line 259
+[4.158s]     while True
+[4.159s]              ^
+[4.159s] SyntaxError: invalid syntax
+[4.160s] 
+[4.160s] running install_data
+[4.161s] running install_egg_info
+[4.168s] removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)
+[4.170s] Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+[4.176s] running install_scripts
+[4.254s] Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+[4.256s] writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'
+[4.356s] Invoked command in '/app/dev_ws/src/xsens_driver' returned '0': PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed

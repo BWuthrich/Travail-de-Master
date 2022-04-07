@@ -241,6 +241,8 @@ stdint.h
 -
 rosidl_runtime_c/string.h
 rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/string.h
+rosidl_runtime_c/primitives_sequence.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
 
 rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__struct.h
 stdbool.h

@@ -13,6 +13,7 @@
 
 
 // Include directives for member types
+// Member `xsens_status`
 // Member `filter_valid`
 // Member `gnss_fix`
 // Member `clock_sync`
@@ -41,7 +42,22 @@ void StaSW__rosidl_typesupport_introspection_c__StaSW_fini_function(void * messa
   xsens_msgs__msg__StaSW__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember StaSW__rosidl_typesupport_introspection_c__StaSW_message_member_array[7] = {
+static rosidl_typesupport_introspection_c__MessageMember StaSW__rosidl_typesupport_introspection_c__StaSW_message_member_array[8] = {
+  {
+    "xsens_status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__StaSW, xsens_status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "filter_valid",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -152,7 +168,7 @@ static rosidl_typesupport_introspection_c__MessageMember StaSW__rosidl_typesuppo
 static const rosidl_typesupport_introspection_c__MessageMembers StaSW__rosidl_typesupport_introspection_c__StaSW_message_members = {
   "xsens_msgs__msg",  // message namespace
   "StaSW",  // message name
-  7,  // number of fields
+  8,  // number of fields
   sizeof(xsens_msgs__msg__StaSW),
   StaSW__rosidl_typesupport_introspection_c__StaSW_message_member_array,  // message members
   StaSW__rosidl_typesupport_introspection_c__StaSW_init_function,  // function to initialize message memory (memory has to be allocated)

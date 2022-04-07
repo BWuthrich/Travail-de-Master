@@ -37,6 +37,7 @@ struct StaSW_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->xsens_status = "";
       this->filter_valid = "";
       this->gnss_fix = "";
       this->clock_sync = "";
@@ -48,7 +49,8 @@ struct StaSW_
   }
 
   explicit StaSW_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : filter_valid(_alloc),
+  : xsens_status(_alloc),
+    filter_valid(_alloc),
     gnss_fix(_alloc),
     clock_sync(_alloc),
     sync_in(_alloc),
@@ -59,6 +61,7 @@ struct StaSW_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->xsens_status = "";
       this->filter_valid = "";
       this->gnss_fix = "";
       this->clock_sync = "";
@@ -70,6 +73,9 @@ struct StaSW_
   }
 
   // field types and members
+  using _xsens_status_type =
+    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+  _xsens_status_type xsens_status;
   using _filter_valid_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
   _filter_valid_type filter_valid;
@@ -93,6 +99,12 @@ struct StaSW_
   _rtk_status_type rtk_status;
 
   // setters for named parameter idiom
+  Type & set__xsens_status(
+    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+  {
+    this->xsens_status = _arg;
+    return *this;
+  }
   Type & set__filter_valid(
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
@@ -178,6 +190,9 @@ struct StaSW_
   // comparison operators
   bool operator==(const StaSW_ & other) const
   {
+    if (this->xsens_status != other.xsens_status) {
+      return false;
+    }
     if (this->filter_valid != other.filter_valid) {
       return false;
     }

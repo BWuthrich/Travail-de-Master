@@ -18,17 +18,20 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'configuration'
+// Member 'output_config'
 // Member 'port_name'
 #include "rosidl_runtime_c/string.h"
+// Member 'sync_config'
+#include "rosidl_runtime_c/primitives_sequence.h"
 
 // Struct defined in msg/ConfigXsens in the package xsens_msgs.
 typedef struct xsens_msgs__msg__ConfigXsens
 {
-  rosidl_runtime_c__String configuration;
+  rosidl_runtime_c__String output_config;
   uint32_t baudrate;
   rosidl_runtime_c__String port_name;
   uint16_t rtcm_refresh_dist;
+  rosidl_runtime_c__uint32__Sequence sync_config;
 } xsens_msgs__msg__ConfigXsens;
 
 // Struct for a sequence of xsens_msgs__msg__ConfigXsens.

@@ -53,6 +53,7 @@ class StaSW(metaclass=Metaclass_StaSW):
     """Message class 'StaSW'."""
 
     __slots__ = [
+        '_xsens_status',
         '_filter_valid',
         '_gnss_fix',
         '_clock_sync',
@@ -63,6 +64,7 @@ class StaSW(metaclass=Metaclass_StaSW):
     ]
 
     _fields_and_field_types = {
+        'xsens_status': 'string',
         'filter_valid': 'string',
         'gnss_fix': 'string',
         'clock_sync': 'string',
@@ -80,12 +82,14 @@ class StaSW(metaclass=Metaclass_StaSW):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.xsens_status = kwargs.get('xsens_status', str())
         self.filter_valid = kwargs.get('filter_valid', str())
         self.gnss_fix = kwargs.get('gnss_fix', str())
         self.clock_sync = kwargs.get('clock_sync', str())
@@ -123,6 +127,8 @@ class StaSW(metaclass=Metaclass_StaSW):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.xsens_status != other.xsens_status:
+            return False
         if self.filter_valid != other.filter_valid:
             return False
         if self.gnss_fix != other.gnss_fix:
@@ -143,6 +149,19 @@ class StaSW(metaclass=Metaclass_StaSW):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @property
+    def xsens_status(self):
+        """Message field 'xsens_status'."""
+        return self._xsens_status
+
+    @xsens_status.setter
+    def xsens_status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'xsens_status' field must be of type 'str'"
+        self._xsens_status = value
 
     @property
     def filter_valid(self):

@@ -37,7 +37,22 @@ void StaSW_fini_function(void * message_memory)
   typed_message->~StaSW();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember StaSW_message_member_array[7] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember StaSW_message_member_array[8] = {
+  {
+    "xsens_status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs::msg::StaSW, xsens_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "filter_valid",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -148,7 +163,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StaSW_message
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers StaSW_message_members = {
   "xsens_msgs::msg",  // message namespace
   "StaSW",  // message name
-  7,  // number of fields
+  8,  // number of fields
   sizeof(xsens_msgs::msg::StaSW),
   StaSW_message_member_array,  // message members
   StaSW_init_function,  // function to initialize message memory (memory has to be allocated)

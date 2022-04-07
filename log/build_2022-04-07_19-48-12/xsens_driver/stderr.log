@@ -1,0 +1,5 @@
+  File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py", line 134
+    self.device.SetSyncSettings([SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7]))
+                                                                                                      ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+

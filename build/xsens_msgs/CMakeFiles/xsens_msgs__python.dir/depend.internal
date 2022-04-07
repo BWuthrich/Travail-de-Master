@@ -112,6 +112,7 @@ CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_ntr
 CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c.o
  /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c
  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/string.h
  /opt/ros/foxy/include/rosidl_runtime_c/string_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
