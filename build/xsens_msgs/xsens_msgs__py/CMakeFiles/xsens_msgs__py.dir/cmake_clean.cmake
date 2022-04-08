@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr.py"
   "../rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c"
+  "../rosidl_generator_py/xsens_msgs/msg/_sta_nt.py"
+  "../rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_sta_sw.py"
   "../rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c"
   "../rosidl_generator_py/xsens_msgs/srv/__init__.py"

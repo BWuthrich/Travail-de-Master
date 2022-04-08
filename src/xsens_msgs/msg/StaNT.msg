@@ -1,0 +1,1 @@
+string ntrip_status

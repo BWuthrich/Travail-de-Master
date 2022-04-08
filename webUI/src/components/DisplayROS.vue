@@ -1,10 +1,19 @@
 <script>
+
 export default {
+	name: "config_componant",
   data() {
     return {
+      // Ros
       ros: null,
       xsens_config_pub: null,
       xsens_config_msg: null,
+      xsens_status_sub: null,
+      ntrip_config_pub: null,
+      ntrip_config_msg: null,
+      ntrip_status_sub: null,
+      
+      // Xsens config
       OutputConfigString: "",
       syncFunction: "Interval Transition Measurement [out] - 4",
       syncLine: "Out1 - 7",
@@ -18,8 +27,8 @@ export default {
       syncFromXsens: true,
       syncXsensFreq: 1,
       syncList: null,
-      PortName: "/dev/ttyS0",
-      Baudrate: 115200,
+      XsensPortName: "/dev/ttyS0",
+      XsensBaudrate: 115200,
       wishPosPL: true,
       wishPosPA: true,
       wishOriOE: true,
@@ -54,8 +63,37 @@ export default {
       AccAF_prec: "Fp1632 - b",
       AngWH_prec: "Fp1632 - b",
       AngWR_prec: "Fp1632 - b",
+      
+      boolshit: false,
+      
+      // Xsens Status
+      XsensStatus: "Deconnected",
+      GnssFix: "0",
+      
+      // Ntrip Status
+      NtripStatus: "Deconnected",
+      
+      // Ntrip Config
+      NtripPort: 5001,
+      NtripHost: "193.134.218.96",
+      NtripMount: "M_04",
+      NtripUser: "Ecole01",
+      NtripPassword: "365heig",
+			NtripTime: 3,
+    	NtripDist: 5,
+    	
+    	status_style:{
+    		"Inactive": "badge bg-secondary",
+    		"Deconnected": "badge bg-dark",
+    		"Active": "badge bg-success",
+    		"Connecting": "badge bg-warning text-dark",
+    		"Configuring": "badge bg-warning text-dark",
+    		"Connecting RTCM": "badge bg-warning text-dark"
+    	}
     }
   },
+  
+ 
   methods: {
     connect: function() {
       this.ros = new ROSLIB.Ros({
@@ -72,6 +110,7 @@ export default {
       this.ros.on('close', function() {
         console.log('Connection to websocket server closed.');
       });
+
     },
     
     // set Xsens configuration publisher
@@ -83,6 +122,42 @@ export default {
       })
     },
     
+    // set Ntrip configuration publisher
+    setNtripConfigPublisher: function(){
+      this.ntrip_config_pub = new ROSLIB.Topic({
+        ros : this.ros,
+        name : 'config/ntripclient',
+        messageType : 'xsens_msgs/ConfigNtrip'
+      })
+    },
+    
+    // set Xsens status subscriber
+		setXsensStatusSubscriber: function(){
+		  this.xsens_status_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'mti/status',
+		    messageType : 'xsens_msgs/StaSW'
+		  })
+			this.xsens_status_sub.subscribe(message => {
+				this.XsensStatus = message.xsens_status
+				this.GnssFix = message.gnss_fix
+				console.log("Xsens:" +this.XsensStatus)			
+			})
+		},
+		
+    // set Ntrip status subscriber
+		setNtripStatusSubscriber: function(){
+		  this.ntrip_status_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'ntrip/status',
+		    messageType : 'xsens_msgs/StaNT'
+		  })
+			this.ntrip_status_sub.subscribe(message => {
+				this.NtripStatus = message.ntrip_status
+				console.log("Ntrip:" +this.NtripStatus)		
+			})
+		},
+
     // publish Xsens configuration
     publishXsensConfig: function(){
     	this.setXsensConfigPublisher()
@@ -90,12 +165,27 @@ export default {
     	this.setSyncConfig()
     	this.xsens_config_msg = new ROSLIB.Message({
 				output_config : this.OutputConfigString,
-				baudrate : this.Baudrate,
-				port_name : this.PortName,
+				baudrate : this.XsensBaudrate,
+				port_name : this.XsensPortName,
 				sync_config : this.syncList,
-				rtcm_refresh_dist : 3,
+				rtcm_refresh_dist : this.NtripDist,
 			});
 			this.xsens_config_pub.publish(this.xsens_config_msg)
+    },
+    
+    // publish Ntrip configuration
+    publishNtripConfig: function(){
+    	this.setNtripConfigPublisher()
+    	this.ntrip_config_msg = new ROSLIB.Message({
+				host : this.NtripHost,
+				port : this.NtripPort,
+				mountpoint : this.NtripMount,
+				username : this.NtripUser,
+				password : this.NtripPassword,
+				rtcm_timer : this.NtripTime,
+			});
+			console.log(this.ntrip_config_msg)
+			this.ntrip_config_pub.publish(this.ntrip_config_msg)
     },
 		
 		// compile output data string for Xsens Donnée GNSS?? // status byte pour legerté??
@@ -112,7 +202,6 @@ export default {
 	    if(this.wishAngWH){this.OutputConfigString=this.OutputConfigString + "wh" + this.AngWH_freq + this.AngWH_prec.slice(-1) + this.AngWH_coor.slice(-1) + ","}
 	    if(this.wishStaSW){this.OutputConfigString=this.OutputConfigString + "sw" + this.StaSW_freq + ","}
 			this.OutputConfigString = this.OutputConfigString.slice(0, -1)
-			console.log(this.OutputConfigString)
 		},
     
     // compile synchronisation setting list
@@ -127,7 +216,6 @@ export default {
     	else {this.syncList.push(this.syncSkipFactor)}
     	this.syncList.push(this.syncPulse)
     	this.syncList.push(this.syncDelay)
-    	console.log(this.syncList)
     }, 
     
     // set default config to trigger from Raspberry
@@ -163,11 +251,12 @@ export default {
   		this.syncFromXsens = false
   	}
   },
-  
+
   mounted() {
    try {
       this.connect();
-      //this.setTopic();
+      this.setXsensStatusSubscriber();
+			this.setNtripStatusSubscriber();
     } catch (error) {
       console.error(error);
     }
@@ -176,17 +265,69 @@ export default {
 </script>
 
 <template>
-  <h2>Simple roslib Example</h2>
+<nav class="navbar fixed-top navbar-light" style="background-color: #e3e3e3;">
+  <div class="container-fluid">
+		<h5><span v-bind:class="status_style[XsensStatus]">Xsens {{this.XsensStatus}}</span></h5>
+		<h5><span v-bind:class="status_style[NtripStatus]">ntrip {{this.NtripStatus}}</span></h5>
+		<h5><span class="badge bg-danger" v-if="GnssFix=='0'">No GNSS</span></h5>
+		<h5><span class="badge bg-success" v-if="GnssFix=='1'">GNSS OK</span></h5>
+  </div>
+</nav>
   
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
+        <strong>CONFIGURATION NTRIP</strong>
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
+      
+      <table class="table table-sm table-borderless">
+		    	<thead>
+						<tr class="table-secondary">
+							<th scope="col" colspan="3">CONNECTION</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label class="form-label">Username</label>
+								<input class="form-control form-control-sm" type="text" v-model="NtripUser">
+							</td>
+							<td>
+								<label class="form-label">Password</label>
+								<input class="form-control form-control-sm" type="password" v-model="NtripPassword">
+							</td>
+							<td>
+								<label class="form-label">Host</label>
+								<input class="form-control form-control-sm" type="text" v-model="NtripHost">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="form-label">Port</label>
+								<input class="form-control form-control-sm" type="text" v-model="NtripPort">
+							</td>
+							<td>
+								<label class="form-label">Mountpoint</label>
+								<input class="form-control form-control-sm" type="text" v-model="NtripMount"><p></p>
+							</td>
+						</tr>
+						<tr>
+							<th class="table-secondary" colspan="3">PARAMETER</th>
+						</tr>
+						<tr>
+							<td>
+								<label class="form-label">RTCM refresh rate [s]</label>
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="NtripTime">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+      
+      
     	</div>
   	</div>
   </div>
@@ -203,22 +344,26 @@ export default {
 		    	<thead>
 						<tr class="table-secondary">
 							<th scope="col" colspan="2">CONNECTION</th>
+							<th scope="col" colspan="1">PARAMETER</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>
 								<label class="form-label">Port</label>
-								<input class="form-control form-control-sm" type="text" v-model="PortName">
+								<input class="form-control form-control-sm" type="text" v-model="XsensPortName">
 							</td>
 							<td>
 								<label class="form-label">Baudrate</label>
-								<input class="form-control form-control-sm" type="text" v-model="Baudrate">
+								<input class="form-control form-control-sm" type="text" v-model="XsensBaudrate">
+							</td>
+							<td>
+								<label class="form-label">RTCM refresh distance [m]</label>
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="NtripDist">
 							</td>
 						</tr>
 					</tbody>
 				</table>
-      	
       	
       	<table class="table table-sm table-borderless">
 		    	<thead>
@@ -537,27 +682,26 @@ export default {
 						</tr>
 					</tbody>
 				</table>	
-				<div class="d-grid gap-2 col-4 mx-auto">
-					<button class="btn btn-primary" type="button" @click="publishXsensConfig">Change Xsens Configuration</button>
-				</div>
       </div>
     </div>
   </div>
 	<div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+        ...
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div class="accordion-body">BLABLA...
       </div>
     </div>
   </div>
 </div>
-  
-  
-  
-	
+<p></p>
+	<div class="d-grid gap-2 col-4 mx-auto">
+		<button class="btn btn-primary" type="button" @click="publishNtripConfig" v-if="XsensStatus!=='Configuring' && XsensStatus!=='Connecting'">Change Ntrip Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishXsensConfig" v-if="NtripStatus=='Active'">Change Xsens Configuration</button>
+	</div>
 </template>
+
+

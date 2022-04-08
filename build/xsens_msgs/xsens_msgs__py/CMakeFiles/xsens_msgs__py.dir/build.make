@@ -63,6 +63,7 @@ xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_st
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr.py
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_xsens.py
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_ntrip.py
+xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_nt.py
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/_rtc_mdata.py
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/__init__.py
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/__init__.py
@@ -73,6 +74,7 @@ xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_st
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_ntrip_s.c
+xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c
 xsens_msgs__py/CMakeFiles/xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c
 
 
@@ -96,6 +98,7 @@ rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/xsens_msgs/msg/RTCMcorr.idl
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/xsens_msgs/msg/ConfigXsens.idl
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/xsens_msgs/msg/ConfigNtrip.idl
+rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/xsens_msgs/msg/StaNT.idl
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -216,6 +219,9 @@ rosidl_generator_py/xsens_msgs/msg/_config_xsens.py: rosidl_generator_py/xsens_m
 rosidl_generator_py/xsens_msgs/msg/_config_ntrip.py: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/msg/_config_ntrip.py
 
+rosidl_generator_py/xsens_msgs/msg/_sta_nt.py: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/msg/_sta_nt.py
+
 rosidl_generator_py/xsens_msgs/srv/_rtc_mdata.py: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/srv/_rtc_mdata.py
 
@@ -246,6 +252,9 @@ rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c: rosidl_generator_py/xsens_
 rosidl_generator_py/xsens_msgs/msg/_config_ntrip_s.c: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/msg/_config_ntrip_s.c
 
+rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c
+
 rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c: rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c
 
@@ -260,6 +269,7 @@ xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_sw.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_xsens.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_ntrip.py
+xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_nt.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/_rtc_mdata.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/__init__.py
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/__init__.py
@@ -270,6 +280,7 @@ xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_config_ntrip_s.c
+xsens_msgs__py: rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c
 xsens_msgs__py: rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c
 xsens_msgs__py: xsens_msgs__py/CMakeFiles/xsens_msgs__py.dir/build.make
 

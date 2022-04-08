@@ -58,38 +58,45 @@ class XSensDriver(Node):
 		self.RTCM_sub
 		
 		# Create service client
-		#self.RTCMcli = self.create_client(RTCMdata, 'RTCM_data')
-		#while not self.RTCMcli.wait_for_service(timeout_sec=1.0):
-		#	self.get_logger().info('service not available, waiting again...')
-		#self.RTCMreq = RTCMdata.Request()
+		self.RTCMcli = self.create_client(RTCMdata, 'RTCM_data')
+		while not self.RTCMcli.wait_for_service(timeout_sec=1.0):
+			self.get_logger().info('service not available, waiting again...')
+		self.RTCMreq = RTCMdata.Request()
 		
 		# Publish status "Inactive"
 		self.sta_sw_pub.publish(self.sta_sw_msg)
 	
 	
 	def setConfig(self, msg):
+		
 		if self.portName != msg.port_name or self.baudrate != msg.baudrate:
 			self.portName = msg.port_name 
 			self.baudrate = msg.baudrate
 			self.xsens_status = "Connecting"
+			self.sta_sw_msg.xsens_status = self.xsens_status
 			self.sta_sw_pub.publish(self.sta_sw_msg)
 			self.connect()
 		if self.outputConfig != msg.output_config:
 			self.outputConfig = msg.output_config
 			self.baudrate = msg.baudrate
+			
 			self.xsens_status = "Configuring"
+			self.sta_sw_msg.xsens_status = self.xsens_status
 			self.sta_sw_pub.publish(self.sta_sw_msg)
 			self.configOutput()
 		if self.syncConfig != msg.sync_config:
 			self.syncConfig = msg.sync_config
 			self.baudrate = msg.baudrate
+			
 			self.xsens_status = "Configuring"
+			self.sta_sw_msg.xsens_status = self.xsens_status
 			self.sta_sw_pub.publish(self.sta_sw_msg)
 			self.configSync()
 		
 		self.rtcmRefreshDist = msg.rtcm_refresh_dist
 		print(msg)
 		self.xsens_status = "Active"
+		self.sta_sw_msg.xsens_status = self.xsens_status
 		self.sta_sw_pub.publish(self.sta_sw_msg)
 		self.get_logger().info('Xsens configuration updated')			
 	
@@ -265,7 +272,6 @@ def main(args=None):
 		# Waiting for connection and configuration data
 		while driver.xsens_status == "Inactive":
 			rclpy.spin_once(driver, timeout_sec=5)
-		driver.connect()
 			
 		while driver.xsens_status == "Active":
 			data = driver.device.read_measurement()

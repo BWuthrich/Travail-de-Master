@@ -10,6 +10,7 @@
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/RTCMcorr.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/ConfigXsens.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/ConfigNtrip.idl",
+    "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/StaNT.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:srv/RTCMdata.idl"
   ],
   "ros_interface_dependencies": [
@@ -126,6 +127,7 @@
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/RTCMcorr.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/ConfigXsens.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/ConfigNtrip.idl",
+    "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/StaNT.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/srv/RTCMdata.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl",

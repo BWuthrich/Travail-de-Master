@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rtc_mcorr__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/rtc_mcorr__type_support.cpp.o"
+  "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/sta_nt__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_nt__type_support.cpp.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp.o"
   )
@@ -36,6 +37,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rtc_mcorr__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
+  "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/sta_nt__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
   "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp" "/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp"
   )

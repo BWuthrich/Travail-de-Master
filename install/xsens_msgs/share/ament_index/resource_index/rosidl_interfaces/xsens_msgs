@@ -10,6 +10,8 @@ msg/PosPL.idl
 msg/PosPL.msg
 msg/RTCMcorr.idl
 msg/RTCMcorr.msg
+msg/StaNT.idl
+msg/StaNT.msg
 msg/StaSW.idl
 msg/StaSW.msg
 srv/RTCMdata.idl

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_rtc_mcorr_s.c.o"
+  "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c.o"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c" "/app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c.o"
   )

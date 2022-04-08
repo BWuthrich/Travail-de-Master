@@ -6,7 +6,7 @@ import base64
 import socket
 
 from xsens_msgs.srv import RTCMdata
-from xsens_msgs.msg import ConfigNtrip, RTCMcorr
+from xsens_msgs.msg import ConfigNtrip, RTCMcorr, StaNT
 
 class ntripClient(Node):
 	RTCMv3_PREAMBLE = bytes.fromhex("D300")
@@ -25,28 +25,41 @@ class ntripClient(Node):
 		self.sendGGA = False
 		self.socket = None
 		self.posIsSet = False
+		self.ntrip_status = "Inactive"
+		# Initial status message
+		self.sta_msg = StaNT()
+		self.sta_msg.ntrip_status = self.ntrip_status
 		
 		self.setPosition(0, 0, 0)
 		
 		# Create parameters subscriber
 		self.ntrip_config_sub = self.create_subscription(ConfigNtrip,
 			'config/ntripclient',
-			self.updateConfig,
+			self.setConfig,
 			10)
 		self.ntrip_config_sub	
+    
+    # Create publisher for ntrip Status
+		self.Status_pub = self.create_publisher(StaNT, 'ntrip/status', 10)
+		# Publish "Inactive"
+		self.Status_pub.publish(self.sta_msg)
+        
+    # Create publisher for RTCM correction data
+		#self.RTCM_pub = self.create_publisher(RTCMcorr, 'ntrip/rtcm_data', 10)
             	
-            	# Create publisher for RTCM correction data
-		self.RTCM_pub = self.create_publisher(RTCMcorr, 'ntrip/rtcm_data', 10)
-            	
-            	# Create service to set position on request
+    # Create service to set position on request
 		self.RTCMsrv = self.create_service(RTCMdata, 'RTCM_data', self.RTCM_srv_callback)
 
 
-	def updateConfig(self, msg):
+	def setConfig(self, msg):
+		self.ntrip_status = "Configuring"
+		self.sta_msg.ntrip_status = self.ntrip_status
+		self.Status_pub.publish(self.sta_msg)
+		
 		self.mountpoint = msg.mountpoint
 		if self.RTCMtimer != msg.rtcm_timer:
 			self.RTCMtimer = msg.rtcm_timer
-			self.timer = self.create_timer(self.RTCMtimer, self.RTCM_pub_callback)	
+			#self.timer = self.create_timer(self.RTCMtimer, self.RTCM_pub_callback)	
 		
 		if self.username != msg.username or self.password != msg.password:
 			self.username = msg.username
@@ -56,8 +69,12 @@ class ntripClient(Node):
 		if self.host != msg.host or self.port != msg.port:
 			self.port = msg.port
 			self.host = msg.host
+			print('JAHSKSALA')
 			if not self.connect():
 				RuntimeError("enable to connect to ntrip server")
+		self.ntrip_status = "Active"
+		self.sta_msg.ntrip_status = self.ntrip_status
+		self.Status_pub.publish(self.sta_msg)
 		self.get_logger().info("ntrip configuration updated")
 		
 		
@@ -87,6 +104,9 @@ class ntripClient(Node):
 
 	def connect(self):
 		print("connect")
+		self.ntrip_status = "Connecting RTCM"
+		self.sta_msg.ntrip_status = self.ntrip_status
+		self.Status_pub.publish(self.sta_msg)
 		if self.socket is not None:
 			return
 		self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -203,11 +223,15 @@ def main(args=None):
 
 	rclpy.init(args=args)
 	nc = ntripClient()
-	rclpy.spin_once(nc, timeout_sec=5)
-	if not nc.connect():
-		RuntimeError("enable to connect to ntrip server")
 	
-	rclpy.spin(nc)	
+	while True:
+		
+		# Waiting for connection and configuration data
+		while nc.ntrip_status == "Inactive":
+			rclpy.spin_once(nc, timeout_sec=5)
+		
+		while nc.ntrip_status == "Active":
+			rclpy.spin_once(nc, timeout_sec=0)
 	
 	nc.destroy_node()
 	rclpy.shutdown()

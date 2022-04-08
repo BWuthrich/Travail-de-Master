@@ -115,6 +115,9 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_gene
  rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/rtc_mcorr__type_support.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__functions.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__type_support.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__type_support.h

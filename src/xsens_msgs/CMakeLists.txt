@@ -30,6 +30,7 @@ set(msg_files
    "msg/RTCMcorr.msg"
    "msg/ConfigXsens.msg"
    "msg/ConfigNtrip.msg"
+   "msg/StaNT.msg"
    "srv/RTCMdata.srv"
 )
 
