@@ -14,6 +14,7 @@
 // Member `mountpoint`
 // Member `username`
 // Member `password`
+// Member `rtcm_port`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -43,6 +44,12 @@ xsens_msgs__msg__ConfigNtrip__init(xsens_msgs__msg__ConfigNtrip * msg)
     xsens_msgs__msg__ConfigNtrip__fini(msg);
     return false;
   }
+  // rtcm_port
+  if (!rosidl_runtime_c__String__init(&msg->rtcm_port)) {
+    xsens_msgs__msg__ConfigNtrip__fini(msg);
+    return false;
+  }
+  // rtcm_baudrate
   // rtcm_timer
   return true;
 }
@@ -62,6 +69,9 @@ xsens_msgs__msg__ConfigNtrip__fini(xsens_msgs__msg__ConfigNtrip * msg)
   rosidl_runtime_c__String__fini(&msg->username);
   // password
   rosidl_runtime_c__String__fini(&msg->password);
+  // rtcm_port
+  rosidl_runtime_c__String__fini(&msg->rtcm_port);
+  // rtcm_baudrate
   // rtcm_timer
 }
 

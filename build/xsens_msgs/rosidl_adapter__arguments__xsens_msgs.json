@@ -5,7 +5,6 @@
     "/app/dev_ws/src/xsens_msgs:msg/PosPA.msg",
     "/app/dev_ws/src/xsens_msgs:msg/PosPL.msg",
     "/app/dev_ws/src/xsens_msgs:msg/StaSW.msg",
-    "/app/dev_ws/src/xsens_msgs:msg/RTCMcorr.msg",
     "/app/dev_ws/src/xsens_msgs:msg/ConfigXsens.msg",
     "/app/dev_ws/src/xsens_msgs:msg/ConfigNtrip.msg",
     "/app/dev_ws/src/xsens_msgs:msg/StaNT.msg",

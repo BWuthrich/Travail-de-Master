@@ -11,7 +11,7 @@ from haversine import haversine, Unit
 from .utils.mtdevice import find_devices, find_baudrate, MTDevice, get_output_config
 from .utils.mtdef import SyncSetting
 
-from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, ConfigXsens, RTCMcorr
+from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, ConfigXsens
 from xsens_msgs.srv import RTCMdata
 
 class XSensDriver(Node):
@@ -50,13 +50,6 @@ class XSensDriver(Node):
 			10)
 		self.xsens_config_sub
 		
-		# Create RTCM correction subscriber
-		self.RTCM_sub = self.create_subscription(RTCMcorr,
-			'ntrip/rtcm_data',
-			self.updateRTCM,
-			10)
-		self.RTCM_sub
-		
 		# Create service client
 		self.RTCMcli = self.create_client(RTCMdata, 'RTCM_data')
 		while not self.RTCMcli.wait_for_service(timeout_sec=1.0):
@@ -65,40 +58,29 @@ class XSensDriver(Node):
 		
 		# Publish status "Inactive"
 		self.sta_sw_pub.publish(self.sta_sw_msg)
-	
+		
 	
 	def setConfig(self, msg):
 		
 		if self.portName != msg.port_name or self.baudrate != msg.baudrate:
 			self.portName = msg.port_name 
 			self.baudrate = msg.baudrate
-			self.xsens_status = "Connecting"
-			self.sta_sw_msg.xsens_status = self.xsens_status
-			self.sta_sw_pub.publish(self.sta_sw_msg)
+			self.publishStatus("Connecting")
 			self.connect()
 		if self.outputConfig != msg.output_config:
 			self.outputConfig = msg.output_config
 			self.baudrate = msg.baudrate
-			
-			self.xsens_status = "Configuring"
-			self.sta_sw_msg.xsens_status = self.xsens_status
-			self.sta_sw_pub.publish(self.sta_sw_msg)
+			self.publishStatus("Configuring")
 			self.configOutput()
 		if self.syncConfig != msg.sync_config:
 			self.syncConfig = msg.sync_config
-			self.baudrate = msg.baudrate
-			
-			self.xsens_status = "Configuring"
-			self.sta_sw_msg.xsens_status = self.xsens_status
-			self.sta_sw_pub.publish(self.sta_sw_msg)
+			self.baudrate = msg.baudrate	
+			self.publishStatus("Configuring")
 			self.configSync()
 		
 		self.rtcmRefreshDist = msg.rtcm_refresh_dist
-		print(msg)
-		self.xsens_status = "Active"
-		self.sta_sw_msg.xsens_status = self.xsens_status
-		self.sta_sw_pub.publish(self.sta_sw_msg)
-		self.get_logger().info('Xsens configuration updated')			
+		self.publishStatus("Active")
+		self.get_logger().info('Xsens configuration updated. Ready to Record.')			
 	
 		
 	def connect(self):
@@ -123,28 +105,36 @@ class XSensDriver(Node):
 		# normal connect
 		else:
 			self.get_logger().info("xsensClient - connect")
-			self.device = MTDevice(self.portName, self.baudrate)
+			timeout = 0.01
+			self.device = MTDevice(self.portName, self.baudrate, timeout, True, False)
 			
 				
 	def configOutput(self):
-		self.get_logger().info("xsensClient - config")
+		self.get_logger().info("xsensClient - output config")
 		output_config = get_output_config(self.outputConfig)
 		self.device.SetOutputConfiguration(output_config)
-		self.get_logger().info("xsensClient - config : System is Ok, Ready to Record.")
 
 
 	def configSync(self):
 		self.get_logger().info("xsensClient - syncSetting")
 		lst = self.syncConfig
+		print(self.syncConfig)
 		# clear list of sync settings (msg with polarity at 0)
 		self.device.SetSyncSettings([SyncSetting(3, 2, 0, 1, 0, 0, 0, 0)])
 		self.device.SetSyncSettings([SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7])])
+
+	
+	def publishStatus(self, status):
+		self.xsens_status = status
+		self.sta_sw_msg.xsens_status = self.xsens_status
+		self.sta_sw_pub.publish(self.sta_sw_msg)
 
 
 	def getOneMeasure(self):
 		data = None
 		try:
 		    if self.device:
+		        self.device.ReqData() # !!! Ajouté par KNM
 		        data = self.device.read_measurement()
 		except Exception as e:
 			self.get_logger().error(f"{e}")
@@ -234,32 +224,7 @@ class XSensDriver(Node):
 		# 10: RTK fixed
 		msg.rtk_status = decode[27:29][::-1]
 		# {SyncOut=}, {SyncIn=},
-		return msg	
-		
-	
-	def updateRTCM(self, msg):
-		rtcm_data_unflat = self.buildResponse(msg)
-		print('len RTCM: ' + str(len(rtcm_data_unflat)))
-		for d in rtcm_data_unflat:
-			#try:
-			print('forward')
-			self.device.ForwardGnssData(d)
-			#except Exception as e:
-			    	#driver.get_logger().error(f"{e}")
-			#break
-		self.get_logger().info('RTCM correction updated')
-
-	
-	def buildResponse(self, msg):
-		rtcm_data_unflat = []
-		id_i = 0
-		# Unflat bytes data recieved from ntrip_client
-		for i in range(len(msg.layout)):
-			id_f = id_i + msg.layout[i]
-			rtcm_data_unflat.append(bytes(msg.rtcm_data[id_i:id_f]))
-			id_i = id_f
-		return rtcm_data_unflat
-		
+		return msg		
 			
 
 def main(args=None):

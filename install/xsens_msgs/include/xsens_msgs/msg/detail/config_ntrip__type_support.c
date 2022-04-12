@@ -17,6 +17,7 @@
 // Member `mountpoint`
 // Member `username`
 // Member `password`
+// Member `rtcm_port`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -38,7 +39,7 @@ void ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_fini_function(
   xsens_msgs__msg__ConfigNtrip__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_message_member_array[8] = {
   {
     "host",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -115,6 +116,36 @@ static rosidl_typesupport_introspection_c__MessageMember ConfigNtrip__rosidl_typ
     NULL  // resize(index) function pointer
   },
   {
+    "rtcm_port",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__ConfigNtrip, rtcm_port),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "rtcm_baudrate",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__ConfigNtrip, rtcm_baudrate),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "rtcm_timer",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
@@ -134,7 +165,7 @@ static rosidl_typesupport_introspection_c__MessageMember ConfigNtrip__rosidl_typ
 static const rosidl_typesupport_introspection_c__MessageMembers ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_message_members = {
   "xsens_msgs__msg",  // message namespace
   "ConfigNtrip",  // message name
-  6,  // number of fields
+  8,  // number of fields
   sizeof(xsens_msgs__msg__ConfigNtrip),
   ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_message_member_array,  // message members
   ConfigNtrip__rosidl_typesupport_introspection_c__ConfigNtrip_init_function,  // function to initialize message memory (memory has to be allocated)

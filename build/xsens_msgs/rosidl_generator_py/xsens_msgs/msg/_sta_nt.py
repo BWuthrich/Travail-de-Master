@@ -54,13 +54,16 @@ class StaNT(metaclass=Metaclass_StaNT):
 
     __slots__ = [
         '_ntrip_status',
+        '_rtcm_status',
     ]
 
     _fields_and_field_types = {
         'ntrip_status': 'string',
+        'rtcm_status': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
@@ -69,6 +72,7 @@ class StaNT(metaclass=Metaclass_StaNT):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.ntrip_status = kwargs.get('ntrip_status', str())
+        self.rtcm_status = kwargs.get('rtcm_status', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,6 +105,8 @@ class StaNT(metaclass=Metaclass_StaNT):
             return False
         if self.ntrip_status != other.ntrip_status:
             return False
+        if self.rtcm_status != other.rtcm_status:
+            return False
         return True
 
     @classmethod
@@ -120,3 +126,16 @@ class StaNT(metaclass=Metaclass_StaNT):
                 isinstance(value, str), \
                 "The 'ntrip_status' field must be of type 'str'"
         self._ntrip_status = value
+
+    @property
+    def rtcm_status(self):
+        """Message field 'rtcm_status'."""
+        return self._rtcm_status
+
+    @rtcm_status.setter
+    def rtcm_status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'rtcm_status' field must be of type 'str'"
+        self._rtcm_status = value

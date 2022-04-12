@@ -34,6 +34,8 @@ cdr_serialize(
 {
   // Member: ntrip_status
   cdr << ros_message.ntrip_status;
+  // Member: rtcm_status
+  cdr << ros_message.rtcm_status;
   return true;
 }
 
@@ -45,6 +47,9 @@ cdr_deserialize(
 {
   // Member: ntrip_status
   cdr >> ros_message.ntrip_status;
+
+  // Member: rtcm_status
+  cdr >> ros_message.rtcm_status;
 
   return true;
 }
@@ -66,6 +71,10 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.ntrip_status.size() + 1);
+  // Member: rtcm_status
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.rtcm_status.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -86,6 +95,18 @@ max_serialized_size_StaNT(
 
 
   // Member: ntrip_status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: rtcm_status
   {
     size_t array_size = 1;
 

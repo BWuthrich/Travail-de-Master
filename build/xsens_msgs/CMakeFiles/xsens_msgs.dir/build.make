@@ -57,7 +57,6 @@ CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/OriOE.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/PosPA.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/PosPL.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaSW.msg
-CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/RTCMcorr.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/ConfigXsens.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/ConfigNtrip.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaNT.msg

@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_StaNT_rtcm_status
+{
+public:
+  explicit Init_StaNT_rtcm_status(::xsens_msgs::msg::StaNT & msg)
+  : msg_(msg)
+  {}
+  ::xsens_msgs::msg::StaNT rtcm_status(::xsens_msgs::msg::StaNT::_rtcm_status_type arg)
+  {
+    msg_.rtcm_status = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::StaNT msg_;
+};
+
 class Init_StaNT_ntrip_status
 {
 public:
   Init_StaNT_ntrip_status()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::xsens_msgs::msg::StaNT ntrip_status(::xsens_msgs::msg::StaNT::_ntrip_status_type arg)
+  Init_StaNT_rtcm_status ntrip_status(::xsens_msgs::msg::StaNT::_ntrip_status_type arg)
   {
     msg_.ntrip_status = std::move(arg);
-    return std::move(msg_);
+    return Init_StaNT_rtcm_status(msg_);
   }
 
 private:

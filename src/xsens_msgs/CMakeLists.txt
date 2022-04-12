@@ -27,7 +27,6 @@ set(msg_files
    "msg/PosPA.msg"
    "msg/PosPL.msg"
    "msg/StaSW.msg"
-   "msg/RTCMcorr.msg"
    "msg/ConfigXsens.msg"
    "msg/ConfigNtrip.msg"
    "msg/StaNT.msg"

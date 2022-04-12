@@ -42,6 +42,10 @@ cdr_serialize(
   cdr << ros_message.username;
   // Member: password
   cdr << ros_message.password;
+  // Member: rtcm_port
+  cdr << ros_message.rtcm_port;
+  // Member: rtcm_baudrate
+  cdr << ros_message.rtcm_baudrate;
   // Member: rtcm_timer
   cdr << ros_message.rtcm_timer;
   return true;
@@ -67,6 +71,12 @@ cdr_deserialize(
 
   // Member: password
   cdr >> ros_message.password;
+
+  // Member: rtcm_port
+  cdr >> ros_message.rtcm_port;
+
+  // Member: rtcm_baudrate
+  cdr >> ros_message.rtcm_baudrate;
 
   // Member: rtcm_timer
   cdr >> ros_message.rtcm_timer;
@@ -109,6 +119,16 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.password.size() + 1);
+  // Member: rtcm_port
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.rtcm_port.size() + 1);
+  // Member: rtcm_baudrate
+  {
+    size_t item_size = sizeof(ros_message.rtcm_baudrate);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: rtcm_timer
   {
     size_t item_size = sizeof(ros_message.rtcm_timer);
@@ -188,6 +208,26 @@ max_serialized_size_ConfigNtrip(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
+  }
+
+  // Member: rtcm_port
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: rtcm_baudrate
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: rtcm_timer

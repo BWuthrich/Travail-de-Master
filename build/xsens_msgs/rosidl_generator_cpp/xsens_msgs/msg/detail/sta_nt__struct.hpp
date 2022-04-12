@@ -38,16 +38,19 @@ struct StaNT_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ntrip_status = "";
+      this->rtcm_status = "";
     }
   }
 
   explicit StaNT_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : ntrip_status(_alloc)
+  : ntrip_status(_alloc),
+    rtcm_status(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ntrip_status = "";
+      this->rtcm_status = "";
     }
   }
 
@@ -55,12 +58,21 @@ struct StaNT_
   using _ntrip_status_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
   _ntrip_status_type ntrip_status;
+  using _rtcm_status_type =
+    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+  _rtcm_status_type rtcm_status;
 
   // setters for named parameter idiom
   Type & set__ntrip_status(
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
     this->ntrip_status = _arg;
+    return *this;
+  }
+  Type & set__rtcm_status(
+    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+  {
+    this->rtcm_status = _arg;
     return *this;
   }
 
@@ -107,6 +119,9 @@ struct StaNT_
   bool operator==(const StaNT_ & other) const
   {
     if (this->ntrip_status != other.ntrip_status) {
+      return false;
+    }
+    if (this->rtcm_status != other.rtcm_status) {
       return false;
     }
     return true;

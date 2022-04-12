@@ -1,0 +1,85 @@
+[0.000000] (-) TimerEvent: {}
+[0.001651] (-) JobUnselected: {'identifier': 'central'}
+[0.002553] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.003421] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.004664] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.004993] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.005160] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.005310] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.005424] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.005536] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.005650] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.005763] (ntrip_client) JobQueued: {'identifier': 'ntrip_client', 'dependencies': OrderedDict()}
+[0.005874] (ntrip_client) JobStarted: {'identifier': 'ntrip_client'}
+[0.100185] (-) TimerEvent: {}
+[0.201887] (-) TimerEvent: {}
+[0.303126] (-) TimerEvent: {}
+[0.403888] (-) TimerEvent: {}
+[0.504563] (-) TimerEvent: {}
+[0.605271] (-) TimerEvent: {}
+[0.705953] (-) TimerEvent: {}
+[0.806699] (-) TimerEvent: {}
+[0.907376] (-) TimerEvent: {}
+[1.008124] (-) TimerEvent: {}
+[1.108864] (-) TimerEvent: {}
+[1.209645] (-) TimerEvent: {}
+[1.310850] (-) TimerEvent: {}
+[1.412503] (-) TimerEvent: {}
+[1.513517] (-) TimerEvent: {}
+[1.614302] (-) TimerEvent: {}
+[1.715130] (-) TimerEvent: {}
+[1.816818] (-) TimerEvent: {}
+[1.918082] (-) TimerEvent: {}
+[2.018821] (-) TimerEvent: {}
+[2.119589] (-) TimerEvent: {}
+[2.220270] (-) TimerEvent: {}
+[2.320958] (-) TimerEvent: {}
+[2.421626] (-) TimerEvent: {}
+[2.522314] (-) TimerEvent: {}
+[2.622974] (-) TimerEvent: {}
+[2.723772] (-) TimerEvent: {}
+[2.824506] (-) TimerEvent: {}
+[2.925161] (-) TimerEvent: {}
+[3.026009] (-) TimerEvent: {}
+[3.112307] (ntrip_client) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/ntrip_client', 'build', '--build-base', '/app/dev_ws/build/ntrip_client/build', 'install', '--prefix', '/app/dev_ws/install/ntrip_client', '--record', '/app/dev_ws/build/ntrip_client/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/ntrip_client', 'env': {'HOSTNAME': '821c4583c330', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/app/dev_ws/webUI', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/ntrip_client', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs'}, 'shell': False}
+[3.129293] (-) TimerEvent: {}
+[3.231805] (-) TimerEvent: {}
+[3.332517] (-) TimerEvent: {}
+[3.433236] (-) TimerEvent: {}
+[3.534587] (-) TimerEvent: {}
+[3.635325] (-) TimerEvent: {}
+[3.736031] (-) TimerEvent: {}
+[3.836696] (-) TimerEvent: {}
+[3.937357] (-) TimerEvent: {}
+[4.038048] (-) TimerEvent: {}
+[4.138784] (-) TimerEvent: {}
+[4.146430] (ntrip_client) StdoutLine: {'line': b'running egg_info\n'}
+[4.148950] (ntrip_client) StdoutLine: {'line': b'writing ../../build/ntrip_client/ntrip_client.egg-info/PKG-INFO\n'}
+[4.151303] (ntrip_client) StdoutLine: {'line': b'writing dependency_links to ../../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt\n'}
+[4.152499] (ntrip_client) StdoutLine: {'line': b'writing entry points to ../../build/ntrip_client/ntrip_client.egg-info/entry_points.txt\n'}
+[4.153425] (ntrip_client) StdoutLine: {'line': b'writing requirements to ../../build/ntrip_client/ntrip_client.egg-info/requires.txt\n'}
+[4.154202] (ntrip_client) StdoutLine: {'line': b'writing top-level names to ../../build/ntrip_client/ntrip_client.egg-info/top_level.txt\n'}
+[4.238947] (-) TimerEvent: {}
+[4.323064] (ntrip_client) StdoutLine: {'line': b"reading manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'\n"}
+[4.328160] (ntrip_client) StdoutLine: {'line': b"writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'\n"}
+[4.328832] (ntrip_client) StdoutLine: {'line': b'running build\n'}
+[4.329367] (ntrip_client) StdoutLine: {'line': b'running build_py\n'}
+[4.333147] (ntrip_client) StdoutLine: {'line': b'copying ntrip_client/ntrip_pub.py -> /app/dev_ws/build/ntrip_client/build/lib/ntrip_client\n'}
+[4.334482] (ntrip_client) StdoutLine: {'line': b'running install\n'}
+[4.338291] (ntrip_client) StdoutLine: {'line': b'running install_lib\n'}
+[4.338958] (-) TimerEvent: {}
+[4.344796] (ntrip_client) StdoutLine: {'line': b'copying /app/dev_ws/build/ntrip_client/build/lib/ntrip_client/ntrip_pub.py -> /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client\n'}
+[4.349000] (ntrip_client) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client/ntrip_pub.py to ntrip_pub.cpython-38.pyc\n'}
+[4.359954] (ntrip_client) StdoutLine: {'line': b'running install_data\n'}
+[4.362429] (ntrip_client) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.370041] (ntrip_client) StdoutLine: {'line': b"removing '/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.372067] (ntrip_client) StdoutLine: {'line': b'Copying ../../build/ntrip_client/ntrip_client.egg-info to /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info\n'}
+[4.379319] (ntrip_client) StdoutLine: {'line': b'running install_scripts\n'}
+[4.439124] (-) TimerEvent: {}
+[4.457063] (ntrip_client) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/ntrip_client/lib/ntrip_client\n'}
+[4.459766] (ntrip_client) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/ntrip_client/install.log'\n"}
+[4.539388] (-) TimerEvent: {}
+[4.559313] (ntrip_client) CommandEnded: {'returncode': 0}
+[4.644675] (-) TimerEvent: {}
+[4.649089] (ntrip_client) JobEnded: {'identifier': 'ntrip_client', 'rc': 0}
+[4.652480] (-) EventReactorShutdown: {}

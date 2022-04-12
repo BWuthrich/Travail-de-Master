@@ -122,6 +122,30 @@ bool xsens_msgs__msg__config_ntrip__convert_from_py(PyObject * _pymsg, void * _r
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // rtcm_port
+    PyObject * field = PyObject_GetAttrString(_pymsg, "rtcm_port");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->rtcm_port, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // rtcm_baudrate
+    PyObject * field = PyObject_GetAttrString(_pymsg, "rtcm_baudrate");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->rtcm_baudrate = PyLong_AsUnsignedLongLong(field);
+    Py_DECREF(field);
+  }
   {  // rtcm_timer
     PyObject * field = PyObject_GetAttrString(_pymsg, "rtcm_timer");
     if (!field) {
@@ -226,6 +250,34 @@ PyObject * xsens_msgs__msg__config_ntrip__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "password", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // rtcm_port
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->rtcm_port.data,
+      strlen(ros_message->rtcm_port.data),
+      "strict");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "rtcm_port", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // rtcm_baudrate
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLongLong(ros_message->rtcm_baudrate);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "rtcm_baudrate", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

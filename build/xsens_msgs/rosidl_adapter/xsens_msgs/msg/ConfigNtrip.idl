@@ -16,6 +16,10 @@ module xsens_msgs {
 
       string password;
 
+      string rtcm_port;
+
+      uint64 rtcm_baudrate;
+
       float rtcm_timer;
     };
   };

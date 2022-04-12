@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // ntrip_status
-#include "rosidl_runtime_c/string_functions.h"  // ntrip_status
+#include "rosidl_runtime_c/string.h"  // ntrip_status, rtcm_status
+#include "rosidl_runtime_c/string_functions.h"  // ntrip_status, rtcm_status
 
 // forward declare type support functions
 
@@ -54,6 +54,20 @@ static bool _StaNT__cdr_serialize(
   // Field name: ntrip_status
   {
     const rosidl_runtime_c__String * str = &ros_message->ntrip_status;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: rtcm_status
+  {
+    const rosidl_runtime_c__String * str = &ros_message->rtcm_status;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -93,6 +107,22 @@ static bool _StaNT__cdr_deserialize(
     }
   }
 
+  // Field name: rtcm_status
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->rtcm_status.data) {
+      rosidl_runtime_c__String__init(&ros_message->rtcm_status);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->rtcm_status,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'rtcm_status'\n");
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -114,6 +144,10 @@ size_t get_serialized_size_xsens_msgs__msg__StaNT(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->ntrip_status.size + 1);
+  // field.name rtcm_status
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->rtcm_status.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -139,6 +173,17 @@ size_t max_serialized_size_xsens_msgs__msg__StaNT(
   (void)full_bounded;
 
   // member: ntrip_status
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: rtcm_status
   {
     size_t array_size = 1;
 

@@ -11,6 +11,7 @@
 
 // Include directives for member types
 // Member `ntrip_status`
+// Member `rtcm_status`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -21,6 +22,11 @@ xsens_msgs__msg__StaNT__init(xsens_msgs__msg__StaNT * msg)
   }
   // ntrip_status
   if (!rosidl_runtime_c__String__init(&msg->ntrip_status)) {
+    xsens_msgs__msg__StaNT__fini(msg);
+    return false;
+  }
+  // rtcm_status
+  if (!rosidl_runtime_c__String__init(&msg->rtcm_status)) {
     xsens_msgs__msg__StaNT__fini(msg);
     return false;
   }
@@ -35,6 +41,8 @@ xsens_msgs__msg__StaNT__fini(xsens_msgs__msg__StaNT * msg)
   }
   // ntrip_status
   rosidl_runtime_c__String__fini(&msg->ntrip_status);
+  // rtcm_status
+  rosidl_runtime_c__String__fini(&msg->rtcm_status);
 }
 
 xsens_msgs__msg__StaNT *

@@ -42,6 +42,8 @@ struct ConfigNtrip_
       this->mountpoint = "";
       this->username = "";
       this->password = "";
+      this->rtcm_port = "";
+      this->rtcm_baudrate = 0ull;
       this->rtcm_timer = 0.0f;
     }
   }
@@ -50,7 +52,8 @@ struct ConfigNtrip_
   : host(_alloc),
     mountpoint(_alloc),
     username(_alloc),
-    password(_alloc)
+    password(_alloc),
+    rtcm_port(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -60,6 +63,8 @@ struct ConfigNtrip_
       this->mountpoint = "";
       this->username = "";
       this->password = "";
+      this->rtcm_port = "";
+      this->rtcm_baudrate = 0ull;
       this->rtcm_timer = 0.0f;
     }
   }
@@ -80,6 +85,12 @@ struct ConfigNtrip_
   using _password_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
   _password_type password;
+  using _rtcm_port_type =
+    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+  _rtcm_port_type rtcm_port;
+  using _rtcm_baudrate_type =
+    uint64_t;
+  _rtcm_baudrate_type rtcm_baudrate;
   using _rtcm_timer_type =
     float;
   _rtcm_timer_type rtcm_timer;
@@ -113,6 +124,18 @@ struct ConfigNtrip_
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
     this->password = _arg;
+    return *this;
+  }
+  Type & set__rtcm_port(
+    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+  {
+    this->rtcm_port = _arg;
+    return *this;
+  }
+  Type & set__rtcm_baudrate(
+    const uint64_t & _arg)
+  {
+    this->rtcm_baudrate = _arg;
     return *this;
   }
   Type & set__rtcm_timer(
@@ -177,6 +200,12 @@ struct ConfigNtrip_
       return false;
     }
     if (this->password != other.password) {
+      return false;
+    }
+    if (this->rtcm_port != other.rtcm_port) {
+      return false;
+    }
+    if (this->rtcm_baudrate != other.rtcm_baudrate) {
       return false;
     }
     if (this->rtcm_timer != other.rtcm_timer) {

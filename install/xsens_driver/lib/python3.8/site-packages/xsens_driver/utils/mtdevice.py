@@ -48,7 +48,6 @@ class MTDevice(object):
     def write_msg(self, mid, data=b''):
         """Low-level message sending function."""
         length = len(data)
-        print('mtdevice: write')
         if length > 254:
             lendat = b'\xFF' + struct.pack('!H', length)
         else:
@@ -384,6 +383,18 @@ class MTDevice(object):
         self._ensure_config_state()
         data = struct.pack('!ddd', lat, lon, alt)
         self.write_ack(MID.SetLatLonAlt, data)
+
+    def SetGnssLeverArm(self, leverArmXYZ): # !!! Ajouté par KNM
+        """Set the values of the lever arm."""
+        laX, laY, laZ = leverArmXYZ
+        self._ensure_config_state()
+        data = struct.pack('!fff', laX, laY, laZ)
+        self.write_ack(MID.SetGnssLeverArm, data)
+                
+    def ReqData(self): # !!! Ajouté par KNM
+        """Requests device to send MTData2"""
+        self._ensure_measurement_state()
+        self.write_msg(MID.ReqData) # no ack mentioned in the doc
 
     def GetAvailableScenarios(self):
         """Get the available XKF scenarios on the device."""
@@ -1101,9 +1112,11 @@ def main():
             # if (mode is None) or (settings is None):
             #     mode, settings, length = mt.auto_config()
             #     print mode, settings, length
+            counter = 0
             try:
-                while True:
+                while counter<100:
                     print(mt.read_measurement(mode, settings))
+                    counter +=1
             except KeyboardInterrupt:
                 pass
     except MTErrorMessage as e:

@@ -36,16 +36,48 @@ private:
   ::xsens_msgs::msg::ConfigNtrip msg_;
 };
 
+class Init_ConfigNtrip_rtcm_baudrate
+{
+public:
+  explicit Init_ConfigNtrip_rtcm_baudrate(::xsens_msgs::msg::ConfigNtrip & msg)
+  : msg_(msg)
+  {}
+  Init_ConfigNtrip_rtcm_timer rtcm_baudrate(::xsens_msgs::msg::ConfigNtrip::_rtcm_baudrate_type arg)
+  {
+    msg_.rtcm_baudrate = std::move(arg);
+    return Init_ConfigNtrip_rtcm_timer(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::ConfigNtrip msg_;
+};
+
+class Init_ConfigNtrip_rtcm_port
+{
+public:
+  explicit Init_ConfigNtrip_rtcm_port(::xsens_msgs::msg::ConfigNtrip & msg)
+  : msg_(msg)
+  {}
+  Init_ConfigNtrip_rtcm_baudrate rtcm_port(::xsens_msgs::msg::ConfigNtrip::_rtcm_port_type arg)
+  {
+    msg_.rtcm_port = std::move(arg);
+    return Init_ConfigNtrip_rtcm_baudrate(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::ConfigNtrip msg_;
+};
+
 class Init_ConfigNtrip_password
 {
 public:
   explicit Init_ConfigNtrip_password(::xsens_msgs::msg::ConfigNtrip & msg)
   : msg_(msg)
   {}
-  Init_ConfigNtrip_rtcm_timer password(::xsens_msgs::msg::ConfigNtrip::_password_type arg)
+  Init_ConfigNtrip_rtcm_port password(::xsens_msgs::msg::ConfigNtrip::_password_type arg)
   {
     msg_.password = std::move(arg);
-    return Init_ConfigNtrip_rtcm_timer(msg_);
+    return Init_ConfigNtrip_rtcm_port(msg_);
   }
 
 private:

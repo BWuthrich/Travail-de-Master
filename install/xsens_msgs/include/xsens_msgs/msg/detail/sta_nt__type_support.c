@@ -14,6 +14,7 @@
 
 // Include directives for member types
 // Member `ntrip_status`
+// Member `rtcm_status`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -35,7 +36,7 @@ void StaNT__rosidl_typesupport_introspection_c__StaNT_fini_function(void * messa
   xsens_msgs__msg__StaNT__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember StaNT__rosidl_typesupport_introspection_c__StaNT_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember StaNT__rosidl_typesupport_introspection_c__StaNT_message_member_array[2] = {
   {
     "ntrip_status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -50,13 +51,28 @@ static rosidl_typesupport_introspection_c__MessageMember StaNT__rosidl_typesuppo
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "rtcm_status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__StaNT, rtcm_status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers StaNT__rosidl_typesupport_introspection_c__StaNT_message_members = {
   "xsens_msgs__msg",  // message namespace
   "StaNT",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(xsens_msgs__msg__StaNT),
   StaNT__rosidl_typesupport_introspection_c__StaNT_message_member_array,  // message members
   StaNT__rosidl_typesupport_introspection_c__StaNT_init_function,  // function to initialize message memory (memory has to be allocated)

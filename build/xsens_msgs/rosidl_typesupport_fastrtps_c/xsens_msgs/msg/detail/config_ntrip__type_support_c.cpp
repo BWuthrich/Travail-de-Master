@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // host, mountpoint, password, username
-#include "rosidl_runtime_c/string_functions.h"  // host, mountpoint, password, username
+#include "rosidl_runtime_c/string.h"  // host, mountpoint, password, rtcm_port, username
+#include "rosidl_runtime_c/string_functions.h"  // host, mountpoint, password, rtcm_port, username
 
 // forward declare type support functions
 
@@ -110,6 +110,25 @@ static bool _ConfigNtrip__cdr_serialize(
       return false;
     }
     cdr << str->data;
+  }
+
+  // Field name: rtcm_port
+  {
+    const rosidl_runtime_c__String * str = &ros_message->rtcm_port;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: rtcm_baudrate
+  {
+    cdr << ros_message->rtcm_baudrate;
   }
 
   // Field name: rtcm_timer
@@ -198,6 +217,27 @@ static bool _ConfigNtrip__cdr_deserialize(
     }
   }
 
+  // Field name: rtcm_port
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->rtcm_port.data) {
+      rosidl_runtime_c__String__init(&ros_message->rtcm_port);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->rtcm_port,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'rtcm_port'\n");
+      return false;
+    }
+  }
+
+  // Field name: rtcm_baudrate
+  {
+    cdr >> ros_message->rtcm_baudrate;
+  }
+
   // Field name: rtcm_timer
   {
     cdr >> ros_message->rtcm_timer;
@@ -242,6 +282,16 @@ size_t get_serialized_size_xsens_msgs__msg__ConfigNtrip(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->password.size + 1);
+  // field.name rtcm_port
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->rtcm_port.size + 1);
+  // field.name rtcm_baudrate
+  {
+    size_t item_size = sizeof(ros_message->rtcm_baudrate);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name rtcm_timer
   {
     size_t item_size = sizeof(ros_message->rtcm_timer);
@@ -322,6 +372,24 @@ size_t max_serialized_size_xsens_msgs__msg__ConfigNtrip(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
+  }
+  // member: rtcm_port
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: rtcm_baudrate
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: rtcm_timer
   {

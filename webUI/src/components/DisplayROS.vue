@@ -64,14 +64,21 @@ export default {
       AngWH_prec: "Fp1632 - b",
       AngWR_prec: "Fp1632 - b",
       
-      boolshit: false,
-      
       // Xsens Status
       XsensStatus: "Deconnected",
       GnssFix: "0",
+      RTKFix: "00",
+      
+      // Xsens data
+      OriOE: {
+      	"roll": 0,
+      	"pitch": 0,
+      	"yaw": 0
+      },
       
       // Ntrip Status
       NtripStatus: "Deconnected",
+      RTCMStatus: "Deconnected",
       
       // Ntrip Config
       NtripPort: 5001,
@@ -79,16 +86,32 @@ export default {
       NtripMount: "M_04",
       NtripUser: "Ecole01",
       NtripPassword: "365heig",
-			NtripTime: 3,
+			NtripTime: 1,
     	NtripDist: 5,
+    	RTCMPortName: "/dev/ttyUSB0",
+    	RTCMBaudrate: 38400,
     	
+    	GnssFixLabel: "No GNSS",
+    	RTKLabel: "No RTK",
     	status_style:{
     		"Inactive": "badge bg-secondary",
     		"Deconnected": "badge bg-dark",
     		"Active": "badge bg-success",
+    		"Connected": "badge bg-success",
     		"Connecting": "badge bg-warning text-dark",
     		"Configuring": "badge bg-warning text-dark",
-    		"Connecting RTCM": "badge bg-warning text-dark"
+    		"Connecting RTCM": "badge bg-warning text-dark",
+    		"Error": "badge bg-danger"
+    	},
+    	gnss_style:{
+    	"0": "badge bg-danger",
+    	"1": "badge bg-success",
+    	},
+    	
+    	rtk_style:{
+    	"00": "badge bg-danger",
+    	"01": "badge bg-warning text-dark",
+    	"10": "badge bg-success",
     	}
     }
   },
@@ -141,7 +164,24 @@ export default {
 			this.xsens_status_sub.subscribe(message => {
 				this.XsensStatus = message.xsens_status
 				this.GnssFix = message.gnss_fix
-				console.log("Xsens:" +this.XsensStatus)			
+				if(this.GnssFix=='1'){this.GnssFixLabel = "GNSS OK"}
+				else{this.GnssFixLabel = "No GNSS"}		
+				this.RTKFix = message.rtk_status
+				if(this.RTKFix=='00'){this.RTKLabel = "No RTK"}
+				else if(this.RTKFix=='01'){this.RTKLabel = "RTK Floating"}
+				else{this.RTKLabel = "RTK Fixed"}
+			})
+		},
+		
+		// set Xsens orientation Euler subscriber
+		setXsensOriOESubscriber: function(){
+		  this.xsens_OriOE_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'mti/orientation_Euler',
+		    messageType : 'xsens_msgs/OriOE'
+		  })
+			this.xsens_OriOE_sub.subscribe(message => {
+				this.OriOE = message
 			})
 		},
 		
@@ -154,7 +194,7 @@ export default {
 		  })
 			this.ntrip_status_sub.subscribe(message => {
 				this.NtripStatus = message.ntrip_status
-				console.log("Ntrip:" +this.NtripStatus)		
+				this.RTCMStatus = message.rtcm_status	
 			})
 		},
 
@@ -183,8 +223,9 @@ export default {
 				username : this.NtripUser,
 				password : this.NtripPassword,
 				rtcm_timer : this.NtripTime,
+				rtcm_port : this.RTCMPortName,
+    		rtcm_baudrate : this.RTCMBaudrate,
 			});
-			console.log(this.ntrip_config_msg)
 			this.ntrip_config_pub.publish(this.ntrip_config_msg)
     },
 		
@@ -246,6 +287,61 @@ export default {
       this.syncFromXsens = true
   	},
   	
+  	plotOriOE: function(){
+  		
+  		var roll = {
+				y: [this.OriOE.roll],
+				mode: 'lines',
+				name: 'roll',
+				line: {
+					color: 'rgb(0, 204, 0)',
+					width: 3
+				}
+			};
+  		var pitch = {
+				y: [this.OriOE.pitch],
+				mode: 'lines',
+				name: 'pitch',
+				line: {
+					color: 'rgb(0, 128, 255)',
+					width: 3
+				}
+			};	
+  		var yaw = {
+				y: [this.OriOE.yaw],
+				mode: 'lines',
+				name: 'yaw',
+				line: {
+					color: 'rgb(255, 51, 51)',
+					width: 3
+				}
+			};
+			var layout = {
+				title:{text:'Orientation Euler', xref: 'paper', x :0.01},
+				xaxis: {title: {text: 'Data packages'}},
+				yaxis: {title: {text: 'Orientation [deg]'}},
+				}
+			
+			var data = [roll, pitch, yaw];
+
+  		Plotly.plot('plot1', data, layout);
+  	},
+  	
+  	StartPlotOriOE: function(){	  		
+			var cnt = 0;
+			setInterval(()=>{
+				Plotly.extendTraces('plot1',{y:[[this.OriOE.roll],[this.OriOE.pitch],[this.OriOE.yaw]]}, [0,1,2]);
+				cnt++;
+				if(cnt > 200) {
+					Plotly.relayout('plot1',{
+						xaxis: {
+							range: [cnt-200,cnt]
+						}
+					});
+				}
+			},100);
+  	},
+  	
   	configTrigPerso: function() {
   		this.syncPerso = true
   		this.syncFromXsens = false
@@ -257,6 +353,8 @@ export default {
       this.connect();
       this.setXsensStatusSubscriber();
 			this.setNtripStatusSubscriber();
+			this.setXsensOriOESubscriber();
+			this.plotOriOE();
     } catch (error) {
       console.error(error);
     }
@@ -267,13 +365,35 @@ export default {
 <template>
 <nav class="navbar fixed-top navbar-light" style="background-color: #e3e3e3;">
   <div class="container-fluid">
-		<h5><span v-bind:class="status_style[XsensStatus]">Xsens {{this.XsensStatus}}</span></h5>
-		<h5><span v-bind:class="status_style[NtripStatus]">ntrip {{this.NtripStatus}}</span></h5>
-		<h5><span class="badge bg-danger" v-if="GnssFix=='0'">No GNSS</span></h5>
-		<h5><span class="badge bg-success" v-if="GnssFix=='1'">GNSS OK</span></h5>
+		<div class="row">
+		  <div class="col">
+		    <h5><span v-bind:class="status_style[XsensStatus]">Xsens {{this.XsensStatus}}</span></h5>
+		  </div>
+		  <div class="col">
+		    <h5><span v-bind:class="status_style[NtripStatus]">ntrip {{this.NtripStatus}}</span></h5>
+		  </div>
+		  <div class="col">
+		    <h5><span v-bind:class="status_style[RTCMStatus]">RTCM {{this.RTCMStatus}}</span></h5>
+		  </div>
+		  <div class="col">
+		    <h5><span v-bind:class="gnss_style[GnssFix]">{{GnssFixLabel}}</span></h5>
+		  </div>
+		  <div class="col">
+		    <h5><span v-bind:class="rtk_style[RTKFix]">{{RTKLabel}}</span></h5>
+		  </div>
+  	</div>
   </div>
 </nav>
-  
+
+
+<h1 class="display-6">Measurments</h1>
+<p></p>
+<button class="btn btn-primary" type="button" @click="StartPlotOriOE">Start Plot</button>
+<div ref="plot1" id="plot1"></div>
+
+
+<h1 class="display-6">Configuration</h1>
+<p></p>
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -287,7 +407,7 @@ export default {
       <table class="table table-sm table-borderless">
 		    	<thead>
 						<tr class="table-secondary">
-							<th scope="col" colspan="3">CONNECTION</th>
+							<th scope="col" colspan="3">CONNECTION SERVEUR NTRIP</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -316,9 +436,17 @@ export default {
 							</td>
 						</tr>
 						<tr>
-							<th class="table-secondary" colspan="3">PARAMETER</th>
+							<th class="table-secondary" colspan="3">RTCM PARAMETER</th>
 						</tr>
 						<tr>
+							<td>
+								<label class="form-label">Port</label>
+								<input class="form-control form-control-sm" type="text" v-model="RTCMPortName">
+							</td>
+							<td>
+								<label class="form-label">Baudrate</label>
+								<input class="form-control form-control-sm" type="text" v-model="RTCMBaudrate">
+							</td>
 							<td>
 								<label class="form-label">RTCM refresh rate [s]</label>
 								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="NtripTime">
@@ -387,7 +515,12 @@ export default {
 									<label class="form-check-label" for="flexRadioDefault2">
 										Trigger form Xsens - Default config
 									</label>
-									<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="syncXsensFreq" placeholder="trigger frequency [hz]" :disabled="!syncFromXsens">
+									<div class="input-group input-group-sm mb-3" style="width: 7em">
+										<input type="number" class="form-control"  v-model="syncXsensFreq" :disabled="!syncFromXsens">
+										<div class="input-group-append">
+											<span class="input-group-text" id="inputGroup-sizing-sm"> hz </span>
+										</div>
+									</div>
 								</div>
 							</td>
 							<td>
@@ -699,9 +832,9 @@ export default {
 </div>
 <p></p>
 	<div class="d-grid gap-2 col-4 mx-auto">
-		<button class="btn btn-primary" type="button" @click="publishNtripConfig" v-if="XsensStatus!=='Configuring' && XsensStatus!=='Connecting'">Change Ntrip Configuration</button>
-		<button class="btn btn-primary" type="button" @click="publishXsensConfig" v-if="NtripStatus=='Active'">Change Xsens Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishNtripConfig" :disabled="XsensStatus=='Configuring' && XsensStatus=='Connecting'">Load Ntrip Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishXsensConfig" :disabled="NtripStatus!=='Connected' && RTCMStatus!=='Connected'">Load Xsens Configuration</button>
 	</div>
-</template>
+</template> 
 
 

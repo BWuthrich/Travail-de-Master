@@ -58,6 +58,8 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
         '_mountpoint',
         '_username',
         '_password',
+        '_rtcm_port',
+        '_rtcm_baudrate',
         '_rtcm_timer',
     ]
 
@@ -67,6 +69,8 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
         'mountpoint': 'string',
         'username': 'string',
         'password': 'string',
+        'rtcm_port': 'string',
+        'rtcm_baudrate': 'uint64',
         'rtcm_timer': 'float',
     }
 
@@ -76,6 +80,8 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
@@ -88,6 +94,8 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
         self.mountpoint = kwargs.get('mountpoint', str())
         self.username = kwargs.get('username', str())
         self.password = kwargs.get('password', str())
+        self.rtcm_port = kwargs.get('rtcm_port', str())
+        self.rtcm_baudrate = kwargs.get('rtcm_baudrate', int())
         self.rtcm_timer = kwargs.get('rtcm_timer', float())
 
     def __repr__(self):
@@ -128,6 +136,10 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
         if self.username != other.username:
             return False
         if self.password != other.password:
+            return False
+        if self.rtcm_port != other.rtcm_port:
+            return False
+        if self.rtcm_baudrate != other.rtcm_baudrate:
             return False
         if self.rtcm_timer != other.rtcm_timer:
             return False
@@ -204,6 +216,34 @@ class ConfigNtrip(metaclass=Metaclass_ConfigNtrip):
                 isinstance(value, str), \
                 "The 'password' field must be of type 'str'"
         self._password = value
+
+    @property
+    def rtcm_port(self):
+        """Message field 'rtcm_port'."""
+        return self._rtcm_port
+
+    @rtcm_port.setter
+    def rtcm_port(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'rtcm_port' field must be of type 'str'"
+        self._rtcm_port = value
+
+    @property
+    def rtcm_baudrate(self):
+        """Message field 'rtcm_baudrate'."""
+        return self._rtcm_baudrate
+
+    @rtcm_baudrate.setter
+    def rtcm_baudrate(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'rtcm_baudrate' field must be of type 'int'"
+            assert value >= 0 and value < 18446744073709551616, \
+                "The 'rtcm_baudrate' field must be an unsigned integer in [0, 18446744073709551615]"
+        self._rtcm_baudrate = value
 
     @property
     def rtcm_timer(self):

@@ -22,6 +22,7 @@ extern "C"
 // Member 'mountpoint'
 // Member 'username'
 // Member 'password'
+// Member 'rtcm_port'
 #include "rosidl_runtime_c/string.h"
 
 // Struct defined in msg/ConfigNtrip in the package xsens_msgs.
@@ -32,6 +33,8 @@ typedef struct xsens_msgs__msg__ConfigNtrip
   rosidl_runtime_c__String mountpoint;
   rosidl_runtime_c__String username;
   rosidl_runtime_c__String password;
+  rosidl_runtime_c__String rtcm_port;
+  uint64_t rtcm_baudrate;
   float rtcm_timer;
 } xsens_msgs__msg__ConfigNtrip;
 

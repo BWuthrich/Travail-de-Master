@@ -37,7 +37,7 @@ void StaNT_fini_function(void * message_memory)
   typed_message->~StaNT();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember StaNT_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember StaNT_message_member_array[2] = {
   {
     "ntrip_status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -52,13 +52,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StaNT_message
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "rtcm_status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs::msg::StaNT, rtcm_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers StaNT_message_members = {
   "xsens_msgs::msg",  // message namespace
   "StaNT",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(xsens_msgs::msg::StaNT),
   StaNT_message_member_array,  // message members
   StaNT_init_function,  // function to initialize message memory (memory has to be allocated)
