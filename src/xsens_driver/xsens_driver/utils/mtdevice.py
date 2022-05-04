@@ -35,8 +35,8 @@ class MTDevice(object):
         self.device.flushInput()   # flush to make sure the port is ready TODO
         self.device.flushOutput()  # flush to make sure the port is ready TODO
         # timeout for communication
-        # self.timeout = 1000*timeout C'est quoi ça pourquoi ce facteur 1000 à l'origine?
-        self.timeout = timeout
+        self.timeout = 1000*timeout #C'est quoi ça pourquoi ce facteur 1000 à l'origine?
+        #self.timeout = timeout
         # state of the device
         self.state = None
         if config_mode:

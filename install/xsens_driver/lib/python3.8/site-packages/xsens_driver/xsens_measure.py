@@ -9,9 +9,9 @@ import time
 from haversine import haversine, Unit
 
 from .utils.mtdevice import find_devices, find_baudrate, MTDevice, get_output_config
-from .utils.mtdef import SyncSetting
+from .utils.mtdef import SyncSetting, SyncFunction, SyncLine
 
-from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, ConfigXsens
+from xsens_msgs.msg import AccAA, AccAF, AngWR, OriOE, PosPL, PosPA, StaSW, ConfigXsens
 from xsens_msgs.srv import RTCMdata
 
 class XSensDriver(Node):
@@ -41,6 +41,9 @@ class XSensDriver(Node):
 		self.ori_oe_pub = self.create_publisher(OriOE, 'mti/orientation_Euler', 10)
 		self.pos_pl_pub = self.create_publisher(PosPL, 'mti/position_lonLat', 10)
 		self.pos_pa_pub = self.create_publisher(PosPA, 'mti/position_altEll', 10)
+		self.acc_aa_pub = self.create_publisher(AccAA, 'mti/acceleration', 10)
+		self.acc_af_pub = self.create_publisher(AccAF, 'mti/free_acceleration', 10)
+		self.ang_wr_pub = self.create_publisher(AngWR, 'mti/rate_of_turn', 10)
 		self.sta_sw_pub = self.create_publisher(StaSW, 'mti/status', 10)
 		
 		# Create parameters subscriber
@@ -118,11 +121,20 @@ class XSensDriver(Node):
 	def configSync(self):
 		self.get_logger().info("xsensClient - syncSetting")
 		lst = self.syncConfig
-		print(self.syncConfig)
-		# clear list of sync settings (msg with polarity at 0)
-		self.device.SetSyncSettings([SyncSetting(3, 2, 0, 1, 0, 0, 0, 0)])
-		self.device.SetSyncSettings([SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7])])
 
+		# clear list of sync settings (msg with polarity at 0)
+		settings0 = SyncSetting(0, 0, 0, 0, 0, 0, 0, 0)
+		self.device.SetSyncSettings([settings0])
+		
+		# Send new sync settings
+		settings = [
+		    SyncSetting(
+		        SyncFunction.ClockBiasEstimation, 10, 1, 0, 0, 0, 0, 1000),
+		    SyncSetting(
+		        SyncFunction.OnePpsTimePulse, 10, 1, 0, 0, 0, 500, 0)
+		]	
+		settings += [SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7])]
+		self.device.SetSyncSettings(settings)
 	
 	def publishStatus(self, status):
 		self.xsens_status = status
@@ -151,7 +163,7 @@ class XSensDriver(Node):
 		Timestamp.append(data.get('Timestamp')['ns'])
 		
 		# Publication - Orientation Euler's angles	
-		if 'oe' in self.outputConfig:
+		if 'oe' in self.outputConfig and 'Orientation Data' in data:
 			ori_oe_msg = OriOE()
 			ori_oe_data = data.get('Orientation Data')
 			ori_oe_msg.stamp = Timestamp
@@ -161,38 +173,64 @@ class XSensDriver(Node):
 			self.ori_oe_pub.publish(ori_oe_msg)		
 		
 		# Publication - Postion longitude/latitude
-		if 'pl' in self.outputConfig:
-			if 'Position' in data:
-				pos_pl_msg = PosPL()
-				pos_pl_data = data.get('Position')
-				pos_pl_msg.stamp = Timestamp
-				pos_pl_msg.latitude = pos_pl_data['lat']
-				pos_pl_msg.longitude = pos_pl_data['lon']
-				self.pos_pl_pub.publish(pos_pl_msg)
-				
-				# Compute distance for RTCM position update
-				latlon = (pos_pl_data['lat'], pos_pl_data['lon'])
-				d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
-				# Check for RTCM update
-				if d > self.rtcmRefreshDist:
-					self.get_logger().info('Send new position to ntrip client')
-					# Build and send service request
-					self.lastPos3D = latlon + (data.get('Position')['altEllipsoid'],)
-					self.RTCMreq.latitude = self.lastPos3D[0]
-					self.RTCMreq.longitude = self.lastPos3D[1]
-					self.RTCMreq.alti_ell = self.lastPos3D[2]
-					self.future = self.RTCMcli.call_async(self.RTCMreq)
-				
-				
+		if 'pl' in self.outputConfig and 'Position' in data:
+			pos_pl_msg = PosPL()
+			pos_pl_data = data.get('Position')
+			pos_pl_msg.stamp = Timestamp
+			pos_pl_msg.latitude = pos_pl_data['lat']
+			pos_pl_msg.longitude = pos_pl_data['lon']
+			self.pos_pl_pub.publish(pos_pl_msg)
+			
+			# Compute distance for RTCM position update
+			latlon = (pos_pl_data['lat'], pos_pl_data['lon'])
+			d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
+			# Check for RTCM update
+			if d > self.rtcmRefreshDist:
+				self.get_logger().info('Send new position to ntrip client')
+				# Build and send service request
+				self.lastPos3D = latlon + (data.get('Position')['altEllipsoid'],)
+				self.RTCMreq.latitude = self.lastPos3D[0]
+				self.RTCMreq.longitude = self.lastPos3D[1]
+				self.RTCMreq.alti_ell = self.lastPos3D[2]
+				self.future = self.RTCMcli.call_async(self.RTCMreq)		
 		
 		# Publication - Ellipsoidal height	
-		if 'pa' in self.outputConfig:
-			if 'Position' in data:
-				pos_pa_msg = PosPA()
-				pos_pa_data = data.get('Position')
-				pos_pa_msg.stamp = Timestamp
-				pos_pa_msg.alt_ell = pos_pa_data['altEllipsoid']
-				self.pos_pa_pub.publish(pos_pa_msg)
+		if 'pa' in self.outputConfig and 'Position' in data:
+			pos_pa_msg = PosPA()
+			pos_pa_data = data.get('Position')
+			pos_pa_msg.stamp = Timestamp
+			pos_pa_msg.alt_ell = pos_pa_data['altEllipsoid']
+			self.pos_pa_pub.publish(pos_pa_msg)
+	
+		# Publication - Acceleration	
+		if 'aa' in self.outputConfig and 'Acceleration' in data:
+			acc_aa_msg = AccAA()
+			acc_aa_data = data.get('Acceleration')
+			acc_aa_msg.stamp = Timestamp
+			acc_aa_msg.accx = acc_aa_data['accX']
+			acc_aa_msg.accy = acc_aa_data['accY']
+			acc_aa_msg.accz = acc_aa_data['accZ']
+			self.acc_aa_pub.publish(acc_aa_msg)
+		
+		# Publication - Free Acceleration	
+		if 'af' in self.outputConfig and 'Acceleration' in data:
+			acc_af_msg = AccAF()
+			acc_af_data = data.get('Acceleration')
+			acc_af_msg.stamp = Timestamp
+			acc_af_msg.accx = acc_af_data['freeAccX']
+			acc_af_msg.accy = acc_af_data['freeAccY']
+			acc_af_msg.accz = acc_af_data['freeAccZ']
+			self.acc_af_pub.publish(acc_af_msg)
+		
+		# Publication - Rate of turn
+		if 'wr' in self.outputConfig and 'Angular Velocity' in data:
+			ang_wr_msg = AngWR()
+			ang_wr_data = data.get('Angular Velocity')
+			ang_wr_msg.stamp = Timestamp
+			ang_wr_msg.gyrx = ang_wr_data['gyrX']
+			ang_wr_msg.gyry = ang_wr_data['gyrY']
+			ang_wr_msg.gyrz = ang_wr_data['gyrZ']
+			self.ang_wr_pub.publish(ang_wr_msg)
 		
 		# Publication - Xsens status
 		if 'Status' in data:

@@ -1,3 +1,6 @@
+from xsens_msgs.msg._acc_aa import AccAA  # noqa: F401
+from xsens_msgs.msg._acc_af import AccAF  # noqa: F401
+from xsens_msgs.msg._ang_wr import AngWR  # noqa: F401
 from xsens_msgs.msg._config_ntrip import ConfigNtrip  # noqa: F401
 from xsens_msgs.msg._config_xsens import ConfigXsens  # noqa: F401
 from xsens_msgs.msg._ori_oe import OriOE  # noqa: F401

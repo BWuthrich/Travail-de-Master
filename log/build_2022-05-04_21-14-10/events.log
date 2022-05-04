@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.001200] (-) JobUnselected: {'identifier': 'bluespace_ai_xsens_mti_driver'}
+[0.002495] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.003433] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.004724] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.005082] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.005275] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.005485] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.005673] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.005802] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.008601] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.010722] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.011032] (central) JobQueued: {'identifier': 'central', 'dependencies': OrderedDict()}
+[0.011299] (central) JobStarted: {'identifier': 'central'}
+[0.102185] (-) TimerEvent: {}
+[0.203441] (-) TimerEvent: {}
+[0.304658] (-) TimerEvent: {}
+[0.405368] (-) TimerEvent: {}
+[0.506110] (-) TimerEvent: {}
+[0.606792] (-) TimerEvent: {}
+[0.707490] (-) TimerEvent: {}
+[0.809413] (-) TimerEvent: {}
+[0.910093] (-) TimerEvent: {}
+[1.010787] (-) TimerEvent: {}
+[1.111504] (-) TimerEvent: {}
+[1.212281] (-) TimerEvent: {}
+[1.317337] (-) TimerEvent: {}
+[1.420263] (-) TimerEvent: {}
+[1.521357] (-) TimerEvent: {}
+[1.622034] (-) TimerEvent: {}
+[1.722789] (-) TimerEvent: {}
+[1.823606] (-) TimerEvent: {}
+[1.927224] (-) TimerEvent: {}
+[2.027943] (-) TimerEvent: {}
+[2.128664] (-) TimerEvent: {}
+[2.229831] (-) TimerEvent: {}
+[2.330506] (-) TimerEvent: {}
+[2.431323] (-) TimerEvent: {}
+[2.532196] (-) TimerEvent: {}
+[2.632871] (-) TimerEvent: {}
+[2.733552] (-) TimerEvent: {}
+[2.834239] (-) TimerEvent: {}
+[2.934998] (-) TimerEvent: {}
+[3.035815] (-) TimerEvent: {}
+[3.082484] (central) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central', 'build', '--build-base', '/app/dev_ws/build/central/build', 'install', '--prefix', '/app/dev_ws/install/central', '--record', '/app/dev_ws/build/central/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/central', 'env': {'HOSTNAME': '41c296eeef97', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy', 'PWD': '/app/dev_ws/build/central', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/central/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver'}, 'shell': False}
+[3.136133] (-) TimerEvent: {}
+[3.237176] (-) TimerEvent: {}
+[3.337868] (-) TimerEvent: {}
+[3.438569] (-) TimerEvent: {}
+[3.539353] (-) TimerEvent: {}
+[3.640041] (-) TimerEvent: {}
+[3.740715] (-) TimerEvent: {}
+[3.841560] (-) TimerEvent: {}
+[3.942227] (-) TimerEvent: {}
+[4.042908] (-) TimerEvent: {}
+[4.143753] (-) TimerEvent: {}
+[4.188206] (central) StdoutLine: {'line': b'running egg_info\n'}
+[4.190640] (central) StdoutLine: {'line': b'writing ../../build/central/central.egg-info/PKG-INFO\n'}
+[4.201008] (central) StdoutLine: {'line': b'writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt\n'}
+[4.201965] (central) StdoutLine: {'line': b'writing entry points to ../../build/central/central.egg-info/entry_points.txt\n'}
+[4.202905] (central) StdoutLine: {'line': b'writing requirements to ../../build/central/central.egg-info/requires.txt\n'}
+[4.203761] (central) StdoutLine: {'line': b'writing top-level names to ../../build/central/central.egg-info/top_level.txt\n'}
+[4.243891] (-) TimerEvent: {}
+[4.344672] (-) TimerEvent: {}
+[4.367537] (central) StdoutLine: {'line': b"reading manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[4.371753] (central) StdoutLine: {'line': b"writing manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[4.372627] (central) StdoutLine: {'line': b'running build\n'}
+[4.373493] (central) StdoutLine: {'line': b'running build_py\n'}
+[4.374401] (central) StdoutLine: {'line': b'copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central\n'}
+[4.376146] (central) StdoutLine: {'line': b'running install\n'}
+[4.381227] (central) StdoutLine: {'line': b'running install_lib\n'}
+[4.385708] (central) StdoutLine: {'line': b'copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central\n'}
+[4.389548] (central) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc\n'}
+[4.400647] (central) StdoutLine: {'line': b'running install_data\n'}
+[4.403071] (central) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.410667] (central) StdoutLine: {'line': b"removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.412605] (central) StdoutLine: {'line': b'Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info\n'}
+[4.418661] (central) StdoutLine: {'line': b'running install_scripts\n'}
+[4.444843] (-) TimerEvent: {}
+[4.499172] (central) StdoutLine: {'line': b'Installing collect_data script to /app/dev_ws/install/central/lib/central\n'}
+[4.500302] (central) StdoutLine: {'line': b'Installing config script to /app/dev_ws/install/central/lib/central\n'}
+[4.502264] (central) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/central/install.log'\n"}
+[4.545208] (-) TimerEvent: {}
+[4.602620] (central) CommandEnded: {'returncode': 0}
+[4.647635] (-) TimerEvent: {}
+[4.667714] (central) JobEnded: {'identifier': 'central', 'rc': 0}
+[4.671572] (-) EventReactorShutdown: {}

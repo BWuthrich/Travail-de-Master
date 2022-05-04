@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_aa__type_support.cpp.o"
+  "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_af__type_support.cpp.o"
+  "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.o"
   "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_ntrip__type_support.cpp.o"
   "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.o"
   "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.cpp.o"
@@ -9,6 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.cpp.o"
   "libxsens_msgs__rosidl_typesupport_cpp.pdb"
   "libxsens_msgs__rosidl_typesupport_cpp.so"
+  "rosidl_typesupport_cpp/xsens_msgs/msg/acc_aa__type_support.cpp"
+  "rosidl_typesupport_cpp/xsens_msgs/msg/acc_af__type_support.cpp"
+  "rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp"
   "rosidl_typesupport_cpp/xsens_msgs/msg/config_ntrip__type_support.cpp"
   "rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp"
   "rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.cpp"

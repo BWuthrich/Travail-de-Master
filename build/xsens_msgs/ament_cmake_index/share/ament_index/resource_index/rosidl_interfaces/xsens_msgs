@@ -1,3 +1,9 @@
+msg/AccAA.idl
+msg/AccAA.msg
+msg/AccAF.idl
+msg/AccAF.msg
+msg/AngWR.idl
+msg/AngWR.msg
 msg/ConfigNtrip.idl
 msg/ConfigNtrip.msg
 msg/ConfigXsens.idl

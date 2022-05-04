@@ -83,9 +83,9 @@ export default {
       // Ntrip Config
       NtripPort: 5001,
       NtripHost: "193.134.218.96",
-      NtripMount: "M_04",
-      NtripUser: "Ecole01",
-      NtripPassword: "365heig",
+      NtripMount: "YVD2_AGS",
+      NtripUser: "master1",
+      NtripPassword: "master1",
 			NtripTime: 1,
     	NtripDist: 5,
     	RTCMPortName: "/dev/ttyUSB0",

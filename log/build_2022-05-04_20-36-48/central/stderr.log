@@ -1,0 +1,5 @@
+  File "/app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py", line 85
+    F = np.array([[1.0 0.0, 0.0, dt, 0.0, 0.0],
+                       ^
+SyntaxError: invalid syntax
+
