@@ -1,0 +1,537 @@
+[0.074s] Invoking command in '/app/dev_ws/src/build/xsens_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/src/build/xsens_msgs -- -j4 -l4
+[0.273s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.415s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.416s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.400s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[1.552s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.570s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.600s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.802s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.858s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.492s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.961s] -- Found ament_cmake_cppcheck: 0.9.6 (/opt/ros/foxy/share/ament_cmake_cppcheck/cmake)
+[4.966s] -- Found ament_cmake_cpplint: 0.9.6 (/opt/ros/foxy/share/ament_cmake_cpplint/cmake)
+[4.971s] -- Found ament_cmake_uncrustify: 0.9.6 (/opt/ros/foxy/share/ament_cmake_uncrustify/cmake)
+[4.976s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[7.346s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.168s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.335s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[8.336s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[8.476s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.476s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[8.477s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[8.854s] -- Found ament_cmake_flake8: 0.9.6 (/opt/ros/foxy/share/ament_cmake_flake8/cmake)
+[8.858s] -- Found ament_cmake_pep257: 0.9.6 (/opt/ros/foxy/share/ament_cmake_pep257/cmake)
+[8.868s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[8.968s] -- Configuring done
+[9.479s] -- Generating done
+[9.499s] -- Build files have been written to: /app/dev_ws/src/build/xsens_msgs
+[9.647s] [35m[1mScanning dependencies of target xsens_msgs__cpp[0m
+[9.659s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[9.726s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[14.639s] [  1%] Built target xsens_msgs__cpp
+[14.783s] [  1%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[14.794s] [  2%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[14.835s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[15.316s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_generator_c[0m
+[15.445s] [  4%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o[0m
+[15.742s] [  4%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o[0m
+[16.028s] [  5%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o[0m
+[16.376s] [  6%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.c.o[0m
+[16.858s] [  7%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/acc_aa__functions.c.o[0m
+[17.197s] [  8%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/acc_af__functions.c.o[0m
+[17.512s] [  8%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.c.o[0m
+[17.852s] [  9%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.o[0m
+[18.198s] [ 10%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_ntrip__functions.c.o[0m
+[18.490s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_cpp[0m
+[18.532s] [ 11%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.c.o[0m
+[18.635s] [ 12%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.cpp.o[0m
+[18.830s] [ 13%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__functions.c.o[0m
+[19.157s] [ 13%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_ct__functions.c.o[0m
+[19.546s] [ 14%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o[0m
+[19.615s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_introspection_cpp[0m
+[19.766s] [ 15%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.cpp.o[0m
+[19.896s] [ 16%] [32m[1mLinking C shared library libxsens_msgs__rosidl_generator_c.so[0m
+[20.091s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[20.226s] [ 16%] Built target xsens_msgs__rosidl_generator_c
+[20.291s] [ 17%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.cpp.o[0m
+[20.300s] [ 18%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/pos_pa__type_support.cpp.o[0m
+[20.849s] [ 19%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/pos_pa__type_support.cpp.o[0m
+[22.279s] [ 20%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_pa__type_support.cpp.o[0m
+[23.303s] [ 20%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/pos_pl__type_support.cpp.o[0m
+[23.815s] [ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[24.120s] [ 22%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/pos_pl__type_support.cpp.o[0m
+[25.223s] [ 23%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_pl__type_support.cpp.o[0m
+[25.253s] [ 24%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.cpp.o[0m
+[27.325s] [ 25%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_aa__type_support.cpp.o[0m
+[27.474s] [ 26%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.cpp.o[0m
+[27.833s] [ 26%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.cpp.o[0m
+[29.269s] [ 27%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_af__type_support.cpp.o[0m
+[29.409s] [ 27%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/acc_aa__type_support.cpp.o[0m
+[29.602s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_introspection_c[0m
+[29.775s] [ 28%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.c.o[0m
+[30.047s] [ 29%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/pos_pa__type_support.c.o[0m
+[30.327s] [ 29%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/pos_pl__type_support.c.o[0m
+[30.611s] [ 30%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.c.o[0m
+[30.894s] [ 31%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_aa__type_support.c.o[0m
+[31.059s] [ 32%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/acc_aa__type_support.cpp.o[0m
+[31.167s] [ 33%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__type_support.c.o[0m
+[31.395s] [ 34%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.o[0m
+[31.463s] [ 35%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.o[0m
+[31.687s] [ 36%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/acc_af__type_support.cpp.o[0m
+[31.854s] [ 36%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o[0m
+[32.184s] [ 37%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o[0m
+[32.499s] [ 38%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o[0m
+[32.932s] [ 39%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o[0m
+[33.461s] [ 40%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o[0m
+[34.059s] [ 40%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o[0m
+[34.191s] [ 40%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.o[0m
+[34.376s] [ 41%] [32m[1mLinking C shared library libxsens_msgs__rosidl_typesupport_introspection_c.so[0m
+[34.562s] [ 42%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.cpp.o[0m
+[34.684s] [ 42%] Built target xsens_msgs__rosidl_typesupport_introspection_c
+[34.776s] [ 43%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_ntrip__type_support.cpp.o[0m
+[34.813s] [ 44%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/acc_af__type_support.cpp.o[0m
+[36.219s] [ 45%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.cpp.o[0m
+[36.903s] [ 46%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_nt__type_support.cpp.o[0m
+[36.945s] [ 47%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.cpp.o[0m
+[38.411s] [ 48%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.cpp.o[0m
+[38.469s] [ 49%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_ct__type_support.cpp.o[0m
+[39.143s] [ 50%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_ntrip__type_support.cpp.o[0m
+[39.191s] [ 51%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.cpp.o[0m
+[40.705s] [ 51%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.cpp.o[0m
+[41.608s] [ 51%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.cpp.o[0m
+[42.351s] [ 51%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_ntrip__type_support.cpp.o[0m
+[43.291s] [ 52%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.cpp.o[0m
+[43.347s] [ 53%] [32m[1mLinking CXX shared library libxsens_msgs__rosidl_typesupport_cpp.so[0m
+[43.679s] [ 53%] Built target xsens_msgs__rosidl_typesupport_cpp
+[43.721s] [ 54%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_nt__type_support.cpp.o[0m
+[43.783s] [ 55%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[45.589s] [ 56%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_nt__type_support.cpp.o[0m
+[46.398s] [ 57%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_ct__type_support.cpp.o[0m
+[46.743s] [ 58%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_ct__type_support.cpp.o[0m
+[48.159s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_c[0m
+[48.335s] [ 58%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o[0m
+[48.730s] [ 59%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp.o[0m
+[49.072s] [ 60%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/pos_pl__type_support.cpp.o[0m
+[49.413s] [ 61%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp.o[0m
+[49.469s] [ 62%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o[0m
+[49.673s] [ 63%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/acc_aa__type_support.cpp.o[0m
+[49.924s] [ 63%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/acc_af__type_support.cpp.o[0m
+[49.963s] [ 64%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.cpp.o[0m
+[50.022s] [ 65%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.cpp.o[0m
+[50.182s] [ 66%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.cpp.o[0m
+[50.276s] [ 67%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/config_ntrip__type_support.cpp.o[0m
+[50.496s] [ 68%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.cpp.o[0m
+[50.542s] [ 68%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_nt__type_support.cpp.o[0m
+[50.908s] [ 69%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_ct__type_support.cpp.o[0m
+[50.996s] [ 70%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp.o[0m
+[51.556s] [ 71%] [32m[1mLinking CXX shared library libxsens_msgs__rosidl_typesupport_c.so[0m
+[52.027s] [ 72%] [32m[1mLinking CXX shared library libxsens_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[52.127s] [ 72%] Built target xsens_msgs__rosidl_typesupport_c
+[52.523s] [ 72%] Built target xsens_msgs__rosidl_typesupport_introspection_cpp
+[53.404s] [ 72%] [32m[1mLinking CXX shared library libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[53.935s] [ 72%] Built target xsens_msgs__rosidl_typesupport_fastrtps_cpp
+[54.011s] [ 73%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[57.443s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_fastrtps_c[0m
+[57.705s] [ 74%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o[0m
+[57.712s] [ 74%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pa__type_support_c.cpp.o[0m
+[57.720s] [ 75%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/pos_pl__type_support_c.cpp.o[0m
+[57.728s] [ 76%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.cpp.o[0m
+[60.176s] [ 77%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/acc_aa__type_support_c.cpp.o[0m
+[60.241s] [ 78%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/acc_af__type_support_c.cpp.o[0m
+[60.347s] [ 78%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.cpp.o[0m
+[60.618s] [ 79%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.cpp.o[0m
+[62.685s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_ntrip__type_support_c.cpp.o[0m
+[63.145s] [ 81%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.cpp.o[0m
+[63.363s] [ 82%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_nt__type_support_c.cpp.o[0m
+[63.506s] [ 82%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_ct__type_support_c.cpp.o[0m
+[65.248s] [ 83%] [32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.cpp.o[0m
+[67.733s] [ 84%] [32m[1mLinking CXX shared library libxsens_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[68.264s] [ 84%] Built target xsens_msgs__rosidl_typesupport_fastrtps_c
+[68.558s] [ 84%] Built target xsens_msgs
+[68.711s] [35m[1mScanning dependencies of target xsens_msgs__py[0m
+[68.896s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[87.458s] [ 85%] Built target xsens_msgs__py
+[87.569s] [35m[1mScanning dependencies of target xsens_msgs__python[0m
+[87.920s] [ 87%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c.o[0m
+[87.920s] [ 87%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c.o[0m
+[88.582s] [ 88%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c.o[0m
+[88.591s] [ 89%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_acc_aa_s.c.o[0m
+[89.209s] [ 90%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.c.o[0m
+[89.228s] [ 91%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_acc_af_s.c.o[0m
+[89.932s] [ 92%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_ntrip_s.c.o[0m
+[90.467s] [ 93%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_cam_s.c.o[0m
+[90.971s] [ 94%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_nt_s.c.o[0m
+[91.478s] [ 95%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c.o[0m
+[91.481s] [ 95%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_ct_s.c.o[0m
+[92.092s] [ 95%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c.o[0m
+[92.611s] [ 95%] [32mBuilding C object CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_pos_pl_s.c.o[0m
+[93.140s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/xsens_msgs/libxsens_msgs__python.so[0m
+[93.445s] [ 96%] Built target xsens_msgs__python
+[93.511s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[93.511s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_c__pyext[0m
+[93.630s] [ 98%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[93.631s] [ 98%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[94.342s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/xsens_msgs/xsens_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[94.346s] [ 99%] [32m[1mLinking C shared library rosidl_generator_py/xsens_msgs/xsens_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[94.649s] [ 99%] Built target xsens_msgs__rosidl_typesupport_c__pyext
+[94.657s] [ 99%] Built target xsens_msgs__rosidl_typesupport_introspection_c__pyext
+[94.718s] [35m[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[94.866s] [100%] [32mBuilding C object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[95.556s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/xsens_msgs/xsens_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[95.978s] [100%] Built target xsens_msgs__rosidl_typesupport_fastrtps_c__pyext
+[96.045s] Invoked command in '/app/dev_ws/src/build/xsens_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/src/build/xsens_msgs -- -j4 -l4
+[97.853s] Invoking command in '/app/dev_ws/src/build/xsens_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --install /app/dev_ws/src/build/xsens_msgs
+[97.903s] -- Install configuration: ""
+[97.903s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/ament_index/resource_index/rosidl_interfaces/xsens_msgs
+[97.905s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[97.907s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[97.907s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_xsens.h
+[97.908s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_cam.h
+[97.909s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_nt.h
+[97.910s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.h
+[97.912s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_sw.h
+[97.913s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/acc_aa.h
+[97.914s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
+[97.915s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/acc_af.h
+[97.916s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_ct.h
+[97.917s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[97.918s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__functions.h
+[97.920s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__functions.h
+[97.921s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__struct.h
+[97.922s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__functions.h
+[97.923s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__struct.h
+[97.925s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.h
+[97.926s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__struct.h
+[97.928s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__type_support.h
+[97.929s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__functions.c
+[97.930s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__struct.h
+[97.932s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.h
+[97.933s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__functions.h
+[97.934s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__functions.c
+[97.936s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.h
+[97.937s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__functions.c
+[97.938s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__functions.c
+[97.940s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__functions.c
+[97.941s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__functions.c
+[97.942s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.h
+[97.943s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__functions.c
+[97.945s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__type_support.h
+[97.946s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.h
+[97.948s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__struct.h
+[97.949s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__struct.h
+[97.950s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__functions.h
+[97.952s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__functions.h
+[97.953s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__functions.h
+[97.954s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__type_support.h
+[97.955s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__type_support.h
+[97.957s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__functions.c
+[97.959s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__type_support.h
+[97.960s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__struct.h
+[97.961s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__struct.h
+[97.962s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__functions.h
+[97.964s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__functions.c
+[97.965s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__type_support.h
+[97.966s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.h
+[97.968s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__functions.h
+[97.969s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.c
+[97.970s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__functions.c
+[97.972s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__functions.c
+[97.973s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__struct.h
+[97.974s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__struct.h
+[97.976s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__struct.h
+[97.977s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__functions.h
+[97.978s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__struct.h
+[97.979s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__functions.h
+[97.981s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.h
+[97.982s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/pos_pa.h
+[97.983s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/pos_pl.h
+[97.985s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/ang_wr.h
+[97.990s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/ori_oe.h
+[97.990s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[97.991s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[97.992s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__functions.h
+[97.992s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__functions.c
+[97.993s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__struct.h
+[97.993s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.h
+[97.995s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/rtc_mdata.h
+[97.997s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/library_path.sh
+[97.997s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/library_path.dsv
+[98.000s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_generator_c.so
+[98.004s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_generator_c.so" to ""
+[98.004s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[98.005s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[98.005s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[98.006s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_c.h
+[98.007s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_fastrtps_c.h
+[98.009s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_fastrtps_c.h
+[98.011s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_fastrtps_c.h
+[98.013s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_fastrtps_c.h
+[98.014s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_fastrtps_c.h
+[98.016s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_fastrtps_c.h
+[98.017s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_fastrtps_c.h
+[98.019s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_fastrtps_c.h
+[98.020s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_fastrtps_c.h
+[98.022s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_fastrtps_c.h
+[98.023s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_fastrtps_c.h
+[98.025s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[98.025s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[98.025s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[98.026s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_fastrtps_c.h
+[98.029s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_c.so
+[98.033s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[98.033s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[98.034s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[98.034s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[98.035s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_fastrtps_cpp.hpp
+[98.036s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_fastrtps_cpp.hpp
+[98.038s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_fastrtps_cpp.hpp
+[98.039s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_fastrtps_cpp.hpp
+[98.041s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_cpp.hpp
+[98.042s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_fastrtps_cpp.hpp
+[98.044s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_fastrtps_cpp.hpp
+[98.045s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_fastrtps_cpp.hpp
+[98.046s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_fastrtps_cpp.hpp
+[98.048s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_fastrtps_cpp.hpp
+[98.049s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_fastrtps_cpp.hpp
+[98.051s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/dds_fastrtps
+[98.051s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_fastrtps_cpp.hpp
+[98.053s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[98.053s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[98.054s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[98.054s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_fastrtps_cpp.hpp
+[98.055s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/dds_fastrtps
+[98.058s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so
+[98.062s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[98.063s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[98.063s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[98.064s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[98.064s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[98.065s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.c
+[98.066s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__type_support.c
+[98.068s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+[98.069s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.c
+[98.071s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__type_support.c
+[98.072s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__type_support.c
+[98.074s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_c.h
+[98.075s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_introspection_c.h
+[98.077s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__type_support.c
+[98.078s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_introspection_c.h
+[98.080s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_introspection_c.h
+[98.081s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.c
+[98.082s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_c.h
+[98.084s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_introspection_c.h
+[98.086s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_introspection_c.h
+[98.087s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_introspection_c.h
+[98.090s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_introspection_c.h
+[98.091s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.c
+[98.093s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_introspection_c.h
+[98.094s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__type_support.c
+[98.096s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.c
+[98.097s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.c
+[98.099s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__type_support.c
+[98.100s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_introspection_c.h
+[98.102s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[98.102s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[98.103s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_c.h
+[98.104s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.c
+[98.108s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_c.so
+[98.111s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_c.so" to ""
+[98.113s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_c.so
+[98.116s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_c.so" to ""
+[98.117s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[98.117s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[98.117s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_sw.hpp
+[98.119s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/ori_oe.hpp
+[98.120s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/pos_pa.hpp
+[98.121s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/acc_af.hpp
+[98.122s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_cam.hpp
+[98.123s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_nt.hpp
+[98.125s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/acc_aa.hpp
+[98.126s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.hpp
+[98.127s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/config_xsens.hpp
+[98.128s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/sta_ct.hpp
+[98.129s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[98.130s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__builder.hpp
+[98.132s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__struct.hpp
+[98.133s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__traits.hpp
+[98.134s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__struct.hpp
+[98.136s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__traits.hpp
+[98.137s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__builder.hpp
+[98.138s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__traits.hpp
+[98.139s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__builder.hpp
+[98.141s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__struct.hpp
+[98.142s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__builder.hpp
+[98.143s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__traits.hpp
+[98.145s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__builder.hpp
+[98.146s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__struct.hpp
+[98.148s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__struct.hpp
+[98.149s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__builder.hpp
+[98.150s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__traits.hpp
+[98.151s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__builder.hpp
+[98.153s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__builder.hpp
+[98.154s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__struct.hpp
+[98.155s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__builder.hpp
+[98.157s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__traits.hpp
+[98.158s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__struct.hpp
+[98.160s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__traits.hpp
+[98.161s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__builder.hpp
+[98.162s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__struct.hpp
+[98.164s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__traits.hpp
+[98.165s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__struct.hpp
+[98.166s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__traits.hpp
+[98.168s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__builder.hpp
+[98.169s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__builder.hpp
+[98.171s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__traits.hpp
+[98.172s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__struct.hpp
+[98.173s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__traits.hpp
+[98.174s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__traits.hpp
+[98.176s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__struct.hpp
+[98.177s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__struct.hpp
+[98.178s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/pos_pl.hpp
+[98.180s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/ang_wr.hpp
+[98.181s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[98.181s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/rtc_mdata.hpp
+[98.182s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[98.183s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__builder.hpp
+[98.184s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__traits.hpp
+[98.186s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__struct.hpp
+[98.188s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs
+[98.189s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg
+[98.190s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail
+[98.191s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__rosidl_typesupport_introspection_cpp.hpp
+[98.193s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_introspection_cpp.hpp
+[98.194s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.cpp
+[98.195s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__type_support.cpp
+[98.197s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__type_support.cpp
+[98.198s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__type_support.cpp
+[98.200s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.cpp
+[98.202s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__type_support.cpp
+[98.203s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__type_support.cpp
+[98.205s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_introspection_cpp.hpp
+[98.207s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_introspection_cpp.hpp
+[98.208s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__type_support.cpp
+[98.210s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_introspection_cpp.hpp
+[98.212s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.cpp
+[98.213s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_introspection_cpp.hpp
+[98.215s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_introspection_cpp.hpp
+[98.216s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__rosidl_typesupport_introspection_cpp.hpp
+[98.218s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__type_support.cpp
+[98.219s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__type_support.cpp
+[98.221s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__type_support.cpp
+[98.222s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_introspection_cpp.hpp
+[98.224s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_cpp.hpp
+[98.225s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
+[98.227s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_cpp.hpp
+[98.228s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv
+[98.229s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail
+[98.229s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp
+[98.231s] -- Installing: /app/dev_ws/src/install/xsens_msgs/include/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_cpp.hpp
+[98.234s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_cpp.so
+[98.238s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[98.240s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_cpp.so
+[98.243s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__rosidl_typesupport_cpp.so" to ""
+[98.244s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/pythonpath.sh
+[98.244s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/pythonpath.dsv
+[98.246s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/__init__.py
+[98.439s] Compiling '/app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/__init__.py'...
+[98.460s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg
+[98.460s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_acc_af_s.c
+[98.462s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_xsens.py
+[98.463s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_sw_s.c
+[98.465s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ori_oe.py
+[98.466s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pl_s.c
+[98.468s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ori_oe_s.c
+[98.469s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_nt_s.c
+[98.470s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pa_s.c
+[98.472s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ang_wr.py
+[98.473s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_sw.py
+[98.474s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_acc_aa.py
+[98.476s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pa.py
+[98.477s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_nt.py
+[98.478s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_ct_s.c
+[98.480s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_pl.py
+[98.481s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_ntrip_s.c
+[98.482s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_cam_s.c
+[98.484s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_sta_ct.py
+[98.485s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ang_wr_s.c
+[98.486s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_ntrip.py
+[98.488s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/__init__.py
+[98.489s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_xsens_s.c
+[98.491s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_acc_af.py
+[98.493s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_acc_aa_s.c
+[98.495s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_cam.py
+[98.496s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv
+[98.497s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/_rtc_mdata.py
+[98.498s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/_rtc_mdata_s.c
+[98.500s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/srv/__init__.py
+[98.503s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[98.508s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[98.510s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[98.515s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[98.517s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[98.521s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/xsens_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[98.522s] -- Installing: /app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__python.so
+[98.527s] -- Set runtime path of "/app/dev_ws/src/install/xsens_msgs/lib/libxsens_msgs__python.so" to ""
+[98.527s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/OriOE.idl
+[98.528s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/PosPA.idl
+[98.528s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/PosPL.idl
+[98.529s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaSW.idl
+[98.529s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AccAA.idl
+[98.530s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AccAF.idl
+[98.530s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AngWR.idl
+[98.531s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigXsens.idl
+[98.531s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigNtrip.idl
+[98.532s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigCam.idl
+[98.533s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaNT.idl
+[98.534s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaCT.idl
+[98.534s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.idl
+[98.535s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/OriOE.msg
+[98.535s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/PosPA.msg
+[98.536s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/PosPL.msg
+[98.536s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaSW.msg
+[98.537s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AccAA.msg
+[98.537s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AccAF.msg
+[98.538s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/AngWR.msg
+[98.538s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigXsens.msg
+[98.539s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigNtrip.msg
+[98.539s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/ConfigCam.msg
+[98.540s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaNT.msg
+[98.541s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/msg/StaCT.msg
+[98.541s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.srv
+[98.542s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Request.msg
+[98.542s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Response.msg
+[98.543s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/ament_index/resource_index/package_run_dependencies/xsens_msgs
+[98.544s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/ament_index/resource_index/parent_prefix_path/xsens_msgs
+[98.544s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/ament_prefix_path.sh
+[98.545s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/ament_prefix_path.dsv
+[98.547s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/path.sh
+[98.547s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/environment/path.dsv
+[98.549s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/local_setup.bash
+[98.549s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/local_setup.sh
+[98.550s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/local_setup.zsh
+[98.550s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/local_setup.dsv
+[98.552s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/package.dsv
+[98.553s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/ament_index/resource_index/packages/xsens_msgs
+[98.554s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cExport.cmake
+[98.555s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cExport-noconfig.cmake
+[98.557s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cExport.cmake
+[98.558s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[98.561s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cExport.cmake
+[98.562s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[98.564s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_generator_cppExport.cmake
+[98.565s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[98.565s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[98.568s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cppExport.cmake
+[98.569s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[98.570s] -- Installing: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake-extras.cmake
+[98.572s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[98.573s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[98.573s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[98.574s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[98.574s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[98.575s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[98.576s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgsConfig.cmake
+[98.576s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/cmake/xsens_msgsConfig-version.cmake
+[98.577s] -- Up-to-date: /app/dev_ws/src/install/xsens_msgs/share/xsens_msgs/package.xml
+[98.587s] Invoked command in '/app/dev_ws/src/build/xsens_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --install /app/dev_ws/src/build/xsens_msgs

@@ -39,6 +39,7 @@ xsens_msgs__msg__ConfigXsens__init(xsens_msgs__msg__ConfigXsens * msg)
     xsens_msgs__msg__ConfigXsens__fini(msg);
     return false;
   }
+  // dt_freq
   return true;
 }
 
@@ -56,6 +57,7 @@ xsens_msgs__msg__ConfigXsens__fini(xsens_msgs__msg__ConfigXsens * msg)
   // rtcm_refresh_dist
   // sync_config
   rosidl_runtime_c__uint32__Sequence__fini(&msg->sync_config);
+  // dt_freq
 }
 
 xsens_msgs__msg__ConfigXsens *

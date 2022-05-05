@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from xsens_msgs/msg/ConfigNtrip.msg
+// generated code does not contain a copyright notice
+
+
+module xsens_msgs {
+  module msg {
+    struct ConfigNtrip {
+      string host;
+
+      int16 port;
+
+      string mountpoint;
+
+      string username;
+
+      string password;
+
+      string rtcm_port;
+
+      uint64 rtcm_baudrate;
+
+      float rtcm_timer;
+    };
+  };
+};

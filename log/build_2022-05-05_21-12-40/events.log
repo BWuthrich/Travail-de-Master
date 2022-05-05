@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.004091] (-) JobUnselected: {'identifier': 'bluespace_ai_xsens_mti_driver'}
+[0.004471] (-) JobUnselected: {'identifier': 'central'}
+[0.004644] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.004778] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.004904] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.005013] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.005177] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.007428] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.008367] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.008574] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.008729] (-) JobUnselected: {'identifier': 'tcam'}
+[0.008881] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.009030] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.009187] (cam_client) JobQueued: {'identifier': 'cam_client', 'dependencies': OrderedDict([('xsens_msgs', '/app/dev_ws/install/xsens_msgs')])}
+[0.009359] (cam_client) JobStarted: {'identifier': 'cam_client'}
+[0.098448] (-) TimerEvent: {}
+[0.199899] (-) TimerEvent: {}
+[0.301271] (-) TimerEvent: {}
+[0.402149] (-) TimerEvent: {}
+[0.502846] (-) TimerEvent: {}
+[0.603677] (-) TimerEvent: {}
+[0.704810] (-) TimerEvent: {}
+[0.805491] (-) TimerEvent: {}
+[0.906540] (-) TimerEvent: {}
+[1.007287] (-) TimerEvent: {}
+[1.108025] (-) TimerEvent: {}
+[1.231016] (-) TimerEvent: {}
+[1.331730] (-) TimerEvent: {}
+[1.436136] (-) TimerEvent: {}
+[1.537180] (-) TimerEvent: {}
+[1.637946] (-) TimerEvent: {}
+[1.740938] (-) TimerEvent: {}
+[1.844720] (-) TimerEvent: {}
+[1.948645] (-) TimerEvent: {}
+[2.049396] (-) TimerEvent: {}
+[2.150253] (-) TimerEvent: {}
+[2.251020] (-) TimerEvent: {}
+[2.351738] (-) TimerEvent: {}
+[2.452448] (-) TimerEvent: {}
+[2.553120] (-) TimerEvent: {}
+[2.653827] (-) TimerEvent: {}
+[2.754572] (-) TimerEvent: {}
+[2.855334] (-) TimerEvent: {}
+[2.956058] (-) TimerEvent: {}
+[3.056774] (-) TimerEvent: {}
+[3.157844] (-) TimerEvent: {}
+[3.265125] (-) TimerEvent: {}
+[3.319810] (cam_client) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/cam_client', 'build', '--build-base', '/app/dev_ws/build/cam_client/build', 'install', '--prefix', '/app/dev_ws/install/cam_client', '--record', '/app/dev_ws/build/cam_client/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/cam_client', 'env': {'LIBRARY_PATH': '/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'C_INCLUDE_PATH': '/app/dev_ws/tiscamera/src/gobject:/app/dev_ws/tiscamera/src/gstreamer-1.0', 'GST_PLUGIN_PATH_1_0': '/app/dev_ws/tiscamera/build/src/gstreamer-1.0/', 'HOSTNAME': 'c7da8545c2d4', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'GI_TYPELIB_PATH': '/app/dev_ws/tiscamera/build/src/gobject/', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/app/dev_ws/tiscamera/build/data/', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy', 'LD_RUN_PATH': '/app/dev_ws/tiscamera/build/src:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'PWD': '/app/dev_ws/build/cam_client', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver'}, 'shell': False}
+[3.403133] (-) TimerEvent: {}
+[3.505716] (-) TimerEvent: {}
+[3.607755] (-) TimerEvent: {}
+[3.709605] (-) TimerEvent: {}
+[3.810347] (-) TimerEvent: {}
+[3.911477] (-) TimerEvent: {}
+[4.012550] (-) TimerEvent: {}
+[4.113379] (-) TimerEvent: {}
+[4.214360] (-) TimerEvent: {}
+[4.315508] (-) TimerEvent: {}
+[4.416211] (-) TimerEvent: {}
+[4.516936] (-) TimerEvent: {}
+[4.537145] (cam_client) StdoutLine: {'line': b'running egg_info\n'}
+[4.539789] (cam_client) StdoutLine: {'line': b'writing ../../build/cam_client/cam_client.egg-info/PKG-INFO\n'}
+[4.541039] (cam_client) StdoutLine: {'line': b'writing dependency_links to ../../build/cam_client/cam_client.egg-info/dependency_links.txt\n'}
+[4.542074] (cam_client) StdoutLine: {'line': b'writing entry points to ../../build/cam_client/cam_client.egg-info/entry_points.txt\n'}
+[4.542983] (cam_client) StdoutLine: {'line': b'writing requirements to ../../build/cam_client/cam_client.egg-info/requires.txt\n'}
+[4.543919] (cam_client) StdoutLine: {'line': b'writing top-level names to ../../build/cam_client/cam_client.egg-info/top_level.txt\n'}
+[4.617114] (-) TimerEvent: {}
+[4.713946] (cam_client) StdoutLine: {'line': b"reading manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'\n"}
+[4.717246] (-) TimerEvent: {}
+[4.718472] (cam_client) StdoutLine: {'line': b"writing manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'\n"}
+[4.719541] (cam_client) StdoutLine: {'line': b'running build\n'}
+[4.720333] (cam_client) StdoutLine: {'line': b'running build_py\n'}
+[4.721490] (cam_client) StdoutLine: {'line': b'copying cam_client/utils/myTIS.py -> /app/dev_ws/build/cam_client/build/lib/cam_client/utils\n'}
+[4.725298] (cam_client) StdoutLine: {'line': b'running install\n'}
+[4.729109] (cam_client) StdoutLine: {'line': b'running install_lib\n'}
+[4.734182] (cam_client) StdoutLine: {'line': b'copying /app/dev_ws/build/cam_client/build/lib/cam_client/utils/myTIS.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils\n'}
+[4.738476] (cam_client) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils/myTIS.py to myTIS.cpython-38.pyc\n'}
+[4.755832] (cam_client) StdoutLine: {'line': b'running install_data\n'}
+[4.758166] (cam_client) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.765626] (cam_client) StdoutLine: {'line': b"removing '/app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.767507] (cam_client) StdoutLine: {'line': b'Copying ../../build/cam_client/cam_client.egg-info to /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client-0.0.0-py3.8.egg-info\n'}
+[4.774125] (cam_client) StdoutLine: {'line': b'running install_scripts\n'}
+[4.817539] (-) TimerEvent: {}
+[4.864238] (cam_client) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/cam_client/lib/cam_client\n'}
+[4.868275] (cam_client) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/cam_client/install.log'\n"}
+[4.917772] (-) TimerEvent: {}
+[4.991435] (cam_client) CommandEnded: {'returncode': 0}
+[5.017918] (-) TimerEvent: {}
+[5.056346] (cam_client) JobEnded: {'identifier': 'cam_client', 'rc': 0}
+[5.059604] (-) EventReactorShutdown: {}

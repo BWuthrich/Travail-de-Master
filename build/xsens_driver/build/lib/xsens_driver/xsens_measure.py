@@ -2,9 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
-from rcl_interfaces.msg import SetParametersResult
-from rclpy.parameter import Parameter
-
+import RPi.GPIO as GPIO
 import time
 from haversine import haversine, Unit
 
@@ -36,6 +34,14 @@ class XSensDriver(Node):
 		self.sta_sw_msg.sync_out = "0"
 		self.sta_sw_msg.filter_mode = "000"
 		self.sta_sw_msg.rtk_status = "00"
+		# GPIO trigger connection
+		self.gpioSwitch = 24
+		self.gpioTrig = 23
+		self.dtPulse = 0.001
+		self.dtFreq = None			
+		GPIO.setmode(GPIO.BCM)
+		GPIO.setup(self.gpioSwitch, GPIO.OUT)
+		GPIO.setup(self.gpioTrig, GPIO.OUT)
 
 		# Create Publishers
 		self.ori_oe_pub = self.create_publisher(OriOE, 'mti/orientation_Euler', 10)
@@ -77,7 +83,8 @@ class XSensDriver(Node):
 			self.configOutput()
 		if self.syncConfig != msg.sync_config:
 			self.syncConfig = msg.sync_config
-			self.baudrate = msg.baudrate	
+			self.baudrate = msg.baudrate
+			self.dtFreq = msg.dt_freq
 			self.publishStatus("Configuring")
 			self.configSync()
 		
@@ -133,8 +140,26 @@ class XSensDriver(Node):
 		    SyncSetting(
 		        SyncFunction.OnePpsTimePulse, 10, 1, 0, 0, 0, 500, 0)
 		]	
-		settings += [SyncSetting(lst[0], lst[1],lst[2],lst[3],lst[5],lst[5],lst[6],lst[7])]
+		settings += [SyncSetting(lst[0],lst[1],lst[2],lst[3],lst[4],lst[5],lst[6],lst[7])]
 		self.device.SetSyncSettings(settings)
+		
+		# If sync on input line - Trigger from RPI
+		if lst[1] != 7:
+			GPIO.output(self.gpioSwitch, GPIO.HIGH)
+			# Start Trigger
+			self.timer = self.create_timer(self.dtFreq, self.RPItrig)
+		
+		# Else sync on output line - Trigger from Xsens
+		else:
+			self.timer = []
+			GPIO.output(self.gpioSwitch, GPIO.LOW)
+	
+	
+	def RPItrig(self):
+		GPIO.output(self.gpioTrig, GPIO.HIGH)
+		time.sleep(self.dtPulse)
+		GPIO.output(self.gpioTrig, GPIO.LOW)		
+		
 	
 	def publishStatus(self, status):
 		self.xsens_status = status

@@ -1,0 +1,37 @@
+[4.858s] Invoking command in '/app/dev_ws/src/ntrip_client': PYTHONPATH=/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ntrip_client build --build-base /app/dev_ws/build/ntrip_client/build install --prefix /app/dev_ws/install/ntrip_client --record /app/dev_ws/build/ntrip_client/install.log --single-version-externally-managed
+[6.593s] running egg_info
+[6.594s] creating ../../build/ntrip_client/ntrip_client.egg-info
+[6.595s] writing ../../build/ntrip_client/ntrip_client.egg-info/PKG-INFO
+[6.597s] writing dependency_links to ../../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt
+[6.598s] writing entry points to ../../build/ntrip_client/ntrip_client.egg-info/entry_points.txt
+[6.598s] writing requirements to ../../build/ntrip_client/ntrip_client.egg-info/requires.txt
+[6.599s] writing top-level names to ../../build/ntrip_client/ntrip_client.egg-info/top_level.txt
+[6.610s] writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[6.811s] reading manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[6.816s] writing manifest file '../../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+[6.817s] running build
+[6.818s] running build_py
+[6.819s] creating /app/dev_ws/build/ntrip_client/build
+[6.820s] creating /app/dev_ws/build/ntrip_client/build/lib
+[6.821s] creating /app/dev_ws/build/ntrip_client/build/lib/ntrip_client
+[6.822s] copying ntrip_client/__init__.py -> /app/dev_ws/build/ntrip_client/build/lib/ntrip_client
+[6.822s] copying ntrip_client/ntrip_pub.py -> /app/dev_ws/build/ntrip_client/build/lib/ntrip_client
+[6.823s] running install
+[6.828s] running install_lib
+[6.835s] creating /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client
+[6.835s] copying /app/dev_ws/build/ntrip_client/build/lib/ntrip_client/__init__.py -> /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client
+[6.836s] copying /app/dev_ws/build/ntrip_client/build/lib/ntrip_client/ntrip_pub.py -> /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client
+[6.840s] byte-compiling /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client/__init__.py to __init__.cpython-38.pyc
+[6.846s] byte-compiling /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client/ntrip_pub.py to ntrip_pub.cpython-38.pyc
+[6.855s] running install_data
+[6.858s] creating /app/dev_ws/install/ntrip_client/share/ament_index
+[6.859s] creating /app/dev_ws/install/ntrip_client/share/ament_index/resource_index
+[6.859s] creating /app/dev_ws/install/ntrip_client/share/ament_index/resource_index/packages
+[6.860s] copying resource/ntrip_client -> /app/dev_ws/install/ntrip_client/share/ament_index/resource_index/packages
+[6.862s] copying package.xml -> /app/dev_ws/install/ntrip_client/share/ntrip_client
+[6.862s] running install_egg_info
+[6.870s] Copying ../../build/ntrip_client/ntrip_client.egg-info to /app/dev_ws/install/ntrip_client/lib/python3.8/site-packages/ntrip_client-0.0.0-py3.8.egg-info
+[6.882s] running install_scripts
+[6.983s] Installing main script to /app/dev_ws/install/ntrip_client/lib/ntrip_client
+[6.985s] writing list of installed files to '/app/dev_ws/build/ntrip_client/install.log'
+[7.120s] Invoked command in '/app/dev_ws/src/ntrip_client' returned '0': PYTHONPATH=/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ntrip_client build --build-base /app/dev_ws/build/ntrip_client/build install --prefix /app/dev_ws/install/ntrip_client --record /app/dev_ws/build/ntrip_client/install.log --single-version-externally-managed

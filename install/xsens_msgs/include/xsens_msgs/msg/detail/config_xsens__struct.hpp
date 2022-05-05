@@ -41,6 +41,7 @@ struct ConfigXsens_
       this->baudrate = 0ul;
       this->port_name = "";
       this->rtcm_refresh_dist = 0;
+      this->dt_freq = 0.0;
     }
   }
 
@@ -55,6 +56,7 @@ struct ConfigXsens_
       this->baudrate = 0ul;
       this->port_name = "";
       this->rtcm_refresh_dist = 0;
+      this->dt_freq = 0.0;
     }
   }
 
@@ -74,6 +76,9 @@ struct ConfigXsens_
   using _sync_config_type =
     std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other>;
   _sync_config_type sync_config;
+  using _dt_freq_type =
+    double;
+  _dt_freq_type dt_freq;
 
   // setters for named parameter idiom
   Type & set__output_config(
@@ -104,6 +109,12 @@ struct ConfigXsens_
     const std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other> & _arg)
   {
     this->sync_config = _arg;
+    return *this;
+  }
+  Type & set__dt_freq(
+    const double & _arg)
+  {
+    this->dt_freq = _arg;
     return *this;
   }
 
@@ -162,6 +173,9 @@ struct ConfigXsens_
       return false;
     }
     if (this->sync_config != other.sync_config) {
+      return false;
+    }
+    if (this->dt_freq != other.dt_freq) {
       return false;
     }
     return true;

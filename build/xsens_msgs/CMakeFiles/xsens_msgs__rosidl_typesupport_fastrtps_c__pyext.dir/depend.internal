@@ -106,6 +106,9 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
  rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__type_support.h
+ rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.h
+ rosidl_generator_c/xsens_msgs/msg/detail/config_cam__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/config_cam__type_support.h
  rosidl_generator_c/xsens_msgs/msg/detail/config_ntrip__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/config_ntrip__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/config_ntrip__type_support.h
@@ -121,6 +124,9 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__type_support.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_ct__functions.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_ct__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/sta_ct__type_support.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__type_support.h

@@ -12,6 +12,9 @@ export default {
       ntrip_config_pub: null,
       ntrip_config_msg: null,
       ntrip_status_sub: null,
+      cam_config_pub: null,
+      cam_config_msg: null,
+      cam_status_sub: null,
       
       // Xsens config
       OutputConfigString: "",
@@ -25,8 +28,10 @@ export default {
       syncDelay: 0,
       syncPerso: false,
       syncFromXsens: true,
+      syncFromRPI: false,
       syncXsensFreq: 1,
       syncList: null,
+      syncRPIFreq: 1,
       XsensPortName: "/dev/ttyS0",
       XsensBaudrate: 115200,
       wishPosPL: true,
@@ -91,6 +96,15 @@ export default {
     	RTCMPortName: "/dev/ttyUSB0",
     	RTCMBaudrate: 38400,
     	
+    	// Cameras Config
+    	CamSaveFolder: "/home/vignes/dev/vignes2/data/",
+    	CamHeight: 2448,
+    	CamWidth: 2048,
+    	CameFrameRate: 1,
+    	
+    	// Cameras status
+    	CamStatus : "Deconnected",
+    	
     	GnssFixLabel: "No GNSS",
     	RTKLabel: "No RTK",
     	status_style:{
@@ -154,6 +168,15 @@ export default {
       })
     },
     
+    // set Cam configuration publisher
+    setCamConfigPublisher: function(){
+      this.cam_config_pub = new ROSLIB.Topic({
+        ros : this.ros,
+        name : 'config/camclient',
+        messageType : 'xsens_msgs/ConfigCam'
+      })
+    },
+    
     // set Xsens status subscriber
 		setXsensStatusSubscriber: function(){
 		  this.xsens_status_sub = new ROSLIB.Topic({
@@ -197,6 +220,18 @@ export default {
 				this.RTCMStatus = message.rtcm_status	
 			})
 		},
+		
+    // set Ntrip status subscriber
+		setCamStatusSubscriber: function(){
+		  this.cam_status_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'cam/status',
+		    messageType : 'xsens_msgs/StaCT'
+		  })
+			this.cam_status_sub.subscribe(message => {
+				this.CamStatus = message.cam_status	
+			})
+		},
 
     // publish Xsens configuration
     publishXsensConfig: function(){
@@ -209,6 +244,7 @@ export default {
 				port_name : this.XsensPortName,
 				sync_config : this.syncList,
 				rtcm_refresh_dist : this.NtripDist,
+				dt_freq: 1/this.syncRPIFreq,
 			});
 			this.xsens_config_pub.publish(this.xsens_config_msg)
     },
@@ -228,8 +264,20 @@ export default {
 			});
 			this.ntrip_config_pub.publish(this.ntrip_config_msg)
     },
+    
+    // publish Cameras configuration
+    publishCamConfig: function(){
+    	this.setCamConfigPublisher()
+    	this.cam_config_msg = new ROSLIB.Message({
+				height : this.CamHeight,
+				width : this.CamWidth,
+				framerate : this.CameFrameRate,
+				save_file : this.CamSaveFolder,
+			});
+			this.cam_config_pub.publish(this.cam_config_msg)
+    },
 		
-		// compile output data string for Xsens Donnée GNSS?? // status byte pour legerté??
+		// compile output data string for Xsens - ajouter Donnée GNSS??
 		setOutputConfig: function(){
 			this.OutputConfigString=""
 			if(this.wishOriOE){this.OutputConfigString=this.OutputConfigString + "oe" + this.OriOE_freq + this.OriOE_prec.slice(-1) + this.OriOE_coor.slice(-1) + ","}
@@ -245,7 +293,7 @@ export default {
 			this.OutputConfigString = this.OutputConfigString.slice(0, -1)
 		},
     
-    // compile synchronisation setting list
+    // compile Xsens synchronisation setting list
     setSyncConfig: function() {
     	this.syncList = []
     	this.syncList.push(parseInt(this.syncFunction.slice(-2)))
@@ -253,7 +301,7 @@ export default {
     	this.syncList.push(parseInt(this.syncPolarity.slice(-1)))
     	this.syncList.push(parseInt(this.syncTrigger.slice(-1)))
     	this.syncList.push(this.syncSkipFirst)
-    	if (this.syncFromXsens) {this.syncList.push(parseInt(399*this.syncXsensFreq))}
+    	if (this.syncFromXsens) {this.syncList.push(parseInt(399/this.syncXsensFreq))}
     	else {this.syncList.push(this.syncSkipFactor)}
     	this.syncList.push(this.syncPulse)
     	this.syncList.push(this.syncDelay)
@@ -270,6 +318,7 @@ export default {
       this.syncPulse = 10
       this.syncDelay = 0
       this.syncPerso = false
+      this.syncFromRPI = true
       this.syncFromXsens = false
   	},
   	
@@ -284,6 +333,7 @@ export default {
       this.syncPulse = 10
       this.syncDelay = 0
       this.syncPerso = false
+      this.syncFromRPI = false
       this.syncFromXsens = true
   	},
   	
@@ -345,6 +395,7 @@ export default {
   	configTrigPerso: function() {
   		this.syncPerso = true
   		this.syncFromXsens = false
+  		this.syncFromRPI = false
   	}
   },
 
@@ -353,6 +404,7 @@ export default {
       this.connect();
       this.setXsensStatusSubscriber();
 			this.setNtripStatusSubscriber();
+			this.setCamStatusSubscriber();
 			this.setXsensOriOESubscriber();
 			this.plotOriOE();
     } catch (error) {
@@ -376,6 +428,9 @@ export default {
 		    <h5><span v-bind:class="status_style[RTCMStatus]">RTCM {{this.RTCMStatus}}</span></h5>
 		  </div>
 		  <div class="col">
+		    <h5><span v-bind:class="status_style[CamStatus]">Cameras{{this.CamStatus}}</span></h5>
+		  </div>
+		  <div class="col">
 		    <h5><span v-bind:class="gnss_style[GnssFix]">{{GnssFixLabel}}</span></h5>
 		  </div>
 		  <div class="col">
@@ -397,11 +452,11 @@ export default {
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         <strong>CONFIGURATION NTRIP</strong>
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       
       <table class="table table-sm table-borderless">
@@ -507,6 +562,12 @@ export default {
 									<label class="form-check-label" for="flexRadioDefault1">
 										Trigger form Raspberry - Default config
 									</label>
+									<div class="input-group input-group-sm mb-3" style="width: 7em">
+										<input type="number" class="form-control"  v-model="syncRPIFreq" :disabled="!syncFromRPI">
+										<div class="input-group-append">
+											<span class="input-group-text" id="inputGroup-sizing-sm"> hz </span>
+										</div>
+									</div>
 								</div>
 							</td>
 							<td>
@@ -821,11 +882,63 @@ export default {
 	<div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        ...
+        <strong>CONFIGURATION CAMERAS</strong>
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">BLABLA...
+      <div class="accordion-body">
+				
+				<table class="table table-sm table-borderless">
+					<tbody>
+						<tr>
+							<td>
+								<label class="form-label">Image height [px]</label>
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="CamHeight">
+							</td>
+							<td>
+								<label class="form-label">Image width [px]</label>
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="CamWidth">
+							</td>
+							<td>
+								<label class="form-label">Framerate [img/sec]</label>
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="CameFrameRate">
+							</td>
+							<td>
+								<label class="form-label"> Save images in...</label>
+								<input class="form-control form-control-sm" type="text" v-model="CamSaveFolder" style="width: 20em">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				
+				<p></p>
+				<table class="table table-sm table-borderless">
+		    	<thead>
+						<tr class="table-secondary">
+							<th scope="col" colspan="1">Camera 1</th>
+							<th scope="col" colspan="1">Camera 2</th>
+							<th scope="col" colspan="1">Camera 3</th>
+							<th scope="col" colspan="1">Camera 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label class="form-label">Dedicated parameters ?</label>
+							</td>
+							<td>
+								<label class="form-label">Dedicated parameters ?</label>
+							</td>
+							<td>
+								<label class="form-label">Dedicated parameters ?</label>
+							</td>
+							<td>
+								<label class="form-label">Dedicated parameters ?</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
       </div>
     </div>
   </div>
@@ -834,6 +947,7 @@ export default {
 	<div class="d-grid gap-2 col-4 mx-auto">
 		<button class="btn btn-primary" type="button" @click="publishNtripConfig" :disabled="XsensStatus=='Configuring' && XsensStatus=='Connecting'">Load Ntrip Configuration</button>
 		<button class="btn btn-primary" type="button" @click="publishXsensConfig" :disabled="NtripStatus!=='Connected' && RTCMStatus!=='Connected'">Load Xsens Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishCamConfig" :disabled="NtripStatus!=='Connected' && RTCMStatus!=='Connected'&& XsensStatus!=='Active'">Load Cameras Configuration</button>
 	</div>
 </template> 
 

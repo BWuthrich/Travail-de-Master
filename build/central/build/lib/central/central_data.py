@@ -146,8 +146,8 @@ class CollectData(Node):
 		#Update data
 		self.lines.set_xdata(np.append(self.lines.get_xdata(), self.x[0]))
 		self.lines.set_ydata(np.append(self.lines.get_ydata(), self.x[1]))
-		self.ax.set_ylim(self.x[1]-0.00003, self.x[1]+0.00003)
-		self.ax.set_xlim(self.x[0]-0.00003, self.x[0]+0.00003)
+		self.ax.set_ylim(self.x[1]-0.00005, self.x[1]+0.00005)
+		self.ax.set_xlim(self.x[0]-0.00005, self.x[0]+0.00005)
 
 		self.figure.canvas.draw()
 		self.figure.canvas.flush_events()
@@ -189,8 +189,8 @@ class CollectData(Node):
 		
 		# Init figure
 		self.figure, self.ax = plt.subplots()
-		self.lines, = self.ax.plot([],[], '-g')
-		self.lines_obs, = self.ax.plot([],[], 'ob')
+		self.lines, = self.ax.plot([],[], '-r')
+		self.lines_obs, = self.ax.plot([],[], '+k')
 		self.ax.grid()
 		
 	

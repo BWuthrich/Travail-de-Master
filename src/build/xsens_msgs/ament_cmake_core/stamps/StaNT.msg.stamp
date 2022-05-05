@@ -1,0 +1,2 @@
+string ntrip_status
+string rtcm_status

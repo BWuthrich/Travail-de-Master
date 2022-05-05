@@ -64,7 +64,7 @@ void resize_function__ConfigXsens__sync_config(void * untyped_member, size_t siz
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_message_member_array[6] = {
   {
     "output_config",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -139,13 +139,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ConfigXsens_m
     get_const_function__ConfigXsens__sync_config,  // get_const(index) function pointer
     get_function__ConfigXsens__sync_config,  // get(index) function pointer
     resize_function__ConfigXsens__sync_config  // resize(index) function pointer
+  },
+  {
+    "dt_freq",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs::msg::ConfigXsens, dt_freq),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ConfigXsens_message_members = {
   "xsens_msgs::msg",  // message namespace
   "ConfigXsens",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(xsens_msgs::msg::ConfigXsens),
   ConfigXsens_message_member_array,  // message members
   ConfigXsens_init_function,  // function to initialize message memory (memory has to be allocated)

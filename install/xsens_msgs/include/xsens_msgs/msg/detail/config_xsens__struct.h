@@ -32,6 +32,7 @@ typedef struct xsens_msgs__msg__ConfigXsens
   rosidl_runtime_c__String port_name;
   uint16_t rtcm_refresh_dist;
   rosidl_runtime_c__uint32__Sequence sync_config;
+  double dt_freq;
 } xsens_msgs__msg__ConfigXsens;
 
 // Struct for a sequence of xsens_msgs__msg__ConfigXsens.

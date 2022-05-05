@@ -32,7 +32,9 @@ set(msg_files
    "msg/AngWR.msg"
    "msg/ConfigXsens.msg"
    "msg/ConfigNtrip.msg"
+   "msg/ConfigCam.msg"
    "msg/StaNT.msg"
+   "msg/StaCT.msg"
    "srv/RTCMdata.srv"
 )
 

@@ -89,10 +89,18 @@ CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/config_ntrip.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__builder.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__struct.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__traits.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/config_cam.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__builder.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__struct.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__traits.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/sta_nt.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__builder.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__struct.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__traits.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/sta_ct.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__builder.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__struct.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__traits.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__builder.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__struct.hpp
@@ -123,7 +131,9 @@ rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/Ac
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/AngWR.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/ConfigXsens.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/ConfigNtrip.idl
+rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/ConfigCam.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/StaNT.idl
+rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/StaCT.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -322,6 +332,18 @@ rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__struct.hpp: rosidl_gene
 rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__traits.hpp
 
+rosidl_generator_cpp/xsens_msgs/msg/config_cam.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/config_cam.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__builder.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__builder.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__struct.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__struct.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__traits.hpp
+
 rosidl_generator_cpp/xsens_msgs/msg/sta_nt.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/sta_nt.hpp
 
@@ -333,6 +355,18 @@ rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__struct.hpp: rosidl_generator_
 
 rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__traits.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/sta_ct.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/sta_ct.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__builder.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__builder.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__struct.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__struct.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__traits.hpp
 
 rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
@@ -383,10 +417,18 @@ xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/config_ntrip.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__builder.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__struct.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_ntrip__traits.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/config_cam.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__builder.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__struct.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/config_cam__traits.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/sta_nt.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__builder.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__struct.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_nt__traits.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/sta_ct.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__builder.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__struct.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/sta_ct__traits.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__builder.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__struct.hpp

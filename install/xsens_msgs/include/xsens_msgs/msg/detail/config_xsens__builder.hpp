@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ConfigXsens_dt_freq
+{
+public:
+  explicit Init_ConfigXsens_dt_freq(::xsens_msgs::msg::ConfigXsens & msg)
+  : msg_(msg)
+  {}
+  ::xsens_msgs::msg::ConfigXsens dt_freq(::xsens_msgs::msg::ConfigXsens::_dt_freq_type arg)
+  {
+    msg_.dt_freq = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::ConfigXsens msg_;
+};
+
 class Init_ConfigXsens_sync_config
 {
 public:
   explicit Init_ConfigXsens_sync_config(::xsens_msgs::msg::ConfigXsens & msg)
   : msg_(msg)
   {}
-  ::xsens_msgs::msg::ConfigXsens sync_config(::xsens_msgs::msg::ConfigXsens::_sync_config_type arg)
+  Init_ConfigXsens_dt_freq sync_config(::xsens_msgs::msg::ConfigXsens::_sync_config_type arg)
   {
     msg_.sync_config = std::move(arg);
-    return std::move(msg_);
+    return Init_ConfigXsens_dt_freq(msg_);
   }
 
 private:
