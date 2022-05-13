@@ -3,29 +3,42 @@
 import rclpy
 from rclpy.node import Node
 import time
+import cv2
+import numpy as np
+import os.path as op
+import tifffile as tif
+from cv_bridge import CvBridge
 
-from xsens_msgs.msg import ConfigCam, StaCT
+from xsens_msgs.msg import ConfigCam, StaCT, CamImage, CamBatch
 from .utils.myTIS import TIS, SinkFormats, listCamerasAvailable
 
-class Camera:
+class Camera(Node):
 	def __init__(self, cameraName, serial, outputDir, height, width, framerate):
+	  
+	  super().__init__(cameraName)
 	  self.imageCounter = 0
 	  self.cameraName = cameraName
 	  self.outputDir = outputDir
 	  self.busy = True
 	  self.tis = TIS()
 	  self.tis.showLive(False)
-
+	  self.bridge = CvBridge()
+	  
 	  if serial is not None:
-	      cam_format = SinkFormats.GRAY16_LE  # GRAY8
+	      cam_format = SinkFormats.GRAY16_LE
 	      if serial.startswith("41"):
 	          cam_format = SinkFormats.BGRA
-	      self.tis.openDevice(serial, width, height, str(framerate)+"/1", cam_format)
-
+	      self.tis.openDevice(serial, width, height, framerate, cam_format)
+		
+		# Set Callback - trigger - start pipeline
+	  self.tis.setProperty("Trigger Mode", False)
 	  self.tis.setImageCallback(self.onNewImage)
-	  # Start the pipeline
 	  self.tis.startPipeline()
 	  self.tis.setProperty("Trigger Mode", True)
+	  
+	  # Create publisher for images
+	  self.img_msg = CamImage()
+	  self.Image_pub = self.create_publisher(CamImage, 'cam/image', 10)
 
   
 	def onNewImage(self, tis):
@@ -33,14 +46,21 @@ class Camera:
 		# Avoid being called, while the callback is busy
 		if self.busy is True:
 			return
+		start = time.time()
 		self.busy = True
 		image = tis.getImage()
-		# Doing a sample image processing - Create a file name with a running number:
+
+		# Publish image
 		self.imageCounter += 1
-		filename = op.join(self.outputDir, f"{self.cameraName}_{self.imageCounter:04}.tif")
-		print("onNewImage", filename)
-		# Save the image as tif. Instead of saving, there could be an image processing.
-		tif.imsave(filename, image)
+		self.img_msg.cam_id = int(self.cameraName[-1])
+		self.img_msg.data = self.bridge.cv2_to_imgmsg(np.array(image), "mono8")
+		self.Image_pub.publish(self.img_msg)
+		print(f"camera {self.cameraName[-1]} image n°{self.imageCounter} temps {time.time()-start}")
+		
+		
+		#filename = op.join(self.outputDir, f"{self.cameraName}_{self.imageCounter:04}.tif")
+		#print("NewImage", filename)
+		#tif.imsave(filename, image)
 		self.busy = False
 
 	def startLog(self, outputDir=None):
@@ -64,7 +84,6 @@ class camClient(Node):
 		self.cam_config = []
 		self.cam_number = 4
 		
-		
 		# Initial status message
 		self.sta_msg = StaCT()
 		self.sta_msg.cam_status = self.cam_status
@@ -76,11 +95,13 @@ class camClient(Node):
 			10)
 		self.cam_config_sub	
     
-    # Create publisher for ntrip Status
+    # Create publisher for cam Status
 		self.Status_pub = self.create_publisher(StaCT, 'cam/status', 10)
 		# Publish "Inactive"
 		self.Status_pub.publish(self.sta_msg)
 		
+    # Create publisher for images batch
+		self.Images_pub = self.create_publisher(CamBatch, 'cam/image_batch', 10)
 	
 	def setConfig(self, msg):
 		self.get_logger().info("cameras initialisation")
@@ -109,14 +130,10 @@ class camClient(Node):
 		for i, serial in enumerate(lstCamTemp):
 			self.get_logger().info(f" Init Cam_{i} : " + str(serial))
 			mc = Camera(f"Cam_{i}", serial, self.data_dir, self.height, self.width, self.framerate)
-			mc.busy = True
 			self.lstCam.append(mc)
-
 		time.sleep(0.1)
 		self.publishStatus("Connected")
-	
 
-	
 
 	def publishStatus(self, status):
 		self.cam_status = status

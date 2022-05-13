@@ -60,11 +60,15 @@ CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaSW.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/AccAA.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/AccAF.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/AngWR.msg
+CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/GnsNP.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/ConfigXsens.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/ConfigNtrip.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/ConfigCam.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaNT.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaCT.msg
+CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/TrgSP.msg
+CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/CamImage.msg
+CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/CamBatch.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/srv/RTCMdata.srv
 CMakeFiles/xsens_msgs: rosidl_cmake/srv/RTCMdata_Request.msg
 CMakeFiles/xsens_msgs: rosidl_cmake/srv/RTCMdata_Response.msg

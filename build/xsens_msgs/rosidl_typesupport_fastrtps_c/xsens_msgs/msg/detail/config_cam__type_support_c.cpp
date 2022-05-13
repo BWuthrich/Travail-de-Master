@@ -80,6 +80,11 @@ static bool _ConfigCam__cdr_serialize(
     cdr << str->data;
   }
 
+  // Field name: stream
+  {
+    cdr << (ros_message->stream ? true : false);
+  }
+
   return true;
 }
 
@@ -123,6 +128,13 @@ static bool _ConfigCam__cdr_deserialize(
     }
   }
 
+  // Field name: stream
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->stream = tmp ? true : false;
+  }
+
   return true;
 }
 
@@ -162,6 +174,12 @@ size_t get_serialized_size_xsens_msgs__msg__ConfigCam(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->save_file.size + 1);
+  // field.name stream
+  {
+    size_t item_size = sizeof(ros_message->stream);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -217,6 +235,12 @@ size_t max_serialized_size_xsens_msgs__msg__ConfigCam(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
+  }
+  // member: stream
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;

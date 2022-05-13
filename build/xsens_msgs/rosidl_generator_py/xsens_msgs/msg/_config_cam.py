@@ -57,6 +57,7 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
         '_width',
         '_framerate',
         '_save_file',
+        '_stream',
     ]
 
     _fields_and_field_types = {
@@ -64,6 +65,7 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
         'width': 'int32',
         'framerate': 'int32',
         'save_file': 'string',
+        'stream': 'boolean',
     }
 
     SLOT_TYPES = (
@@ -71,6 +73,7 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -81,6 +84,7 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
         self.width = kwargs.get('width', int())
         self.framerate = kwargs.get('framerate', int())
         self.save_file = kwargs.get('save_file', str())
+        self.stream = kwargs.get('stream', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -118,6 +122,8 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
         if self.framerate != other.framerate:
             return False
         if self.save_file != other.save_file:
+            return False
+        if self.stream != other.stream:
             return False
         return True
 
@@ -183,3 +189,16 @@ class ConfigCam(metaclass=Metaclass_ConfigCam):
                 isinstance(value, str), \
                 "The 'save_file' field must be of type 'str'"
         self._save_file = value
+
+    @property
+    def stream(self):
+        """Message field 'stream'."""
+        return self._stream
+
+    @stream.setter
+    def stream(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'stream' field must be of type 'bool'"
+        self._stream = value

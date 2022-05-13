@@ -8,11 +8,15 @@
     "/app/dev_ws/src/xsens_msgs:msg/AccAA.msg",
     "/app/dev_ws/src/xsens_msgs:msg/AccAF.msg",
     "/app/dev_ws/src/xsens_msgs:msg/AngWR.msg",
+    "/app/dev_ws/src/xsens_msgs:msg/GnsNP.msg",
     "/app/dev_ws/src/xsens_msgs:msg/ConfigXsens.msg",
     "/app/dev_ws/src/xsens_msgs:msg/ConfigNtrip.msg",
     "/app/dev_ws/src/xsens_msgs:msg/ConfigCam.msg",
     "/app/dev_ws/src/xsens_msgs:msg/StaNT.msg",
     "/app/dev_ws/src/xsens_msgs:msg/StaCT.msg",
+    "/app/dev_ws/src/xsens_msgs:msg/TrgSP.msg",
+    "/app/dev_ws/src/xsens_msgs:msg/CamImage.msg",
+    "/app/dev_ws/src/xsens_msgs:msg/CamBatch.msg",
     "/app/dev_ws/src/xsens_msgs:srv/RTCMdata.srv"
   ]
 }

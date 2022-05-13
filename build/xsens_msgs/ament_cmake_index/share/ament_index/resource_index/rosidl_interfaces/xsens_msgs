@@ -4,12 +4,18 @@ msg/AccAF.idl
 msg/AccAF.msg
 msg/AngWR.idl
 msg/AngWR.msg
+msg/CamBatch.idl
+msg/CamBatch.msg
+msg/CamImage.idl
+msg/CamImage.msg
 msg/ConfigCam.idl
 msg/ConfigCam.msg
 msg/ConfigNtrip.idl
 msg/ConfigNtrip.msg
 msg/ConfigXsens.idl
 msg/ConfigXsens.msg
+msg/GnsNP.idl
+msg/GnsNP.msg
 msg/OriOE.idl
 msg/OriOE.msg
 msg/PosPA.idl
@@ -22,6 +28,8 @@ msg/StaNT.idl
 msg/StaNT.msg
 msg/StaSW.idl
 msg/StaSW.msg
+msg/TrgSP.idl
+msg/TrgSP.msg
 srv/RTCMdata.idl
 srv/RTCMdata.srv
 srv/RTCMdata_Request.msg

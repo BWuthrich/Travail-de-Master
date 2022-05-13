@@ -95,6 +95,15 @@ bool xsens_msgs__msg__config_cam__convert_from_py(PyObject * _pymsg, void * _ros
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // stream
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stream");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->stream = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -161,6 +170,17 @@ PyObject * xsens_msgs__msg__config_cam__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "save_file", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stream
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->stream ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stream", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

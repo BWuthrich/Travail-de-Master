@@ -33,7 +33,8 @@ export default {
       syncList: null,
       syncRPIFreq: 1,
       XsensPortName: "/dev/ttyS0",
-      XsensBaudrate: 115200,
+      XsensBaudrate: 460800,
+      wishGnsNP: true,
       wishPosPL: true,
       wishPosPA: true,
       wishOriOE: true,
@@ -44,6 +45,7 @@ export default {
       wishAngWR: false,
       wishAngWH: false,
       wishStaSW: true,
+      GnsNP_freq: 4,
       PosPL_freq: 30,
       PosPA_freq: 30,
       OriOE_freq: 30,
@@ -97,10 +99,12 @@ export default {
     	RTCMBaudrate: 38400,
     	
     	// Cameras Config
-    	CamSaveFolder: "/home/vignes/dev/vignes2/data/",
+    	CamSaveFolder: "/app/dev_ws/data/",
     	CamHeight: 2448,
     	CamWidth: 2048,
-    	CameFrameRate: 1,
+    	CamFrameRate: 1,
+    	CamStream: true,
+    	
     	
     	// Cameras status
     	CamStatus : "Deconnected",
@@ -240,7 +244,7 @@ export default {
     	this.setSyncConfig()
     	this.xsens_config_msg = new ROSLIB.Message({
 				output_config : this.OutputConfigString,
-				baudrate : this.XsensBaudrate,
+				baudrate : parseInt(this.XsensBaudrate),
 				port_name : this.XsensPortName,
 				sync_config : this.syncList,
 				rtcm_refresh_dist : this.NtripDist,
@@ -271,8 +275,9 @@ export default {
     	this.cam_config_msg = new ROSLIB.Message({
 				height : this.CamHeight,
 				width : this.CamWidth,
-				framerate : this.CameFrameRate,
+				framerate : this.CamFrameRate,
 				save_file : this.CamSaveFolder,
+				stream : this.CamStream,
 			});
 			this.cam_config_pub.publish(this.cam_config_msg)
     },
@@ -287,6 +292,7 @@ export default {
 	    if(this.wishAccAF){this.OutputConfigString=this.OutputConfigString + "af" + this.AccAF_freq + this.AccAF_prec.slice(-1) + this.AccAF_coor.slice(-1) + ","}
 	    if(this.wishTmpIU){this.OutputConfigString=this.OutputConfigString + "iu" + this.TmpIU_freq + ","}
 	    if(this.wishTmpIP){this.OutputConfigString=this.OutputConfigString + "ip" + this.TmpIP_freq + ","}
+	    if(this.wishGnsNP){this.OutputConfigString=this.OutputConfigString + "np" + this.GnsNP_freq + ","}
 	    if(this.wishAngWR){this.OutputConfigString=this.OutputConfigString + "wr" + this.AngWR_freq + this.AngWR_prec.slice(-1) + this.AngWR_coor.slice(-1) + ","}
 	    if(this.wishAngWH){this.OutputConfigString=this.OutputConfigString + "wh" + this.AngWH_freq + this.AngWH_prec.slice(-1) + this.AngWH_coor.slice(-1) + ","}
 	    if(this.wishStaSW){this.OutputConfigString=this.OutputConfigString + "sw" + this.StaSW_freq + ","}
@@ -309,7 +315,7 @@ export default {
     
     // set default config to trigger from Raspberry
     configTrigRPI: function() {
-      this.syncFunction = "Send Latest [in] - 8"
+      this.syncFunction = "Trigger Indication [in] - 3"
       this.syncLine = "In1 - 2"
       this.syncPolarity = "Positive Pulse - 1"
       this.syncTrigger = "Multiple times - 0"
@@ -428,7 +434,7 @@ export default {
 		    <h5><span v-bind:class="status_style[RTCMStatus]">RTCM {{this.RTCMStatus}}</span></h5>
 		  </div>
 		  <div class="col">
-		    <h5><span v-bind:class="status_style[CamStatus]">Cameras{{this.CamStatus}}</span></h5>
+		    <h5><span v-bind:class="status_style[CamStatus]">Cameras {{this.CamStatus}}</span></h5>
 		  </div>
 		  <div class="col">
 		    <h5><span v-bind:class="gnss_style[GnssFix]">{{GnssFixLabel}}</span></h5>
@@ -538,7 +544,20 @@ export default {
 							</td>
 							<td>
 								<label class="form-label">Baudrate</label>
-								<input class="form-control form-control-sm" type="text" v-model="XsensBaudrate">
+								<select class="form-select form-select-sm" v-model="XsensBaudrate">
+									<option>4800</option>
+									<option>9600</option>
+									<option>14400</option>
+									<option>19200</option>
+									<option>28800</option>
+									<option>38400</option>
+									<option>57600</option>
+									<option>76600</option>
+									<option>115200</option>
+									<option>230400</option>
+									<option>460800</option>
+									<option>921600</option>
+								</select>
 							</td>
 							<td>
 								<label class="form-label">RTCM refresh distance [m]</label>
@@ -722,6 +741,20 @@ export default {
 									</select>
 							</td>
 						</tr>
+						
+						
+						<th scope="row">GNSS</th>
+						<tr>
+							<th scope="row">
+								<input class="form-check-input" type="checkbox" v-model="wishGnsNP">
+							</th>
+							<td>GNSS PVT data</td>
+							<td>
+								<input type="number" v-model="GnsNP_freq" style="width: 5em"><label>&nbspmax 4 hz</label>
+							</td>
+						</tr>
+						
+						
 						<th scope="row">Orientation</th>
 						<tr>
 							<th scope="row">
@@ -901,11 +934,15 @@ export default {
 							</td>
 							<td>
 								<label class="form-label">Framerate [img/sec]</label>
-								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="CameFrameRate">
+								<input type="number" class="form-control form-control-sm" style="width: 13em" v-model="CamFrameRate">
 							</td>
 							<td>
 								<label class="form-label"> Save images in...</label>
 								<input class="form-control form-control-sm" type="text" v-model="CamSaveFolder" style="width: 20em">
+							</td>
+							<td>
+								<input class="form-check-input" type="checkbox" v-model="CamStream">
+								<label class="form-label"> Stream pictures</label>
 							</td>
 						</tr>
 					</tbody>
@@ -945,9 +982,9 @@ export default {
 </div>
 <p></p>
 	<div class="d-grid gap-2 col-4 mx-auto">
-		<button class="btn btn-primary" type="button" @click="publishNtripConfig" :disabled="XsensStatus=='Configuring' && XsensStatus=='Connecting'">Load Ntrip Configuration</button>
-		<button class="btn btn-primary" type="button" @click="publishXsensConfig" :disabled="NtripStatus!=='Connected' && RTCMStatus!=='Connected'">Load Xsens Configuration</button>
-		<button class="btn btn-primary" type="button" @click="publishCamConfig" :disabled="NtripStatus!=='Connected' && RTCMStatus!=='Connected'&& XsensStatus!=='Active'">Load Cameras Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishNtripConfig">Load Ntrip Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishCamConfig">Load Cameras Configuration</button>
+		<button class="btn btn-primary" type="button" @click="publishXsensConfig">Load Xsens Configuration</button>
 	</div>
 </template> 
 

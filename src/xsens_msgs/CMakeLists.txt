@@ -30,11 +30,15 @@ set(msg_files
    "msg/AccAA.msg"
    "msg/AccAF.msg"
    "msg/AngWR.msg"
+   "msg/GnsNP.msg"
    "msg/ConfigXsens.msg"
    "msg/ConfigNtrip.msg"
    "msg/ConfigCam.msg"
    "msg/StaNT.msg"
    "msg/StaCT.msg"
+   "msg/TrgSP.msg"
+   "msg/CamImage.msg"
+   "msg/CamBatch.msg"
    "srv/RTCMdata.srv"
 )
 

@@ -456,6 +456,60 @@ rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.c.s
 .PHONY : rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.c.s
 
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.o
+
+# target to build an object file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o
+
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.i: rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.i
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.i
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.i
+
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.s: rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.s
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.s
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.s
+
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.o
+
+# target to build an object file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o
+
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.i: rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.i
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.i
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.i
+
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.s: rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.s
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.s
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.s
+
 rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.c.o
 
 .PHONY : rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.o
@@ -536,6 +590,33 @@ rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.s: rosidl_gener
 rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.s
 .PHONY : rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.s
+
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.o
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.o
+
+# target to build an object file
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.o
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.o
+
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.i: rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.i
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.i
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.i
+
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.s: rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.s
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.s
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.c.s
 
 rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o
 
@@ -698,6 +779,33 @@ rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.s: rosidl_generator_c
 rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.c.s
 .PHONY : rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.c.s
+
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.o: rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.o
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.o
+
+# target to build an object file
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.o
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.o
+
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.i: rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.i
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.i
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.i
+
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.s: rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.s
+
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.s
+.PHONY : rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.c.s
 
 rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.o: rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o
 
@@ -888,6 +996,60 @@ rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.c.s
 .PHONY : rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.c.s
 
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.o: rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.o
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.o
+
+# target to build an object file
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.o
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.o
+
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.i: rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.i
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.i
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.i
+
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.s: rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.s
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.s
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c.s
+
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.o: rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.o
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.o
+
+# target to build an object file
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.o
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.o
+
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.i: rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.i
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.i
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.i
+
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.s: rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.s
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.s
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_cam_image_s.c.s
+
 rosidl_generator_py/xsens_msgs/msg/_config_cam_s.o: rosidl_generator_py/xsens_msgs/msg/_config_cam_s.c.o
 
 .PHONY : rosidl_generator_py/xsens_msgs/msg/_config_cam_s.o
@@ -968,6 +1130,33 @@ rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.s: rosidl_generator_py/xsens_
 rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c.s
 .PHONY : rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.c.s
+
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.o: rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.o
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.o
+
+# target to build an object file
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.o
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.o
+
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.i: rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.i
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.i
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.i
+
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.s: rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.s
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.s
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c.s
 
 rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.o: rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c.o
 
@@ -1131,6 +1320,33 @@ rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c.s
 .PHONY : rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.c.s
 
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.o: rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.o
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.o
+
+# target to build an object file
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.o
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.o
+
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.i: rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.i
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.i
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.i
+
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.s: rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.s
+
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__python.dir/build.make CMakeFiles/xsens_msgs__python.dir/rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.s
+.PHONY : rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.c.s
+
 rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.o: rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.c.o
 
 .PHONY : rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.o
@@ -1239,6 +1455,60 @@ rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.cpp.s
 
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.o
+
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.i: rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.i
+
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.s: rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.s
+
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.o
+
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.i: rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.i
+
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.s: rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.s
+
 rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.o
@@ -1319,6 +1589,33 @@ rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.s: rosidl_typesup
 rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.cpp.s
+
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.o
+
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.i: rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.i
+
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.s: rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.s
 
 rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o
 
@@ -1482,6 +1779,33 @@ rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.cpp.s
 
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.o: rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.o
+
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.i: rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.i
+
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.s: rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.s
+
 rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.o: rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.o
@@ -1590,6 +1914,60 @@ rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.s
 
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.o
+
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.i: rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.i
+
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.s: rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.s
+
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o
+
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.i: rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.i
+
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.s: rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.s
+
 rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.o
@@ -1670,6 +2048,33 @@ rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.s: rosidl_types
 rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.s
+
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.o
+
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.i: rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.i
+
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.s: rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.cpp.s
 
 rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.cpp.o
 
@@ -1833,6 +2238,33 @@ rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.cpp.s
 
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.o: rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.o
+
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.i: rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.i
+
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.s: rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.cpp.s
+
 rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.o: rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.o
@@ -1941,6 +2373,60 @@ rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.cpp.s
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.i: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.s: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.i: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.s: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.cpp.o
 
 .PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.o
@@ -2021,6 +2507,33 @@ rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c
 rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.i: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.s: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.cpp.o
 
@@ -2184,6 +2697,33 @@ rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.cpp.s
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.i: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.s: rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.o: rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.cpp.o
 
 .PHONY : rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.o
@@ -2292,6 +2832,60 @@ rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.i: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.s: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.i: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.s: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.o
@@ -2372,6 +2966,33 @@ rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens_
 rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.i: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.s: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.cpp.o
 
@@ -2535,6 +3156,33 @@ rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.i: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.s: rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.o: rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.o
@@ -2643,6 +3291,60 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.s
 
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.i: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.s: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.i: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.s: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s
+
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o
 
 .PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.o
@@ -2723,6 +3425,33 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_supp
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.s
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.i: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.s: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s
 
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.c.o
 
@@ -2886,6 +3615,33 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.c.
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.c.s
 
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.i: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.s: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s
+
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s
+
 rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.o: rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o
 
 .PHONY : rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.o
@@ -2994,6 +3750,60 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.i: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.s: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.i: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.s: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.o
@@ -3074,6 +3884,33 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_su
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.i: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.s: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.cpp.s
 
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.cpp.o
 
@@ -3237,6 +4074,33 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.
 	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.o
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.o:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.i: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.i
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.i:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.s: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.s
+
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.s:
+	$(MAKE) -f CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.o: rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o
 
 .PHONY : rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.o
@@ -3302,6 +4166,12 @@ help:
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.s"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.o"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.i"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.s"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.o"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.i"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.s"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.s"
@@ -3311,6 +4181,9 @@ help:
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.s"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.o"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.i"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/gns_np__functions.s"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.s"
@@ -3329,6 +4202,9 @@ help:
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.s"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.o"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.i"
+	@echo "... rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__functions.s"
 	@echo "... rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.o"
 	@echo "... rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.i"
 	@echo "... rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.s"
@@ -3350,6 +4226,12 @@ help:
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.s"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.o"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.i"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.s"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_image_s.o"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_image_s.i"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_cam_image_s.s"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_cam_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_cam_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_cam_s.s"
@@ -3359,6 +4241,9 @@ help:
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_config_xsens_s.s"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_gns_np_s.o"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_gns_np_s.i"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_gns_np_s.s"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.s"
@@ -3377,6 +4262,9 @@ help:
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/msg/_sta_sw_s.s"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.o"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.i"
+	@echo "... rosidl_generator_py/xsens_msgs/msg/_trg_sp_s.s"
 	@echo "... rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.o"
 	@echo "... rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.i"
 	@echo "... rosidl_generator_py/xsens_msgs/srv/_rtc_mdata_s.s"
@@ -3389,6 +4277,12 @@ help:
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ang_wr__type_support.s"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.o"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.i"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.s"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.o"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.i"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.s"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.s"
@@ -3398,6 +4292,9 @@ help:
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/config_xsens__type_support.s"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.o"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.i"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.s"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.s"
@@ -3416,6 +4313,9 @@ help:
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/msg/sta_sw__type_support.s"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.o"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.i"
+	@echo "... rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.s"
 	@echo "... rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.o"
 	@echo "... rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.i"
 	@echo "... rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.s"
@@ -3428,6 +4328,12 @@ help:
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.s"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.o"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.i"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.s"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.o"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.i"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.s"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.s"
@@ -3437,6 +4343,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.s"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.o"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.i"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/gns_np__type_support.s"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.s"
@@ -3455,6 +4364,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.s"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.o"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.i"
+	@echo "... rosidl_typesupport_cpp/xsens_msgs/msg/trg_sp__type_support.s"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.o"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.i"
 	@echo "... rosidl_typesupport_cpp/xsens_msgs/srv/rtc_mdata__type_support.s"
@@ -3467,6 +4379,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ang_wr__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_batch__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/cam_image__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_cam__type_support_c.s"
@@ -3476,6 +4394,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/config_xsens__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/gns_np__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/ori_oe__type_support_c.s"
@@ -3494,6 +4415,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/sta_sw__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/msg/detail/trg_sp__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/xsens_msgs/srv/detail/rtc_mdata__type_support_c.s"
@@ -3506,6 +4430,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.s"
@@ -3515,6 +4445,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/gns_np__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.s"
@@ -3533,6 +4466,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/trg_sp__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/xsens_msgs/srv/detail/dds_fastrtps/rtc_mdata__type_support.s"
@@ -3545,6 +4481,12 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.s"
@@ -3554,6 +4496,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.s"
@@ -3572,6 +4517,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_sw__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.s"
@@ -3584,6 +4532,12 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.s"
@@ -3593,6 +4547,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/gns_np__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.s"
@@ -3611,6 +4568,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/trg_sp__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.s"

@@ -1,0 +1,24 @@
+[3.188s] Invoking command in '/app/dev_ws/src/cam_client': PYTHONPATH=/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_client build --build-base /app/dev_ws/build/cam_client/build install --prefix /app/dev_ws/install/cam_client --record /app/dev_ws/build/cam_client/install.log --single-version-externally-managed
+[4.339s] running egg_info
+[4.341s] writing ../../build/cam_client/cam_client.egg-info/PKG-INFO
+[4.343s] writing dependency_links to ../../build/cam_client/cam_client.egg-info/dependency_links.txt
+[4.344s] writing entry points to ../../build/cam_client/cam_client.egg-info/entry_points.txt
+[4.345s] writing requirements to ../../build/cam_client/cam_client.egg-info/requires.txt
+[4.345s] writing top-level names to ../../build/cam_client/cam_client.egg-info/top_level.txt
+[4.513s] reading manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'
+[4.518s] writing manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'
+[4.518s] running build
+[4.519s] running build_py
+[4.519s] copying cam_client/cam_client.py -> /app/dev_ws/build/cam_client/build/lib/cam_client
+[4.522s] running install
+[4.526s] running install_lib
+[4.531s] copying /app/dev_ws/build/cam_client/build/lib/cam_client/cam_client.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client
+[4.536s] byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/cam_client.py to cam_client.cpython-38.pyc
+[4.545s] running install_data
+[4.548s] running install_egg_info
+[4.555s] removing '/app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client-0.0.0-py3.8.egg-info' (and everything under it)
+[4.558s] Copying ../../build/cam_client/cam_client.egg-info to /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client-0.0.0-py3.8.egg-info
+[4.567s] running install_scripts
+[4.647s] Installing main script to /app/dev_ws/install/cam_client/lib/cam_client
+[4.649s] writing list of installed files to '/app/dev_ws/build/cam_client/install.log'
+[4.752s] Invoked command in '/app/dev_ws/src/cam_client' returned '0': PYTHONPATH=/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_client build --build-base /app/dev_ws/build/cam_client/build install --prefix /app/dev_ws/install/cam_client --record /app/dev_ws/build/cam_client/install.log --single-version-externally-managed

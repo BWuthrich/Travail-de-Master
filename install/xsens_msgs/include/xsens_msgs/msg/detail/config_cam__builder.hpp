@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ConfigCam_stream
+{
+public:
+  explicit Init_ConfigCam_stream(::xsens_msgs::msg::ConfigCam & msg)
+  : msg_(msg)
+  {}
+  ::xsens_msgs::msg::ConfigCam stream(::xsens_msgs::msg::ConfigCam::_stream_type arg)
+  {
+    msg_.stream = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::ConfigCam msg_;
+};
+
 class Init_ConfigCam_save_file
 {
 public:
   explicit Init_ConfigCam_save_file(::xsens_msgs::msg::ConfigCam & msg)
   : msg_(msg)
   {}
-  ::xsens_msgs::msg::ConfigCam save_file(::xsens_msgs::msg::ConfigCam::_save_file_type arg)
+  Init_ConfigCam_stream save_file(::xsens_msgs::msg::ConfigCam::_save_file_type arg)
   {
     msg_.save_file = std::move(arg);
-    return std::move(msg_);
+    return Init_ConfigCam_stream(msg_);
   }
 
 private:

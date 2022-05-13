@@ -35,7 +35,7 @@ void ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_fini_function(void
   xsens_msgs__msg__ConfigCam__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_message_member_array[5] = {
   {
     "height",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -95,13 +95,28 @@ static rosidl_typesupport_introspection_c__MessageMember ConfigCam__rosidl_types
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "stream",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__ConfigCam, stream),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_message_members = {
   "xsens_msgs__msg",  // message namespace
   "ConfigCam",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(xsens_msgs__msg__ConfigCam),
   ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_message_member_array,  // message members
   ConfigCam__rosidl_typesupport_introspection_c__ConfigCam_init_function,  // function to initialize message memory (memory has to be allocated)

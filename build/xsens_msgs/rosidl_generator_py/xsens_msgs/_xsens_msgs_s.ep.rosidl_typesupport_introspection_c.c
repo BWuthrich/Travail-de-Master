@@ -997,6 +997,145 @@ _register_msg_type__msg__ang_wr(PyObject * pymodule)
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_runtime_c/action_type_support_struct.h"
+#include "xsens_msgs/msg/detail/gns_np__type_support.h"
+#include "xsens_msgs/msg/detail/gns_np__struct.h"
+#include "xsens_msgs/msg/detail/gns_np__functions.h"
+
+static void * xsens_msgs__msg__gns_np__create_ros_message(void)
+{
+  return xsens_msgs__msg__GnsNP__create();
+}
+
+static void xsens_msgs__msg__gns_np__destroy_ros_message(void * raw_ros_message)
+{
+  xsens_msgs__msg__GnsNP * ros_message = (xsens_msgs__msg__GnsNP *)raw_ros_message;
+  xsens_msgs__msg__GnsNP__destroy(ros_message);
+}
+
+ROSIDL_GENERATOR_C_IMPORT
+bool xsens_msgs__msg__gns_np__convert_from_py(PyObject * _pymsg, void * ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * xsens_msgs__msg__gns_np__convert_to_py(void * raw_ros_message);
+
+
+ROSIDL_GENERATOR_C_IMPORT
+const rosidl_message_type_support_t *
+ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, GnsNP);
+
+int8_t
+_register_msg_type__msg__gns_np(PyObject * pymodule)
+{
+  int8_t err;
+
+  PyObject * pyobject_create_ros_message = NULL;
+  pyobject_create_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__gns_np__create_ros_message,
+    NULL, NULL);
+  if (!pyobject_create_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "create_ros_message_msg__msg__gns_np",
+    pyobject_create_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_create_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_destroy_ros_message = NULL;
+  pyobject_destroy_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__gns_np__destroy_ros_message,
+    NULL, NULL);
+  if (!pyobject_destroy_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "destroy_ros_message_msg__msg__gns_np",
+    pyobject_destroy_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_destroy_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_from_py = NULL;
+  pyobject_convert_from_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__gns_np__convert_from_py,
+    NULL, NULL);
+  if (!pyobject_convert_from_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_from_py_msg__msg__gns_np",
+    pyobject_convert_from_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_from_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_to_py = NULL;
+  pyobject_convert_to_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__gns_np__convert_to_py,
+    NULL, NULL);
+  if (!pyobject_convert_to_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_to_py_msg__msg__gns_np",
+    pyobject_convert_to_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_to_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_type_support = NULL;
+  pyobject_type_support = PyCapsule_New(
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, GnsNP),
+    NULL, NULL);
+  if (!pyobject_type_support) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "type_support_msg__msg__gns_np",
+    pyobject_type_support);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_type_support);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+  return 0;
+}
+
+// already included above
+// #include <stdbool.h>
+// already included above
+// #include <stdint.h>
+// already included above
+// #include "rosidl_runtime_c/visibility_control.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/action_type_support_struct.h"
 #include "xsens_msgs/msg/detail/config_xsens__type_support.h"
 #include "xsens_msgs/msg/detail/config_xsens__struct.h"
 #include "xsens_msgs/msg/detail/config_xsens__functions.h"
@@ -1692,6 +1831,423 @@ _register_msg_type__msg__sta_ct(PyObject * pymodule)
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_runtime_c/action_type_support_struct.h"
+#include "xsens_msgs/msg/detail/trg_sp__type_support.h"
+#include "xsens_msgs/msg/detail/trg_sp__struct.h"
+#include "xsens_msgs/msg/detail/trg_sp__functions.h"
+
+static void * xsens_msgs__msg__trg_sp__create_ros_message(void)
+{
+  return xsens_msgs__msg__TrgSP__create();
+}
+
+static void xsens_msgs__msg__trg_sp__destroy_ros_message(void * raw_ros_message)
+{
+  xsens_msgs__msg__TrgSP * ros_message = (xsens_msgs__msg__TrgSP *)raw_ros_message;
+  xsens_msgs__msg__TrgSP__destroy(ros_message);
+}
+
+ROSIDL_GENERATOR_C_IMPORT
+bool xsens_msgs__msg__trg_sp__convert_from_py(PyObject * _pymsg, void * ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * xsens_msgs__msg__trg_sp__convert_to_py(void * raw_ros_message);
+
+
+ROSIDL_GENERATOR_C_IMPORT
+const rosidl_message_type_support_t *
+ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, TrgSP);
+
+int8_t
+_register_msg_type__msg__trg_sp(PyObject * pymodule)
+{
+  int8_t err;
+
+  PyObject * pyobject_create_ros_message = NULL;
+  pyobject_create_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__trg_sp__create_ros_message,
+    NULL, NULL);
+  if (!pyobject_create_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "create_ros_message_msg__msg__trg_sp",
+    pyobject_create_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_create_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_destroy_ros_message = NULL;
+  pyobject_destroy_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__trg_sp__destroy_ros_message,
+    NULL, NULL);
+  if (!pyobject_destroy_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "destroy_ros_message_msg__msg__trg_sp",
+    pyobject_destroy_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_destroy_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_from_py = NULL;
+  pyobject_convert_from_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__trg_sp__convert_from_py,
+    NULL, NULL);
+  if (!pyobject_convert_from_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_from_py_msg__msg__trg_sp",
+    pyobject_convert_from_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_from_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_to_py = NULL;
+  pyobject_convert_to_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__trg_sp__convert_to_py,
+    NULL, NULL);
+  if (!pyobject_convert_to_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_to_py_msg__msg__trg_sp",
+    pyobject_convert_to_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_to_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_type_support = NULL;
+  pyobject_type_support = PyCapsule_New(
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, TrgSP),
+    NULL, NULL);
+  if (!pyobject_type_support) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "type_support_msg__msg__trg_sp",
+    pyobject_type_support);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_type_support);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+  return 0;
+}
+
+// already included above
+// #include <stdbool.h>
+// already included above
+// #include <stdint.h>
+// already included above
+// #include "rosidl_runtime_c/visibility_control.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/action_type_support_struct.h"
+#include "xsens_msgs/msg/detail/cam_image__type_support.h"
+#include "xsens_msgs/msg/detail/cam_image__struct.h"
+#include "xsens_msgs/msg/detail/cam_image__functions.h"
+
+static void * xsens_msgs__msg__cam_image__create_ros_message(void)
+{
+  return xsens_msgs__msg__CamImage__create();
+}
+
+static void xsens_msgs__msg__cam_image__destroy_ros_message(void * raw_ros_message)
+{
+  xsens_msgs__msg__CamImage * ros_message = (xsens_msgs__msg__CamImage *)raw_ros_message;
+  xsens_msgs__msg__CamImage__destroy(ros_message);
+}
+
+ROSIDL_GENERATOR_C_IMPORT
+bool xsens_msgs__msg__cam_image__convert_from_py(PyObject * _pymsg, void * ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * xsens_msgs__msg__cam_image__convert_to_py(void * raw_ros_message);
+
+
+ROSIDL_GENERATOR_C_IMPORT
+const rosidl_message_type_support_t *
+ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, CamImage);
+
+int8_t
+_register_msg_type__msg__cam_image(PyObject * pymodule)
+{
+  int8_t err;
+
+  PyObject * pyobject_create_ros_message = NULL;
+  pyobject_create_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_image__create_ros_message,
+    NULL, NULL);
+  if (!pyobject_create_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "create_ros_message_msg__msg__cam_image",
+    pyobject_create_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_create_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_destroy_ros_message = NULL;
+  pyobject_destroy_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_image__destroy_ros_message,
+    NULL, NULL);
+  if (!pyobject_destroy_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "destroy_ros_message_msg__msg__cam_image",
+    pyobject_destroy_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_destroy_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_from_py = NULL;
+  pyobject_convert_from_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_image__convert_from_py,
+    NULL, NULL);
+  if (!pyobject_convert_from_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_from_py_msg__msg__cam_image",
+    pyobject_convert_from_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_from_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_to_py = NULL;
+  pyobject_convert_to_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_image__convert_to_py,
+    NULL, NULL);
+  if (!pyobject_convert_to_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_to_py_msg__msg__cam_image",
+    pyobject_convert_to_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_to_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_type_support = NULL;
+  pyobject_type_support = PyCapsule_New(
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, CamImage),
+    NULL, NULL);
+  if (!pyobject_type_support) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "type_support_msg__msg__cam_image",
+    pyobject_type_support);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_type_support);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+  return 0;
+}
+
+// already included above
+// #include <stdbool.h>
+// already included above
+// #include <stdint.h>
+// already included above
+// #include "rosidl_runtime_c/visibility_control.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/action_type_support_struct.h"
+#include "xsens_msgs/msg/detail/cam_batch__type_support.h"
+#include "xsens_msgs/msg/detail/cam_batch__struct.h"
+#include "xsens_msgs/msg/detail/cam_batch__functions.h"
+
+static void * xsens_msgs__msg__cam_batch__create_ros_message(void)
+{
+  return xsens_msgs__msg__CamBatch__create();
+}
+
+static void xsens_msgs__msg__cam_batch__destroy_ros_message(void * raw_ros_message)
+{
+  xsens_msgs__msg__CamBatch * ros_message = (xsens_msgs__msg__CamBatch *)raw_ros_message;
+  xsens_msgs__msg__CamBatch__destroy(ros_message);
+}
+
+ROSIDL_GENERATOR_C_IMPORT
+bool xsens_msgs__msg__cam_batch__convert_from_py(PyObject * _pymsg, void * ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * xsens_msgs__msg__cam_batch__convert_to_py(void * raw_ros_message);
+
+
+ROSIDL_GENERATOR_C_IMPORT
+const rosidl_message_type_support_t *
+ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, CamBatch);
+
+int8_t
+_register_msg_type__msg__cam_batch(PyObject * pymodule)
+{
+  int8_t err;
+
+  PyObject * pyobject_create_ros_message = NULL;
+  pyobject_create_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_batch__create_ros_message,
+    NULL, NULL);
+  if (!pyobject_create_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "create_ros_message_msg__msg__cam_batch",
+    pyobject_create_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_create_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_destroy_ros_message = NULL;
+  pyobject_destroy_ros_message = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_batch__destroy_ros_message,
+    NULL, NULL);
+  if (!pyobject_destroy_ros_message) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "destroy_ros_message_msg__msg__cam_batch",
+    pyobject_destroy_ros_message);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_destroy_ros_message);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_from_py = NULL;
+  pyobject_convert_from_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_batch__convert_from_py,
+    NULL, NULL);
+  if (!pyobject_convert_from_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_from_py_msg__msg__cam_batch",
+    pyobject_convert_from_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_from_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_convert_to_py = NULL;
+  pyobject_convert_to_py = PyCapsule_New(
+    (void *)&xsens_msgs__msg__cam_batch__convert_to_py,
+    NULL, NULL);
+  if (!pyobject_convert_to_py) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "convert_to_py_msg__msg__cam_batch",
+    pyobject_convert_to_py);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_convert_to_py);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+
+  PyObject * pyobject_type_support = NULL;
+  pyobject_type_support = PyCapsule_New(
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(xsens_msgs, msg, CamBatch),
+    NULL, NULL);
+  if (!pyobject_type_support) {
+    // previously added objects will be removed when the module is destroyed
+    return -1;
+  }
+  err = PyModule_AddObject(
+    pymodule,
+    "type_support_msg__msg__cam_batch",
+    pyobject_type_support);
+  if (err) {
+    // the created capsule needs to be decremented
+    Py_XDECREF(pyobject_type_support);
+    // previously added objects will be removed when the module is destroyed
+    return err;
+  }
+  return 0;
+}
+
+// already included above
+// #include <stdbool.h>
+// already included above
+// #include <stdint.h>
+// already included above
+// #include "rosidl_runtime_c/visibility_control.h"
+// already included above
+// #include "rosidl_runtime_c/message_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/service_type_support_struct.h"
+// already included above
+// #include "rosidl_runtime_c/action_type_support_struct.h"
 #include "xsens_msgs/srv/detail/rtc_mdata__type_support.h"
 #include "xsens_msgs/srv/detail/rtc_mdata__struct.h"
 #include "xsens_msgs/srv/detail/rtc_mdata__functions.h"
@@ -2042,6 +2598,12 @@ PyInit_xsens_msgs_s__rosidl_typesupport_introspection_c(void)
     return NULL;
   }
 
+  err = _register_msg_type__msg__gns_np(pymodule);
+  if (err) {
+    Py_XDECREF(pymodule);
+    return NULL;
+  }
+
   err = _register_msg_type__msg__config_xsens(pymodule);
   if (err) {
     Py_XDECREF(pymodule);
@@ -2067,6 +2629,24 @@ PyInit_xsens_msgs_s__rosidl_typesupport_introspection_c(void)
   }
 
   err = _register_msg_type__msg__sta_ct(pymodule);
+  if (err) {
+    Py_XDECREF(pymodule);
+    return NULL;
+  }
+
+  err = _register_msg_type__msg__trg_sp(pymodule);
+  if (err) {
+    Py_XDECREF(pymodule);
+    return NULL;
+  }
+
+  err = _register_msg_type__msg__cam_image(pymodule);
+  if (err) {
+    Py_XDECREF(pymodule);
+    return NULL;
+  }
+
+  err = _register_msg_type__msg__cam_batch(pymodule);
   if (err) {
     Py_XDECREF(pymodule);
     return NULL;

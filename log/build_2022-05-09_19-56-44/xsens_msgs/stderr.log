@@ -1,0 +1,33 @@
+In file included from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.h:19[m[K,
+                 from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c:4[m[K:
+[01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__struct.h:24:10:[m[K [01;31m[Kfatal error: [m[Kmsgs/msg/detail/cam_image__struct.h: No such file or directory
+   24 | #include [01;31m[K"msgs/msg/detail/cam_image__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make:574: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:386: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp:7[m[K:
+[01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_batch__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Kmsgs/msg/detail/cam_image__struct.hpp: No such file or directory
+   19 | #include [01;31m[K"msgs/msg/detail/cam_image__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make:387: CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_batch__type_support.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:469: CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp:12[m[K:
+[01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_batch__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Kmsgs/msg/detail/cam_image__struct.hpp: No such file or directory
+   19 | #include [01;31m[K"msgs/msg/detail/cam_image__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:434: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:496: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+In file included from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp:4[m[K:
+[01m[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_batch__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Kmsgs/msg/detail/cam_image__struct.hpp: No such file or directory
+   19 | #include [01;31m[K"msgs/msg/detail/cam_image__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:434: CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_batch__type_support.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

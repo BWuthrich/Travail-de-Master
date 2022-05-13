@@ -18,10 +18,11 @@ from .mtdef import MID, OutputMode, OutputSettings, MTException, Baudrates, \
 class MTDevice(object):
     """XSens MT device communication object."""
 
-    def __init__(self, port, baudrate=115200, timeout=0.2,
+    def __init__(self, port, baudrate=115200, timeout=0.1,
                  config_mode=False, verbose=False):
         """Open device."""
         self.verbose = verbose
+        
         # serial interface to the device
         try:
             print(f"Connect to {port} @ {baudrate}")
@@ -32,11 +33,11 @@ class MTDevice(object):
             self.device = serial.Serial(port, baudrate, timeout=timeout,
                                         writeTimeout=timeout, rtscts=True,
                                         dsrdtr=True)
-        self.device.flushInput()   # flush to make sure the port is ready TODO
-        self.device.flushOutput()  # flush to make sure the port is ready TODO
+        self.device.reset_input_buffer()   # flush to make sure the port is ready TODO
+        self.device.reset_output_buffer()  # flush to make sure the port is ready TODO
+        
         # timeout for communication
-        self.timeout = 1000*timeout #C'est quoi ça pourquoi ce facteur 1000 à l'origine?
-        #self.timeout = timeout
+        self.timeout = 10  #1000*timeout #C'est quoi ça? Pourquoi ce facteur 1000 à l'origine?
         # state of the device
         self.state = None
         if config_mode:
@@ -106,9 +107,13 @@ class MTDevice(object):
                          ' '.join("%02X" % v for v in data)))
             if mid == MID.Error:
                 raise MTErrorMessage(data[0])
+            if (time.time()-start) > 0.1:
+            	print(time.time()-start)
             return (mid, buf[:-1])
         else:
-            raise MTException("could not find message.")
+        	if (time.time()-start) > 0.1:
+        		print(time.time()-start)
+        	raise MTException("could not find message.")			
 
     def write_ack(self, mid, data=b'', n_retries=500):
         """Send a message and read confirmation."""
@@ -211,6 +216,7 @@ class MTDevice(object):
         """Set the baudrate of the device using the baudrate id."""
         self._ensure_config_state()
         self.write_ack(MID.SetBaudrate, (brid,))
+        #self.write_ack(MID.SetBaudrate, b'\x00')
 
     def GetErrorMode(self):
         """Get the current error mode of the device."""
@@ -309,6 +315,7 @@ class MTDevice(object):
         self._ensure_config_state()
         data = b''.join(struct.pack('!HH', *output)
                         for output in output_configuration)
+        print(data)
         self.write_ack(MID.SetOutputConfiguration, data)
 
     def GetStringOutputType(self):
@@ -467,9 +474,9 @@ class MTDevice(object):
         self._ensure_measurement_state()
         # getting data
         mid, data = self.read_msg()
-        if mid == MID.MTData:
-            raise MTException("obsolete MTData.")
-        elif mid == MID.MTData2:
+        #if mid == MID.MTData:
+        #    raise MTException("obsolete MTData.")
+        if mid == MID.MTData2:
             return self.parse_MTData2(data)
         else:
             # return None
@@ -806,6 +813,7 @@ class MTDevice(object):
     def ChangeBaudrate(self, baudrate):
         """Change the baudrate, reset the device and reopen communication."""
         brid = Baudrates.get_BRID(baudrate)
+        print(type(brid))
         self.SetBaudrate(brid)
         self.Reset()
         # self.device.flush()

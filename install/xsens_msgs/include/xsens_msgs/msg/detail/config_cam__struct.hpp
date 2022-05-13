@@ -41,6 +41,7 @@ struct ConfigCam_
       this->width = 0l;
       this->framerate = 0l;
       this->save_file = "";
+      this->stream = false;
     }
   }
 
@@ -54,6 +55,7 @@ struct ConfigCam_
       this->width = 0l;
       this->framerate = 0l;
       this->save_file = "";
+      this->stream = false;
     }
   }
 
@@ -70,6 +72,9 @@ struct ConfigCam_
   using _save_file_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
   _save_file_type save_file;
+  using _stream_type =
+    bool;
+  _stream_type stream;
 
   // setters for named parameter idiom
   Type & set__height(
@@ -94,6 +99,12 @@ struct ConfigCam_
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
     this->save_file = _arg;
+    return *this;
+  }
+  Type & set__stream(
+    const bool & _arg)
+  {
+    this->stream = _arg;
     return *this;
   }
 
@@ -149,6 +160,9 @@ struct ConfigCam_
       return false;
     }
     if (this->save_file != other.save_file) {
+      return false;
+    }
+    if (this->stream != other.stream) {
       return false;
     }
     return true;

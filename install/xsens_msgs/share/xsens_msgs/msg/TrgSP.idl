@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from xsens_msgs/msg/TrgSP.msg
+// generated code does not contain a copyright notice
+
+
+module xsens_msgs {
+  module msg {
+    struct TrgSP {
+      sequence<int32> stamp;
+
+      int32 trig_counter;
+    };
+  };
+};

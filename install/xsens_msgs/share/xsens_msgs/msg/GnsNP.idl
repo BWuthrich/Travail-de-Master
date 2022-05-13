@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from xsens_msgs/msg/GnsNP.msg
+// generated code does not contain a copyright notice
+
+
+module xsens_msgs {
+  module msg {
+    struct GnsNP {
+      sequence<int32> stamp;
+
+      int8 fixtype;
+
+      double lon;
+
+      double lat;
+
+      int64 height;
+
+      int64 h_msl;
+
+      int64 h_acc;
+
+      int64 v_acc;
+
+      int64 vel_n;
+
+      int64 vel_e;
+
+      int64 vel_d;
+
+      int64 s_acc;
+    };
+  };
+};

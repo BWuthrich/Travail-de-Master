@@ -13,6 +13,8 @@ module xsens_msgs {
       int32 framerate;
 
       string save_file;
+
+      boolean stream;
     };
   };
 };

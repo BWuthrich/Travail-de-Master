@@ -72,11 +72,15 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupp
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/AccAA.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/AccAF.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/AngWR.idl
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/GnsNP.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/ConfigXsens.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/ConfigNtrip.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/ConfigCam.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/StaNT.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/StaCT.idl
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/TrgSP.idl
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/CamImage.idl
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/msg/CamBatch.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -188,6 +192,9 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__rosidl_typesupp
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_c.h
 
@@ -202,6 +209,15 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__rosidl_typesupp
 
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_c.h
@@ -227,6 +243,9 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__type_support.c:
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c
 
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c
+
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c
 
@@ -241,6 +260,15 @@ rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c:
 
 rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c
+
+rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c
 
 rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c
@@ -336,9 +364,22 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.s
 
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c > CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.i
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.s
+
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.i: cmake_force
@@ -351,7 +392,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.i: cmake_force
@@ -364,7 +405,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.i: cmake_force
@@ -377,7 +418,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.i: cmake_force
@@ -390,7 +431,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.i: cmake_force
@@ -401,9 +442,48 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.s
 
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c > CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.i
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.s
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c > CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.i
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.s
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c > CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.i
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.s
+
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o: rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.i: cmake_force
@@ -423,11 +503,15 @@ xsens_msgs__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_aa__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.o" \
+"CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o" \
+"CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o" \
+"CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o" \
+"CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o"
 
 # External object files for target xsens_msgs__rosidl_typesupport_introspection_c
@@ -440,11 +524,15 @@ libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__ros
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_aa__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c.o
+libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c.o
+libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c.o
+libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c.o
+libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c.o
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/build.make
 libxsens_msgs__rosidl_typesupport_introspection_c.so: libxsens_msgs__rosidl_generator_c.so
@@ -476,7 +564,7 @@ libxsens_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcppu
 libxsens_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libxsens_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcutils.so
 libxsens_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C shared library libxsens_msgs__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C shared library libxsens_msgs__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -495,11 +583,15 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typ
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_introspection_c.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_introspection_c.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__rosidl_typesupport_introspection_c.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__rosidl_typesupport_introspection_c.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_c.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ori_oe__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/pos_pa__type_support.c
@@ -508,11 +600,15 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typ
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_aa__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/acc_af__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/ang_wr__type_support.c
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/gns_np__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_xsens__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_ntrip__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/config_cam__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_nt__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/sta_ct__type_support.c
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/trg_sp__type_support.c
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_image__type_support.c
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/msg/detail/cam_batch__type_support.c
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/xsens_msgs/srv/detail/rtc_mdata__type_support.c
 	cd /app/dev_ws/build/xsens_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /app/dev_ws/src/xsens_msgs /app/dev_ws/src/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_c.dir/depend

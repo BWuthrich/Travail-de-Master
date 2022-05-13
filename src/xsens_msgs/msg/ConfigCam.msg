@@ -2,3 +2,4 @@ int32 height
 int32 width
 int32 framerate
 string save_file
+bool stream

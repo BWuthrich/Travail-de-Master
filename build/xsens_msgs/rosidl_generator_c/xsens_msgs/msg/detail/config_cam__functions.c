@@ -27,6 +27,7 @@ xsens_msgs__msg__ConfigCam__init(xsens_msgs__msg__ConfigCam * msg)
     xsens_msgs__msg__ConfigCam__fini(msg);
     return false;
   }
+  // stream
   return true;
 }
 
@@ -41,6 +42,7 @@ xsens_msgs__msg__ConfigCam__fini(xsens_msgs__msg__ConfigCam * msg)
   // framerate
   // save_file
   rosidl_runtime_c__String__fini(&msg->save_file);
+  // stream
 }
 
 xsens_msgs__msg__ConfigCam *

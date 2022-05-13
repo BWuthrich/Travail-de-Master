@@ -1,0 +1,25 @@
+[3.250s] Invoking command in '/app/dev_ws/src/xsens_driver': LD_LIBRARY_PATH=/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0 PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed
+[4.396s] running egg_info
+[4.405s] writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO
+[4.405s] writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt
+[4.406s] writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt
+[4.407s] writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt
+[4.407s] writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt
+[4.571s] reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.577s] writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'
+[4.579s] running build
+[4.579s] running build_py
+[4.581s] copying xsens_driver/utils/mtdevice.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils
+[4.584s] running install
+[4.588s] running install_lib
+[4.594s] copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils/mtdevice.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils
+[4.605s] byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdevice.py to mtdevice.cpython-38.pyc
+[4.606s] Sorry: IndentationError: unindent does not match any outer indentation level (mtdevice.py, line 113)
+[4.607s] running install_data
+[4.610s] running install_egg_info
+[4.617s] removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)
+[4.619s] Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info
+[4.625s] running install_scripts
+[4.711s] Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver
+[4.714s] writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'
+[4.816s] Invoked command in '/app/dev_ws/src/xsens_driver' returned '0': LD_LIBRARY_PATH=/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0 PYTHONPATH=/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/xsens_driver build --build-base /app/dev_ws/build/xsens_driver/build install --prefix /app/dev_ws/install/xsens_driver --record /app/dev_ws/build/xsens_driver/install.log --single-version-externally-managed

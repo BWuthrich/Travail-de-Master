@@ -1,0 +1,700 @@
+[0.000000] (-) TimerEvent: {}
+[0.001233] (-) JobUnselected: {'identifier': 'bluespace_ai_xsens_mti_driver'}
+[0.001434] (-) JobUnselected: {'identifier': 'cam_client'}
+[0.001558] (-) JobUnselected: {'identifier': 'central'}
+[0.001671] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.001815] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.002925] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.004854] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.005177] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.005352] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.005483] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.005583] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.005692] (-) JobUnselected: {'identifier': 'tcam'}
+[0.005781] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.005929] (xsens_msgs) JobQueued: {'identifier': 'xsens_msgs', 'dependencies': OrderedDict()}
+[0.006094] (xsens_msgs) JobStarted: {'identifier': 'xsens_msgs'}
+[0.087929] (xsens_msgs) JobProgress: {'identifier': 'xsens_msgs', 'progress': 'cmake'}
+[0.091739] (xsens_msgs) JobProgress: {'identifier': 'xsens_msgs', 'progress': 'build'}
+[0.094943] (xsens_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/app/dev_ws/build/xsens_msgs', '--', '-j4', '-l4'], 'cwd': '/app/dev_ws/build/xsens_msgs', 'env': OrderedDict([('LIBRARY_PATH', '/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0'), ('C_INCLUDE_PATH', '/app/dev_ws/tiscamera/src/gobject:/app/dev_ws/tiscamera/src/gstreamer-1.0'), ('GST_PLUGIN_PATH_1_0', '/app/dev_ws/tiscamera/build/src/gstreamer-1.0/'), ('HOSTNAME', '96caa57e4091'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('GI_TYPELIB_PATH', '/app/dev_ws/tiscamera/build/src/gobject/'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/app/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/app/dev_ws/tiscamera/build/data/'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':10.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy'), ('LD_RUN_PATH', '/app/dev_ws/tiscamera/build/src:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0'), ('PWD', '/app/dev_ws/build/xsens_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy')]), 'shell': False}
+[0.100165] (-) TimerEvent: {}
+[0.202404] (-) TimerEvent: {}
+[0.308546] (-) TimerEvent: {}
+[0.344099] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.408720] (-) TimerEvent: {}
+[0.498975] (xsens_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.499970] (xsens_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.508907] (-) TimerEvent: {}
+[0.609727] (-) TimerEvent: {}
+[0.710557] (-) TimerEvent: {}
+[0.811260] (-) TimerEvent: {}
+[0.911966] (-) TimerEvent: {}
+[1.012677] (-) TimerEvent: {}
+[1.113390] (-) TimerEvent: {}
+[1.215122] (-) TimerEvent: {}
+[1.317547] (-) TimerEvent: {}
+[1.418312] (-) TimerEvent: {}
+[1.497472] (xsens_msgs) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[1.518494] (-) TimerEvent: {}
+[1.619231] (-) TimerEvent: {}
+[1.647541] (xsens_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.665234] (xsens_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.719444] (-) TimerEvent: {}
+[1.820761] (-) TimerEvent: {}
+[1.922064] (-) TimerEvent: {}
+[2.023398] (-) TimerEvent: {}
+[2.125396] (-) TimerEvent: {}
+[2.226964] (-) TimerEvent: {}
+[2.328440] (-) TimerEvent: {}
+[2.429107] (-) TimerEvent: {}
+[2.529841] (-) TimerEvent: {}
+[2.630632] (-) TimerEvent: {}
+[2.731356] (-) TimerEvent: {}
+[2.747151] (xsens_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.831528] (-) TimerEvent: {}
+[2.932225] (-) TimerEvent: {}
+[2.953117] (xsens_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[3.008374] (xsens_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[3.032388] (-) TimerEvent: {}
+[3.133110] (-) TimerEvent: {}
+[3.233813] (-) TimerEvent: {}
+[3.334765] (-) TimerEvent: {}
+[3.435453] (-) TimerEvent: {}
+[3.536229] (-) TimerEvent: {}
+[3.637681] (-) TimerEvent: {}
+[3.656848] (xsens_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[3.737923] (-) TimerEvent: {}
+[3.838652] (-) TimerEvent: {}
+[3.939334] (-) TimerEvent: {}
+[4.040282] (-) TimerEvent: {}
+[4.141447] (-) TimerEvent: {}
+[4.242922] (-) TimerEvent: {}
+[4.345248] (-) TimerEvent: {}
+[4.447469] (-) TimerEvent: {}
+[4.548419] (-) TimerEvent: {}
+[4.649948] (-) TimerEvent: {}
+[4.751556] (-) TimerEvent: {}
+[4.852350] (-) TimerEvent: {}
+[4.953076] (-) TimerEvent: {}
+[5.053807] (-) TimerEvent: {}
+[5.106844] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.9.6 (/opt/ros/foxy/share/ament_cmake_cppcheck/cmake)\n'}
+[5.111460] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.9.6 (/opt/ros/foxy/share/ament_cmake_cpplint/cmake)\n'}
+[5.116253] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.9.6 (/opt/ros/foxy/share/ament_cmake_uncrustify/cmake)\n'}
+[5.121566] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[5.153963] (-) TimerEvent: {}
+[5.254673] (-) TimerEvent: {}
+[5.357087] (-) TimerEvent: {}
+[5.458597] (-) TimerEvent: {}
+[5.559420] (-) TimerEvent: {}
+[5.660201] (-) TimerEvent: {}
+[5.760928] (-) TimerEvent: {}
+[5.861653] (-) TimerEvent: {}
+[5.962435] (-) TimerEvent: {}
+[6.063229] (-) TimerEvent: {}
+[6.163974] (-) TimerEvent: {}
+[6.268382] (-) TimerEvent: {}
+[6.369082] (-) TimerEvent: {}
+[6.469781] (-) TimerEvent: {}
+[6.570515] (-) TimerEvent: {}
+[6.671285] (-) TimerEvent: {}
+[6.772148] (-) TimerEvent: {}
+[6.872872] (-) TimerEvent: {}
+[6.973564] (-) TimerEvent: {}
+[7.074388] (-) TimerEvent: {}
+[7.175095] (-) TimerEvent: {}
+[7.204333] (xsens_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.275267] (-) TimerEvent: {}
+[7.375992] (-) TimerEvent: {}
+[7.476715] (-) TimerEvent: {}
+[7.577391] (-) TimerEvent: {}
+[7.678137] (-) TimerEvent: {}
+[7.778923] (-) TimerEvent: {}
+[7.879659] (-) TimerEvent: {}
+[7.980355] (-) TimerEvent: {}
+[8.057303] (xsens_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.080503] (-) TimerEvent: {}
+[8.181894] (-) TimerEvent: {}
+[8.234802] (xsens_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.237155] (xsens_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[8.282069] (-) TimerEvent: {}
+[8.382826] (-) TimerEvent: {}
+[8.386503] (xsens_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[8.387185] (xsens_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[8.387654] (xsens_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[8.482978] (-) TimerEvent: {}
+[8.584075] (-) TimerEvent: {}
+[8.685481] (-) TimerEvent: {}
+[8.779961] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.9.6 (/opt/ros/foxy/share/ament_cmake_flake8/cmake)\n'}
+[8.784178] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.9.6 (/opt/ros/foxy/share/ament_cmake_pep257/cmake)\n'}
+[8.785611] (-) TimerEvent: {}
+[8.794411] (xsens_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[8.885777] (-) TimerEvent: {}
+[8.898896] (xsens_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.985979] (-) TimerEvent: {}
+[9.086737] (-) TimerEvent: {}
+[9.189808] (-) TimerEvent: {}
+[9.290562] (-) TimerEvent: {}
+[9.391236] (-) TimerEvent: {}
+[9.439787] (xsens_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[9.462906] (xsens_msgs) StdoutLine: {'line': b'-- Build files have been written to: /app/dev_ws/build/xsens_msgs\n'}
+[9.491523] (-) TimerEvent: {}
+[9.593512] (-) TimerEvent: {}
+[9.648783] (xsens_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[9.693699] (-) TimerEvent: {}
+[9.727676] (xsens_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.793945] (-) TimerEvent: {}
+[9.894869] (-) TimerEvent: {}
+[9.996384] (-) TimerEvent: {}
+[10.100018] (-) TimerEvent: {}
+[10.203435] (-) TimerEvent: {}
+[10.306788] (-) TimerEvent: {}
+[10.410673] (-) TimerEvent: {}
+[10.514150] (-) TimerEvent: {}
+[10.617359] (-) TimerEvent: {}
+[10.720432] (-) TimerEvent: {}
+[10.824060] (-) TimerEvent: {}
+[10.927494] (-) TimerEvent: {}
+[11.030782] (-) TimerEvent: {}
+[11.142589] (-) TimerEvent: {}
+[11.246220] (-) TimerEvent: {}
+[11.349344] (-) TimerEvent: {}
+[11.452945] (-) TimerEvent: {}
+[11.556346] (-) TimerEvent: {}
+[11.659441] (-) TimerEvent: {}
+[11.762988] (-) TimerEvent: {}
+[11.866286] (-) TimerEvent: {}
+[11.969460] (-) TimerEvent: {}
+[12.072646] (-) TimerEvent: {}
+[12.176397] (-) TimerEvent: {}
+[12.280157] (-) TimerEvent: {}
+[12.383678] (-) TimerEvent: {}
+[12.487043] (-) TimerEvent: {}
+[12.590358] (-) TimerEvent: {}
+[12.693557] (-) TimerEvent: {}
+[12.805240] (-) TimerEvent: {}
+[12.908800] (-) TimerEvent: {}
+[13.012393] (-) TimerEvent: {}
+[13.115595] (-) TimerEvent: {}
+[13.222024] (-) TimerEvent: {}
+[13.325734] (-) TimerEvent: {}
+[13.430292] (-) TimerEvent: {}
+[13.533642] (-) TimerEvent: {}
+[13.638357] (-) TimerEvent: {}
+[13.742850] (-) TimerEvent: {}
+[13.846740] (-) TimerEvent: {}
+[13.950486] (-) TimerEvent: {}
+[14.055282] (-) TimerEvent: {}
+[14.159843] (-) TimerEvent: {}
+[14.263764] (-) TimerEvent: {}
+[14.367883] (-) TimerEvent: {}
+[14.474450] (-) TimerEvent: {}
+[14.578317] (-) TimerEvent: {}
+[14.681934] (-) TimerEvent: {}
+[14.782800] (-) TimerEvent: {}
+[14.883726] (-) TimerEvent: {}
+[14.990789] (-) TimerEvent: {}
+[15.095537] (-) TimerEvent: {}
+[15.206147] (-) TimerEvent: {}
+[15.312273] (-) TimerEvent: {}
+[15.416560] (-) TimerEvent: {}
+[15.519856] (-) TimerEvent: {}
+[15.623775] (-) TimerEvent: {}
+[15.727791] (-) TimerEvent: {}
+[15.831121] (-) TimerEvent: {}
+[15.924985] (xsens_msgs) StdoutLine: {'line': b'[  1%] Built target xsens_msgs__cpp\n'}
+[15.931352] (-) TimerEvent: {}
+[16.026636] (xsens_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[16.031570] (-) TimerEvent: {}
+[16.136184] (-) TimerEvent: {}
+[16.241028] (-) TimerEvent: {}
+[16.345221] (-) TimerEvent: {}
+[16.454037] (-) TimerEvent: {}
+[16.519442] (xsens_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.538261] (xsens_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[16.554197] (-) TimerEvent: {}
+[16.656429] (-) TimerEvent: {}
+[16.760705] (-) TimerEvent: {}
+[16.864534] (-) TimerEvent: {}
+[16.968068] (-) TimerEvent: {}
+[17.072023] (-) TimerEvent: {}
+[17.175481] (-) TimerEvent: {}
+[17.279828] (-) TimerEvent: {}
+[17.363182] (xsens_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target xsens_msgs__rosidl_generator_c\x1b[0m\n'}
+[17.380025] (-) TimerEvent: {}
+[17.483448] (-) TimerEvent: {}
+[17.507718] (xsens_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.c.o\x1b[0m\n'}
+[17.583630] (-) TimerEvent: {}
+[17.686952] (-) TimerEvent: {}
+[17.790383] (-) TimerEvent: {}
+[17.850845] (xsens_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.c.o\x1b[0m\n'}
+[17.890622] (-) TimerEvent: {}
+[17.993422] (-) TimerEvent: {}
+[18.097792] (-) TimerEvent: {}
+[18.176455] (xsens_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_pl__functions.c.o\x1b[0m\n'}
+[18.198273] (-) TimerEvent: {}
+[18.300951] (-) TimerEvent: {}
+[18.403550] (-) TimerEvent: {}
+[18.506245] (-) TimerEvent: {}
+[18.608922] (-) TimerEvent: {}
+[18.711691] (-) TimerEvent: {}
+[18.742667] (xsens_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__functions.c.o\x1b[0m\n'}
+[18.811892] (-) TimerEvent: {}
+[18.912660] (-) TimerEvent: {}
+[19.013472] (-) TimerEvent: {}
+[19.126018] (-) TimerEvent: {}
+[19.192983] (xsens_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/acc_aa__functions.c.o\x1b[0m\n'}
+[19.226179] (-) TimerEvent: {}
+[19.327875] (-) TimerEvent: {}
+[19.430376] (-) TimerEvent: {}
+[19.532941] (-) TimerEvent: {}
+[19.635944] (-) TimerEvent: {}
+[19.738036] (-) TimerEvent: {}
+[19.840186] (-) TimerEvent: {}
+[19.889712] (xsens_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/acc_af__functions.c.o\x1b[0m\n'}
+[19.940430] (-) TimerEvent: {}
+[20.043255] (-) TimerEvent: {}
+[20.146404] (-) TimerEvent: {}
+[20.251321] (-) TimerEvent: {}
+[20.356691] (-) TimerEvent: {}
+[20.460971] (-) TimerEvent: {}
+[20.480695] (xsens_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__functions.c.o\x1b[0m\n'}
+[20.561195] (-) TimerEvent: {}
+[20.664574] (-) TimerEvent: {}
+[20.766678] (-) TimerEvent: {}
+[20.870736] (-) TimerEvent: {}
+[20.908626] (xsens_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__functions.c.o\x1b[0m\n'}
+[20.970948] (-) TimerEvent: {}
+[21.074432] (-) TimerEvent: {}
+[21.178967] (-) TimerEvent: {}
+[21.283081] (-) TimerEvent: {}
+[21.368874] (xsens_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_ntrip__functions.c.o\x1b[0m\n'}
+[21.383291] (-) TimerEvent: {}
+[21.487173] (-) TimerEvent: {}
+[21.590832] (-) TimerEvent: {}
+[21.694407] (-) TimerEvent: {}
+[21.739356] (xsens_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[21.794600] (-) TimerEvent: {}
+[21.898447] (-) TimerEvent: {}
+[21.905639] (xsens_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/config_cam__functions.c.o\x1b[0m\n'}
+[21.998654] (-) TimerEvent: {}
+[22.041554] (xsens_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ori_oe__type_support.cpp.o\x1b[0m\n'}
+[22.098839] (-) TimerEvent: {}
+[22.201976] (-) TimerEvent: {}
+[22.306629] (-) TimerEvent: {}
+[22.414088] (-) TimerEvent: {}
+[22.419631] (xsens_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_nt__functions.c.o\x1b[0m\n'}
+[22.514331] (-) TimerEvent: {}
+[22.617678] (-) TimerEvent: {}
+[22.721460] (-) TimerEvent: {}
+[22.822708] (-) TimerEvent: {}
+[22.838709] (xsens_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[22.877159] (xsens_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/sta_ct__functions.c.o\x1b[0m\n'}
+[22.922906] (-) TimerEvent: {}
+[23.000427] (xsens_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.cpp.o\x1b[0m\n'}
+[23.023095] (-) TimerEvent: {}
+[23.125568] (-) TimerEvent: {}
+[23.228050] (-) TimerEvent: {}
+[23.330635] (-) TimerEvent: {}
+[23.433252] (-) TimerEvent: {}
+[23.478210] (xsens_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o\x1b[0m\n'}
+[23.533470] (-) TimerEvent: {}
+[23.636900] (-) TimerEvent: {}
+[23.740457] (-) TimerEvent: {}
+[23.785020] (xsens_msgs) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.h:19\x1b[m\x1b[K,\n'}
+[23.786147] (xsens_msgs) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c:4\x1b[m\x1b[K:\n'}
+[23.786947] (xsens_msgs) StderrLine: {'line': b'\x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kxsens_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[23.788174] (xsens_msgs) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"xsens_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[23.789063] (xsens_msgs) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[23.790545] (xsens_msgs) StderrLine: {'line': b'compilation terminated.\n'}
+[23.800566] (xsens_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make:561: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o] Error 1\n'}
+[23.801660] (xsens_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:386: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/all] Error 2\n'}
+[23.804572] (xsens_msgs) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[23.841093] (-) TimerEvent: {}
+[23.943446] (-) TimerEvent: {}
+[24.045605] (-) TimerEvent: {}
+[24.157083] (-) TimerEvent: {}
+[24.261179] (-) TimerEvent: {}
+[24.363451] (-) TimerEvent: {}
+[24.468643] (-) TimerEvent: {}
+[24.573676] (-) TimerEvent: {}
+[24.678195] (-) TimerEvent: {}
+[24.733628] (xsens_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_pa__type_support.cpp.o\x1b[0m\n'}
+[24.778379] (-) TimerEvent: {}
+[24.879554] (-) TimerEvent: {}
+[24.980550] (-) TimerEvent: {}
+[25.081752] (-) TimerEvent: {}
+[25.096212] (xsens_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/pos_pa__type_support.cpp.o\x1b[0m\n'}
+[25.182029] (-) TimerEvent: {}
+[25.202557] (xsens_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/pos_pl__type_support.cpp.o\x1b[0m\n'}
+[25.282397] (-) TimerEvent: {}
+[25.312726] (xsens_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target xsens_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[25.383236] (-) TimerEvent: {}
+[25.485936] (-) TimerEvent: {}
+[25.590456] (-) TimerEvent: {}
+[25.693205] (-) TimerEvent: {}
+[25.796099] (-) TimerEvent: {}
+[25.846042] (xsens_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ori_oe__type_support.cpp.o\x1b[0m\n'}
+[25.896889] (-) TimerEvent: {}
+[25.999768] (-) TimerEvent: {}
+[26.104655] (-) TimerEvent: {}
+[26.207845] (-) TimerEvent: {}
+[26.310700] (-) TimerEvent: {}
+[26.413622] (-) TimerEvent: {}
+[26.516885] (-) TimerEvent: {}
+[26.621971] (-) TimerEvent: {}
+[26.725093] (-) TimerEvent: {}
+[26.828213] (-) TimerEvent: {}
+[26.925188] (xsens_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_pl__type_support.cpp.o\x1b[0m\n'}
+[26.929285] (-) TimerEvent: {}
+[27.032342] (-) TimerEvent: {}
+[27.135945] (-) TimerEvent: {}
+[27.239232] (-) TimerEvent: {}
+[27.343349] (-) TimerEvent: {}
+[27.446755] (-) TimerEvent: {}
+[27.549965] (-) TimerEvent: {}
+[27.608418] (xsens_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_sw__type_support.cpp.o\x1b[0m\n'}
+[27.650169] (-) TimerEvent: {}
+[27.755154] (-) TimerEvent: {}
+[27.858089] (-) TimerEvent: {}
+[27.961055] (-) TimerEvent: {}
+[28.064370] (-) TimerEvent: {}
+[28.142410] (xsens_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_aa__type_support.cpp.o\x1b[0m\n'}
+[28.164577] (-) TimerEvent: {}
+[28.268777] (-) TimerEvent: {}
+[28.372005] (-) TimerEvent: {}
+[28.475340] (-) TimerEvent: {}
+[28.580428] (-) TimerEvent: {}
+[28.683726] (-) TimerEvent: {}
+[28.787340] (-) TimerEvent: {}
+[28.890438] (-) TimerEvent: {}
+[28.993520] (-) TimerEvent: {}
+[29.097913] (-) TimerEvent: {}
+[29.201196] (-) TimerEvent: {}
+[29.306591] (-) TimerEvent: {}
+[29.410225] (-) TimerEvent: {}
+[29.513644] (-) TimerEvent: {}
+[29.615831] (-) TimerEvent: {}
+[29.672832] (xsens_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_sw__type_support.cpp.o\x1b[0m\n'}
+[29.716053] (-) TimerEvent: {}
+[29.817081] (-) TimerEvent: {}
+[29.920153] (-) TimerEvent: {}
+[30.023267] (-) TimerEvent: {}
+[30.126196] (-) TimerEvent: {}
+[30.227010] (-) TimerEvent: {}
+[30.327958] (-) TimerEvent: {}
+[30.428884] (-) TimerEvent: {}
+[30.481165] (xsens_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/acc_af__type_support.cpp.o\x1b[0m\n'}
+[30.529151] (-) TimerEvent: {}
+[30.630357] (-) TimerEvent: {}
+[30.675681] (xsens_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/ang_wr__type_support.cpp.o\x1b[0m\n'}
+[30.730549] (-) TimerEvent: {}
+[30.833436] (-) TimerEvent: {}
+[30.938248] (-) TimerEvent: {}
+[31.040900] (-) TimerEvent: {}
+[31.144063] (-) TimerEvent: {}
+[31.248639] (-) TimerEvent: {}
+[31.351650] (-) TimerEvent: {}
+[31.454441] (-) TimerEvent: {}
+[31.557346] (xsens_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/pos_pa__type_support.cpp.o\x1b[0m\n'}
+[31.558230] (-) TimerEvent: {}
+[31.661139] (-) TimerEvent: {}
+[31.765950] (-) TimerEvent: {}
+[31.868702] (-) TimerEvent: {}
+[31.972022] (-) TimerEvent: {}
+[32.003515] (xsens_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/acc_aa__type_support.cpp.o\x1b[0m\n'}
+[32.072263] (-) TimerEvent: {}
+[32.175151] (-) TimerEvent: {}
+[32.277775] (-) TimerEvent: {}
+[32.379533] (-) TimerEvent: {}
+[32.480966] (-) TimerEvent: {}
+[32.582854] (-) TimerEvent: {}
+[32.685373] (-) TimerEvent: {}
+[32.788674] (-) TimerEvent: {}
+[32.891195] (-) TimerEvent: {}
+[32.993675] (-) TimerEvent: {}
+[33.009553] (xsens_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_xsens__type_support.cpp.o\x1b[0m\n'}
+[33.094040] (-) TimerEvent: {}
+[33.135291] (xsens_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_ntrip__type_support.cpp.o\x1b[0m\n'}
+[33.194294] (-) TimerEvent: {}
+[33.296232] (-) TimerEvent: {}
+[33.397117] (-) TimerEvent: {}
+[33.499428] (-) TimerEvent: {}
+[33.602320] (-) TimerEvent: {}
+[33.705141] (-) TimerEvent: {}
+[33.807832] (-) TimerEvent: {}
+[33.909649] (-) TimerEvent: {}
+[34.012847] (-) TimerEvent: {}
+[34.115699] (-) TimerEvent: {}
+[34.216640] (-) TimerEvent: {}
+[34.321745] (-) TimerEvent: {}
+[34.425519] (-) TimerEvent: {}
+[34.528546] (-) TimerEvent: {}
+[34.552873] (xsens_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/acc_af__type_support.cpp.o\x1b[0m\n'}
+[34.628790] (-) TimerEvent: {}
+[34.730158] (-) TimerEvent: {}
+[34.831146] (-) TimerEvent: {}
+[34.932248] (-) TimerEvent: {}
+[35.033146] (-) TimerEvent: {}
+[35.135441] (-) TimerEvent: {}
+[35.236383] (-) TimerEvent: {}
+[35.337348] (-) TimerEvent: {}
+[35.442186] (-) TimerEvent: {}
+[35.554027] (-) TimerEvent: {}
+[35.662026] (-) TimerEvent: {}
+[35.770028] (-) TimerEvent: {}
+[35.811476] (xsens_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/config_cam__type_support.cpp.o\x1b[0m\n'}
+[35.864094] (xsens_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_nt__type_support.cpp.o\x1b[0m\n'}
+[35.870208] (-) TimerEvent: {}
+[35.971230] (-) TimerEvent: {}
+[36.040793] (xsens_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/pos_pl__type_support.cpp.o\x1b[0m\n'}
+[36.071454] (-) TimerEvent: {}
+[36.172930] (-) TimerEvent: {}
+[36.275790] (-) TimerEvent: {}
+[36.378147] (-) TimerEvent: {}
+[36.479835] (-) TimerEvent: {}
+[36.580865] (-) TimerEvent: {}
+[36.681749] (-) TimerEvent: {}
+[36.782722] (-) TimerEvent: {}
+[36.883754] (-) TimerEvent: {}
+[36.985907] (-) TimerEvent: {}
+[37.087807] (-) TimerEvent: {}
+[37.190050] (-) TimerEvent: {}
+[37.290941] (-) TimerEvent: {}
+[37.394589] (-) TimerEvent: {}
+[37.498015] (-) TimerEvent: {}
+[37.597625] (xsens_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ang_wr__type_support.cpp.o\x1b[0m\n'}
+[37.598632] (-) TimerEvent: {}
+[37.702074] (-) TimerEvent: {}
+[37.805617] (-) TimerEvent: {}
+[37.908916] (-) TimerEvent: {}
+[38.012116] (-) TimerEvent: {}
+[38.115316] (-) TimerEvent: {}
+[38.218826] (-) TimerEvent: {}
+[38.322770] (-) TimerEvent: {}
+[38.374263] (xsens_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/sta_ct__type_support.cpp.o\x1b[0m\n'}
+[38.423007] (-) TimerEvent: {}
+[38.444516] (xsens_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o\x1b[0m\n'}
+[38.523212] (-) TimerEvent: {}
+[38.626839] (-) TimerEvent: {}
+[38.729766] (-) TimerEvent: {}
+[38.833227] (-) TimerEvent: {}
+[38.936761] (-) TimerEvent: {}
+[39.040288] (-) TimerEvent: {}
+[39.118368] (xsens_msgs) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp:7\x1b[m\x1b[K:\n'}
+[39.122614] (xsens_msgs) StderrLine: {'line': b'\x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_image__struct.hpp:19:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kxsens_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[39.123256] (xsens_msgs) StderrLine: {'line': b'   19 | #include \x1b[01;31m\x1b[K"xsens_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[39.123851] (xsens_msgs) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[39.124490] (xsens_msgs) StderrLine: {'line': b'compilation terminated.\n'}
+[39.128491] (xsens_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/build.make:374: CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_msgs/msg/cam_image__type_support.cpp.o] Error 1\n'}
+[39.129404] (xsens_msgs) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[39.140515] (-) TimerEvent: {}
+[39.243973] (-) TimerEvent: {}
+[39.317445] (xsens_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_xsens__type_support.cpp.o\x1b[0m\n'}
+[39.344217] (-) TimerEvent: {}
+[39.447648] (-) TimerEvent: {}
+[39.550932] (-) TimerEvent: {}
+[39.654132] (-) TimerEvent: {}
+[39.757449] (-) TimerEvent: {}
+[39.860235] (-) TimerEvent: {}
+[39.962821] (-) TimerEvent: {}
+[40.066363] (-) TimerEvent: {}
+[40.170025] (-) TimerEvent: {}
+[40.273866] (-) TimerEvent: {}
+[40.376868] (-) TimerEvent: {}
+[40.424396] (xsens_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_sw__type_support.cpp.o\x1b[0m\n'}
+[40.477064] (-) TimerEvent: {}
+[40.575160] (xsens_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_ntrip__type_support.cpp.o\x1b[0m\n'}
+[40.577361] (-) TimerEvent: {}
+[40.680798] (-) TimerEvent: {}
+[40.784331] (-) TimerEvent: {}
+[40.890030] (-) TimerEvent: {}
+[40.994000] (-) TimerEvent: {}
+[41.098006] (-) TimerEvent: {}
+[41.202052] (-) TimerEvent: {}
+[41.306015] (-) TimerEvent: {}
+[41.410035] (-) TimerEvent: {}
+[41.484807] (xsens_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:469: CMakeFiles/xsens_msgs__rosidl_typesupport_cpp.dir/all] Error 2\n'}
+[41.510269] (-) TimerEvent: {}
+[41.613511] (-) TimerEvent: {}
+[41.650768] (xsens_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/config_cam__type_support.cpp.o\x1b[0m\n'}
+[41.713757] (-) TimerEvent: {}
+[41.817654] (-) TimerEvent: {}
+[41.921044] (-) TimerEvent: {}
+[42.024454] (-) TimerEvent: {}
+[42.076300] (xsens_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_nt__type_support.cpp.o\x1b[0m\n'}
+[42.124650] (-) TimerEvent: {}
+[42.226237] (-) TimerEvent: {}
+[42.328872] (-) TimerEvent: {}
+[42.431677] (-) TimerEvent: {}
+[42.534595] (-) TimerEvent: {}
+[42.637363] (-) TimerEvent: {}
+[42.740021] (-) TimerEvent: {}
+[42.842819] (-) TimerEvent: {}
+[42.945690] (-) TimerEvent: {}
+[43.048378] (-) TimerEvent: {}
+[43.151195] (-) TimerEvent: {}
+[43.254006] (-) TimerEvent: {}
+[43.357018] (-) TimerEvent: {}
+[43.406749] (xsens_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/sta_ct__type_support.cpp.o\x1b[0m\n'}
+[43.457261] (-) TimerEvent: {}
+[43.561311] (-) TimerEvent: {}
+[43.664909] (-) TimerEvent: {}
+[43.768819] (-) TimerEvent: {}
+[43.872811] (-) TimerEvent: {}
+[43.976541] (-) TimerEvent: {}
+[44.086843] (-) TimerEvent: {}
+[44.190843] (-) TimerEvent: {}
+[44.295274] (-) TimerEvent: {}
+[44.350798] (xsens_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/acc_aa__type_support.cpp.o\x1b[0m\n'}
+[44.395492] (-) TimerEvent: {}
+[44.465772] (xsens_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/acc_af__type_support.cpp.o\x1b[0m\n'}
+[44.495695] (-) TimerEvent: {}
+[44.599185] (-) TimerEvent: {}
+[44.703108] (-) TimerEvent: {}
+[44.806738] (-) TimerEvent: {}
+[44.850163] (xsens_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o\x1b[0m\n'}
+[44.906957] (-) TimerEvent: {}
+[45.010362] (-) TimerEvent: {}
+[45.113777] (-) TimerEvent: {}
+[45.218075] (-) TimerEvent: {}
+[45.324244] (-) TimerEvent: {}
+[45.427962] (-) TimerEvent: {}
+[45.462913] (xsens_msgs) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp:12\x1b[m\x1b[K:\n'}
+[45.466702] (xsens_msgs) StderrLine: {'line': b'\x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_image__struct.hpp:19:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kxsens_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[45.467490] (xsens_msgs) StderrLine: {'line': b'   19 | #include \x1b[01;31m\x1b[K"xsens_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[45.468105] (xsens_msgs) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[45.468709] (xsens_msgs) StderrLine: {'line': b'compilation terminated.\n'}
+[45.483645] (xsens_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:421: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o] Error 1\n'}
+[45.484762] (xsens_msgs) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[45.528168] (-) TimerEvent: {}
+[45.629144] (-) TimerEvent: {}
+[45.664438] (xsens_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/ang_wr__type_support.cpp.o\x1b[0m\n'}
+[45.729353] (-) TimerEvent: {}
+[45.777502] (xsens_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:496: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/all] Error 2\n'}
+[45.829580] (-) TimerEvent: {}
+[45.930439] (-) TimerEvent: {}
+[45.950298] (xsens_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_xsens__type_support.cpp.o\x1b[0m\n'}
+[46.030676] (-) TimerEvent: {}
+[46.133340] (-) TimerEvent: {}
+[46.236109] (-) TimerEvent: {}
+[46.338807] (-) TimerEvent: {}
+[46.441480] (-) TimerEvent: {}
+[46.544195] (-) TimerEvent: {}
+[46.647026] (-) TimerEvent: {}
+[46.750007] (-) TimerEvent: {}
+[46.852678] (-) TimerEvent: {}
+[46.955459] (-) TimerEvent: {}
+[47.058491] (-) TimerEvent: {}
+[47.161504] (-) TimerEvent: {}
+[47.264886] (-) TimerEvent: {}
+[47.368032] (-) TimerEvent: {}
+[47.470951] (-) TimerEvent: {}
+[47.571953] (-) TimerEvent: {}
+[47.673867] (-) TimerEvent: {}
+[47.775949] (-) TimerEvent: {}
+[47.878023] (-) TimerEvent: {}
+[47.979726] (-) TimerEvent: {}
+[48.081547] (-) TimerEvent: {}
+[48.175319] (xsens_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_ntrip__type_support.cpp.o\x1b[0m\n'}
+[48.181762] (-) TimerEvent: {}
+[48.284636] (-) TimerEvent: {}
+[48.390089] (-) TimerEvent: {}
+[48.494022] (-) TimerEvent: {}
+[48.602028] (-) TimerEvent: {}
+[48.706045] (-) TimerEvent: {}
+[48.810056] (-) TimerEvent: {}
+[48.913996] (-) TimerEvent: {}
+[49.018025] (-) TimerEvent: {}
+[49.042403] (xsens_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/config_cam__type_support.cpp.o\x1b[0m\n'}
+[49.118213] (-) TimerEvent: {}
+[49.221132] (-) TimerEvent: {}
+[49.324144] (-) TimerEvent: {}
+[49.427187] (-) TimerEvent: {}
+[49.528211] (-) TimerEvent: {}
+[49.629485] (-) TimerEvent: {}
+[49.730678] (-) TimerEvent: {}
+[49.833245] (-) TimerEvent: {}
+[49.935973] (-) TimerEvent: {}
+[50.039116] (-) TimerEvent: {}
+[50.140154] (-) TimerEvent: {}
+[50.241393] (-) TimerEvent: {}
+[50.342863] (-) TimerEvent: {}
+[50.390274] (xsens_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_nt__type_support.cpp.o\x1b[0m\n'}
+[50.443091] (-) TimerEvent: {}
+[50.452804] (xsens_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/sta_ct__type_support.cpp.o\x1b[0m\n'}
+[50.543265] (-) TimerEvent: {}
+[50.645728] (-) TimerEvent: {}
+[50.748273] (-) TimerEvent: {}
+[50.851031] (-) TimerEvent: {}
+[50.953581] (-) TimerEvent: {}
+[51.056376] (-) TimerEvent: {}
+[51.159379] (-) TimerEvent: {}
+[51.262296] (-) TimerEvent: {}
+[51.364106] (-) TimerEvent: {}
+[51.466884] (-) TimerEvent: {}
+[51.569602] (-) TimerEvent: {}
+[51.671806] (-) TimerEvent: {}
+[51.772752] (-) TimerEvent: {}
+[51.873714] (-) TimerEvent: {}
+[51.974809] (-) TimerEvent: {}
+[52.047733] (xsens_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o\x1b[0m\n'}
+[52.075034] (-) TimerEvent: {}
+[52.176829] (-) TimerEvent: {}
+[52.279446] (-) TimerEvent: {}
+[52.381931] (-) TimerEvent: {}
+[52.484385] (-) TimerEvent: {}
+[52.586955] (-) TimerEvent: {}
+[52.690053] (-) TimerEvent: {}
+[52.701054] (xsens_msgs) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/cam_image__rosidl_typesupport_fastrtps_cpp.hpp:11\x1b[m\x1b[K,\n'}
+[52.702341] (xsens_msgs) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp:4\x1b[m\x1b[K:\n'}
+[52.703394] (xsens_msgs) StderrLine: {'line': b'\x1b[01m\x1b[K/app/dev_ws/build/xsens_msgs/rosidl_generator_cpp/xsens_msgs/msg/detail/cam_image__struct.hpp:19:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kxsens_msgs/msg/detail/header__struct.hpp: No such file or directory\n'}
+[52.704082] (xsens_msgs) StderrLine: {'line': b'   19 | #include \x1b[01;31m\x1b[K"xsens_msgs/msg/detail/header__struct.hpp"\x1b[m\x1b[K\n'}
+[52.704803] (xsens_msgs) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[52.705621] (xsens_msgs) StderrLine: {'line': b'compilation terminated.\n'}
+[52.711202] (xsens_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:421: CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_msgs/msg/detail/dds_fastrtps/cam_image__type_support.cpp.o] Error 1\n'}
+[52.711979] (xsens_msgs) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[52.790264] (-) TimerEvent: {}
+[52.891648] (-) TimerEvent: {}
+[52.992907] (-) TimerEvent: {}
+[53.094228] (-) TimerEvent: {}
+[53.196140] (-) TimerEvent: {}
+[53.297782] (-) TimerEvent: {}
+[53.401984] (-) TimerEvent: {}
+[53.506408] (-) TimerEvent: {}
+[53.610453] (-) TimerEvent: {}
+[53.714725] (-) TimerEvent: {}
+[53.818573] (-) TimerEvent: {}
+[53.922419] (-) TimerEvent: {}
+[54.006976] (xsens_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/xsens_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2\n'}
+[54.008163] (xsens_msgs) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[54.014616] (xsens_msgs) CommandEnded: {'returncode': 2}
+[54.023409] (-) TimerEvent: {}
+[54.125885] (-) TimerEvent: {}
+[54.226578] (-) TimerEvent: {}
+[54.327304] (-) TimerEvent: {}
+[54.428608] (-) TimerEvent: {}
+[54.529391] (-) TimerEvent: {}
+[54.631923] (-) TimerEvent: {}
+[54.733367] (-) TimerEvent: {}
+[54.834294] (-) TimerEvent: {}
+[54.935091] (-) TimerEvent: {}
+[55.035839] (-) TimerEvent: {}
+[55.136557] (-) TimerEvent: {}
+[55.237320] (-) TimerEvent: {}
+[55.337973] (-) TimerEvent: {}
+[55.438738] (-) TimerEvent: {}
+[55.539447] (-) TimerEvent: {}
+[55.640098] (-) TimerEvent: {}
+[55.740789] (-) TimerEvent: {}
+[55.841486] (-) TimerEvent: {}
+[55.943259] (-) TimerEvent: {}
+[56.044796] (-) TimerEvent: {}
+[56.146910] (-) TimerEvent: {}
+[56.249693] (-) TimerEvent: {}
+[56.350442] (-) TimerEvent: {}
+[56.451152] (-) TimerEvent: {}
+[56.552152] (-) TimerEvent: {}
+[56.652998] (-) TimerEvent: {}
+[56.754756] (-) TimerEvent: {}
+[56.814820] (xsens_msgs) JobEnded: {'identifier': 'xsens_msgs', 'rc': 2}
+[56.826512] (-) EventReactorShutdown: {}

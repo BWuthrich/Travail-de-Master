@@ -13,6 +13,7 @@ from gi.repository import GLib, GObject, Gst, Tcam
 
 
 Gst.init([])
+Gst.debug_set_default_threshold(Gst.DebugLevel.WARNING)
 
 DeviceInfo = namedtuple("DeviceInfo", "status name identifier connection_type")
 CameraProperty = namedtuple("CameraProperty", "status value min max default step type flags category group")
@@ -79,6 +80,7 @@ class TIS:
         self.sinkformat = sinkformat
         self._createPipeline()
         self.source.set_property("serial", self.serialnumber)
+        
 
     def _createPipeline(self):
         p = 'tcambin name=source ! capsfilter name=caps'
@@ -131,12 +133,32 @@ class TIS:
         Set pixel and sink format and frame rate
         """
         caps = Gst.Caps.new_empty()
-        format = 'video/x-raw,format=%s,width=%d,height=%d,framerate=%s' % \
-            (SinkFormats.toString(self.sinkformat),
-                self.width, self.height, self.framerate,)
-        structure = Gst.Structure.new_from_string(format)
+        
+        #format = 'video/x-raw,format=%s,width=%d,height=%d,framerate=%s' % \
+        #    (SinkFormats.toString(self.sinkformat),
+        #        self.width, self.height, self.framerate,)
+        #structure = Gst.Structure.new_from_string(format)
 
+        #caps.append_structure(structure)
+        
+        structure = Gst.Structure.new_from_string("video/x-raw")
+        #structure.set_value("format", 'gbrg')
+        structure.set_value("width", 640)
+        structure.set_value("height", 480)
+        
+        try:
+        	fraction = Gst.Fraction(self.framerate, 1)
+        	structure.set_value("framerate", fraction)
+        except TypeError:
+          struc_string = structure.to_string()
+          struc_string += ",framerate={}/{}".format(self.framerate, 1)
+          structure.free()
+          structure, end = structure.from_string(struc_string)
+      		
         caps.append_structure(structure)
+
+        
+        
 
         structure.free()
         capsfilter = self.pipeline.get_by_name("caps")

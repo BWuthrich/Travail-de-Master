@@ -1,0 +1,54 @@
+[0.165s] Invoking command in '/app/dev_ws/build/xsens_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/build/xsens_msgs -- -j4 -l4
+[0.434s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.633s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.633s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.791s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[1.944s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.961s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.068s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.270s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[3.323s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.978s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[5.019s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[5.019s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[5.019s]   xsens_msgs --arguments-file
+[5.020s]   /app/dev_ws/build/xsens_msgs/rosidl_adapter__arguments__xsens_msgs.json
+[5.020s]   --output-dir /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs
+[5.020s]   --output-file /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs.idls)
+[5.021s]   returned error code 1:
+[5.021s] 
+[5.021s]   Error processing 'int64 velN' of 'xsens_msgs/GnsNP': ''velN' is an invalid
+[5.022s]   field name.  It should have the pattern
+[5.022s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[5.022s] 
+[5.023s]   Traceback (most recent call last):
+[5.023s] 
+[5.023s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[5.024s]       return _run_code(code, main_globals, None,
+[5.024s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[5.025s]       exec(code, run_globals)
+[5.025s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[5.025s]       sys.exit(main())
+[5.025s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[5.026s]       abs_idl_file = convert_to_idl(
+[5.026s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[5.027s]       return convert_msg_to_idl(
+[5.027s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[5.027s]       msg = parse_message_string(package_name, input_file.stem, content)
+[5.028s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[5.028s]       fields.append(Field(
+[5.028s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 353, in __init__
+[5.029s]       raise NameError(
+[5.029s] 
+[5.029s]   NameError: 'velN' is an invalid field name.  It should have the pattern
+[5.030s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[5.030s] 
+[5.030s] Call Stack (most recent call first):
+[5.031s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[5.031s]   CMakeLists.txt:44 (rosidl_generate_interfaces)
+[5.031s] 
+[5.032s] 
+[5.038s] -- Configuring incomplete, errors occurred!
+[5.039s] See also "/app/dev_ws/build/xsens_msgs/CMakeFiles/CMakeOutput.log".
+[5.052s] make: *** [Makefile:4348: cmake_check_build_system] Error 1
+[5.060s] Invoked command in '/app/dev_ws/build/xsens_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/opt/ros/foxy /usr/bin/cmake --build /app/dev_ws/build/xsens_msgs -- -j4 -l4

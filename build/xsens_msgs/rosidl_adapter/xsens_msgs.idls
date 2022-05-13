@@ -5,9 +5,13 @@
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/AccAA.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/AccAF.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/AngWR.idl
+/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/GnsNP.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/ConfigXsens.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/ConfigNtrip.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/ConfigCam.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/StaNT.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/StaCT.idl
+/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/TrgSP.idl
+/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/CamImage.idl
+/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/CamBatch.idl
 /app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:srv/RTCMdata.idl

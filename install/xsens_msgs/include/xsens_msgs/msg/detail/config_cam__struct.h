@@ -28,6 +28,7 @@ typedef struct xsens_msgs__msg__ConfigCam
   int32_t width;
   int32_t framerate;
   rosidl_runtime_c__String save_file;
+  bool stream;
 } xsens_msgs__msg__ConfigCam;
 
 // Struct for a sequence of xsens_msgs__msg__ConfigCam.

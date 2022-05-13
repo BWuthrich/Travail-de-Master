@@ -37,6 +37,39 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
  rosidl_generator_c/xsens_msgs/msg/detail/ang_wr__struct.h
  rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp.o
+ /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/cam_batch__type_support.cpp
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/type_support_map.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ /opt/ros/foxy/include/sensor_msgs/msg/detail/image__struct.h
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/cam_image__struct.h
+ rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp.o
+ /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/cam_image__type_support.cpp
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/type_support_map.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ /opt/ros/foxy/include/sensor_msgs/msg/detail/image__struct.h
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/cam_image__struct.h
+ rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.cpp.o
  /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/config_cam__type_support.cpp
  /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
@@ -75,6 +108,18 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
  /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
  rosidl_generator_c/xsens_msgs/msg/detail/config_xsens__struct.h
+ rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp.o
+ /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/gns_np__type_support.cpp
+ /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/type_support_map.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ rosidl_generator_c/xsens_msgs/msg/detail/gns_np__struct.h
  rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp.o
  /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/ori_oe__type_support.cpp
@@ -150,6 +195,18 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/
  /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
  rosidl_generator_c/xsens_msgs/msg/detail/sta_sw__struct.h
+ rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp.o
+ /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/trg_sp__type_support.cpp
+ /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/type_support_map.h
+ /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h
+ /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ rosidl_generator_c/xsens_msgs/msg/detail/trg_sp__struct.h
  rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
 CMakeFiles/xsens_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp.o
  /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/srv/rtc_mdata__type_support.cpp
