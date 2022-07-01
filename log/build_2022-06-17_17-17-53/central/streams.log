@@ -1,0 +1,26 @@
+[3.112s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[4.213s] running egg_info
+[4.215s] writing ../../build/central/central.egg-info/PKG-INFO
+[4.216s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[4.217s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[4.218s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[4.219s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[4.384s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.389s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.389s] running build
+[4.390s] running build_py
+[4.390s] copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central
+[4.392s] running install
+[4.396s] running install_lib
+[4.401s] copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central
+[4.405s] byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc
+[4.410s] Sorry: IndentationError: unindent does not match any outer indentation level (central_data.py, line 123)
+[4.411s] running install_data
+[4.413s] running install_egg_info
+[4.420s] removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)
+[4.422s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[4.429s] running install_scripts
+[4.511s] Installing collect_data script to /app/dev_ws/install/central/lib/central
+[4.512s] Installing config script to /app/dev_ws/install/central/lib/central
+[4.514s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[4.618s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed

@@ -137,7 +137,6 @@ class XSensDriver(Node):
 	def configOutput(self):
 		self.get_logger().info("xsensClient - output config")
 		output_config = get_output_config(self.outputConfig)
-		print(self.outputConfig)
 		self.device.SetOutputConfiguration(output_config)
 
 

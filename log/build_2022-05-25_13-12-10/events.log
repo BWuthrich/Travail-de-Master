@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.001073] (-) JobUnselected: {'identifier': 'bluespace_ai_xsens_mti_driver'}
+[0.001952] (-) JobUnselected: {'identifier': 'cam_client'}
+[0.003521] (-) JobUnselected: {'identifier': 'central'}
+[0.009689] (-) JobUnselected: {'identifier': 'cv_bridge'}
+[0.010004] (-) JobUnselected: {'identifier': 'image_geometry'}
+[0.010164] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.010298] (-) JobUnselected: {'identifier': 'opencv_tests'}
+[0.010453] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.010600] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.010743] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.010893] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.011050] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.011189] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.011379] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.011575] (-) JobUnselected: {'identifier': 'tcam'}
+[0.011739] (-) JobUnselected: {'identifier': 'vision_opencv'}
+[0.011889] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.012047] (xsens_driver) JobQueued: {'identifier': 'xsens_driver', 'dependencies': OrderedDict([('xsens_msgs', '/app/dev_ws/install/xsens_msgs')])}
+[0.012255] (xsens_driver) JobStarted: {'identifier': 'xsens_driver'}
+[0.113261] (-) TimerEvent: {}
+[0.215489] (-) TimerEvent: {}
+[0.320509] (-) TimerEvent: {}
+[0.424170] (-) TimerEvent: {}
+[0.525751] (-) TimerEvent: {}
+[0.626707] (-) TimerEvent: {}
+[0.727715] (-) TimerEvent: {}
+[0.830167] (-) TimerEvent: {}
+[0.931476] (-) TimerEvent: {}
+[1.032839] (-) TimerEvent: {}
+[1.134493] (-) TimerEvent: {}
+[1.235584] (-) TimerEvent: {}
+[1.339081] (-) TimerEvent: {}
+[1.440698] (-) TimerEvent: {}
+[1.541906] (-) TimerEvent: {}
+[1.645548] (-) TimerEvent: {}
+[1.748111] (-) TimerEvent: {}
+[1.855508] (-) TimerEvent: {}
+[1.968867] (-) TimerEvent: {}
+[2.077906] (-) TimerEvent: {}
+[2.187563] (-) TimerEvent: {}
+[2.288630] (-) TimerEvent: {}
+[2.390158] (-) TimerEvent: {}
+[2.493332] (-) TimerEvent: {}
+[2.596016] (-) TimerEvent: {}
+[2.698401] (-) TimerEvent: {}
+[2.799944] (-) TimerEvent: {}
+[2.907835] (-) TimerEvent: {}
+[3.015664] (-) TimerEvent: {}
+[3.132167] (-) TimerEvent: {}
+[3.233069] (-) TimerEvent: {}
+[3.334144] (-) TimerEvent: {}
+[3.435589] (-) TimerEvent: {}
+[3.536426] (-) TimerEvent: {}
+[3.637655] (-) TimerEvent: {}
+[3.738505] (-) TimerEvent: {}
+[3.839437] (-) TimerEvent: {}
+[3.940333] (-) TimerEvent: {}
+[4.041629] (-) TimerEvent: {}
+[4.143385] (-) TimerEvent: {}
+[4.245196] (-) TimerEvent: {}
+[4.348172] (-) TimerEvent: {}
+[4.454569] (-) TimerEvent: {}
+[4.555448] (-) TimerEvent: {}
+[4.657520] (-) TimerEvent: {}
+[4.759796] (-) TimerEvent: {}
+[4.864571] (-) TimerEvent: {}
+[4.965800] (-) TimerEvent: {}
+[5.068168] (-) TimerEvent: {}
+[5.174259] (-) TimerEvent: {}
+[5.218684] (xsens_driver) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/xsens_driver', 'build', '--build-base', '/app/dev_ws/build/xsens_driver/build', 'install', '--prefix', '/app/dev_ws/install/xsens_driver', '--record', '/app/dev_ws/build/xsens_driver/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/xsens_driver', 'env': {'LIBRARY_PATH': '/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'C_INCLUDE_PATH': '/app/dev_ws/tiscamera/src/gobject:/app/dev_ws/tiscamera/src/gstreamer-1.0', 'GST_PLUGIN_PATH_1_0': '/app/dev_ws/tiscamera/build/src/gstreamer-1.0/', 'HOSTNAME': 'vignes', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'HOME': '/root', 'GI_TYPELIB_PATH': '/app/dev_ws/tiscamera/build/src/gobject/', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/app/dev_ws/tiscamera/build/data/', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/app/dev_ws/install/bluespace_ai_xsens_mti_driver', 'LD_RUN_PATH': '/app/dev_ws/tiscamera/build/src:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'PWD': '/app/dev_ws/build/xsens_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver'}, 'shell': False}
+[5.274620] (-) TimerEvent: {}
+[5.375967] (-) TimerEvent: {}
+[5.478420] (-) TimerEvent: {}
+[5.582024] (-) TimerEvent: {}
+[5.693705] (-) TimerEvent: {}
+[5.799158] (-) TimerEvent: {}
+[5.906258] (-) TimerEvent: {}
+[6.010594] (-) TimerEvent: {}
+[6.111476] (-) TimerEvent: {}
+[6.212363] (-) TimerEvent: {}
+[6.313254] (-) TimerEvent: {}
+[6.414516] (-) TimerEvent: {}
+[6.515784] (-) TimerEvent: {}
+[6.617352] (-) TimerEvent: {}
+[6.718222] (-) TimerEvent: {}
+[6.819515] (-) TimerEvent: {}
+[6.921187] (-) TimerEvent: {}
+[7.022176] (-) TimerEvent: {}
+[7.106791] (xsens_driver) StdoutLine: {'line': b'running egg_info\n'}
+[7.112152] (xsens_driver) StdoutLine: {'line': b'writing ../../build/xsens_driver/xsens_driver.egg-info/PKG-INFO\n'}
+[7.113778] (xsens_driver) StdoutLine: {'line': b'writing dependency_links to ../../build/xsens_driver/xsens_driver.egg-info/dependency_links.txt\n'}
+[7.115051] (xsens_driver) StdoutLine: {'line': b'writing entry points to ../../build/xsens_driver/xsens_driver.egg-info/entry_points.txt\n'}
+[7.116180] (xsens_driver) StdoutLine: {'line': b'writing requirements to ../../build/xsens_driver/xsens_driver.egg-info/requires.txt\n'}
+[7.117119] (xsens_driver) StdoutLine: {'line': b'writing top-level names to ../../build/xsens_driver/xsens_driver.egg-info/top_level.txt\n'}
+[7.122328] (-) TimerEvent: {}
+[7.223219] (-) TimerEvent: {}
+[7.326057] (-) TimerEvent: {}
+[7.427378] (-) TimerEvent: {}
+[7.438032] (xsens_driver) StdoutLine: {'line': b"reading manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'\n"}
+[7.444233] (xsens_driver) StdoutLine: {'line': b"writing manifest file '../../build/xsens_driver/xsens_driver.egg-info/SOURCES.txt'\n"}
+[7.445229] (xsens_driver) StdoutLine: {'line': b'running build\n'}
+[7.446188] (xsens_driver) StdoutLine: {'line': b'running build_py\n'}
+[7.448516] (xsens_driver) StdoutLine: {'line': b'copying xsens_driver/utils/mtdevice.py -> /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils\n'}
+[7.453171] (xsens_driver) StdoutLine: {'line': b'running install\n'}
+[7.459027] (xsens_driver) StdoutLine: {'line': b'running install_lib\n'}
+[7.466617] (xsens_driver) StdoutLine: {'line': b'copying /app/dev_ws/build/xsens_driver/build/lib/xsens_driver/utils/mtdevice.py -> /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils\n'}
+[7.479152] (xsens_driver) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdevice.py to mtdevice.cpython-38.pyc\n'}
+[7.520324] (xsens_driver) StdoutLine: {'line': b'running install_data\n'}
+[7.523760] (xsens_driver) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.527935] (-) TimerEvent: {}
+[7.532706] (xsens_driver) StdoutLine: {'line': b"removing '/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[7.535093] (xsens_driver) StdoutLine: {'line': b'Copying ../../build/xsens_driver/xsens_driver.egg-info to /app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver-0.0.0-py3.8.egg-info\n'}
+[7.544121] (xsens_driver) StdoutLine: {'line': b'running install_scripts\n'}
+[7.628194] (-) TimerEvent: {}
+[7.664602] (xsens_driver) StdoutLine: {'line': b'Installing main script to /app/dev_ws/install/xsens_driver/lib/xsens_driver\n'}
+[7.678063] (xsens_driver) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/xsens_driver/install.log'\n"}
+[7.730722] (-) TimerEvent: {}
+[7.829253] (xsens_driver) CommandEnded: {'returncode': 0}
+[7.833719] (-) TimerEvent: {}
+[7.942836] (-) TimerEvent: {}
+[7.982251] (xsens_driver) JobEnded: {'identifier': 'xsens_driver', 'rc': 0}
+[7.988312] (-) EventReactorShutdown: {}

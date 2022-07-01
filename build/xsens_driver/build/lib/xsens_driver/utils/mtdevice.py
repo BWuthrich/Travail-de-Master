@@ -315,7 +315,6 @@ class MTDevice(object):
         self._ensure_config_state()
         data = b''.join(struct.pack('!HH', *output)
                         for output in output_configuration)
-        print(data)
         self.write_ack(MID.SetOutputConfiguration, data)
 
     def GetStringOutputType(self):

@@ -87,15 +87,14 @@ class ntripClient(Node):
 	
 	# connect rtcm
 	def connect_rtcm(self):
-
 		try:		
 			self.publishStatus(self.ntrip_status, "Connecting")
-			self.rtcm_device = serial.Serial(self.rtcm_port, self.rtcm_baudrate, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE) #, self.rtcm_baudrate, timeout=0.2) #, writeTimeout=0.2)
+			self.rtcm_device = serial.Serial(self.rtcm_port, self.rtcm_baudrate, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE)#, timeout=0.2, writeTimeout=0.2)
 			self.publishStatus(self.ntrip_status, "Connected")
 		except Exception as e:
 			print(e)
 			self.publishStatus(self.ntrip_status, "Error")
-	
+		
 
 	# connect to ntrip server
 	def connect_ntrip(self):

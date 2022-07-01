@@ -137,7 +137,6 @@ class XSensDriver(Node):
 	def configOutput(self):
 		self.get_logger().info("xsensClient - output config")
 		output_config = get_output_config(self.outputConfig)
-		print(self.outputConfig)
 		self.device.SetOutputConfiguration(output_config)
 
 
@@ -284,13 +283,13 @@ class XSensDriver(Node):
 		msg.lon = data['GNSS']['lon']	
 		msg.lat = data['GNSS']['lat']	
 		msg.height = data['GNSS']['height']	
-		msg.h_msl = data['GNSS']['hMSL']	
-		msg.h_acc = data['GNSS']['hAcc']
-		msg.v_acc = data['GNSS']['vAcc']
+		msg.h_msl = data['GNSS']['hMSL']			# Besoin?
+		msg.h_acc = data['GNSS']['hAcc']			# Besoin?
+		msg.v_acc = data['GNSS']['vAcc']			# Besoin?
 		msg.vel_n = data['GNSS']['velN']
 		msg.vel_e = data['GNSS']['velE']
 		msg.vel_d = data['GNSS']['velD']
-		msg.s_acc = data['GNSS']['sAcc']
+		msg.s_acc = data['GNSS']['sAcc']			# Besoin?
 		return msg	
 	
 	def readStatus(self, status, msg):
