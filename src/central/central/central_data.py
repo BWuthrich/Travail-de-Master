@@ -13,6 +13,9 @@ class CollectData(Node):
 	
 	def __init__(self):
 		super().__init__('CollectData')
+		
+		self.e = 0.08181919 # eccentricity
+		self.a = 6378137.0 # equatorial radius
 
 		# Create data subscriber
 		# Orientation Euler's angles
@@ -114,6 +117,7 @@ class CollectData(Node):
 			print('INS')
 			self.t_new = 3600*self.AccAA.stamp[0] + 60*self.AccAA.stamp[1] + self.AccAA.stamp[2] + self.AccAA.stamp[3]/1e9
 			dt_INS = self.t_new - self.t_old_INS
+			dt_INS = 1/50############## 50hz
 			self.t_old_INS = self.t_new
         
 			gyr = np.array([[self.AngWR.gyrx], [self.AngWR.gyry], [self.AngWR.gyrz]])
@@ -127,9 +131,6 @@ class CollectData(Node):
 		
     
     # Use new INS position or if no new data last estimated position
-		#print('** STATE')
-		#print(self.state)
-		#print()
 		lat = self.state['Position'][0,0]
 		lon = self.state['Position'][1,0]
 		alti = self.state['Position'][2,0]
@@ -139,6 +140,8 @@ class CollectData(Node):
 		accE = self.state['Acceleration'][0,0]
 		accN = self.state['Acceleration'][1,0]
 		accH = self.state['Acceleration'][2,0]
+		print('lat')
+		print(lat)
     
     # Update time and dt
 		dt_KF = self.t_new - self.t_old_KF
@@ -150,7 +153,7 @@ class CollectData(Node):
 				           [0.0, 0.0, 1.0]])
     
 		Fv = np.array([[0.0, accH, -accN],
-				           [-accH, 0.0, accE],
+				           [-accH, 0.0, accE], 
 				           [accN, -accE, 0.0]])
     
 		Fe = np.array([[0.0, 1/(self.Rm+alti), 0.0],
@@ -187,8 +190,9 @@ class CollectData(Node):
 		Q = G@self.Kww@G.T
 
 		# Measurment covariance matrix [sigma_lat_GNSS, sigma_lon_GNSS, sigma_alt_GNSS, sigma_velE_GNSS, sigma_velN_GNSS, sigma_velU_GNSS]
-		Kll = np.diag([9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2])
+		Kll = np.diag([99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2])
 		l = np.array([[0.0],[0.0],[0.0],[0.0],[0.0],[0.0]])
+		#l = np.array([lat,lon,alti,velE,velN,velU])
     
 		if self.newPosPL:
 			self.newPosPL = False
@@ -196,6 +200,23 @@ class CollectData(Node):
 			self.lines_imu.set_ydata(np.append(self.lines_imu.get_ydata(), self.PosPL.latitude))    
     
 		if self.newGnsNP:
+			print('************** GNSS **************')
+			
+			p_l = self.Rbl @ self.p_INS # Bras de levier dans le repère local
+			RlTRSc = np.array([[-np.sin(np.radians(lon)), -np.sin(np.radians(lat))*np.cos(np.radians(lon)), np.cos(np.radians(lat))*np.cos(np.radians(lon))],
+												 [np.cos(np.radians(lon)), -np.sin(np.radians(lat))*np.sin(np.radians(lon)), np.cos(np.radians(lat))*np.sin(np.radians(lon))],
+												 [0, np.cos(np.radians(lat)), np.sin(np.radians(lat))]])
+			p_TRSc = self.p0 + RlTRSc @ p_l # Bras de levier dans le repère TRS carthésien
+			BL_GNSS_lon = np.arctan2(p_TRSc[1,0], p_TRSc[0,0])
+			BL_GNSS_lat = np.arctan2(p_TRSc[2,0], np.linalg.norm([p_TRSc[0,0],p_TRSc[1,0]])*(1-(self.Rn*self.e**2)/(self.Rn+alti)))
+			BL_GNSS_h = np.linalg.norm([p_TRSc[0,0],p_TRSc[1,0]])/np.cos(np.radians(lat)) - self.Rn
+
+			print(BL_GNSS_lon)	
+			print(BL_GNSS_lat)	
+			print(BL_GNSS_h)
+			print(self.GnsNP.height/1000)
+		
+		
 			l[0] = lat - self.GnsNP.lat
 			l[1] = lon - self.GnsNP.lon
 			l[2] = alti - self.GnsNP.height/1000 # [m]
@@ -220,11 +241,24 @@ class CollectData(Node):
 		self.Kxx = Kxx_pred - K@A@Kxx_pred
 
 		# Update state with Kalman error estimates
-		#self.state['Position'] = self.state['Position'] - np.array([[self.x[0,0]],[self.x[1,0]],[self.x[2,0]]])
-		#self.state['Attitude'] = self.state['Attitude'] - np.array([[self.x[6,0]],[self.x[7,0]],[self.x[8,0]]])
-		#self.state['Velocity'] = self.state['Velocity'] - np.array([[self.x[3,0]],[self.x[4,0]],[self.x[5,0]]])
-		#self.state['Biais gyr'] = self.state['Biais gyr'] - np.array([[self.x[9,0]],[self.x[10,0]],[self.x[11,0]]])
-		#self.state['Biais acc'] = self.state['Biais acc'] - np.array([[self.x[12,0]],[self.x[13,0]],[self.x[14,0]]])
+		self.state['Position'] = self.state['Position'] - np.array([[self.x[0,0]],[self.x[1,0]],[self.x[2,0]]])
+		self.state['Attitude'] = self.state['Attitude'] - np.array([[self.x[6,0]],[self.x[7,0]],[self.x[8,0]]])
+		self.state['Velocity'] = self.state['Velocity'] - np.array([[self.x[3,0]],[self.x[4,0]],[self.x[5,0]]])
+		self.state['Biais gyr'] = self.state['Biais gyr'] - np.array([[self.x[9,0]],[self.x[10,0]],[self.x[11,0]]])
+		self.state['Biais acc'] = self.state['Biais acc'] - np.array([[self.x[12,0]],[self.x[13,0]],[self.x[14,0]]])
+
+
+		#print('K')
+		#print(K)
+		print()
+		print('l-A@x_pred')
+		print(l-A@x_pred)
+		print()
+		print('atitude')
+		print(self.state['Attitude'])
+		print('bgyr')
+		print(self.state['Biais gyr'])
+
 
 		#Update plot data
 		self.lines.set_xdata(np.append(self.lines.get_xdata(), self.state['Position'][1,0]))
@@ -249,6 +283,19 @@ class CollectData(Node):
 		y0 = 0 #[rad]
 		b_gyr0 = np.array([[0],[0],[0]]) # to get by calibration
 		b_acc0 = np.array([[0],[0],[0]]) # to get by calibration
+		
+		# Position intiale référentiel TRS carthésien 
+		Rn = self.a/pow(1-pow(self.e*np.sin(np.radians(lat0)),2),1/2)
+		self.p0 = np.array([[(Rn + h0)*np.cos(np.radians(lon0))*np.cos(np.radians(lat0))],
+												[(Rn + h0)*np.cos(np.radians(lat0))*np.sin(np.radians(lon0))],
+												[(Rn*(1-self.e**2)+h0)*np.sin(np.radians(lat0))]]) 
+		
+		# Bras de levier GNSS
+		BL_GNSS_x = 68.250e-3 
+		BL_GNSS_y = 6.7e-3
+		BL_GNSS_z = 71.34e-3
+		self.p_INS = np.array([[BL_GNSS_x],[BL_GNSS_y],[BL_GNSS_z]])
+
 			
 		self.state = {'Position': np.array([[lat0],[lon0],[h0]]), 'Attitude': np.array([[p0],[r0],[y0]]),
 							    'Velocity': np.array([[0],[0],[0]]), 'Acceleration': np.array([[0],[0],[0]]),
@@ -269,8 +316,8 @@ class CollectData(Node):
 		self.x = np.array([[lat0],[lon0],[h0],[0.0],[0.0],[0.0],[p0],[r0],[y0],[0.0],[0.0],[0.0],[0.0],[0.0],[0.0]])
 		
 		# Initial variance covariance matrix
-		self.Kxx = np.diag([9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2,
-				                9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2])
+		self.Kxx = np.diag([99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2,
+				                99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2, 99999**2])
 
 		# Process noise
 		self.sigma_accE = 120
@@ -286,11 +333,12 @@ class CollectData(Node):
 		self.sigma_d_fy = 300
 		self.sigma_d_fz = 300
 
+
 		self.Kww = np.diag([self.sigma_accE**2, self.sigma_accN**2, self.sigma_accH**2, self.sigma_d_pitch**2,
 				            self.sigma_d_roll**2, self.sigma_d_yaw**2, self.sigma_d_wx**2, self.sigma_d_wy**2,
 				            self.sigma_d_wz**2, self.sigma_d_fx**2, self.sigma_d_fy**2, self.sigma_d_fz**2])
 
-		# !!!!!
+		# Biais Gauss-Markov
 		self.beta_wx = 0.01 #######################
 		self.beta_wy = 0.01 #######################
 		self.beta_wz = 0.01 #######################
@@ -302,9 +350,9 @@ class CollectData(Node):
 		self.sigma_lat_GNSS = 10e-8
 		self.sigma_lon_GNSS = 10e-8
 		self.sigma_alt_GNSS = 3
-		self.sigma_velE_GNSS = 0.0001
-		self.sigma_velN_GNSS = 0.0001
-		self.sigma_velU_GNSS = 0.0001
+		self.sigma_velE_GNSS = 0.001
+		self.sigma_velN_GNSS = 0.001
+		self.sigma_velU_GNSS = 0.001
 
 
 		# Init time
@@ -344,10 +392,8 @@ class CollectData(Node):
 
 		# Paramerters
 		omega_e = np.radians(15/3600) # Earth rotation rate [rad/s]
-		e = 0.08181919 # eccentricity
-		a = 6378137.0 # equatorial radius
-		self.Rn = a/pow(1-pow(e*np.sin(np.radians(lat)),2),1/2)
-		self.Rm = a*(1-e**2)/pow(1-pow(e*np.sin(np.radians(lat)),2),3/2)
+		self.Rn = self.a/pow(1-pow(self.e*np.sin(np.radians(lat)),2),1/2)
+		self.Rm = self.a*(1-self.e**2)/pow(1-pow(self.e*np.sin(np.radians(lat)),2),3/2)
 			 
 
 		## NEW ATTITUDE ##  
@@ -420,15 +466,15 @@ class CollectData(Node):
 		g_z = 9.81
 		acc_g = np.array([[0.0], [0.0], [-g_z]])
 		
-		print('ames')
-		print(acc_measure)
-		print('a coriol')
-		print(acc_coriolis)
-		print('aG')
-		print(acc_g)
+		#print('ames')
+		#print(acc_measure)
+		#print('a coriol')
+		#print(acc_coriolis)
+		#print('aG')
+		#print(acc_g)
 		
 		
-		acceleration = acc_measure - acc_coriolis + acc_g
+		acceleration = acc_measure + acc_g# - acc_coriolis
 		velocity = self.state['Velocity'] + 0.5 * (self.state['Acceleration'] + acceleration) * dt_INS
 		
 		## NEW POSITION ##
