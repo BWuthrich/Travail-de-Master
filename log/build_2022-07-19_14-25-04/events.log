@@ -1,0 +1,100 @@
+[0.000000] (-) TimerEvent: {}
+[0.001410] (-) JobUnselected: {'identifier': 'bluespace_ai_xsens_mti_driver'}
+[0.001860] (-) JobUnselected: {'identifier': 'cam_client'}
+[0.002896] (-) JobUnselected: {'identifier': 'cv_bridge'}
+[0.003721] (-) JobUnselected: {'identifier': 'image_geometry'}
+[0.004890] (-) JobUnselected: {'identifier': 'ntrip_client'}
+[0.005176] (-) JobUnselected: {'identifier': 'opencv_tests'}
+[0.005335] (-) JobUnselected: {'identifier': 'rosapi'}
+[0.005509] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.005683] (-) JobUnselected: {'identifier': 'rosbridge_library'}
+[0.005792] (-) JobUnselected: {'identifier': 'rosbridge_msgs'}
+[0.005964] (-) JobUnselected: {'identifier': 'rosbridge_server'}
+[0.008502] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.009815] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.010170] (-) JobUnselected: {'identifier': 'tcam'}
+[0.010414] (-) JobUnselected: {'identifier': 'vision_opencv'}
+[0.010776] (-) JobUnselected: {'identifier': 'xsens_driver'}
+[0.011052] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.011265] (central) JobQueued: {'identifier': 'central', 'dependencies': OrderedDict()}
+[0.011462] (central) JobStarted: {'identifier': 'central'}
+[0.095555] (-) TimerEvent: {}
+[0.204249] (-) TimerEvent: {}
+[0.307374] (-) TimerEvent: {}
+[0.408496] (-) TimerEvent: {}
+[0.509190] (-) TimerEvent: {}
+[0.610283] (-) TimerEvent: {}
+[0.711412] (-) TimerEvent: {}
+[0.812133] (-) TimerEvent: {}
+[0.912882] (-) TimerEvent: {}
+[1.013732] (-) TimerEvent: {}
+[1.116157] (-) TimerEvent: {}
+[1.218536] (-) TimerEvent: {}
+[1.320568] (-) TimerEvent: {}
+[1.421445] (-) TimerEvent: {}
+[1.523509] (-) TimerEvent: {}
+[1.625381] (-) TimerEvent: {}
+[1.726532] (-) TimerEvent: {}
+[1.827311] (-) TimerEvent: {}
+[1.930703] (-) TimerEvent: {}
+[2.031648] (-) TimerEvent: {}
+[2.134585] (-) TimerEvent: {}
+[2.236852] (-) TimerEvent: {}
+[2.337768] (-) TimerEvent: {}
+[2.438596] (-) TimerEvent: {}
+[2.539349] (-) TimerEvent: {}
+[2.640946] (-) TimerEvent: {}
+[2.742675] (-) TimerEvent: {}
+[2.843415] (-) TimerEvent: {}
+[2.944161] (-) TimerEvent: {}
+[3.045071] (-) TimerEvent: {}
+[3.146280] (-) TimerEvent: {}
+[3.247001] (-) TimerEvent: {}
+[3.347703] (-) TimerEvent: {}
+[3.448807] (-) TimerEvent: {}
+[3.549580] (-) TimerEvent: {}
+[3.618399] (central) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/central', 'build', '--build-base', '/app/dev_ws/build/central/build', 'install', '--prefix', '/app/dev_ws/install/central', '--record', '/app/dev_ws/build/central/install.log', '--single-version-externally-managed'], 'cwd': '/app/dev_ws/src/central', 'env': {'LIBRARY_PATH': '/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'C_INCLUDE_PATH': '/app/dev_ws/tiscamera/src/gobject:/app/dev_ws/tiscamera/src/gstreamer-1.0', 'GST_PLUGIN_PATH_1_0': '/app/dev_ws/tiscamera/build/src/gstreamer-1.0/', 'HOSTNAME': 'vignes', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_test_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib:/app/dev_ws/tiscamera/build/src/v4l2:/app/dev_ws/tiscamera/build/src/aravis:/app/dev_ws/tiscamera/build/src/libusb:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'GI_TYPELIB_PATH': '/app/dev_ws/tiscamera/build/src/gobject/', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/app/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/app/dev_ws/tiscamera/build/data/', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy', 'LD_RUN_PATH': '/app/dev_ws/tiscamera/build/src:/app/dev_ws/tiscamera/build/src/gobject:/app/dev_ws/tiscamera/build/src/gstreamer-1.0', 'PWD': '/app/dev_ws/build/central', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/app/dev_ws/install/central/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver'}, 'shell': False}
+[3.651067] (-) TimerEvent: {}
+[3.755062] (-) TimerEvent: {}
+[3.856383] (-) TimerEvent: {}
+[3.957218] (-) TimerEvent: {}
+[4.058025] (-) TimerEvent: {}
+[4.158769] (-) TimerEvent: {}
+[4.259464] (-) TimerEvent: {}
+[4.360161] (-) TimerEvent: {}
+[4.460992] (-) TimerEvent: {}
+[4.561720] (-) TimerEvent: {}
+[4.662633] (-) TimerEvent: {}
+[4.763306] (-) TimerEvent: {}
+[4.829456] (central) StdoutLine: {'line': b'running egg_info\n'}
+[4.831515] (central) StdoutLine: {'line': b'writing ../../build/central/central.egg-info/PKG-INFO\n'}
+[4.835966] (central) StdoutLine: {'line': b'writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt\n'}
+[4.836900] (central) StdoutLine: {'line': b'writing entry points to ../../build/central/central.egg-info/entry_points.txt\n'}
+[4.837349] (central) StdoutLine: {'line': b'writing requirements to ../../build/central/central.egg-info/requires.txt\n'}
+[4.837804] (central) StdoutLine: {'line': b'writing top-level names to ../../build/central/central.egg-info/top_level.txt\n'}
+[4.863472] (-) TimerEvent: {}
+[4.964261] (-) TimerEvent: {}
+[5.009911] (central) StdoutLine: {'line': b"reading manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[5.014071] (central) StdoutLine: {'line': b"writing manifest file '../../build/central/central.egg-info/SOURCES.txt'\n"}
+[5.014807] (central) StdoutLine: {'line': b'running build\n'}
+[5.016523] (central) StdoutLine: {'line': b'running build_py\n'}
+[5.017178] (central) StdoutLine: {'line': b'copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central\n'}
+[5.018818] (central) StdoutLine: {'line': b'running install\n'}
+[5.023676] (central) StdoutLine: {'line': b'running install_lib\n'}
+[5.030144] (central) StdoutLine: {'line': b'copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central\n'}
+[5.035410] (central) StdoutLine: {'line': b'byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc\n'}
+[5.060342] (central) StdoutLine: {'line': b'running install_data\n'}
+[5.063912] (central) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.064524] (-) TimerEvent: {}
+[5.072257] (central) StdoutLine: {'line': b"removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.074250] (central) StdoutLine: {'line': b'Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info\n'}
+[5.082008] (central) StdoutLine: {'line': b'running install_scripts\n'}
+[5.164702] (-) TimerEvent: {}
+[5.172298] (central) StdoutLine: {'line': b'Installing collect_data script to /app/dev_ws/install/central/lib/central\n'}
+[5.173385] (central) StdoutLine: {'line': b'Installing config script to /app/dev_ws/install/central/lib/central\n'}
+[5.176038] (central) StdoutLine: {'line': b"writing list of installed files to '/app/dev_ws/build/central/install.log'\n"}
+[5.264953] (-) TimerEvent: {}
+[5.285029] (central) CommandEnded: {'returncode': 0}
+[5.362225] (central) JobEnded: {'identifier': 'central', 'rc': 0}
+[5.366255] (-) TimerEvent: {}
+[5.366702] (-) EventReactorShutdown: {}

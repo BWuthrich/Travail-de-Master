@@ -1,0 +1,30 @@
+[3.183s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[4.286s] running egg_info
+[4.288s] writing ../../build/central/central.egg-info/PKG-INFO
+[4.290s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[4.291s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[4.292s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[4.293s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[4.468s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.472s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.473s] running build
+[4.473s] running build_py
+[4.474s] copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central
+[4.476s] running install
+[4.480s] running install_lib
+[4.484s] copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central
+[4.488s] byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc
+[4.506s]   File "/app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py", line 455
+[4.507s]     while cd.init_filter and cd.newAccAA
+[4.507s]                                        ^
+[4.508s] SyntaxError: invalid syntax
+[4.508s] 
+[4.508s] running install_data
+[4.509s] running install_egg_info
+[4.517s] removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)
+[4.518s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[4.524s] running install_scripts
+[4.607s] Installing collect_data script to /app/dev_ws/install/central/lib/central
+[4.609s] Installing config script to /app/dev_ws/install/central/lib/central
+[4.611s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[4.717s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
