@@ -1,1 +1,0 @@
-string cam_status

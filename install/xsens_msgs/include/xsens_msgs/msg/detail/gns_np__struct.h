@@ -28,13 +28,13 @@ typedef struct xsens_msgs__msg__GnsNP
   int8_t fixtype;
   double lon;
   double lat;
-  int64_t height;
+  double height;
   int64_t h_msl;
   int64_t h_acc;
   int64_t v_acc;
-  int64_t vel_n;
-  int64_t vel_e;
-  int64_t vel_d;
+  double vel_n;
+  double vel_e;
+  double vel_d;
   int64_t s_acc;
 } xsens_msgs__msg__GnsNP;
 

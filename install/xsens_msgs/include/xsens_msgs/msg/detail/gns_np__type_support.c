@@ -98,7 +98,7 @@ static rosidl_typesupport_introspection_c__MessageMember GnsNP__rosidl_typesuppo
   },
   {
     "height",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -158,7 +158,7 @@ static rosidl_typesupport_introspection_c__MessageMember GnsNP__rosidl_typesuppo
   },
   {
     "vel_n",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -173,7 +173,7 @@ static rosidl_typesupport_introspection_c__MessageMember GnsNP__rosidl_typesuppo
   },
   {
     "vel_e",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -188,7 +188,7 @@ static rosidl_typesupport_introspection_c__MessageMember GnsNP__rosidl_typesuppo
   },
   {
     "vel_d",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

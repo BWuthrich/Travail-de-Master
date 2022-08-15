@@ -147,8 +147,8 @@ bool xsens_msgs__msg__gns_np__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->height = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->height = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // h_msl
@@ -183,8 +183,8 @@ bool xsens_msgs__msg__gns_np__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->vel_n = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->vel_n = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // vel_e
@@ -192,8 +192,8 @@ bool xsens_msgs__msg__gns_np__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->vel_e = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->vel_e = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // vel_d
@@ -201,8 +201,8 @@ bool xsens_msgs__msg__gns_np__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->vel_d = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->vel_d = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // s_acc
@@ -328,7 +328,7 @@ PyObject * xsens_msgs__msg__gns_np__convert_to_py(void * raw_ros_message)
   }
   {  // height
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->height);
+    field = PyFloat_FromDouble(ros_message->height);
     {
       int rc = PyObject_SetAttrString(_pymessage, "height", field);
       Py_DECREF(field);
@@ -372,7 +372,7 @@ PyObject * xsens_msgs__msg__gns_np__convert_to_py(void * raw_ros_message)
   }
   {  // vel_n
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->vel_n);
+    field = PyFloat_FromDouble(ros_message->vel_n);
     {
       int rc = PyObject_SetAttrString(_pymessage, "vel_n", field);
       Py_DECREF(field);
@@ -383,7 +383,7 @@ PyObject * xsens_msgs__msg__gns_np__convert_to_py(void * raw_ros_message)
   }
   {  // vel_e
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->vel_e);
+    field = PyFloat_FromDouble(ros_message->vel_e);
     {
       int rc = PyObject_SetAttrString(_pymessage, "vel_e", field);
       Py_DECREF(field);
@@ -394,7 +394,7 @@ PyObject * xsens_msgs__msg__gns_np__convert_to_py(void * raw_ros_message)
   }
   {  // vel_d
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->vel_d);
+    field = PyFloat_FromDouble(ros_message->vel_d);
     {
       int rc = PyObject_SetAttrString(_pymessage, "vel_d", field);
       Py_DECREF(field);

@@ -2,11 +2,11 @@ int32[] stamp
 int8 fixtype
 float64 lon
 float64 lat
-int64 height
+float64 height
 int64 h_msl
 int64 h_acc
 int64 v_acc
-int64 vel_n
-int64 vel_e
-int64 vel_d
+float64 vel_n
+float64 vel_e
+float64 vel_d
 int64 s_acc

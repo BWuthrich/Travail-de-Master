@@ -24,6 +24,8 @@ class XSensDriver(Node):
 		self.syncConfig = None
 		self.lastPos3D = (0, 0, 0)	# Position of last RTCM refresh
 		self.xsens_status = "Inactive"
+		self.time_s = time.time()
+		
 		# Initial status message
 		self.sta_sw_msg = StaSW()
 		self.sta_sw_msg.xsens_status = self.xsens_status
@@ -34,6 +36,7 @@ class XSensDriver(Node):
 		self.sta_sw_msg.sync_out = "0"
 		self.sta_sw_msg.filter_mode = "000"
 		self.sta_sw_msg.rtk_status = "00"
+		
 		# GPIO trigger connection
 		self.gpioSwitch = 24
 		self.gpioTrig = 23
@@ -89,7 +92,7 @@ class XSensDriver(Node):
 			self.baudrate = msg.baudrate
 			self.publishStatus("Connecting")
 			self.connect()
-			#self.device.ChangeBaudrate(460800)
+			#self.device.ChangeBaudrate(460800) # A executer /!\ selon recommendation /!\ lorsqu'on veut changer le baudrate
 		if self.outputConfig != msg.output_config:
 			self.outputConfig = msg.output_config
 			self.baudrate = msg.baudrate
@@ -185,6 +188,7 @@ class XSensDriver(Node):
 
 	def getOneMeasure(self):
 		data = None
+		time_s=time.time()
 		try:
 			data = self.device.read_measurement()
 			#print(data)
@@ -223,6 +227,11 @@ class XSensDriver(Node):
 			self.acc_aa_msg.accy = data['Acceleration']['accY']
 			self.acc_aa_msg.accz = data['Acceleration']['accZ']
 			self.acc_aa_pub.publish(self.acc_aa_msg)
+			
+			fp = open("freq_read.txt", "a")
+			fp.write(str(1/(time.time()-self.time_s))+'\n')
+			fp.close()
+			self.time_s = time.time()
 		
 		# Publication - Free Acceleration	
 		if 'af' in self.outputConfig and 'Acceleration' in data:
@@ -269,6 +278,7 @@ class XSensDriver(Node):
 			d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
 			# Check for RTCM update
 			if d > self.rtcmRefreshDist:
+				print('OK')
 				self.get_logger().info('Send new position to ntrip client')
 				# Build and send service request
 				self.lastPos3D = latlon + (data.get('Position')['altEllipsoid'],)
@@ -282,14 +292,14 @@ class XSensDriver(Node):
 		msg.fixtype = data['GNSS']['fixtype']
 		msg.lon = data['GNSS']['lon']	
 		msg.lat = data['GNSS']['lat']	
-		msg.height = data['GNSS']['height']	
-		msg.h_msl = data['GNSS']['hMSL']			# Besoin?
-		msg.h_acc = data['GNSS']['hAcc']			# Besoin?
-		msg.v_acc = data['GNSS']['vAcc']			# Besoin?
-		msg.vel_n = data['GNSS']['velN']
-		msg.vel_e = data['GNSS']['velE']
-		msg.vel_d = data['GNSS']['velD']
-		msg.s_acc = data['GNSS']['sAcc']			# Besoin?
+		msg.height = data['GNSS']['height']/1000
+		msg.h_msl = data['GNSS']['hMSL']
+		msg.h_acc = data['GNSS']['hAcc']
+		msg.v_acc = data['GNSS']['vAcc']
+		msg.vel_n = data['GNSS']['velN']/1000
+		msg.vel_e = data['GNSS']['velE']/1000
+		msg.vel_d = data['GNSS']['velD']/1000
+		msg.s_acc = data['GNSS']['sAcc']
 		return msg	
 	
 	def readStatus(self, status, msg):

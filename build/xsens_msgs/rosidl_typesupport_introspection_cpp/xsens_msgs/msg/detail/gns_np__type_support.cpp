@@ -127,7 +127,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GnsNP_message
   },
   {
     "height",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
@@ -187,7 +187,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GnsNP_message
   },
   {
     "vel_n",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
@@ -202,7 +202,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GnsNP_message
   },
   {
     "vel_e",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
@@ -217,7 +217,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GnsNP_message
   },
   {
     "vel_d",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array

@@ -75,13 +75,13 @@ class GnsNP(metaclass=Metaclass_GnsNP):
         'fixtype': 'int8',
         'lon': 'double',
         'lat': 'double',
-        'height': 'int64',
+        'height': 'double',
         'h_msl': 'int64',
         'h_acc': 'int64',
         'v_acc': 'int64',
-        'vel_n': 'int64',
-        'vel_e': 'int64',
-        'vel_d': 'int64',
+        'vel_n': 'double',
+        'vel_e': 'double',
+        'vel_d': 'double',
         's_acc': 'int64',
     }
 
@@ -90,13 +90,13 @@ class GnsNP(metaclass=Metaclass_GnsNP):
         rosidl_parser.definition.BasicType('int8'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -108,13 +108,13 @@ class GnsNP(metaclass=Metaclass_GnsNP):
         self.fixtype = kwargs.get('fixtype', int())
         self.lon = kwargs.get('lon', float())
         self.lat = kwargs.get('lat', float())
-        self.height = kwargs.get('height', int())
+        self.height = kwargs.get('height', float())
         self.h_msl = kwargs.get('h_msl', int())
         self.h_acc = kwargs.get('h_acc', int())
         self.v_acc = kwargs.get('v_acc', int())
-        self.vel_n = kwargs.get('vel_n', int())
-        self.vel_e = kwargs.get('vel_e', int())
-        self.vel_d = kwargs.get('vel_d', int())
+        self.vel_n = kwargs.get('vel_n', float())
+        self.vel_e = kwargs.get('vel_e', float())
+        self.vel_d = kwargs.get('vel_d', float())
         self.s_acc = kwargs.get('s_acc', int())
 
     def __repr__(self):
@@ -255,10 +255,8 @@ class GnsNP(metaclass=Metaclass_GnsNP):
     def height(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'height' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'height' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'height' field must be of type 'float'"
         self._height = value
 
     @property
@@ -315,10 +313,8 @@ class GnsNP(metaclass=Metaclass_GnsNP):
     def vel_n(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'vel_n' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'vel_n' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'vel_n' field must be of type 'float'"
         self._vel_n = value
 
     @property
@@ -330,10 +326,8 @@ class GnsNP(metaclass=Metaclass_GnsNP):
     def vel_e(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'vel_e' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'vel_e' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'vel_e' field must be of type 'float'"
         self._vel_e = value
 
     @property
@@ -345,10 +339,8 @@ class GnsNP(metaclass=Metaclass_GnsNP):
     def vel_d(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'vel_d' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'vel_d' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'vel_d' field must be of type 'float'"
         self._vel_d = value
 
     @property

@@ -40,13 +40,13 @@ struct GnsNP_
       this->fixtype = 0;
       this->lon = 0.0;
       this->lat = 0.0;
-      this->height = 0ll;
+      this->height = 0.0;
       this->h_msl = 0ll;
       this->h_acc = 0ll;
       this->v_acc = 0ll;
-      this->vel_n = 0ll;
-      this->vel_e = 0ll;
-      this->vel_d = 0ll;
+      this->vel_n = 0.0;
+      this->vel_e = 0.0;
+      this->vel_d = 0.0;
       this->s_acc = 0ll;
     }
   }
@@ -60,13 +60,13 @@ struct GnsNP_
       this->fixtype = 0;
       this->lon = 0.0;
       this->lat = 0.0;
-      this->height = 0ll;
+      this->height = 0.0;
       this->h_msl = 0ll;
       this->h_acc = 0ll;
       this->v_acc = 0ll;
-      this->vel_n = 0ll;
-      this->vel_e = 0ll;
-      this->vel_d = 0ll;
+      this->vel_n = 0.0;
+      this->vel_e = 0.0;
+      this->vel_d = 0.0;
       this->s_acc = 0ll;
     }
   }
@@ -85,7 +85,7 @@ struct GnsNP_
     double;
   _lat_type lat;
   using _height_type =
-    int64_t;
+    double;
   _height_type height;
   using _h_msl_type =
     int64_t;
@@ -97,13 +97,13 @@ struct GnsNP_
     int64_t;
   _v_acc_type v_acc;
   using _vel_n_type =
-    int64_t;
+    double;
   _vel_n_type vel_n;
   using _vel_e_type =
-    int64_t;
+    double;
   _vel_e_type vel_e;
   using _vel_d_type =
-    int64_t;
+    double;
   _vel_d_type vel_d;
   using _s_acc_type =
     int64_t;
@@ -135,7 +135,7 @@ struct GnsNP_
     return *this;
   }
   Type & set__height(
-    const int64_t & _arg)
+    const double & _arg)
   {
     this->height = _arg;
     return *this;
@@ -159,19 +159,19 @@ struct GnsNP_
     return *this;
   }
   Type & set__vel_n(
-    const int64_t & _arg)
+    const double & _arg)
   {
     this->vel_n = _arg;
     return *this;
   }
   Type & set__vel_e(
-    const int64_t & _arg)
+    const double & _arg)
   {
     this->vel_e = _arg;
     return *this;
   }
   Type & set__vel_d(
-    const int64_t & _arg)
+    const double & _arg)
   {
     this->vel_d = _arg;
     return *this;

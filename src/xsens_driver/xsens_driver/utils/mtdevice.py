@@ -37,7 +37,7 @@ class MTDevice(object):
         self.device.reset_output_buffer()  # flush to make sure the port is ready TODO
         
         # timeout for communication
-        self.timeout = 10  #1000*timeout #C'est quoi ça? Pourquoi ce facteur 1000 à l'origine?
+        self.timeout = 10
         # state of the device
         self.state = None
         if config_mode:
@@ -107,8 +107,11 @@ class MTDevice(object):
                          ' '.join("%02X" % v for v in data)))
             if mid == MID.Error:
                 raise MTErrorMessage(data[0])
-            if (time.time()-start) > 0.1:
-            	print(time.time()-start)
+
+            fp = open("time_read.txt", "a")
+            fp.write(str(time.time()-start)+'\n')
+            fp.close()
+            
             return (mid, buf[:-1])
         else:
         	if (time.time()-start) > 0.1:

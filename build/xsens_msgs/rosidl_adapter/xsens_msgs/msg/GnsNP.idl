@@ -14,7 +14,7 @@ module xsens_msgs {
 
       double lat;
 
-      int64 height;
+      double height;
 
       int64 h_msl;
 
@@ -22,11 +22,11 @@ module xsens_msgs {
 
       int64 v_acc;
 
-      int64 vel_n;
+      double vel_n;
 
-      int64 vel_e;
+      double vel_e;
 
-      int64 vel_d;
+      double vel_d;
 
       int64 s_acc;
     };

@@ -141,6 +141,11 @@ class ntripClient(Node):
 	def RTCM_srv_callback(self, request, response):
 		self.setPosition(request.longitude, request.latitude, request.alti_ell)
 		self.get_logger().info("ntrip - new position set")
+		for d in self.readOneSplittedData():	
+			try:
+				self.rtcm_device.write(d)
+			except Exception as e:
+				print(e)
 		return response
 		
 	

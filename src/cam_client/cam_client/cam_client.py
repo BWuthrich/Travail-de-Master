@@ -30,7 +30,7 @@ class Camera(Node):
 	          cam_format = SinkFormats.BGRA
 	      self.tis.openDevice(serial, width, height, framerate, cam_format)
 		
-		# Set Callback - trigger - start pipeline
+	  # Set Callback - trigger - start pipeline
 	  self.tis.setProperty("Trigger Mode", False)
 	  self.tis.setImageCallback(self.onNewImage)
 	  self.tis.startPipeline()
@@ -58,9 +58,9 @@ class Camera(Node):
 		print(f"camera {self.cameraName[-1]} image n°{self.imageCounter} temps {time.time()-start}")
 		
 		
-		#filename = op.join(self.outputDir, f"{self.cameraName}_{self.imageCounter:04}.tif")
-		#print("NewImage", filename)
-		#tif.imsave(filename, image)
+		filename = op.join(self.outputDir, f"{self.cameraName}_{self.imageCounter:04}.tif")
+		print("NewImage", filename)
+		tif.imsave(filename, image)
 		self.busy = False
 
 	def startLog(self, outputDir=None):
