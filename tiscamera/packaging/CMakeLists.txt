@@ -1,0 +1,176 @@
+# Copyright 2017 The Imaging Source Europe GmbH
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+include(CPackComponent)
+
+set(CPACK_COMPONENTS_ALL tiscamera)
+
+#set(CPACK_MONOLITHIC_INSTALL ON)
+
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "The Imaging Source Europe GmbH <support@theimagingsource.com>")
+
+set(CPACK_PACKAGE_DESCRIPTION "The Imaging Source Linux Software")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Collection of tools and libraries used for camera interaction")
+set(CPACK_PACKAGE_VENDOR "The Imaging Source Europe GmbH")
+set(CPACK_PACKAGE_CONTACT "support@theimagingsource.com")
+set(CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS ON)
+
+set(CPACK_PACKAGE_CHECKSUM "SHA512")
+
+# this causes problems and makes it impossible to create packages
+# without actually installing the files.
+# Due to this problem we have to manually track dependencies.
+# set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+
+
+if (TCAM_EXCLUSIVE_BUILD)
+  set(TCAM_PACKAGE_MODULES "")
+else (TCAM_EXCLUSIVE_BUILD)
+  set(TCAM_PACKAGE_MODULES "base,gstreamer")
+endif (TCAM_EXCLUSIVE_BUILD)
+
+
+function(add_deps dep)
+  if (NOT "${TCAM_PACKAGE_MODULES}" STREQUAL "")
+    set(TCAM_PACKAGE_MODULES "${TCAM_PACKAGE_MODULES},")
+  endif (NOT "${TCAM_PACKAGE_MODULES}" STREQUAL "")
+
+  set(TCAM_PACKAGE_MODULES "${TCAM_PACKAGE_MODULES}${dep}" PARENT_SCOPE)
+
+endfunction()
+
+
+set(CPACK_SET_DESTDIR "on")
+
+# set(CPACK_PACKAGING_INSTALL_PREFIX "/usr")
+set(CPACK_GENERATOR "DEB")
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${TCAM_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${TCAM_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${TCAM_VERSION_PATCH}")
+
+git_commit_count(GIT_COMMIT_COUNT)
+
+set(CPACK_DEBIAN_PACKAGE_VERSION "${TCAM_VERSION}.${GIT_COMMIT_COUNT}")
+set(CPACK_DEBIAN_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})
+
+if (BUILD_ARAVIS)
+
+  set(ARAVIS_PRERM "
+# Based on output by dh_installsystemd/13.5.2
+
+if [ -z \"${DPKG_ROOT\:-}\" ] && [ \"$1\" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'gige-daemon.service' > /dev/null || true
+fi
+")
+  set(ARAVIS_POSTINST "
+# End automatically added section
+# Based on output by dh_installsystemd/13.5.2
+
+if [ \"$1\" = \"configure\" ] || [ \"$1\" = \"abort-upgrade\" ] || [ \"$1\" = \"abort-deconfigure\" ] || [ \"$1\" = \"abort-remove\" ] ; then
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'gige-daemon.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'gige-daemon.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'gige-daemon.service' >/dev/null || true
+	fi
+fi
+if [ \"$1\" = \"configure\" ] || [ \"$1\" = \"abort-upgrade\" ] || [ \"$1\" = \"abort-deconfigure\" ] || [ \"$1\" = \"abort-remove\" ] ; then
+	if [ -z \"${DPKG_ROOT\:-}\" ] && [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		deb-systemd-invoke restart 'gige-daemon.service' >/dev/null || true
+	fi
+fi
+")
+
+  add_deps("aravis")
+
+else (BUILD_ARAVIS)
+
+  set(ARAVIS_PRERM "")
+  set(ARAVIS_POSTINST "")
+
+endif (BUILD_ARAVIS)
+
+if (BUILD_TOOLS)
+
+  add_deps("tools")
+
+  if (TCAM_BUILD_WITH_GUI)
+
+    add_deps("gui")
+
+  endif (TCAM_BUILD_WITH_GUI)
+
+endif (BUILD_TOOLS)
+
+if (BUILD_DOCUMENTATION)
+      add_deps("documentation")
+endif (BUILD_DOCUMENTATION)
+
+#message("${TCAM_SOURCE_DIR}/scripts/dependency-manager list --package deb -m=${TCAM_PACKAGE_MODULES}")
+
+set(DEB_DEPENDENCY_CMD ${TCAM_SOURCE_DIR}/scripts/dependency-manager list --package deb -m=${TCAM_PACKAGE_MODULES})
+
+# execute_process(COMMAND ${TCAM_SOURCE_DIR}/scripts/dependency-manager list --package deb -m=${TCAM_PACKAGE_MODULES}
+execute_process(COMMAND ${DEB_DEPENDENCY_CMD}
+  WORKING_DIRECTORY "${TCAM_SOURCE_DIR}"
+  OUTPUT_VARIABLE CPACK_DEBIAN_PACKAGE_DEPENDS
+  RESULT_VARIABLE BLA)
+
+execute_process(COMMAND ${TCAM_SOURCE_DIR}/scripts/dependency-manager dist-release
+  WORKING_DIRECTORY "${TCAM_SOURCE_DIR}"
+  OUTPUT_VARIABLE TCAM_DISTRIBUTION_DESCRIPTION
+  RESULT_VARIABLE BLA)
+
+### required for tcam-capture
+
+set(CPACK_DEBIAN_PACKAGE_RECOMMENDS "python-gi (>= 3.20), python-gst-1.0")
+
+# when dealing with -DBUIL_TOOLS=OFF and similar situations
+# the dependency list might end with a trailing `,`
+# this will cause dpkg to report an error and abort the installation
+# remove it as the list will not be touched after this
+string(REGEX REPLACE ",$" "" CPACK_DEBIAN_PACKAGE_DEPENDS "${CPACK_DEBIAN_PACKAGE_DEPENDS}")
+# remove line breaks
+# they may be in the string due to dependency-manager being a commandlione tool
+# line breaks may cause the package to not be installable
+string(REGEX REPLACE "\n" "" CPACK_DEBIAN_PACKAGE_DEPENDS "${CPACK_DEBIAN_PACKAGE_DEPENDS}")
+
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/deb/postinst.in" "${CMAKE_CURRENT_BINARY_DIR}/deb/postinst")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/deb/prerm.in" "${CMAKE_CURRENT_BINARY_DIR}/deb/prerm")
+
+set(CPACK_DEBIAN_PACKAGE_PROVIDES "tiscamera-tcamprop")
+set(CPACK_DEBIAN_PACKAGE_CONFLICTS "tiscamera-tcamprop")
+set(CPACK_DEBIAN_PACKAGE_REPLACES "tiscamera-tcamprop")
+
+set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_BINARY_DIR}/deb/postinst;${CMAKE_CURRENT_BINARY_DIR}/deb/prerm;")
+
+
+set(CPACK_PACKAGE_NAME "tiscamera")
+
+include(package-name)
+
+create_package_name(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}" "${TCAM_VERSION}")
+
+set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
+
+
+# always last
+include(CPack)
