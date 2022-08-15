@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/app/dev_ws/tiscamera/src/v4l2/dfk73.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+sys/ioctl.h
+-
+fcntl.h
+-
+linux/uvcvideo.h
+-
+linux/videodev2.h
+-
+libusb-1.0/libusb.h
+-
+dfk73.h
+/app/dev_ws/tiscamera/src/v4l2/dfk73.h
+
+/app/dev_ws/tiscamera/src/v4l2/dfk73.h
+

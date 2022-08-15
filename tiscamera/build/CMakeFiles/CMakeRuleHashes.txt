@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+5ca74477d264ae978f22b0c458316b64 CMakeFiles/uninstall
+2ad3d264dc41683f111230f494848d80 src/CMakeFiles/generate-version-file
+cceb0aac2c9f12df7743ed4dd2d788fa src/gobject/CMakeFiles/create_gobject
+a40f4f6c60d49aff97fe41e6cacd1fad src/gobject/Tcam-0.1.gir
+eb27a293b8eadaf8821f31874d255bec src/gobject/Tcam-0.1.typelib
+354e4735371fe19eaf60fa41796a7b06 src/version.cpp

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall -Wextra -pedantic -pthread -fPIC -O3 -DNDEBUG  -rdynamic CMakeFiles/tcam-uvc-extension-loader.dir/main.cpp.o  -o tcam-uvc-extension-loader  -Wl,-rpath,/app/dev_ws/tiscamera/build/src/v4l2: ../../src/v4l2/libtcam-uvc-extension.so -luuid 

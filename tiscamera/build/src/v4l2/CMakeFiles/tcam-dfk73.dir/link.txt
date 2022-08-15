@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -Wall -Wextra -pedantic -pthread -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libtcam-dfk73.so.0 -o libtcam-dfk73.so.0.14.0 CMakeFiles/tcam-dfk73.dir/dfk73.c.o  -ludev -lusb-1.0 
