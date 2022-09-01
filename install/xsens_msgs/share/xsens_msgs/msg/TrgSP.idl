@@ -7,8 +7,6 @@ module xsens_msgs {
   module msg {
     struct TrgSP {
       sequence<int32> stamp;
-
-      int32 trig_counter;
     };
   };
 };

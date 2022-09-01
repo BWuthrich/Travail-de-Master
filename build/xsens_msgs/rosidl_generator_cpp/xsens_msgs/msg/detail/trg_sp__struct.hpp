@@ -34,42 +34,25 @@ struct TrgSP_
 
   explicit TrgSP_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->trig_counter = 0l;
-    }
+    (void)_init;
   }
 
   explicit TrgSP_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
+    (void)_init;
     (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->trig_counter = 0l;
-    }
   }
 
   // field types and members
   using _stamp_type =
     std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other>;
   _stamp_type stamp;
-  using _trig_counter_type =
-    int32_t;
-  _trig_counter_type trig_counter;
 
   // setters for named parameter idiom
   Type & set__stamp(
     const std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other> & _arg)
   {
     this->stamp = _arg;
-    return *this;
-  }
-  Type & set__trig_counter(
-    const int32_t & _arg)
-  {
-    this->trig_counter = _arg;
     return *this;
   }
 
@@ -116,9 +99,6 @@ struct TrgSP_
   bool operator==(const TrgSP_ & other) const
   {
     if (this->stamp != other.stamp) {
-      return false;
-    }
-    if (this->trig_counter != other.trig_counter) {
       return false;
     }
     return true;

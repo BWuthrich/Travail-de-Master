@@ -25,7 +25,6 @@ extern "C"
 typedef struct xsens_msgs__msg__TrgSP
 {
   rosidl_runtime_c__int32__Sequence stamp;
-  int32_t trig_counter;
 } xsens_msgs__msg__TrgSP;
 
 // Struct for a sequence of xsens_msgs__msg__TrgSP.

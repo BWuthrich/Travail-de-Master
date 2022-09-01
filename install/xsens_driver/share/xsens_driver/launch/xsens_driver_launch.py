@@ -56,7 +56,7 @@ def generate_launch_description():
 
     ld.add_action(Xsens_node)
     ld.add_action(ntrip_node)
-    ld.add_action(cam_node)
+    #ld.add_action(cam_node)
     #ld.add_action(central_config_node)
     ld.add_action(central_data_node)
     return ld

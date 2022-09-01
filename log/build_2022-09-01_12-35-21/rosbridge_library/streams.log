@@ -1,0 +1,108 @@
+[0.109s] Invoking command in '/app/dev_ws/build/rosbridge_library': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake /app/dev_ws/src/rosbridge_suite/rosbridge_library -DCMAKE_INSTALL_PREFIX=/app/dev_ws/install/rosbridge_library
+[0.618s] -- The C compiler identification is GNU 9.4.0
+[1.075s] -- The CXX compiler identification is GNU 9.4.0
+[1.107s] -- Check for working C compiler: /usr/bin/cc
+[1.672s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.676s] -- Detecting C compiler ABI info
+[2.212s] -- Detecting C compiler ABI info - done
+[2.315s] -- Detecting C compile features
+[2.319s] -- Detecting C compile features - done
+[2.346s] -- Check for working CXX compiler: /usr/bin/c++
+[2.915s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.920s] -- Detecting CXX compiler ABI info
+[3.481s] -- Detecting CXX compiler ABI info - done
+[3.532s] -- Detecting CXX compile features
+[3.534s] -- Detecting CXX compile features - done
+[3.566s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[3.926s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.927s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[11.960s] -- Configuring done
+[11.974s] -- Generating done
+[11.979s] -- Build files have been written to: /app/dev_ws/build/rosbridge_library
+[11.996s] Invoked command in '/app/dev_ws/build/rosbridge_library' returned '0': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake /app/dev_ws/src/rosbridge_suite/rosbridge_library -DCMAKE_INSTALL_PREFIX=/app/dev_ws/install/rosbridge_library
+[12.008s] Invoking command in '/app/dev_ws/build/rosbridge_library': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake --build /app/dev_ws/build/rosbridge_library -- -j4 -l4
+[12.257s] Invoked command in '/app/dev_ws/build/rosbridge_library' returned '0': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake --build /app/dev_ws/build/rosbridge_library -- -j4 -l4
+[12.428s] Invoking command in '/app/dev_ws/build/rosbridge_library': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake --install /app/dev_ws/build/rosbridge_library
+[12.484s] -- Install configuration: ""
+[12.485s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/pythonpath.sh
+[12.487s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/pythonpath.dsv
+[12.489s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library
+[12.490s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/protocol.py
+[12.493s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities
+[12.495s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/unadvertise_service.py
+[12.498s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/subscribe.py
+[12.501s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/advertise_service.py
+[12.504s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/defragmentation.py
+[12.506s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/call_service.py
+[12.509s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/fragmentation.py
+[12.511s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/service_response.py
+[12.513s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/advertise.py
+[12.515s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/publish.py
+[12.518s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/__init__.py
+[12.519s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util
+[12.521s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util/cbor.py
+[12.523s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util/__init__.py
+[12.525s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capability.py
+[12.528s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/rosbridge_protocol.py
+[12.530s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/__init__.py
+[12.531s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal
+[12.533s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/pngcompression.py
+[12.535s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/subscribers.py
+[12.537s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/message_conversion.py
+[12.540s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/topics.py
+[12.543s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/ros_loader.py
+[12.545s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/outgoing_message.py
+[12.547s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/subscription_modifiers.py
+[12.549s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/cbor_conversion.py
+[12.551s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/publishers.py
+[12.554s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/__init__.py
+[12.556s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/exceptions.py
+[12.558s] -- Installing: /app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/services.py
+[12.895s] Listing '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library'...
+[12.897s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/__init__.py'...
+[12.899s] Listing '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities'...
+[12.901s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/__init__.py'...
+[12.903s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/advertise.py'...
+[12.905s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/advertise_service.py'...
+[12.907s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/call_service.py'...
+[12.909s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/defragmentation.py'...
+[12.911s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/fragmentation.py'...
+[12.913s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/publish.py'...
+[12.915s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/service_response.py'...
+[12.917s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/subscribe.py'...
+[12.918s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capabilities/unadvertise_service.py'...
+[12.920s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/capability.py'...
+[12.921s] Listing '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal'...
+[12.923s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/__init__.py'...
+[12.924s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/cbor_conversion.py'...
+[12.926s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/exceptions.py'...
+[12.927s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/message_conversion.py'...
+[12.929s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/outgoing_message.py'...
+[12.930s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/pngcompression.py'...
+[12.931s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/publishers.py'...
+[12.933s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/ros_loader.py'...
+[12.934s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/services.py'...
+[12.935s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/subscribers.py'...
+[12.936s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/subscription_modifiers.py'...
+[12.937s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/internal/topics.py'...
+[12.938s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/protocol.py'...
+[12.938s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/rosbridge_protocol.py'...
+[12.940s] Listing '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util'...
+[12.940s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util/__init__.py'...
+[12.942s] Compiling '/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages/rosbridge_library/util/cbor.py'...
+[12.942s] -- Installing: /app/dev_ws/install/rosbridge_library/share/ament_index/resource_index/package_run_dependencies/rosbridge_library
+[12.945s] -- Installing: /app/dev_ws/install/rosbridge_library/share/ament_index/resource_index/parent_prefix_path/rosbridge_library
+[12.949s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/ament_prefix_path.sh
+[12.952s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/ament_prefix_path.dsv
+[12.956s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/path.sh
+[12.959s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/environment/path.dsv
+[12.963s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/local_setup.bash
+[12.966s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/local_setup.sh
+[12.969s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/local_setup.zsh
+[12.973s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/local_setup.dsv
+[12.976s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/package.dsv
+[12.980s] -- Installing: /app/dev_ws/install/rosbridge_library/share/ament_index/resource_index/packages/rosbridge_library
+[12.984s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/cmake/rosbridge_libraryConfig.cmake
+[12.986s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/cmake/rosbridge_libraryConfig-version.cmake
+[12.988s] -- Installing: /app/dev_ws/install/rosbridge_library/share/rosbridge_library/package.xml
+[13.002s] Invoked command in '/app/dev_ws/build/rosbridge_library' returned '0': CMAKE_PREFIX_PATH=/app/dev_ws/install/rosbridge_test_msgs:/app/dev_ws/install/xsens_msgs:/app/dev_ws/install/rosbridge_suite:/app/dev_ws/install/rosbridge_server:/app/dev_ws/install/rosbridge_msgs:/app/dev_ws/install/rosapi:/app/dev_ws/install/rosbridge_library:/app/dev_ws/install/rosapi_msgs:/app/dev_ws/install/bluespace_ai_xsens_mti_driver:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central LD_LIBRARY_PATH=/app/dev_ws/install/rosbridge_test_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/app/dev_ws/install/xsens_msgs/lib:/app/dev_ws/install/rosbridge_msgs/lib:/app/dev_ws/install/rosapi_msgs/lib PYTHONPATH=/app/dev_ws/install/rosbridge_test_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages:/app/dev_ws/install/cam_client/lib/python3.8/site-packages:/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_server/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_msgs/lib/python3.8/site-packages:/app/dev_ws/install/rosapi/lib/python3.8/site-packages:/app/dev_ws/install/rosbridge_library/lib/python3.8/site-packages:/app/dev_ws/install/rosapi_msgs/lib/python3.8/site-packages:/app/dev_ws/install/ntrip_client/lib/python3.8/site-packages:/app/dev_ws/install/central/lib/python3.8/site-packages /usr/bin/cmake --install /app/dev_ws/build/rosbridge_library

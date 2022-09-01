@@ -20,32 +20,16 @@ namespace msg
 namespace builder
 {
 
-class Init_TrgSP_trig_counter
-{
-public:
-  explicit Init_TrgSP_trig_counter(::xsens_msgs::msg::TrgSP & msg)
-  : msg_(msg)
-  {}
-  ::xsens_msgs::msg::TrgSP trig_counter(::xsens_msgs::msg::TrgSP::_trig_counter_type arg)
-  {
-    msg_.trig_counter = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::xsens_msgs::msg::TrgSP msg_;
-};
-
 class Init_TrgSP_stamp
 {
 public:
   Init_TrgSP_stamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_TrgSP_trig_counter stamp(::xsens_msgs::msg::TrgSP::_stamp_type arg)
+  ::xsens_msgs::msg::TrgSP stamp(::xsens_msgs::msg::TrgSP::_stamp_type arg)
   {
     msg_.stamp = std::move(arg);
-    return Init_TrgSP_trig_counter(msg_);
+    return std::move(msg_);
   }
 
 private:

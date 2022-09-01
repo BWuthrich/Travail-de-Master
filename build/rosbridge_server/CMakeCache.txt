@@ -253,7 +253,7 @@ PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 PYTHON_VERSION:STRING=
 
 //Name of the computer/site where compile is being run
-SITE:STRING=d4a544884428
+SITE:STRING=vignes
 
 //Path to a file.
 _launch_test_FILE_NAME:FILEPATH=/app/dev_ws/src/rosbridge_suite/rosbridge_server/test/websocket/best_effort_publisher.test.py

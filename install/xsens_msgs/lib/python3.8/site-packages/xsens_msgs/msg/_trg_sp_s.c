@@ -115,15 +115,6 @@ bool xsens_msgs__msg__trg_sp__convert_from_py(PyObject * _pymsg, void * _ros_mes
     }
     Py_DECREF(field);
   }
-  {  // trig_counter
-    PyObject * field = PyObject_GetAttrString(_pymsg, "trig_counter");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->trig_counter = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -202,17 +193,6 @@ PyObject * xsens_msgs__msg__trg_sp__convert_to_py(void * raw_ros_message)
       Py_DECREF(ret);
     }
     Py_DECREF(field);
-  }
-  {  // trig_counter
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->trig_counter);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "trig_counter", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
   }
 
   // ownership of _pymessage is transferred to the caller

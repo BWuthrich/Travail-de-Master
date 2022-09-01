@@ -28,6 +28,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_ori_oe.py" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_ins.py" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_ins_s.c" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pa.py" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_pos_pl.py" "/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/_xsens_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"

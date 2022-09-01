@@ -24,7 +24,6 @@ xsens_msgs__msg__TrgSP__init(xsens_msgs__msg__TrgSP * msg)
     xsens_msgs__msg__TrgSP__fini(msg);
     return false;
   }
-  // trig_counter
   return true;
 }
 
@@ -36,7 +35,6 @@ xsens_msgs__msg__TrgSP__fini(xsens_msgs__msg__TrgSP * msg)
   }
   // stamp
   rosidl_runtime_c__int32__Sequence__fini(&msg->stamp);
-  // trig_counter
 }
 
 xsens_msgs__msg__TrgSP *

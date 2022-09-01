@@ -64,7 +64,7 @@ void resize_function__TrgSP__stamp(void * untyped_member, size_t size)
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember TrgSP_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember TrgSP_message_member_array[1] = {
   {
     "stamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -79,28 +79,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TrgSP_message
     get_const_function__TrgSP__stamp,  // get_const(index) function pointer
     get_function__TrgSP__stamp,  // get(index) function pointer
     resize_function__TrgSP__stamp  // resize(index) function pointer
-  },
-  {
-    "trig_counter",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(xsens_msgs::msg::TrgSP, trig_counter),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers TrgSP_message_members = {
   "xsens_msgs::msg",  // message namespace
   "TrgSP",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(xsens_msgs::msg::TrgSP),
   TrgSP_message_member_array,  // message members
   TrgSP_init_function,  // function to initialize message memory (memory has to be allocated)

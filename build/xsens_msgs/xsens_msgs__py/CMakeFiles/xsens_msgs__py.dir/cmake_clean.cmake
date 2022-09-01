@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/xsens_msgs/msg/_gns_np_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_ori_oe.py"
   "../rosidl_generator_py/xsens_msgs/msg/_ori_oe_s.c"
+  "../rosidl_generator_py/xsens_msgs/msg/_pos_ins.py"
+  "../rosidl_generator_py/xsens_msgs/msg/_pos_ins_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_pos_pa.py"
   "../rosidl_generator_py/xsens_msgs/msg/_pos_pa_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_pos_pl.py"

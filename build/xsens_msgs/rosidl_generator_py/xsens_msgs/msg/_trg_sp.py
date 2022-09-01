@@ -57,17 +57,14 @@ class TrgSP(metaclass=Metaclass_TrgSP):
 
     __slots__ = [
         '_stamp',
-        '_trig_counter',
     ]
 
     _fields_and_field_types = {
         'stamp': 'sequence<int32>',
-        'trig_counter': 'int32',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -75,7 +72,6 @@ class TrgSP(metaclass=Metaclass_TrgSP):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.stamp = array.array('i', kwargs.get('stamp', []))
-        self.trig_counter = kwargs.get('trig_counter', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -107,8 +103,6 @@ class TrgSP(metaclass=Metaclass_TrgSP):
         if not isinstance(other, self.__class__):
             return False
         if self.stamp != other.stamp:
-            return False
-        if self.trig_counter != other.trig_counter:
             return False
         return True
 
@@ -144,18 +138,3 @@ class TrgSP(metaclass=Metaclass_TrgSP):
                  all(val >= -2147483648 and val < 2147483648 for val in value)), \
                 "The 'stamp' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
         self._stamp = array.array('i', value)
-
-    @property
-    def trig_counter(self):
-        """Message field 'trig_counter'."""
-        return self._trig_counter
-
-    @trig_counter.setter
-    def trig_counter(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'trig_counter' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'trig_counter' field must be an integer in [-2147483648, 2147483647]"
-        self._trig_counter = value

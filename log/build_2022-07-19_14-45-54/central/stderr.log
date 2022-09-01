@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py", line 473
-    cd.kalman_filter_2(gnss, dt_KF)
-    ^
-SyntaxError: invalid syntax
-

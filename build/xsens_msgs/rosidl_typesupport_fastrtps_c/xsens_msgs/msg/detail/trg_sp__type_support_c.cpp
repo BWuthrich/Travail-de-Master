@@ -59,11 +59,6 @@ static bool _TrgSP__cdr_serialize(
     cdr.serializeArray(array_ptr, size);
   }
 
-  // Field name: trig_counter
-  {
-    cdr << ros_message->trig_counter;
-  }
-
   return true;
 }
 
@@ -89,11 +84,6 @@ static bool _TrgSP__cdr_deserialize(
     }
     auto array_ptr = ros_message->stamp.data;
     cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: trig_counter
-  {
-    cdr >> ros_message->trig_counter;
   }
 
   return true;
@@ -122,12 +112,6 @@ size_t get_serialized_size_xsens_msgs__msg__TrgSP(
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name trig_counter
-  {
-    size_t item_size = sizeof(ros_message->trig_counter);
-    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -160,13 +144,6 @@ size_t max_serialized_size_xsens_msgs__msg__TrgSP(
     full_bounded = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: trig_counter
-  {
-    size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

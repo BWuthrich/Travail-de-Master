@@ -1,0 +1,25 @@
+[3.439s] Invoking command in '/app/dev_ws/src/central': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed
+[4.593s] running egg_info
+[4.595s] writing ../../build/central/central.egg-info/PKG-INFO
+[4.596s] writing dependency_links to ../../build/central/central.egg-info/dependency_links.txt
+[4.598s] writing entry points to ../../build/central/central.egg-info/entry_points.txt
+[4.599s] writing requirements to ../../build/central/central.egg-info/requires.txt
+[4.599s] writing top-level names to ../../build/central/central.egg-info/top_level.txt
+[4.770s] reading manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.774s] writing manifest file '../../build/central/central.egg-info/SOURCES.txt'
+[4.775s] running build
+[4.776s] running build_py
+[4.776s] copying central/central_data.py -> /app/dev_ws/build/central/build/lib/central
+[4.779s] running install
+[4.784s] running install_lib
+[4.790s] copying /app/dev_ws/build/central/build/lib/central/central_data.py -> /app/dev_ws/install/central/lib/python3.8/site-packages/central
+[4.795s] byte-compiling /app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py to central_data.cpython-38.pyc
+[4.821s] running install_data
+[4.824s] running install_egg_info
+[4.832s] removing '/app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info' (and everything under it)
+[4.834s] Copying ../../build/central/central.egg-info to /app/dev_ws/install/central/lib/python3.8/site-packages/central-0.0.0-py3.8.egg-info
+[4.840s] running install_scripts
+[4.927s] Installing collect_data script to /app/dev_ws/install/central/lib/central
+[4.928s] Installing config script to /app/dev_ws/install/central/lib/central
+[4.930s] writing list of installed files to '/app/dev_ws/build/central/install.log'
+[5.045s] Invoked command in '/app/dev_ws/src/central' returned '0': PYTHONPATH=/app/dev_ws/install/central/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/central build --build-base /app/dev_ws/build/central/build install --prefix /app/dev_ws/install/central --record /app/dev_ws/build/central/install.log --single-version-externally-managed

@@ -206,6 +206,26 @@ rosidl_typesupport_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_interface/macros.h
 
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_ins__type_support.cpp
+cstddef
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/cstddef
+rosidl_runtime_c/message_type_support_struct.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_runtime_c/message_type_support_struct.h
+xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/xsens_msgs/msg/rosidl_typesupport_c__visibility_control.h
+xsens_msgs/msg/detail/pos_ins__struct.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/xsens_msgs/msg/detail/pos_ins__struct.h
+rosidl_typesupport_c/identifier.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c/identifier.h
+rosidl_typesupport_c/message_type_support_dispatch.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c/message_type_support_dispatch.h
+rosidl_typesupport_c/type_support_map.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c/type_support_map.h
+rosidl_typesupport_c/visibility_control.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_c/visibility_control.h
+rosidl_typesupport_interface/macros.h
+/app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/rosidl_typesupport_interface/macros.h
+
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/pos_pa__type_support.cpp
 cstddef
 /app/dev_ws/build/xsens_msgs/rosidl_typesupport_c/xsens_msgs/msg/cstddef
@@ -539,6 +559,14 @@ stdint.h
 -
 rosidl_runtime_c/primitives_sequence.h
 rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__struct.h
 stdbool.h

@@ -45,7 +45,7 @@ class XSensDriver(Node):
 		GPIO.setmode(GPIO.BCM)
 		GPIO.setup(self.gpioSwitch, GPIO.OUT)
 		GPIO.setup(self.gpioTrig, GPIO.OUT)
-		self.trig_counter = 0
+		GPIO.setwarnings(False)
 
 		# Create Publishers
 		self.ori_oe_pub = self.create_publisher(OriOE, 'mti/orientation_Euler', 10)
@@ -56,7 +56,7 @@ class XSensDriver(Node):
 		self.acc_af_pub = self.create_publisher(AccAF, 'mti/free_acceleration', 10)
 		self.ang_wr_pub = self.create_publisher(AngWR, 'mti/rate_of_turn', 10)
 		self.sta_sw_pub = self.create_publisher(StaSW, 'mti/status', 10)
-		self.trig_stamp_pub = self.create_publisher(TrgSP, 'mti/trigger_stamp', 10)
+		self.timestamp_pub = self.create_publisher(TrgSP, 'mti/timestamp', 10)
 		
 		# Create messages	
 		self.ori_oe_msg = OriOE()
@@ -66,7 +66,7 @@ class XSensDriver(Node):
 		self.acc_aa_msg = AccAA()
 		self.acc_af_msg = AccAF()
 		self.ang_wr_msg = AngWR()
-		self.trg_sp_msg = TrgSP()
+		self.tim_sp_msg = TrgSP()
 		
 		# Create parameters subscriber
 		self.xsens_config_sub = self.create_subscription(ConfigXsens,
@@ -171,6 +171,7 @@ class XSensDriver(Node):
 		else:
 			self.timer = []
 			GPIO.output(self.gpioSwitch, GPIO.LOW)
+			GPIO.output(self.gpioTrig, GPIO.LOW)
 	
 	
 	def RPItrig(self):
@@ -205,6 +206,10 @@ class XSensDriver(Node):
 		Timestamp.append(data.get('Timestamp')['Minute'])
 		Timestamp.append(data.get('Timestamp')['Second'])
 		Timestamp.append(data.get('Timestamp')['ns'])
+		
+		# Publication - Timestamp
+		self.tim_sp_msg.stamp = Timestamp
+		self.timestamp_pub.publish(self.tim_sp_msg)
 		
 		# Publication - Orientation Euler's angles	
 		if 'oe' in self.outputConfig and 'Orientation Data' in data:
@@ -260,12 +265,6 @@ class XSensDriver(Node):
 			self.sta_sw_msg.xsens_status = self.xsens_status
 			self.sta_sw_msg = self.readStatus(data['Status']['StatusWord'], self.sta_sw_msg)
 			self.sta_sw_pub.publish(self.sta_sw_msg)		
-			# Publication - Trigger timestamp
-			if self.sta_sw_msg.sync_in == '1' or self.sta_sw_msg.sync_out == '1':
-				self.trig_counter += 1
-				self.trg_sp_msg.stamp = Timestamp
-				self.trg_sp_msg.trig_counter = self.trig_counter
-				self.trig_stamp_pub.publish(self.trg_sp_msg)
 				
 		# Publication - Postion longitude/latitude
 		if 'pl' in self.outputConfig and 'Position' in data:
@@ -289,6 +288,7 @@ class XSensDriver(Node):
 	
 	
 	def readGNSS(self, data, msg):
+		print(msg)
 		msg.fixtype = data['GNSS']['fixtype']
 		msg.lon = data['GNSS']['lon']	
 		msg.lat = data['GNSS']['lat']	

@@ -1,0 +1,15 @@
+/app/dev_ws/install/vision_opencv/share/ament_index/resource_index/package_run_dependencies/vision_opencv
+/app/dev_ws/install/vision_opencv/share/ament_index/resource_index/parent_prefix_path/vision_opencv
+/app/dev_ws/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.sh
+/app/dev_ws/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.dsv
+/app/dev_ws/install/vision_opencv/share/vision_opencv/environment/path.sh
+/app/dev_ws/install/vision_opencv/share/vision_opencv/environment/path.dsv
+/app/dev_ws/install/vision_opencv/share/vision_opencv/local_setup.bash
+/app/dev_ws/install/vision_opencv/share/vision_opencv/local_setup.sh
+/app/dev_ws/install/vision_opencv/share/vision_opencv/local_setup.zsh
+/app/dev_ws/install/vision_opencv/share/vision_opencv/local_setup.dsv
+/app/dev_ws/install/vision_opencv/share/vision_opencv/package.dsv
+/app/dev_ws/install/vision_opencv/share/ament_index/resource_index/packages/vision_opencv
+/app/dev_ws/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig.cmake
+/app/dev_ws/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig-version.cmake
+/app/dev_ws/install/vision_opencv/share/vision_opencv/package.xml

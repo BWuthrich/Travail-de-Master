@@ -1,0 +1,97 @@
+[0.245s] Invoking command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake /app/dev_ws/src/bluespace_ai_xsens_ros_mti_driver -DCMAKE_INSTALL_PREFIX=/app/dev_ws/install/bluespace_ai_xsens_mti_driver
+[1.827s] -- The C compiler identification is GNU 9.4.0
+[2.928s] -- The CXX compiler identification is GNU 9.4.0
+[3.063s] -- Check for working C compiler: /usr/bin/cc
+[4.247s] -- Check for working C compiler: /usr/bin/cc -- works
+[4.259s] -- Detecting C compiler ABI info
+[5.491s] -- Detecting C compiler ABI info - done
+[5.805s] -- Detecting C compile features
+[5.823s] -- Detecting C compile features - done
+[5.857s] -- Check for working CXX compiler: /usr/bin/c++
+[6.978s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[6.993s] -- Detecting CXX compiler ABI info
+[8.504s] -- Detecting CXX compiler ABI info - done
+[8.785s] -- Detecting CXX compile features
+[8.797s] -- Detecting CXX compile features - done
+[8.892s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[9.295s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[9.301s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[12.940s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[14.484s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[14.749s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[16.728s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[17.447s] -- Found FastRTPS: /opt/ros/foxy/include  
+[19.142s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[20.673s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[20.732s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[20.749s] -- Looking for pthread.h
+[21.992s] -- Looking for pthread.h - found
+[22.001s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[23.346s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[23.355s] -- Looking for pthread_create in pthreads
+[24.437s] -- Looking for pthread_create in pthreads - not found
+[24.443s] -- Looking for pthread_create in pthread
+[25.498s] -- Looking for pthread_create in pthread - found
+[25.506s] -- Found Threads: TRUE  
+[31.080s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[32.604s] -- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+[42.844s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[45.177s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[46.720s] -- Added test 'copyright' to check source files copyright and LICENSE
+[47.876s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[47.882s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/app/dev_ws/src/bluespace_ai_xsens_ros_mti_driver/lib/xspublic>
+[47.883s] -- Configured cppcheck exclude dirs and/or files: 
+[48.774s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[48.776s] -- Configured cpplint exclude dirs and/or files: 
+[48.922s] -- Added test 'flake8' to check Python code syntax and style conventions
+[49.132s] -- Added test 'lint_cmake' to check CMake code style
+[49.261s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[50.411s] -- Added test 'uncrustify' to check C / C++ code style
+[50.412s] -- Configured uncrustify additional arguments: 
+[50.610s] -- Added test 'xmllint' to check XML markup files
+[50.764s] -- Configuring done
+[51.058s] -- Generating done
+[51.077s] -- Build files have been written to: /app/dev_ws/build/bluespace_ai_xsens_mti_driver
+[51.193s] Invoked command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake /app/dev_ws/src/bluespace_ai_xsens_ros_mti_driver -DCMAKE_INSTALL_PREFIX=/app/dev_ws/install/bluespace_ai_xsens_mti_driver
+[51.203s] Invoking command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake --build /app/dev_ws/build/bluespace_ai_xsens_mti_driver -- -j4 -l4
+[51.959s] [35m[1mScanning dependencies of target xsens_mti_node[0m
+[54.286s] [ 25%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o[0m
+[78.137s] [ 50%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o[0m
+[105.608s] [ 75%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o[0m
+[193.798s] [100%] [32m[1mLinking CXX executable xsens_mti_node[0m
+[203.993s] [100%] Built target xsens_mti_node
+[204.193s] Invoked command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake --build /app/dev_ws/build/bluespace_ai_xsens_mti_driver -- -j4 -l4
+[204.864s] Invoking command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake --install /app/dev_ws/build/bluespace_ai_xsens_mti_driver
+[205.071s] -- Install configuration: ""
+[205.072s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/lib/bluespace_ai_xsens_mti_driver/xsens_mti_node
+[205.189s] -- Set runtime path of "/app/dev_ws/install/bluespace_ai_xsens_mti_driver/lib/bluespace_ai_xsens_mti_driver/xsens_mti_node" to ""
+[205.190s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/launch
+[205.191s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/launch/xsens_mti_node.launch.py
+[205.202s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/launch/display.launch.py
+[205.205s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/param
+[205.207s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/param/xsens_mti_node.yaml
+[205.212s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/rviz
+[205.213s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/rviz/display.rviz
+[205.224s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf
+[205.234s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_6xx.stl
+[205.441s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_1.stl
+[205.471s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_1.urdf
+[205.473s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_10.urdf
+[205.480s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_6xx.urdf
+[205.493s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/urdf/MTi_10.stl
+[205.655s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/ament_index/resource_index/package_run_dependencies/bluespace_ai_xsens_mti_driver
+[205.663s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/ament_index/resource_index/parent_prefix_path/bluespace_ai_xsens_mti_driver
+[205.666s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/environment/ament_prefix_path.sh
+[205.671s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/environment/ament_prefix_path.dsv
+[205.674s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/environment/path.sh
+[205.678s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/environment/path.dsv
+[205.682s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/local_setup.bash
+[205.699s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/local_setup.sh
+[205.705s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/local_setup.zsh
+[205.707s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/local_setup.dsv
+[205.712s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/package.dsv
+[205.717s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/ament_index/resource_index/packages/bluespace_ai_xsens_mti_driver
+[205.718s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/cmake/bluespace_ai_xsens_mti_driverConfig.cmake
+[205.724s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/cmake/bluespace_ai_xsens_mti_driverConfig-version.cmake
+[205.725s] -- Installing: /app/dev_ws/install/bluespace_ai_xsens_mti_driver/share/bluespace_ai_xsens_mti_driver/package.xml
+[205.753s] Invoked command in '/app/dev_ws/build/bluespace_ai_xsens_mti_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy:/app/dev_ws/install/xsens_driver:/app/dev_ws/install/cam_client:/app/dev_ws/install/ntrip_client:/app/dev_ws/install/central /usr/bin/cmake --install /app/dev_ws/build/bluespace_ai_xsens_mti_driver

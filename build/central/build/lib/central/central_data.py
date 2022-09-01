@@ -5,7 +5,7 @@ from rclpy.node import Node
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, AccAA, AngWR, GnsNP
+from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, AccAA, AngWR, GnsNP, PosINS
 
 plt.ion()
 
@@ -16,8 +16,13 @@ class CollectData(Node):
 		
 		self.e = 0.08181919 # eccentricity
 		self.a = 6378137.0 # equatorial radius
-
+		
+		# Create data publisher
+		self.pos_ins_pub = self.create_publisher(PosINS, 'central/position', 10)
+		self.pos_ins_msg = PosINS()
+		
 		# Create data subscriber
+		
 		# Orientation Euler's angles
 		self.ori_oe_sub = self.create_subscription(OriOE,
 			'mti/orientation_Euler',
@@ -203,12 +208,18 @@ class CollectData(Node):
 		Kll = np.diag([9999**2, 9999**2, 9999**2, 9999**2, 9999**2, 9999**2])
         
 		if not gnss==[]:
-			l[0] = lat - gnss[0]
-			l[1] = lon - gnss[1]
-			l[2] = alti - gnss[2]
-			l[3] = velE - gnss[3]
-			l[4] = velN - gnss[4]
-			l[5] = velU + gnss[5]        
+			if not np.isnan(gnss[0]):
+				l[0] = lat - gnss[0]
+			if not np.isnan(gnss[1]):
+				l[1] = lon - gnss[1]
+			if not np.isnan(gnss[2]):
+				l[2] = alti - gnss[2]
+			if not np.isnan(gnss[3]):
+				l[3] = velE - gnss[3]
+			if not np.isnan(gnss[4]):
+				l[4] = velN - gnss[4]
+			if not np.isnan(gnss[5]):
+				l[5] = velU + gnss[5]        
 				
 			Kll = np.diag([self.sigma_lat_GNSS**2, self.sigma_lon_GNSS**2, self.sigma_alt_GNSS**2,
 				 self.sigma_velE_GNSS**2, self.sigma_velN_GNSS**2, self.sigma_velU_GNSS**2])
@@ -217,7 +228,6 @@ class CollectData(Node):
 		self.Kxx = 1/2*(self.Kxx+(self.Kxx).T)
 
 		# Prediction
-
 		Kxx_pred = F@self.Kxx@F.T + Q
 
 		# Update
@@ -260,7 +270,14 @@ class CollectData(Node):
 				self.ObsPathParameters['Quaternion'] = np.array([[q1],[q2],[q3],[q4]])
 				self.ObsPathParameters['Rbl'] = Rbl
 			else:
-				print('No quaternion and Rbl update')
+				pass
+				#print('No quaternion and Rbl update')
+		
+		print(self.ObsPathParameters['State']['Position'][0,0])		
+		self.pos_ins_msg.lat = self.ObsPathParameters['State']['Position'][0,0]
+		self.pos_ins_msg.lon = self.ObsPathParameters['State']['Position'][1,0]
+		self.pos_ins_msg.height = self.ObsPathParameters['State']['Position'][2,0]
+		self.pos_ins_pub.publish(self.pos_ins_msg)
 
 
 	def init_kalman_filter_2 (self, data):
@@ -280,8 +297,6 @@ class CollectData(Node):
 		state_o = {'Position': np.array([[lat0],[lon0],[h0]]), 'Attitude': np.array([[p0],[r0],[y0]]),
 				'Velocity': np.array([[0.0],[0.0],[0.0]]), 'Acceleration': np.array([[0.0],[0.0],[0.0]]),
 				'Biais gyr': b_gyr0, 'Biais acc': b_acc0}
-
-
 
 		Rbl = np.array([[np.cos(y0)*np.cos(r0)-np.sin(y0)*np.sin(p0)*np.sin(r0), -np.sin(y0)*np.cos(p0), np.cos(y0)*np.sin(r0)+np.sin(y0)*np.sin(p0)*np.cos(r0)],
 				[np.sin(y0)*np.cos(r0)+np.cos(y0)*np.sin(p0)*np.sin(r0), np.cos(y0)*np.cos(p0), np.sin(y0)*np.sin(r0)-np.cos(y0)*np.sin(p0)*np.cos(r0)],
@@ -352,32 +367,32 @@ class CollectData(Node):
 		self.Ey_t_o = np.zeros([3,2])
 		self.Ez_t_o = np.zeros([3,2])
 
-		self.figure, self.ax = plt.subplots(2,1)
-		self.lines, = self.ax[0].plot([],[], '-r')
-		self.lines_obs, = self.ax[0].plot([],[], '--k')
-		self.lines_gnss, = self.ax[0].plot([],[], '+k')
-		self.lines_alti, = self.ax[1].plot([],[], '-r')
-		self.lines_alti_obs, = self.ax[1].plot([],[], '--k')
-		self.lines_alti_gnss, = self.ax[1].plot([],[], '+k')
-		self.ax[0].set_xlabel('Longitude [deg]')
-		self.ax[0].set_ylabel('Latitude [deg]')
-		self.ax[1].set_ylabel('Altitude')
-		self.ax[1].set_xlabel('Iteration')
+		# self.figure, self.ax = plt.subplots(2,1)
+		#self.lines, = self.ax[0].plot([],[], '-r')
+		#self.lines_obs, = self.ax[0].plot([],[], '--k')
+		#self.lines_gnss, = self.ax[0].plot([],[], '+k')
+		#self.lines_alti, = self.ax[1].plot([],[], '-r')
+		#self.lines_alti_obs, = self.ax[1].plot([],[], '--k')
+		#self.lines_alti_gnss, = self.ax[1].plot([],[], '+k')
+		#self.ax[0].set_xlabel('Longitude [deg]')
+		#self.ax[0].set_ylabel('Latitude [deg]')
+		#self.ax[1].set_ylabel('Altitude')
+		#self.ax[1].set_xlabel('Iteration')
 
-		self.figure2, self.ax2 = plt.subplots(3,1)
-		self.lines_attitude_pitch, = self.ax2[0].plot([],[], '-r')
-		self.lines_attitude_roll, = self.ax2[1].plot([],[], '-r')
-		self.lines_attitude_yaw, = self.ax2[2].plot([],[], '-r')
-		self.lines_attitude_obs_pitch, = self.ax2[0].plot([],[], '--k')
-		self.lines_attitude_obs_roll, = self.ax2[1].plot([],[], '--k')
-		self.lines_attitude_obs_yaw, = self.ax2[2].plot([],[], '--k')
+		#self.figure2, self.ax2 = plt.subplots(3,1)
+		#self.lines_attitude_pitch, = self.ax2[0].plot([],[], '-r')
+		#self.lines_attitude_roll, = self.ax2[1].plot([],[], '-r')
+		#self.lines_attitude_yaw, = self.ax2[2].plot([],[], '-r')
+		#self.lines_attitude_obs_pitch, = self.ax2[0].plot([],[], '--k')
+		#self.lines_attitude_obs_roll, = self.ax2[1].plot([],[], '--k')
+		#self.lines_attitude_obs_yaw, = self.ax2[2].plot([],[], '--k')
 
-		self.ax2[0].set_xlabel('Iteration')
-		self.ax2[0].set_ylabel('Pitch [rad]')
-		self.ax2[1].set_xlabel('Iteration')
-		self.ax2[1].set_ylabel('Roll [rad]')
-		self.ax2[2].set_xlabel('Iteration')
-		self.ax2[2].set_ylabel('Yaw [rad]')
+		#self.ax2[0].set_xlabel('Iteration')
+	#	self.ax2[0].set_ylabel('Pitch [rad]')
+	#	self.ax2[1].set_xlabel('Iteration')
+#		self.ax2[1].set_ylabel('Roll [rad]')
+#		self.ax2[2].set_xlabel('Iteration')
+#		self.ax2[2].set_ylabel('Yaw [rad]')
 
 		# self.fig = plt.figure()
 		# # self.ax3 = self.fig.add_subplot(111, projection='3d')
@@ -392,12 +407,12 @@ class CollectData(Node):
 		# self.Y_t = []
 		# self.Z_t = []
 				    
-		self.ax[0].axis('equal')
-		self.ax[0].grid()
-		self.ax[1].grid()
-		self.ax2[0].grid()
-		self.ax2[1].grid()
-		self.ax2[2].grid()
+#		self.ax[0].axis('equal')
+#		self.ax[0].grid()
+#		self.ax[1].grid()
+#		self.ax2[0].grid()
+#		self.ax2[1].grid()
+#		self.ax2[2].grid()
 
 		####### Init time ####### 
 		self.t_old_INS = 3600*data.stamp[0] + 60*data.stamp[1] + data.stamp[2] + data.stamp[3]/1e9 - 2 #[sec] -2 to have a delay t_old and t_new first iteration
@@ -514,11 +529,11 @@ class CollectData(Node):
 		self.ObsPathParameters['Quaternion'] = Quat
 		self.ObsPathParameters['Rbl'] = Rbl
 
-		self.lines_obs.set_xdata(np.append(self.lines_obs.get_xdata(), self.ObsPathParameters['State']['Position'][1,0]))
-		self.lines_obs.set_ydata(np.append(self.lines_obs.get_ydata(), self.ObsPathParameters['State']['Position'][0,0]))
+#		self.lines_obs.set_xdata(np.append(self.lines_obs.get_xdata(), self.ObsPathParameters['State']['Position'][1,0]))
+#		self.lines_obs.set_ydata(np.append(self.lines_obs.get_ydata(), self.ObsPathParameters['State']['Position'][0,0]))
 		
-		self.lines_alti_obs.set_xdata(np.append(self.lines_alti_obs.get_xdata(), self.count))
-		self.lines_alti_obs.set_ydata(np.append(self.lines_alti_obs.get_ydata(), self.ObsPathParameters['State']['Position'][2,0]))     
+#		self.lines_alti_obs.set_xdata(np.append(self.lines_alti_obs.get_xdata(), self.count))
+#		self.lines_alti_obs.set_ydata(np.append(self.lines_alti_obs.get_ydata(), self.ObsPathParameters['State']['Position'][2,0]))     
 
 		# Display positionin 3D
 		# self.X_o.append(self.ObsPathParameters['State']['Position'][1,0])
@@ -540,17 +555,17 @@ class CollectData(Node):
 		# self.ax3.plot(self.Ez_t_o[1,:], self.Ez_t_o[0,:], self.Ez_t_o[2,:], color='green')
 		# plt.draw()
 
-		self.lines_attitude_obs_roll.set_xdata(np.append(self.lines_attitude_obs_roll.get_xdata(), self.count))
-		self.lines_attitude_obs_roll.set_ydata(np.append(self.lines_attitude_obs_roll.get_ydata(), self.ObsPathParameters['State']['Attitude'][1,0]))
-		self.lines_attitude_obs_pitch.set_xdata(np.append(self.lines_attitude_obs_pitch.get_xdata(), self.count))
-		self.lines_attitude_obs_pitch.set_ydata(np.append(self.lines_attitude_obs_pitch.get_ydata(), self.ObsPathParameters['State']['Attitude'][0,0]))
-		self.lines_attitude_obs_yaw.set_xdata(np.append(self.lines_attitude_obs_yaw.get_xdata(), self.count))
-		self.lines_attitude_obs_yaw.set_ydata(np.append(self.lines_attitude_obs_yaw.get_ydata(), self.ObsPathParameters['State']['Attitude'][2,0]))
-		
-		self.figure.canvas.draw()
-		self.figure.canvas.flush_events()
-		self.figure2.canvas.draw()
-		self.figure2.canvas.flush_events()
+#		self.lines_attitude_obs_roll.set_xdata(np.append(self.lines_attitude_obs_roll.get_xdata(), self.count))
+#		self.lines_attitude_obs_roll.set_ydata(np.append(self.lines_attitude_obs_roll.get_ydata(), self.ObsPathParameters['State']['Attitude'][1,0]))
+#		self.lines_attitude_obs_pitch.set_xdata(np.append(self.lines_attitude_obs_pitch.get_xdata(), self.count))
+#		self.lines_attitude_obs_pitch.set_ydata(np.append(self.lines_attitude_obs_pitch.get_ydata(), self.ObsPathParameters['State']['Attitude'][0,0]))
+#		self.lines_attitude_obs_yaw.set_xdata(np.append(self.lines_attitude_obs_yaw.get_xdata(), self.count))
+#		self.lines_attitude_obs_yaw.set_ydata(np.append(self.lines_attitude_obs_yaw.get_ydata(), self.ObsPathParameters['State']['Attitude'][2,0]))
+#		
+#		self.figure.canvas.draw()
+#		self.figure.canvas.flush_events()
+#		self.figure2.canvas.draw()
+#		self.figure2.canvas.flush_events()
 
 
 def main(args=None):
@@ -586,12 +601,14 @@ def main(args=None):
 
 			if cd.newGnsNP:
 				cd.newGnsNP = False
+				print(cd.GnsNP)
+				print("YXYXXYXYX")
 				gnss = np.array([[cd.GnsNP.lat], [cd.GnsNP.lon], [cd.GnsNP.height], [cd.GnsNP.vel_e], [cd.GnsNP.vel_n], [cd.GnsNP.vel_d]])
 				
-				cd.lines_gnss.set_xdata(np.append(cd.lines_gnss.get_xdata(), gnss[1]))
-				cd.lines_gnss.set_ydata(np.append(cd.lines_gnss.get_ydata(), gnss[0]))
-				cd.lines_alti_gnss.set_xdata(np.append(cd.lines_alti_gnss.get_xdata(), cd.count))
-				cd.lines_alti_gnss.set_ydata(np.append(cd.lines_alti_gnss.get_ydata(), gnss[2]))
+#				cd.lines_gnss.set_xdata(np.append(cd.lines_gnss.get_xdata(), gnss[1]))
+#				cd.lines_gnss.set_ydata(np.append(cd.lines_gnss.get_ydata(), gnss[0]))
+#				cd.lines_alti_gnss.set_xdata(np.append(cd.lines_alti_gnss.get_xdata(), cd.count))
+#				cd.lines_alti_gnss.set_ydata(np.append(cd.lines_alti_gnss.get_ydata(), gnss[2]))
 			else:
 				gnss = []
 			
@@ -601,42 +618,42 @@ def main(args=None):
 			# Update figues with XSENS KF data		
 			if cd.newPosPL:
 				cd.newPosPL = False
-				cd.lines.set_xdata(np.append(cd.lines.get_xdata(), cd.PosPL.longitude))
-				cd.lines.set_ydata(np.append(cd.lines.get_ydata(), cd.PosPL.latitude))
-				cd.ax[0].set_ylim(cd.PosPL.latitude-1e-5, cd.PosPL.latitude+1e-5)
-				cd.ax[0].set_xlim(cd.PosPL.longitude-1e-5, cd.PosPL.longitude+1e-5)
+#				cd.lines.set_xdata(np.append(cd.lines.get_xdata(), cd.PosPL.longitude))
+#				cd.lines.set_ydata(np.append(cd.lines.get_ydata(), cd.PosPL.latitude))
+#				cd.ax[0].set_ylim(cd.PosPL.latitude-1e-5, cd.PosPL.latitude+1e-5)
+#				cd.ax[0].set_xlim(cd.PosPL.longitude-1e-5, cd.PosPL.longitude+1e-5)
 			
 			if cd.newPosPA:
 				cd.newPosPA = False
-				cd.lines_alti.set_xdata(np.append(cd.lines_alti.get_xdata(), cd.count))
-				cd.lines_alti.set_ydata(np.append(cd.lines_alti.get_ydata(), cd.PosPA.alt_ell))
-				cd.ax[1].set_ylim(cd.PosPA.alt_ell-2, cd.PosPA.alt_ell+2)
-				cd.ax[1].set_xlim(cd.count-10, cd.count+10)  
+#				cd.lines_alti.set_xdata(np.append(cd.lines_alti.get_xdata(), cd.count))
+#				cd.lines_alti.set_ydata(np.append(cd.lines_alti.get_ydata(), cd.PosPA.alt_ell))
+#				cd.ax[1].set_ylim(cd.PosPA.alt_ell-2, cd.PosPA.alt_ell+2)
+#				cd.ax[1].set_xlim(cd.count-10, cd.count+10)  
 			
 			if cd.newOriOE:
 				cd.newOriOE = False
 				#roll
-				cd.lines_attitude_roll.set_xdata(np.append(cd.lines_attitude_roll.get_xdata(), cd.count))
-				cd.lines_attitude_roll.set_ydata(np.append(cd.lines_attitude_roll.get_ydata(), np.radians(cd.OriOE.roll)))
-				cd.ax2[0].set_ylim(np.radians(cd.OriOE.roll)-0.2, np.radians(cd.OriOE.roll)+0.2)
-				cd.ax2[0].set_xlim(cd.count-10, cd.count+10)
+#				cd.lines_attitude_roll.set_xdata(np.append(cd.lines_attitude_roll.get_xdata(), cd.count))
+#				cd.lines_attitude_roll.set_ydata(np.append(cd.lines_attitude_roll.get_ydata(), np.radians(cd.OriOE.roll)))
+#				cd.ax2[0].set_ylim(np.radians(cd.OriOE.roll)-0.2, np.radians(cd.OriOE.roll)+0.2)
+#				cd.ax2[0].set_xlim(cd.count-10, cd.count+10)
 				#pitch
-				cd.lines_attitude_pitch.set_xdata(np.append(cd.lines_attitude_pitch.get_xdata(), cd.count))
-				cd.lines_attitude_pitch.set_ydata(np.append(cd.lines_attitude_pitch.get_ydata(), np.radians(cd.OriOE.pitch)))
-				cd.ax2[1].set_ylim(np.radians(cd.OriOE.pitch)-0.2, np.radians(cd.OriOE.pitch)+0.2)
-				cd.ax2[1].set_xlim(cd.count-10, cd.count+10) 
+#				cd.lines_attitude_pitch.set_xdata(np.append(cd.lines_attitude_pitch.get_xdata(), cd.count))
+#				cd.lines_attitude_pitch.set_ydata(np.append(cd.lines_attitude_pitch.get_ydata(), np.radians(cd.OriOE.pitch)))
+#				cd.ax2[1].set_ylim(np.radians(cd.OriOE.pitch)-0.2, np.radians(cd.OriOE.pitch)+0.2)
+#				cd.ax2[1].set_xlim(cd.count-10, cd.count+10) 
 				#yaw
-				cd.lines_attitude_yaw.set_xdata(np.append(cd.lines_attitude_yaw.get_xdata(), cd.count))
-				cd.lines_attitude_yaw.set_ydata(np.append(cd.lines_attitude_yaw.get_ydata(), np.radians(cd.OriOE.yaw)))
-				cd.ax2[2].set_ylim(np.radians(cd.OriOE.yaw)-0.2, np.radians(cd.OriOE.yaw)+0.2)
-				cd.ax2[2].set_xlim(cd.count-10, cd.count+10)
+#				cd.lines_attitude_yaw.set_xdata(np.append(cd.lines_attitude_yaw.get_xdata(), cd.count))
+#				cd.lines_attitude_yaw.set_ydata(np.append(cd.lines_attitude_yaw.get_ydata(), np.radians(cd.OriOE.yaw)))
+#				cd.ax2[2].set_ylim(np.radians(cd.OriOE.yaw)-0.2, np.radians(cd.OriOE.yaw)+0.2)
+#				cd.ax2[2].set_xlim(cd.count-10, cd.count+10)
 
-				cd.figure.canvas.draw()
-				cd.figure.canvas.flush_events()
-				cd.figure2.canvas.draw()
-				cd.figure2.canvas.flush_events()	
+#				cd.figure.canvas.draw()
+#				cd.figure.canvas.flush_events()
+#				cd.figure2.canvas.draw()
+#				cd.figure2.canvas.flush_events()	
 			
-			print(-1/(time_S-time.time()))
+			#print(-1/(time_S-time.time()))
 
 			cd.count += 1
 

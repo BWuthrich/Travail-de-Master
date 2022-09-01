@@ -1,0 +1,45 @@
+[9.455s] Invoking command in '/app/dev_ws/vision_opencv/opencv_tests': AMENT_PREFIX_PATH=/app/dev_ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/app/dev_ws/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/app/dev_ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/app/dev_ws/install/opencv_tests/lib/python3.8/site-packages:/app/dev_ws/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_tests build --build-base /app/dev_ws/build/opencv_tests/build install --prefix /app/dev_ws/install/opencv_tests --record /app/dev_ws/build/opencv_tests/install.log --single-version-externally-managed
+[12.639s] running egg_info
+[12.646s] creating ../../build/opencv_tests/opencv_tests.egg-info
+[12.650s] writing ../../build/opencv_tests/opencv_tests.egg-info/PKG-INFO
+[12.658s] writing dependency_links to ../../build/opencv_tests/opencv_tests.egg-info/dependency_links.txt
+[12.663s] writing entry points to ../../build/opencv_tests/opencv_tests.egg-info/entry_points.txt
+[12.672s] writing requirements to ../../build/opencv_tests/opencv_tests.egg-info/requires.txt
+[12.676s] writing top-level names to ../../build/opencv_tests/opencv_tests.egg-info/top_level.txt
+[12.714s] writing manifest file '../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[13.235s] reading manifest file '../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[13.247s] writing manifest file '../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[13.251s] running build
+[13.253s] running build_py
+[13.256s] creating /app/dev_ws/build/opencv_tests/build
+[13.258s] creating /app/dev_ws/build/opencv_tests/build/lib
+[13.260s] creating /app/dev_ws/build/opencv_tests/build/lib/opencv_tests
+[13.263s] copying opencv_tests/broadcast.py -> /app/dev_ws/build/opencv_tests/build/lib/opencv_tests
+[13.279s] copying opencv_tests/rosfacedetect.py -> /app/dev_ws/build/opencv_tests/build/lib/opencv_tests
+[13.283s] copying opencv_tests/source.py -> /app/dev_ws/build/opencv_tests/build/lib/opencv_tests
+[13.288s] copying opencv_tests/__init__.py -> /app/dev_ws/build/opencv_tests/build/lib/opencv_tests
+[13.292s] running install
+[13.304s] running install_lib
+[13.319s] creating /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests
+[13.323s] copying /app/dev_ws/build/opencv_tests/build/lib/opencv_tests/broadcast.py -> /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests
+[13.329s] copying /app/dev_ws/build/opencv_tests/build/lib/opencv_tests/rosfacedetect.py -> /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests
+[13.335s] copying /app/dev_ws/build/opencv_tests/build/lib/opencv_tests/source.py -> /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests
+[13.345s] copying /app/dev_ws/build/opencv_tests/build/lib/opencv_tests/__init__.py -> /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests
+[13.356s] byte-compiling /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests/broadcast.py to broadcast.cpython-38.pyc
+[13.375s] byte-compiling /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests/rosfacedetect.py to rosfacedetect.cpython-38.pyc
+[13.390s] byte-compiling /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests/source.py to source.cpython-38.pyc
+[13.398s] byte-compiling /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests/__init__.py to __init__.cpython-38.pyc
+[13.405s] running install_data
+[13.413s] creating /app/dev_ws/install/opencv_tests/share/ament_index
+[13.416s] creating /app/dev_ws/install/opencv_tests/share/ament_index/resource_index
+[13.419s] creating /app/dev_ws/install/opencv_tests/share/ament_index/resource_index/packages
+[13.423s] copying resource/opencv_tests -> /app/dev_ws/install/opencv_tests/share/ament_index/resource_index/packages
+[13.429s] copying package.xml -> /app/dev_ws/install/opencv_tests/share/opencv_tests
+[13.433s] running install_egg_info
+[13.466s] Copying ../../build/opencv_tests/opencv_tests.egg-info to /app/dev_ws/install/opencv_tests/lib/python3.8/site-packages/opencv_tests-3.0.3-py3.8.egg-info
+[13.491s] running install_scripts
+[13.630s] Installing broadcast script to /app/dev_ws/install/opencv_tests/lib/opencv_tests
+[13.633s] Installing rosfacedetect script to /app/dev_ws/install/opencv_tests/lib/opencv_tests
+[13.636s] Installing source script to /app/dev_ws/install/opencv_tests/lib/opencv_tests
+[13.644s] writing list of installed files to '/app/dev_ws/build/opencv_tests/install.log'
+[13.838s] Invoked command in '/app/dev_ws/vision_opencv/opencv_tests' returned '0': AMENT_PREFIX_PATH=/app/dev_ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/app/dev_ws/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/app/dev_ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/app/dev_ws/install/opencv_tests/lib/python3.8/site-packages:/app/dev_ws/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_tests build --build-base /app/dev_ws/build/opencv_tests/build install --prefix /app/dev_ws/install/opencv_tests --record /app/dev_ws/build/opencv_tests/install.log --single-version-externally-managed

@@ -83,6 +83,23 @@ export default {
       	"yaw": 0
       },
       
+      PosPL: {
+      	"lat": 46.7804607,
+      	"lon": 6.6614091
+      },
+      
+      GnsNP: {
+      	"lat": 46.7804607,
+      	"lon": 6.6614091,
+      	"alt": 400
+      },
+      
+      PosINS: {
+      	"lat": 46.7804607,
+      	"lon": 6.6614091,
+      	"alt": 400
+      },
+      
       // Ntrip Status
       NtripStatus: "Deconnected",
       RTCMStatus: "Deconnected",
@@ -212,6 +229,48 @@ export default {
 			})
 		},
 		
+		// set Xsens position subscriber
+		setXsensPosPLSubscriber: function(){
+		  this.xsens_PosPL_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'mti/position_lonLat',
+		    messageType : 'xsens_msgs/PosPL'
+		  })
+			this.xsens_PosPL_sub.subscribe(message => {
+				this.PosPL.lat = message.latitude
+				this.PosPL.lon = message.longitude
+			})
+			console.log(this.PosPL)
+		},
+		
+		// set GNSS position subscriber
+		setXsensGnsNPSubscriber: function(){
+		  this.xsens_GnsNP_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'mti/gnss_pvt_data',
+		    messageType : 'xsens_msgs/GnsNP'
+		  })
+			this.xsens_GnsNP_sub.subscribe(message => {
+				this.GnsNP.lat = message.lat
+				this.GnsNP.lon = message.lon
+				this.GnsNP.alt = message.height
+			})
+		},
+		
+		// set INS position subscriber
+		setPosINSSubscriber: function(){
+		  this.PosINS_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'central/position',
+		    messageType : 'xsens_msgs/PosINS'
+		  })
+			this.PosINS_sub.subscribe(message => {
+				this.PosINS.lat = message.lat
+				this.PosINS.lon = message.lon
+				this.PosINS.alt = message.height
+			})
+		},
+		
     // set Ntrip status subscriber
 		setNtripStatusSubscriber: function(){
 		  this.ntrip_status_sub = new ROSLIB.Topic({
@@ -225,7 +284,7 @@ export default {
 			})
 		},
 		
-    // set Ntrip status subscriber
+    // set Cam status subscriber
 		setCamStatusSubscriber: function(){
 		  this.cam_status_sub = new ROSLIB.Topic({
 		    ros : this.ros,
@@ -384,17 +443,78 @@ export default {
   	},
   	
   	StartPlotOriOE: function(){	  		
-			var cnt = 0;
+			var cnt1 = 0;
 			setInterval(()=>{
 				Plotly.extendTraces('plot1',{y:[[this.OriOE.roll],[this.OriOE.pitch],[this.OriOE.yaw]]}, [0,1,2]);
-				cnt++;
-				if(cnt > 200) {
+				cnt1++;
+				if(cnt1 > 200) {
 					Plotly.relayout('plot1',{
 						xaxis: {
-							range: [cnt-200,cnt]
+							range: [cnt1-200,cnt1]
 						}
 					});
 				}
+			},100);
+  	},
+  	
+  	
+		plotPath: function(){
+  		
+  		var path_xsens = {
+				x: [this.PosPL.lon],
+				y: [this.PosPL.lat],
+				mode: 'lines',
+				name: 'path_xsens',
+				line: {
+					color: 'rgb(255, 0, 0)',
+					dash: 'solid',
+					width: 2
+				}
+			};
+			
+			var path_INS = {
+				x: [this.PosINS.lon],
+				y: [this.PosINS.lat],
+				mode: 'lines',
+				name: 'path_xsens',
+				line: {
+					color: 'rgb(0, 0, 0)',
+					dash: 'dash',
+					width: 2
+				}
+			};
+			
+			var path_GNSS = {
+				x: [this.GnsNP.lon],
+				y: [this.GnsNP.lat],
+				mode: 'markers',
+				name: 'path_GNSS',
+				marker: {
+					symbol: "cross-dot",
+					color: 'rgb(0, 0, 0)',
+					size: 8
+				}
+			};
+			
+			var layout = {
+				title:{text:'Path', xref: 'paper', x :0.01},
+				xaxis: {title: {text: 'Longitude [deg]'}},
+				yaxis: {title: {text: 'Latitude [deg]'}},
+				}
+			
+			var data = [path_xsens, path_GNSS, path_INS];
+		
+
+  		Plotly.plot('plot2', data, layout);
+  	},
+  	
+  	
+  	StartPlotPath: function(){	  		
+			setInterval(()=>{
+				Plotly.extendTraces('plot2',{x: [[this.PosPL.lon],[this.GnsNP.lon],[this.PosINS.lon]], y:[[this.PosPL.lat],[this.GnsNP.lat],[this.PosINS.lat]]}, [0,1,2],100);
+				Plotly.relayout('plot2',{xaxis: {range: [this.PosPL.lon-0.00005,this.PosPL.lon+0.00005]},yaxis: {range: [this.PosPL.lat-0.00005,this.PosPL.lat+0.00005]}});
+				//Plotly.relayout('plot2',{'xaxis.range': [this.PosPL.lon-0.00001,this.PosPL.lon+0.00001], 'yaxis.range': [this.PosPL.lat-0.00001,this.PosPL.lat+0.00001]});
+			
 			},100);
   	},
   	
@@ -412,7 +532,11 @@ export default {
 			this.setNtripStatusSubscriber();
 			this.setCamStatusSubscriber();
 			this.setXsensOriOESubscriber();
+			this.setXsensPosPLSubscriber();
+			this.setXsensGnsNPSubscriber();
+			this.setPosINSSubscriber();
 			this.plotOriOE();
+			this.plotPath();
     } catch (error) {
       console.error(error);
     }
@@ -449,8 +573,11 @@ export default {
 
 <h1 class="display-6">Measurments</h1>
 <p></p>
-<button class="btn btn-primary" type="button" @click="StartPlotOriOE">Start Plot</button>
+<button class="btn btn-primary" type="button" @click="StartPlotOriOE">Start plot orientation</button>
 <div ref="plot1" id="plot1"></div>
+<p></p>
+<button class="btn btn-primary" type="button" @click="StartPlotPath">Start plot path</button>
+<div ref="plot2" id="plot2"></div>
 
 
 <h1 class="display-6">Configuration</h1>

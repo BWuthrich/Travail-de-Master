@@ -69,6 +69,7 @@ CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/StaCT.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/TrgSP.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/CamImage.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/CamBatch.msg
+CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/msg/PosINS.msg
 CMakeFiles/xsens_msgs: /app/dev_ws/src/xsens_msgs/srv/RTCMdata.srv
 CMakeFiles/xsens_msgs: rosidl_cmake/srv/RTCMdata_Request.msg
 CMakeFiles/xsens_msgs: rosidl_cmake/srv/RTCMdata_Response.msg

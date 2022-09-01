@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/cam_client.py", line 102
-    while len(lstCamTemp) < 1# self.cam_number:
-                             ^
-SyntaxError: invalid syntax
-

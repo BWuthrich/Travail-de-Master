@@ -130,6 +130,9 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/xsens
  rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/ori_oe__type_support.h
+ rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.h
+ rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__struct.h
+ rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__type_support.h
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__functions.h
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__struct.h
  rosidl_generator_c/xsens_msgs/msg/detail/pos_pa__type_support.h
