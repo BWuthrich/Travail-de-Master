@@ -82,6 +82,7 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesu
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/xsens_msgs/msg/CamImage.idl
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/xsens_msgs/msg/CamBatch.idl
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/xsens_msgs/msg/PosINS.idl
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/xsens_msgs/msg/AttINS.idl
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -223,6 +224,9 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__rosidl_typ
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__rosidl_typesupport_introspection_cpp.hpp
 
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_introspection_cpp.hpp
+
 rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_cpp.hpp
 
@@ -276,6 +280,9 @@ rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_suppo
 
 rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp
 
 rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp
@@ -501,9 +508,22 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp.s
 
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp > CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.i
+
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.s
+
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o: rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o -c /app/dev_ws/build/xsens_msgs/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp
 
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.i: cmake_force
@@ -533,6 +553,7 @@ xsens_msgs__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp.o" \
+"CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o" \
 "CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o"
 
 # External object files for target xsens_msgs__rosidl_typesupport_introspection_cpp
@@ -555,6 +576,7 @@ libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__r
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp.o
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp.o
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp.o
+libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp.o
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp.o
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/build.make
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
@@ -585,7 +607,7 @@ libxsens_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/foxy/lib/libros
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/foxy/lib/librcpputils.so
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/foxy/lib/librcutils.so
 libxsens_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library libxsens_msgs__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX shared library libxsens_msgs__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -614,6 +636,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_t
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/ori_oe__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_pa__type_support.cpp
@@ -632,6 +655,7 @@ CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_t
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_image__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/cam_batch__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/pos_ins__type_support.cpp
+CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/msg/detail/att_ins__type_support.cpp
 CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/xsens_msgs/srv/detail/rtc_mdata__type_support.cpp
 	cd /app/dev_ws/build/xsens_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /app/dev_ws/src/xsens_msgs /app/dev_ws/src/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/xsens_msgs__rosidl_typesupport_introspection_cpp.dir/depend

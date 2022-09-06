@@ -18,6 +18,7 @@
     "/app/dev_ws/src/xsens_msgs:msg/CamImage.msg",
     "/app/dev_ws/src/xsens_msgs:msg/CamBatch.msg",
     "/app/dev_ws/src/xsens_msgs:msg/PosINS.msg",
+    "/app/dev_ws/src/xsens_msgs:msg/AttINS.msg",
     "/app/dev_ws/src/xsens_msgs:srv/RTCMdata.srv"
   ]
 }

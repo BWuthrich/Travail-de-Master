@@ -60,6 +60,20 @@ rosidl_runtime_c/primitives_sequence.h
 rosidl_runtime_c/primitives_sequence_functions.h
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/primitives_sequence_functions.h
 
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_att_ins_s.c
+Python.h
+-
+stdbool.h
+-
+numpy/ndarrayobject.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/numpy/ndarrayobject.h
+rosidl_runtime_c/visibility_control.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/rosidl_runtime_c/visibility_control.h
+xsens_msgs/msg/detail/att_ins__struct.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/att_ins__struct.h
+xsens_msgs/msg/detail/att_ins__functions.h
+/app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/xsens_msgs/msg/detail/att_ins__functions.h
+
 /app/dev_ws/build/xsens_msgs/rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c
 Python.h
 -
@@ -959,6 +973,26 @@ stdint.h
 -
 rosidl_runtime_c/primitives_sequence.h
 rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/primitives_sequence.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/xsens_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
+xsens_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/xsens_msgs/msg/detail/xsens_msgs/msg/rosidl_generator_c__visibility_control.h
+xsens_msgs/msg/detail/att_ins__struct.h
+rosidl_generator_c/xsens_msgs/msg/detail/xsens_msgs/msg/detail/att_ins__struct.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 
 rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.h
 stdbool.h

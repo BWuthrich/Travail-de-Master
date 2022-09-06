@@ -1,6 +1,7 @@
 from xsens_msgs.msg._acc_aa import AccAA  # noqa: F401
 from xsens_msgs.msg._acc_af import AccAF  # noqa: F401
 from xsens_msgs.msg._ang_wr import AngWR  # noqa: F401
+from xsens_msgs.msg._att_ins import AttINS  # noqa: F401
 from xsens_msgs.msg._cam_batch import CamBatch  # noqa: F401
 from xsens_msgs.msg._cam_image import CamImage  # noqa: F401
 from xsens_msgs.msg._config_cam import ConfigCam  # noqa: F401

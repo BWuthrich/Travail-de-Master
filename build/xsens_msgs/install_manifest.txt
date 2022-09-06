@@ -3,6 +3,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_cam.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/gns_np.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/sta_nt.h
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/att_ins.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/cam_image.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/trg_sp.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.h
@@ -29,14 +30,17 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/trg_sp__type_support.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__functions.h
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_image__struct.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__functions.c
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/trg_sp__struct.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__type_support.h
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__struct.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/gns_np__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__functions.c
@@ -68,6 +72,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_ins__functions.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__functions.c
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__type_support.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_ins__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__functions.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__functions.c
@@ -98,6 +103,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__rosidl_typesupport_fastrtps_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_xsens__rosidl_typesupport_fastrtps_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_fastrtps_c.h
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_fastrtps_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__rosidl_typesupport_fastrtps_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_fastrtps_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_ins__rosidl_typesupport_fastrtps_c.h
@@ -118,6 +124,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/trg_sp__rosidl_typesupport_fastrtps_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_ins__rosidl_typesupport_fastrtps_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_fastrtps_cpp.hpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_fastrtps_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_fastrtps_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__rosidl_typesupport_fastrtps_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__rosidl_typesupport_fastrtps_cpp.hpp
@@ -140,6 +147,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/trg_sp__type_support.c
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_ntrip__rosidl_typesupport_introspection_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__rosidl_typesupport_introspection_c.h
@@ -161,6 +169,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_introspection_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__rosidl_typesupport_introspection_c.h
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_introspection_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_image__type_support.c
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__rosidl_typesupport_introspection_c.h
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__type_support.c
@@ -186,14 +195,17 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_ntrip.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/config_xsens.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/sta_ct.hpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__traits.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__builder.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__struct.hpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__struct.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__struct.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_ct__traits.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pa__struct.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__traits.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ori_oe__builder.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/gns_np__struct.hpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__builder.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/cam_batch__builder.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__traits.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__builder.hpp
@@ -237,6 +249,7 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__struct.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_aa__struct.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/gns_np__builder.hpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/att_ins.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/pos_pl.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/gns_np.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/ang_wr.hpp
@@ -249,7 +262,9 @@
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_nt__rosidl_typesupport_introspection_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/sta_sw__type_support.cpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_ins__type_support.cpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__type_support.cpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/config_cam__type_support.cpp
+/app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/att_ins__rosidl_typesupport_introspection_cpp.hpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/ang_wr__type_support.cpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/acc_af__type_support.cpp
 /app/dev_ws/install/xsens_msgs/include/xsens_msgs/msg/detail/pos_pl__type_support.cpp
@@ -287,6 +302,7 @@
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/__init__.py
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_trg_sp_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_gns_np_s.c
+/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_att_ins_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_ins_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_trg_sp.py
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_acc_af_s.c
@@ -313,6 +329,7 @@
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_cam_image_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_ang_wr_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_ntrip.py
+/app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_att_ins.py
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/__init__.py
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_config_xsens_s.c
 /app/dev_ws/install/xsens_msgs/lib/python3.8/site-packages/xsens_msgs/msg/_pos_ins.py
@@ -344,6 +361,7 @@
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/CamImage.idl
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/CamBatch.idl
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosINS.idl
+/app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/AttINS.idl
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.idl
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/OriOE.msg
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosPA.msg
@@ -362,6 +380,7 @@
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/CamImage.msg
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/CamBatch.msg
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/PosINS.msg
+/app/dev_ws/install/xsens_msgs/share/xsens_msgs/msg/AttINS.msg
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata.srv
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Request.msg
 /app/dev_ws/install/xsens_msgs/share/xsens_msgs/srv/RTCMdata_Response.msg

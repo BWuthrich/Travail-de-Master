@@ -87,6 +87,7 @@ rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/msg/TrgSP.
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/msg/CamImage.idl
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/msg/CamBatch.idl
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/msg/PosINS.idl
+rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/msg/AttINS.idl
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/xsens_msgs/msg/ori_oe.h: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -381,6 +382,18 @@ rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__struct.h: rosidl_generator_c/x
 rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__type_support.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__type_support.h
 
+rosidl_generator_c/xsens_msgs/msg/att_ins.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/att_ins.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__struct.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/att_ins__struct.h
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__type_support.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/att_ins__type_support.h
+
 rosidl_generator_c/xsens_msgs/srv/rtc_mdata.h: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/srv/rtc_mdata.h
 
@@ -443,6 +456,9 @@ rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c: rosidl_generato
 
 rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c
+
+rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c
 
 rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c: rosidl_generator_c/xsens_msgs/msg/ori_oe.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c
@@ -668,9 +684,22 @@ CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c -o CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c.s
 
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o: rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c
+
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c > CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.i
+
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c -o CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.s
+
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o: rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o   -c /app/dev_ws/build/xsens_msgs/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c
 
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.i: cmake_force
@@ -700,6 +729,7 @@ xsens_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c.o" \
+"CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o" \
 "CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o"
 
 # External object files for target xsens_msgs__rosidl_generator_c
@@ -722,6 +752,7 @@ libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c.o
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c.o
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c.o
+libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c.o
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c.o
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/build.make
 libxsens_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
@@ -752,7 +783,7 @@ libxsens_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libxsens_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libxsens_msgs__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libxsens_msgs__rosidl_generator_c.so: CMakeFiles/xsens_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C shared library libxsens_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/app/dev_ws/build/xsens_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C shared library libxsens_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xsens_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -832,6 +863,10 @@ CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_m
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__struct.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__type_support.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/att_ins.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/att_ins__struct.h
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/att_ins__type_support.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/srv/rtc_mdata.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.h
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__struct.h
@@ -853,6 +888,7 @@ CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_m
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/cam_image__functions.c
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/cam_batch__functions.c
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/pos_ins__functions.c
+CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/msg/detail/att_ins__functions.c
 CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/xsens_msgs/srv/detail/rtc_mdata__functions.c
 	cd /app/dev_ws/build/xsens_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /app/dev_ws/src/xsens_msgs /app/dev_ws/src/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs /app/dev_ws/build/xsens_msgs/CMakeFiles/xsens_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/xsens_msgs__rosidl_generator_c.dir/depend

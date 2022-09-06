@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/xsens_msgs/msg/_acc_af_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_ang_wr.py"
   "../rosidl_generator_py/xsens_msgs/msg/_ang_wr_s.c"
+  "../rosidl_generator_py/xsens_msgs/msg/_att_ins.py"
+  "../rosidl_generator_py/xsens_msgs/msg/_att_ins_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_cam_batch.py"
   "../rosidl_generator_py/xsens_msgs/msg/_cam_batch_s.c"
   "../rosidl_generator_py/xsens_msgs/msg/_cam_image.py"

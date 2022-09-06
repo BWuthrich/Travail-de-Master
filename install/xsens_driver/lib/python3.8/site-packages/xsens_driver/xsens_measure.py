@@ -176,7 +176,6 @@ class XSensDriver(Node):
 	
 	def RPItrig(self):
 		GPIO.output(self.gpioTrig, GPIO.HIGH)
-		print('TOP-RPI')
 		time.sleep(self.dtPulse)
 		GPIO.output(self.gpioTrig, GPIO.LOW)		
 		
@@ -192,7 +191,6 @@ class XSensDriver(Node):
 		time_s=time.time()
 		try:
 			data = self.device.read_measurement()
-			#print(data)
 		except Exception as e:
 			self.get_logger().error(f"{e}")
 			return
@@ -277,7 +275,6 @@ class XSensDriver(Node):
 			d = haversine(self.lastPos3D[0:2], latlon, unit=Unit.METERS)
 			# Check for RTCM update
 			if d > self.rtcmRefreshDist:
-				print('OK')
 				self.get_logger().info('Send new position to ntrip client')
 				# Build and send service request
 				self.lastPos3D = latlon + (data.get('Position')['altEllipsoid'],)
@@ -288,7 +285,6 @@ class XSensDriver(Node):
 	
 	
 	def readGNSS(self, data, msg):
-		print(msg)
 		msg.fixtype = data['GNSS']['fixtype']
 		msg.lon = data['GNSS']['lon']	
 		msg.lat = data['GNSS']['lat']	

@@ -5,7 +5,7 @@ from rclpy.node import Node
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, AccAA, AngWR, GnsNP, PosINS
+from xsens_msgs.msg import OriOE, PosPL, PosPA, StaSW, AccAA, AngWR, GnsNP, PosINS, AttINS
 
 plt.ion()
 
@@ -20,6 +20,10 @@ class CollectData(Node):
 		# Create data publisher
 		self.pos_ins_pub = self.create_publisher(PosINS, 'central/position', 10)
 		self.pos_ins_msg = PosINS()
+		
+		self.att_ins_pub = self.create_publisher(AttINS, 'central/attitude', 10)
+		self.att_ins_msg = AttINS()
+		
 		
 		# Create data subscriber
 		
@@ -271,21 +275,27 @@ class CollectData(Node):
 				self.ObsPathParameters['Rbl'] = Rbl
 			else:
 				pass
-				#print('No quaternion and Rbl update')
+				print('No quaternion and Rbl update')
 		
-		print(self.ObsPathParameters['State']['Position'][0,0])		
+		# Publish estimated postion		
 		self.pos_ins_msg.lat = self.ObsPathParameters['State']['Position'][0,0]
 		self.pos_ins_msg.lon = self.ObsPathParameters['State']['Position'][1,0]
 		self.pos_ins_msg.height = self.ObsPathParameters['State']['Position'][2,0]
 		self.pos_ins_pub.publish(self.pos_ins_msg)
+		
+		# Publish estimated attitude		
+		self.att_ins_msg.pitch = self.ObsPathParameters['State']['Attitude'][0,0]
+		self.att_ins_msg.roll = self.ObsPathParameters['State']['Attitude'][1,0]
+		self.att_ins_msg.yaw = self.ObsPathParameters['State']['Attitude'][2,0]
+		self.att_ins_pub.publish(self.att_ins_msg)
 
 
 	def init_kalman_filter_2 (self, data):
     
 		####### Initial state #######
-		lat0 = 46.7804607 #[deg]
-		lon0 = 6.6614091 #[deg]
-		h0 = 497.3 #[m]
+		lat0 = 46.4621 #46.7804607 #[deg]
+		lon0 = 6.88744 #6.6614091 #[deg]
+		h0 = 535 #497.3 #[m]
 		r0 = 0.028616236 #[rad]
 		p0 = 0.010533153 #[rad]
 		y0 = -0.922994599 #[rad]
@@ -601,8 +611,6 @@ def main(args=None):
 
 			if cd.newGnsNP:
 				cd.newGnsNP = False
-				print(cd.GnsNP)
-				print("YXYXXYXYX")
 				gnss = np.array([[cd.GnsNP.lat], [cd.GnsNP.lon], [cd.GnsNP.height], [cd.GnsNP.vel_e], [cd.GnsNP.vel_n], [cd.GnsNP.vel_d]])
 				
 #				cd.lines_gnss.set_xdata(np.append(cd.lines_gnss.get_xdata(), gnss[1]))

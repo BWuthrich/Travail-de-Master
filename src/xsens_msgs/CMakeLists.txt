@@ -40,6 +40,7 @@ set(msg_files
    "msg/CamImage.msg"
    "msg/CamBatch.msg"
    "msg/PosINS.msg"
+   "msg/AttINS.msg"
    "srv/RTCMdata.srv"
 )
 

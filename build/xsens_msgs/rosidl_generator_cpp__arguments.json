@@ -20,6 +20,7 @@
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/CamImage.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/CamBatch.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/PosINS.idl",
+    "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:msg/AttINS.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs:srv/RTCMdata.idl"
   ],
   "ros_interface_dependencies": [
@@ -146,6 +147,7 @@
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/CamImage.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/CamBatch.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/PosINS.idl",
+    "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/msg/AttINS.idl",
     "/app/dev_ws/build/xsens_msgs/rosidl_adapter/xsens_msgs/srv/RTCMdata.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl",

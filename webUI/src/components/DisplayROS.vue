@@ -51,9 +51,9 @@ export default {
       OriOE_freq: 5,
       TmpIU_freq: 10,
       TmpIP_freq: 10,
-      AccAA_freq: 50,
+      AccAA_freq: 10,
       AccAF_freq: 10,
-      AngWR_freq: 50,
+      AngWR_freq: 10,
       AngWH_freq: 10,
       StaSW_freq: 10,
       PosPL_coor: "East-North-Up - e",
@@ -83,20 +83,26 @@ export default {
       	"yaw": 0
       },
       
+      AttINS: {
+      	"pitch": 0,
+      	"roll": 0,
+      	"yaw": 0
+      },
+      
       PosPL: {
-      	"lat": 46.7804607,
-      	"lon": 6.6614091
+      	"lat": 46.4621,
+      	"lon": 6.88744
       },
       
       GnsNP: {
-      	"lat": 46.7804607,
-      	"lon": 6.6614091,
+      	"lat": 46.4621,
+      	"lon": 6.88744,
       	"alt": 400
       },
       
       PosINS: {
-      	"lat": 46.7804607,
-      	"lon": 6.6614091,
+      	"lat": 46.4621,
+      	"lon": 6.88744,
       	"alt": 400
       },
       
@@ -228,9 +234,23 @@ export default {
 				this.OriOE = message
 			})
 		},
-		
+	
+		// set INS Attitude subscriber
+		setAttINSSubscriber: function(){
+		  this.AttINS_sub = new ROSLIB.Topic({
+		    ros : this.ros,
+		    name : 'central/attitude',
+		    messageType : 'xsens_msgs/AttINS'
+		  })
+			this.AttINS_sub.subscribe(message => {
+				this.AttINS.pitch = message.pitch
+				this.AttINS.roll = message.roll
+				this.AttINS.yaw = message.yaw
+			})
+		},
+
 		// set Xsens position subscriber
-		setXsensPosPLSubscriber: function(){
+		setXsensPosPLSubscriber : function(){
 		  this.xsens_PosPL_sub = new ROSLIB.Topic({
 		    ros : this.ros,
 		    name : 'mti/position_lonLat',
@@ -240,9 +260,8 @@ export default {
 				this.PosPL.lat = message.latitude
 				this.PosPL.lon = message.longitude
 			})
-			console.log(this.PosPL)
 		},
-		
+	
 		// set GNSS position subscriber
 		setXsensGnsNPSubscriber: function(){
 		  this.xsens_GnsNP_sub = new ROSLIB.Topic({
@@ -431,13 +450,47 @@ export default {
 					width: 3
 				}
 			};
+			
+			var roll_INS = {
+				y: [this.AttINS.roll],
+				mode: 'lines',
+				name: 'roll',
+				line: {
+					color: 'rgb(0, 204, 0)',
+					dash: 'dash',
+					width: 3
+				}
+			};
+  		var pitch_INS = {
+				y: [this.AttINS.pitch],
+				mode: 'lines',
+				name: 'pitch',
+				line: {
+					color: 'rgb(0, 128, 255)',
+					dash: 'dash',
+					width: 3
+				}
+			};	
+  		var yaw_INS = {
+				y: [this.AttINS.yaw],
+				mode: 'lines',
+				name: 'yaw',
+				line: {
+					color: 'rgb(255, 51, 51)',
+					dash: 'dash',
+					width: 3
+				}
+			};
+			
 			var layout = {
 				title:{text:'Orientation Euler', xref: 'paper', x :0.01},
 				xaxis: {title: {text: 'Data packages'}},
 				yaxis: {title: {text: 'Orientation [deg]'}},
+				xaxis: {range: [0,200]},
+				yaxis: {range: [-180,180]}
 				}
 			
-			var data = [roll, pitch, yaw];
+			var data = [roll, pitch, yaw, roll_INS, pitch_INS, yaw_INS];
 
   		Plotly.plot('plot1', data, layout);
   	},
@@ -445,7 +498,7 @@ export default {
   	StartPlotOriOE: function(){	  		
 			var cnt1 = 0;
 			setInterval(()=>{
-				Plotly.extendTraces('plot1',{y:[[this.OriOE.roll],[this.OriOE.pitch],[this.OriOE.yaw]]}, [0,1,2]);
+				Plotly.extendTraces('plot1',{y:[[this.OriOE.roll],[this.OriOE.pitch],[this.OriOE.yaw],[(180/3.14159265)*this.AttINS.roll],[(180/3.14159265)*this.AttINS.pitch],[(180/3.14159265)*this.AttINS.yaw]]}, [0,1,2,3,4,5]);
 				cnt1++;
 				if(cnt1 > 200) {
 					Plotly.relayout('plot1',{
@@ -500,6 +553,9 @@ export default {
 				title:{text:'Path', xref: 'paper', x :0.01},
 				xaxis: {title: {text: 'Longitude [deg]'}},
 				yaxis: {title: {text: 'Latitude [deg]'}},
+				autosize: false,
+				width: 900,
+				height: 800,
 				}
 			
 			var data = [path_xsens, path_GNSS, path_INS];
@@ -511,10 +567,9 @@ export default {
   	
   	StartPlotPath: function(){	  		
 			setInterval(()=>{
-				Plotly.extendTraces('plot2',{x: [[this.PosPL.lon],[this.GnsNP.lon],[this.PosINS.lon]], y:[[this.PosPL.lat],[this.GnsNP.lat],[this.PosINS.lat]]}, [0,1,2],100);
+				Plotly.extendTraces('plot2',{x: [[this.PosPL.lon],[this.GnsNP.lon],[this.PosINS.lon]], y:[[this.PosPL.lat],[this.GnsNP.lat],[this.PosINS.lat]]}, [0,1,2],500);
+				//Plotly.relayout('plot2',{xaxis: {range: [this.PosPL.lon-0.00001,this.PosPL.lon+0.00001]},yaxis: {range: [this.PosPL.lat-0.00001,this.PosPL.lat+0.00001]}});
 				Plotly.relayout('plot2',{xaxis: {range: [this.PosPL.lon-0.00005,this.PosPL.lon+0.00005]},yaxis: {range: [this.PosPL.lat-0.00005,this.PosPL.lat+0.00005]}});
-				//Plotly.relayout('plot2',{'xaxis.range': [this.PosPL.lon-0.00001,this.PosPL.lon+0.00001], 'yaxis.range': [this.PosPL.lat-0.00001,this.PosPL.lat+0.00001]});
-			
 			},100);
   	},
   	
@@ -535,6 +590,7 @@ export default {
 			this.setXsensPosPLSubscriber();
 			this.setXsensGnsNPSubscriber();
 			this.setPosINSSubscriber();
+			this.setAttINSSubscriber();
 			this.plotOriOE();
 			this.plotPath();
     } catch (error) {

@@ -121,6 +121,10 @@ CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/pos_ins.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__builder.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__struct.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__traits.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/att_ins.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__builder.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__struct.hpp
+CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__traits.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__builder.hpp
 CMakeFiles/xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__struct.hpp
@@ -159,6 +163,7 @@ rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/Tr
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/CamImage.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/CamBatch.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/PosINS.idl
+rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/msg/AttINS.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: rosidl_adapter/xsens_msgs/srv/RTCMdata.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -453,6 +458,18 @@ rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__struct.hpp: rosidl_generator
 rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__traits.hpp
 
+rosidl_generator_cpp/xsens_msgs/msg/att_ins.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/att_ins.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__builder.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__builder.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__struct.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__struct.hpp
+
+rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__traits.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__traits.hpp
+
 rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp: rosidl_generator_cpp/xsens_msgs/msg/ori_oe.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
 
@@ -534,6 +551,10 @@ xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/pos_ins.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__builder.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__struct.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/pos_ins__traits.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/att_ins.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__builder.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__struct.hpp
+xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/msg/detail/att_ins__traits.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/rtc_mdata.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__builder.hpp
 xsens_msgs__cpp: rosidl_generator_cpp/xsens_msgs/srv/detail/rtc_mdata__struct.hpp
