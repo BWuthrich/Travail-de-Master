@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/xsens_measure.py", line 286
-    decode = f"{data:032b}"[::-1]
-    ^
-SyntaxError: invalid syntax
-

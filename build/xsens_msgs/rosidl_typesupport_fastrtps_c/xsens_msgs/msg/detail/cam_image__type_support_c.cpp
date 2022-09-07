@@ -68,6 +68,11 @@ static bool _CamImage__cdr_serialize(
     cdr << ros_message->cam_id;
   }
 
+  // Field name: stamp
+  {
+    cdr << ros_message->stamp;
+  }
+
   // Field name: data
   {
     const message_type_support_callbacks_t * callbacks =
@@ -97,6 +102,11 @@ static bool _CamImage__cdr_deserialize(
   // Field name: cam_id
   {
     cdr >> ros_message->cam_id;
+  }
+
+  // Field name: stamp
+  {
+    cdr >> ros_message->stamp;
   }
 
   // Field name: data
@@ -136,6 +146,12 @@ size_t get_serialized_size_xsens_msgs__msg__CamImage(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name stamp
+  {
+    size_t item_size = sizeof(ros_message->stamp);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name data
 
   current_alignment += get_serialized_size_sensor_msgs__msg__Image(
@@ -169,6 +185,13 @@ size_t max_serialized_size_xsens_msgs__msg__CamImage(
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: stamp
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: data
   {

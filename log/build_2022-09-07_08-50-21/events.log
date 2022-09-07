@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.001315] (-) JobUnselected: {'identifier': 'cv_bridge'}
+[0.002370] (-) JobUnselected: {'identifier': 'image_geometry'}
+[0.003110] (-) JobUnselected: {'identifier': 'opencv_tests'}
+[0.004167] (-) JobUnselected: {'identifier': 'tcam'}
+[0.004395] (-) JobUnselected: {'identifier': 'vision_opencv'}
+[0.004512] (-) JobUnselected: {'identifier': 'xsens_msgs'}
+[0.004630] (cam_client) JobQueued: {'identifier': 'cam_client', 'dependencies': OrderedDict([('xsens_msgs', '/app/dev_ws/install/xsens_msgs')])}
+[0.004771] (cam_client) JobStarted: {'identifier': 'cam_client'}
+[0.064942] (cam_client) JobEnded: {'identifier': 'cam_client', 'rc': 1}
+[0.078255] (-) EventReactorShutdown: {}

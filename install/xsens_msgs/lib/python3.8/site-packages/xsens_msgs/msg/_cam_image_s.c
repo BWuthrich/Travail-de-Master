@@ -63,6 +63,15 @@ bool xsens_msgs__msg__cam_image__convert_from_py(PyObject * _pymsg, void * _ros_
     ros_message->cam_id = (int8_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // stamp
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stamp");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->stamp = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // data
     PyObject * field = PyObject_GetAttrString(_pymsg, "data");
     if (!field) {
@@ -101,6 +110,17 @@ PyObject * xsens_msgs__msg__cam_image__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLong(ros_message->cam_id);
     {
       int rc = PyObject_SetAttrString(_pymessage, "cam_id", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stamp
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->stamp);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stamp", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

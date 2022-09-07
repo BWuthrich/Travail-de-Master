@@ -1,2 +1,0 @@
-xsens_driver
-xsens_driver/utils

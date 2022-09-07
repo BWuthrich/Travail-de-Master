@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/xsens_driver/lib/python3.8/site-packages/xsens_driver/utils/mtdevice.py", line 109
-    if (time.time()-start) > 0.1
-                               ^
-SyntaxError: invalid syntax
-

@@ -9,6 +9,8 @@ module xsens_msgs {
     struct CamImage {
       int8 cam_id;
 
+      double stamp;
+
       sensor_msgs::msg::Image data;
     };
   };

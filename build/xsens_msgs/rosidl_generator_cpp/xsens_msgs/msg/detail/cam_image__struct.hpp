@@ -43,6 +43,7 @@ struct CamImage_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cam_id = 0;
+      this->stamp = 0.0;
     }
   }
 
@@ -53,6 +54,7 @@ struct CamImage_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cam_id = 0;
+      this->stamp = 0.0;
     }
   }
 
@@ -60,6 +62,9 @@ struct CamImage_
   using _cam_id_type =
     int8_t;
   _cam_id_type cam_id;
+  using _stamp_type =
+    double;
+  _stamp_type stamp;
   using _data_type =
     sensor_msgs::msg::Image_<ContainerAllocator>;
   _data_type data;
@@ -69,6 +74,12 @@ struct CamImage_
     const int8_t & _arg)
   {
     this->cam_id = _arg;
+    return *this;
+  }
+  Type & set__stamp(
+    const double & _arg)
+  {
+    this->stamp = _arg;
     return *this;
   }
   Type & set__data(
@@ -121,6 +132,9 @@ struct CamImage_
   bool operator==(const CamImage_ & other) const
   {
     if (this->cam_id != other.cam_id) {
+      return false;
+    }
+    if (this->stamp != other.stamp) {
       return false;
     }
     if (this->data != other.data) {

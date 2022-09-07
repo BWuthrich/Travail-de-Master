@@ -570,7 +570,7 @@ libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librosidl_t
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librcpputils.so
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librcutils.so
-libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/libfoonathan_memory-0.6.2.a
+libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/libfoonathan_memory-0.7.1.a
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 libxsens_msgs__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/aarch64-linux-gnu/libssl.so

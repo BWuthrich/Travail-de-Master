@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/cam_client/cam_client.egg-info
+writing ../../build/cam_client/cam_client.egg-info/PKG-INFO
+writing dependency_links to ../../build/cam_client/cam_client.egg-info/dependency_links.txt
+writing entry points to ../../build/cam_client/cam_client.egg-info/entry_points.txt
+writing requirements to ../../build/cam_client/cam_client.egg-info/requires.txt
+writing top-level names to ../../build/cam_client/cam_client.egg-info/top_level.txt
+writing manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'
+reading manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'
+writing manifest file '../../build/cam_client/cam_client.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /app/dev_ws/build/cam_client/build
+creating /app/dev_ws/build/cam_client/build/lib
+creating /app/dev_ws/build/cam_client/build/lib/cam_client
+copying cam_client/cam_client.py -> /app/dev_ws/build/cam_client/build/lib/cam_client
+copying cam_client/__init__.py -> /app/dev_ws/build/cam_client/build/lib/cam_client
+creating /app/dev_ws/build/cam_client/build/lib/cam_client/utils
+copying cam_client/utils/myTIS.py -> /app/dev_ws/build/cam_client/build/lib/cam_client/utils
+copying cam_client/utils/__init__.py -> /app/dev_ws/build/cam_client/build/lib/cam_client/utils
+running install
+running install_lib
+creating /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client
+copying /app/dev_ws/build/cam_client/build/lib/cam_client/cam_client.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client
+creating /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils
+copying /app/dev_ws/build/cam_client/build/lib/cam_client/utils/myTIS.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils
+copying /app/dev_ws/build/cam_client/build/lib/cam_client/utils/__init__.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils
+copying /app/dev_ws/build/cam_client/build/lib/cam_client/__init__.py -> /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client
+byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/cam_client.py to cam_client.cpython-38.pyc
+byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils/myTIS.py to myTIS.cpython-38.pyc
+byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/utils/__init__.py to __init__.cpython-38.pyc
+byte-compiling /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /app/dev_ws/install/cam_client/share/ament_index
+creating /app/dev_ws/install/cam_client/share/ament_index/resource_index
+creating /app/dev_ws/install/cam_client/share/ament_index/resource_index/packages
+copying resource/cam_client -> /app/dev_ws/install/cam_client/share/ament_index/resource_index/packages
+copying package.xml -> /app/dev_ws/install/cam_client/share/cam_client
+creating /app/dev_ws/install/cam_client/share/cam_client/launch
+copying launch/cam_client_launch.py -> /app/dev_ws/install/cam_client/share/cam_client/launch
+running install_egg_info
+Copying ../../build/cam_client/cam_client.egg-info to /app/dev_ws/install/cam_client/lib/python3.8/site-packages/cam_client-0.0.0-py3.8.egg-info
+running install_scripts
+Installing main script to /app/dev_ws/install/cam_client/lib/cam_client
+writing list of installed files to '/app/dev_ws/build/cam_client/install.log'

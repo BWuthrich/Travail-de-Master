@@ -1,5 +1,0 @@
-  File "/app/dev_ws/install/central/lib/python3.8/site-packages/central/central_data.py", line 455
-    while cd.init_filter and cd.newAccAA
-                                       ^
-SyntaxError: invalid syntax
-

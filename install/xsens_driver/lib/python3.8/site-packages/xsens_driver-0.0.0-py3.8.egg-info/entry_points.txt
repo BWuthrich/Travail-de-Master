@@ -1,3 +1,0 @@
-[console_scripts]
-main = xsens_driver.xsens_measure:main
-

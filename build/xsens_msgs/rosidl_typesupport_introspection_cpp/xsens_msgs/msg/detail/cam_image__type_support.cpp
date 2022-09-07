@@ -37,7 +37,7 @@ void CamImage_fini_function(void * message_memory)
   typed_message->~CamImage();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember CamImage_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember CamImage_message_member_array[3] = {
   {
     "cam_id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
@@ -47,6 +47,21 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CamImage_mess
     0,  // array size
     false,  // is upper bound
     offsetof(xsens_msgs::msg::CamImage, cam_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "stamp",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs::msg::CamImage, stamp),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -73,7 +88,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CamImage_mess
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers CamImage_message_members = {
   "xsens_msgs::msg",  // message namespace
   "CamImage",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(xsens_msgs::msg::CamImage),
   CamImage_message_member_array,  // message members
   CamImage_init_function,  // function to initialize message memory (memory has to be allocated)

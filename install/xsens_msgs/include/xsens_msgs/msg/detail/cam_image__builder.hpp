@@ -36,16 +36,32 @@ private:
   ::xsens_msgs::msg::CamImage msg_;
 };
 
+class Init_CamImage_stamp
+{
+public:
+  explicit Init_CamImage_stamp(::xsens_msgs::msg::CamImage & msg)
+  : msg_(msg)
+  {}
+  Init_CamImage_data stamp(::xsens_msgs::msg::CamImage::_stamp_type arg)
+  {
+    msg_.stamp = std::move(arg);
+    return Init_CamImage_data(msg_);
+  }
+
+private:
+  ::xsens_msgs::msg::CamImage msg_;
+};
+
 class Init_CamImage_cam_id
 {
 public:
   Init_CamImage_cam_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_CamImage_data cam_id(::xsens_msgs::msg::CamImage::_cam_id_type arg)
+  Init_CamImage_stamp cam_id(::xsens_msgs::msg::CamImage::_cam_id_type arg)
   {
     msg_.cam_id = std::move(arg);
-    return Init_CamImage_data(msg_);
+    return Init_CamImage_stamp(msg_);
   }
 
 private:

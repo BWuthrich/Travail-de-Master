@@ -58,16 +58,19 @@ class CamImage(metaclass=Metaclass_CamImage):
 
     __slots__ = [
         '_cam_id',
+        '_stamp',
         '_data',
     ]
 
     _fields_and_field_types = {
         'cam_id': 'int8',
+        'stamp': 'double',
         'data': 'sensor_msgs/Image',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['sensor_msgs', 'msg'], 'Image'),  # noqa: E501
     )
 
@@ -76,6 +79,7 @@ class CamImage(metaclass=Metaclass_CamImage):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.cam_id = kwargs.get('cam_id', int())
+        self.stamp = kwargs.get('stamp', float())
         from sensor_msgs.msg import Image
         self.data = kwargs.get('data', Image())
 
@@ -110,6 +114,8 @@ class CamImage(metaclass=Metaclass_CamImage):
             return False
         if self.cam_id != other.cam_id:
             return False
+        if self.stamp != other.stamp:
+            return False
         if self.data != other.data:
             return False
         return True
@@ -133,6 +139,19 @@ class CamImage(metaclass=Metaclass_CamImage):
             assert value >= -128 and value < 128, \
                 "The 'cam_id' field must be an integer in [-128, 127]"
         self._cam_id = value
+
+    @property
+    def stamp(self):
+        """Message field 'stamp'."""
+        return self._stamp
+
+    @stamp.setter
+    def stamp(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'stamp' field must be of type 'float'"
+        self._stamp = value
 
     @property
     def data(self):

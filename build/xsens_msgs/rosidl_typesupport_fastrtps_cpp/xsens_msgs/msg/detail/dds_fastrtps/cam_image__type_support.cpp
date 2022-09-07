@@ -57,6 +57,8 @@ cdr_serialize(
 {
   // Member: cam_id
   cdr << ros_message.cam_id;
+  // Member: stamp
+  cdr << ros_message.stamp;
   // Member: data
   sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.data,
@@ -72,6 +74,9 @@ cdr_deserialize(
 {
   // Member: cam_id
   cdr >> ros_message.cam_id;
+
+  // Member: stamp
+  cdr >> ros_message.stamp;
 
   // Member: data
   sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
@@ -96,6 +101,12 @@ get_serialized_size(
   // Member: cam_id
   {
     size_t item_size = sizeof(ros_message.cam_id);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: stamp
+  {
+    size_t item_size = sizeof(ros_message.stamp);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -128,6 +139,14 @@ max_serialized_size_CamImage(
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: stamp
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: data

@@ -25,6 +25,7 @@ extern "C"
 typedef struct xsens_msgs__msg__CamImage
 {
   int8_t cam_id;
+  double stamp;
   sensor_msgs__msg__Image data;
 } xsens_msgs__msg__CamImage;
 

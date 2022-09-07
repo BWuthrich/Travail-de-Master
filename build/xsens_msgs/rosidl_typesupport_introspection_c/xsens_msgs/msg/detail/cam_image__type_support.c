@@ -37,7 +37,7 @@ void CamImage__rosidl_typesupport_introspection_c__CamImage_fini_function(void *
   xsens_msgs__msg__CamImage__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember CamImage__rosidl_typesupport_introspection_c__CamImage_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember CamImage__rosidl_typesupport_introspection_c__CamImage_message_member_array[3] = {
   {
     "cam_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
@@ -47,6 +47,21 @@ static rosidl_typesupport_introspection_c__MessageMember CamImage__rosidl_typesu
     0,  // array size
     false,  // is upper bound
     offsetof(xsens_msgs__msg__CamImage, cam_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "stamp",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(xsens_msgs__msg__CamImage, stamp),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -73,7 +88,7 @@ static rosidl_typesupport_introspection_c__MessageMember CamImage__rosidl_typesu
 static const rosidl_typesupport_introspection_c__MessageMembers CamImage__rosidl_typesupport_introspection_c__CamImage_message_members = {
   "xsens_msgs__msg",  // message namespace
   "CamImage",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(xsens_msgs__msg__CamImage),
   CamImage__rosidl_typesupport_introspection_c__CamImage_message_member_array,  // message members
   CamImage__rosidl_typesupport_introspection_c__CamImage_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -91,7 +106,7 @@ static rosidl_message_type_support_t CamImage__rosidl_typesupport_introspection_
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_xsens_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, xsens_msgs, msg, CamImage)() {
-  CamImage__rosidl_typesupport_introspection_c__CamImage_message_member_array[1].members_ =
+  CamImage__rosidl_typesupport_introspection_c__CamImage_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sensor_msgs, msg, Image)();
   if (!CamImage__rosidl_typesupport_introspection_c__CamImage_message_type_support_handle.typesupport_identifier) {
     CamImage__rosidl_typesupport_introspection_c__CamImage_message_type_support_handle.typesupport_identifier =

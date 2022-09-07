@@ -20,6 +20,7 @@ xsens_msgs__msg__CamImage__init(xsens_msgs__msg__CamImage * msg)
     return false;
   }
   // cam_id
+  // stamp
   // data
   if (!sensor_msgs__msg__Image__init(&msg->data)) {
     xsens_msgs__msg__CamImage__fini(msg);
@@ -35,6 +36,7 @@ xsens_msgs__msg__CamImage__fini(xsens_msgs__msg__CamImage * msg)
     return;
   }
   // cam_id
+  // stamp
   // data
   sensor_msgs__msg__Image__fini(&msg->data);
 }

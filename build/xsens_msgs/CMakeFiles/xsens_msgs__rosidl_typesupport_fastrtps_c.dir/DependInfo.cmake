@@ -28,8 +28,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "FOONATHAN_MEMORY=1"
   "FOONATHAN_MEMORY_VERSION_MAJOR=0"
-  "FOONATHAN_MEMORY_VERSION_MINOR=6"
-  "FOONATHAN_MEMORY_VERSION_PATCH=2"
+  "FOONATHAN_MEMORY_VERSION_MINOR=7"
+  "FOONATHAN_MEMORY_VERSION_PATCH=1"
   "RCUTILS_ENABLE_FAULT_INJECTION"
   "ROS_PACKAGE_NAME=\"xsens_msgs\""
   "xsens_msgs__rosidl_typesupport_fastrtps_c_EXPORTS"
@@ -54,7 +54,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/foxy/include/sensor_msgs/srv/dds_fastrtps_c"
   "/opt/ros/foxy/include/sensor_msgs/action/dds_fastrtps_c"
   "/opt/ros/foxy/include"
-  "/opt/ros/foxy/include/foonathan_memory/comp"
   "/opt/ros/foxy/include/foonathan_memory"
   )
 
