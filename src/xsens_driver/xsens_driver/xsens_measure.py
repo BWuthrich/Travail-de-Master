@@ -24,7 +24,6 @@ class XSensDriver(Node):
 		self.syncConfig = None
 		self.lastPos3D = (0, 0, 0)	# Position of last RTCM refresh
 		self.xsens_status = "Inactive"
-		self.time_s = time.time()
 		
 		# Initial status message
 		self.sta_sw_msg = StaSW()
@@ -188,7 +187,6 @@ class XSensDriver(Node):
 
 	def getOneMeasure(self):
 		data = None
-		time_s=time.time()
 		try:
 			data = self.device.read_measurement()
 		except Exception as e:
@@ -230,11 +228,6 @@ class XSensDriver(Node):
 			self.acc_aa_msg.accy = data['Acceleration']['accY']
 			self.acc_aa_msg.accz = data['Acceleration']['accZ']
 			self.acc_aa_pub.publish(self.acc_aa_msg)
-			
-			fp = open("freq_read.txt", "a")
-			fp.write(str(1/(time.time()-self.time_s))+'\n')
-			fp.close()
-			self.time_s = time.time()
 		
 		# Publication - Free Acceleration	
 		if 'af' in self.outputConfig and 'Acceleration' in data:

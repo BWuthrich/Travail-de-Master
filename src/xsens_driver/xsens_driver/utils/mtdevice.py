@@ -107,10 +107,6 @@ class MTDevice(object):
                          ' '.join("%02X" % v for v in data)))
             if mid == MID.Error:
                 raise MTErrorMessage(data[0])
-
-            fp = open("time_read.txt", "a")
-            fp.write(str(time.time()-start)+'\n')
-            fp.close()
             
             return (mid, buf[:-1])
         else:
@@ -815,7 +811,6 @@ class MTDevice(object):
     def ChangeBaudrate(self, baudrate):
         """Change the baudrate, reset the device and reopen communication."""
         brid = Baudrates.get_BRID(baudrate)
-        print(type(brid))
         self.SetBaudrate(brid)
         self.Reset()
         # self.device.flush()
