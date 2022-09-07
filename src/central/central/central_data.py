@@ -25,8 +25,7 @@ class CollectData(Node):
 		self.att_ins_msg = AttINS()
 		
 		
-		# Create data subscriber
-		
+		# Create data subscriber	
 		# Orientation Euler's angles
 		self.ori_oe_sub = self.create_subscription(OriOE,
 			'mti/orientation_Euler',
@@ -88,32 +87,14 @@ class CollectData(Node):
 	def getPosPL(self, msg):
 		self.newPosPL = True
 		self.PosPL = msg
-
-#		Export data to file				
-#		f0 = open("PosPL.txt", "a")
-#		f0.write(str([[3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9],[msg.latitude], [msg.longitude]])+'\n')
-#		f0.close()
-
 	
 	def getOriOE(self, msg):
 		self.newOriOE = True
-		self.OriOE = msg
-
-#		Export data to file				
-#		fp = open("OriOE.txt", "a")
-#		fp.write(str([[3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9],[msg.pitch], [msg.roll], [msg.yaw]])+'\n')
-#		fp.close()
-		
+		self.OriOE = msg		
 	
 	def getPosPA(self, msg):
 		self.newPosPA = True
-		self.PosPA = msg
-
-#		Export data to file				
-#		fl = open("PosPA.txt", "a")
-#		fl.write(str([[3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9],[msg.alt_ell]])+'\n')
-#		fl.close()
-		
+		self.PosPA = msg		
 			
 	def getStaSW(self, msg):
 		pass		
@@ -131,20 +112,10 @@ class CollectData(Node):
 	def getAngWR(self, msg):
 		self.newAngWR = True
 		self.AngWR = msg
-
-#		Export data to file				
-#		fg = open("AngWR.txt", "a")
-#		fg.write(str([[3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9],[msg.gyrx], [msg.gyry], [msg.gyrz]])+'\n')
-#		fg.close()
 	
 	def getGnsNP(self, msg):
 		self.GnsNP = msg
 		self.newGnsNP = True
-
-#		Export data to file				
-#		fn = open("GnsNP.txt", "a")
-#		fn.write(str([[3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9],[msg.lat], [msg.lon], [msg.height], [msg.vel_e], [msg.vel_n], [msg.vel_d]])+'\n')
-#		fn.close()
 
 
 # state: dictionnaire {Position, Velocity, Attitude, Acceleration, Biais gyr, Biais acc}
@@ -237,10 +208,6 @@ class CollectData(Node):
 		# Update
 		K = Kxx_pred @ A.T @ np.linalg.inv( A @ Kxx_pred @ A.T + Kll)        
 		self.Kxx = Kxx_pred - K@A@Kxx_pred
-
-		#fp = open("POS.txt", "a")
-		#fp.write(str([[self.ObsPathParameters['State']['Position'][0,0]], [self.ObsPathParameters['State']['Position'][1,0]], [self.ObsPathParameters['State']['Position'][2,0]]])+'\n')
-		#fp.close()
 
 		if not gnss==[]:
 
@@ -377,52 +344,6 @@ class CollectData(Node):
 		self.Ey_t_o = np.zeros([3,2])
 		self.Ez_t_o = np.zeros([3,2])
 
-		# self.figure, self.ax = plt.subplots(2,1)
-		#self.lines, = self.ax[0].plot([],[], '-r')
-		#self.lines_obs, = self.ax[0].plot([],[], '--k')
-		#self.lines_gnss, = self.ax[0].plot([],[], '+k')
-		#self.lines_alti, = self.ax[1].plot([],[], '-r')
-		#self.lines_alti_obs, = self.ax[1].plot([],[], '--k')
-		#self.lines_alti_gnss, = self.ax[1].plot([],[], '+k')
-		#self.ax[0].set_xlabel('Longitude [deg]')
-		#self.ax[0].set_ylabel('Latitude [deg]')
-		#self.ax[1].set_ylabel('Altitude')
-		#self.ax[1].set_xlabel('Iteration')
-
-		#self.figure2, self.ax2 = plt.subplots(3,1)
-		#self.lines_attitude_pitch, = self.ax2[0].plot([],[], '-r')
-		#self.lines_attitude_roll, = self.ax2[1].plot([],[], '-r')
-		#self.lines_attitude_yaw, = self.ax2[2].plot([],[], '-r')
-		#self.lines_attitude_obs_pitch, = self.ax2[0].plot([],[], '--k')
-		#self.lines_attitude_obs_roll, = self.ax2[1].plot([],[], '--k')
-		#self.lines_attitude_obs_yaw, = self.ax2[2].plot([],[], '--k')
-
-		#self.ax2[0].set_xlabel('Iteration')
-	#	self.ax2[0].set_ylabel('Pitch [rad]')
-	#	self.ax2[1].set_xlabel('Iteration')
-#		self.ax2[1].set_ylabel('Roll [rad]')
-#		self.ax2[2].set_xlabel('Iteration')
-#		self.ax2[2].set_ylabel('Yaw [rad]')
-
-		# self.fig = plt.figure()
-		# # self.ax3 = self.fig.add_subplot(111, projection='3d')
-		# self.ax3 = self.fig.gca(projection='3d')
-		# self.ax3.set_xlabel('axe X')
-		# self.ax3.set_ylabel('axe Y')
-		# self.ax3.set_zlabel('axe Z')
-		# self.X_o = []
-		# self.Y_o = []
-		# self.Z_o = []
-		# self.X_t = []
-		# self.Y_t = []
-		# self.Z_t = []
-				    
-#		self.ax[0].axis('equal')
-#		self.ax[0].grid()
-#		self.ax[1].grid()
-#		self.ax2[0].grid()
-#		self.ax2[1].grid()
-#		self.ax2[2].grid()
 
 		####### Init time ####### 
 		self.t_old_INS = 3600*data.stamp[0] + 60*data.stamp[1] + data.stamp[2] + data.stamp[3]/1e9 - 2 #[sec] -2 to have a delay t_old and t_new first iteration
@@ -539,44 +460,6 @@ class CollectData(Node):
 		self.ObsPathParameters['Quaternion'] = Quat
 		self.ObsPathParameters['Rbl'] = Rbl
 
-#		self.lines_obs.set_xdata(np.append(self.lines_obs.get_xdata(), self.ObsPathParameters['State']['Position'][1,0]))
-#		self.lines_obs.set_ydata(np.append(self.lines_obs.get_ydata(), self.ObsPathParameters['State']['Position'][0,0]))
-		
-#		self.lines_alti_obs.set_xdata(np.append(self.lines_alti_obs.get_xdata(), self.count))
-#		self.lines_alti_obs.set_ydata(np.append(self.lines_alti_obs.get_ydata(), self.ObsPathParameters['State']['Position'][2,0]))     
-
-		# Display positionin 3D
-		# self.X_o.append(self.ObsPathParameters['State']['Position'][1,0])
-		# self.Y_o.append(self.ObsPathParameters['State']['Position'][0,0])
-		# self.Z_o.append(self.ObsPathParameters['State']['Position'][2,0])
-		# self.ax3.plot(np.array(self.X_o), np.array(self.Y_o), np.array(self.Z_o), color='blue')
-
-		# # Display attitude in 3D
-		# self.Ex_t_o[:,0] = self.ObsPathParameters['State']['Position'][:,0]
-		# self.Ex_t_o[:,1] = (self.ObsPathParameters['State']['Position'] + Rbl@self.Ex)[:,0]
-		# self.ax3.plot(self.Ex_t_o[1,:], self.Ex_t_o[0,:], self.Ex_t_o[2,:], color='green')
-
-		# self.Ey_t_o[:,0] = self.ObsPathParameters['State']['Position'][:,0]
-		# self.Ey_t_o[:,1] = (self.ObsPathParameters['State']['Position'] + Rbl@self.Ey)[:,0]
-		# self.ax3.plot(self.Ey_t_o[1,:], self.Ey_t_o[0,:], self.Ey_t_o[2,:], color='green')
-
-		# self.Ez_t_o[:,0] = self.ObsPathParameters['State']['Position'][:,0]
-		# self.Ez_t_o[:,1] = (self.ObsPathParameters['State']['Position'] + Rbl@self.Ez)[:,0]
-		# self.ax3.plot(self.Ez_t_o[1,:], self.Ez_t_o[0,:], self.Ez_t_o[2,:], color='green')
-		# plt.draw()
-
-#		self.lines_attitude_obs_roll.set_xdata(np.append(self.lines_attitude_obs_roll.get_xdata(), self.count))
-#		self.lines_attitude_obs_roll.set_ydata(np.append(self.lines_attitude_obs_roll.get_ydata(), self.ObsPathParameters['State']['Attitude'][1,0]))
-#		self.lines_attitude_obs_pitch.set_xdata(np.append(self.lines_attitude_obs_pitch.get_xdata(), self.count))
-#		self.lines_attitude_obs_pitch.set_ydata(np.append(self.lines_attitude_obs_pitch.get_ydata(), self.ObsPathParameters['State']['Attitude'][0,0]))
-#		self.lines_attitude_obs_yaw.set_xdata(np.append(self.lines_attitude_obs_yaw.get_xdata(), self.count))
-#		self.lines_attitude_obs_yaw.set_ydata(np.append(self.lines_attitude_obs_yaw.get_ydata(), self.ObsPathParameters['State']['Attitude'][2,0]))
-#		
-#		self.figure.canvas.draw()
-#		self.figure.canvas.flush_events()
-#		self.figure2.canvas.draw()
-#		self.figure2.canvas.flush_events()
-
 
 def main(args=None):
 
@@ -606,17 +489,13 @@ def main(args=None):
 			gyr = np.array([[cd.AngWR.gyry], [-cd.AngWR.gyrx], [cd.AngWR.gyrz]])
 			acc = np.array([[cd.AccAA.accy], [-cd.AccAA.accx], [cd.AccAA.accz]])	
 				
-			cd.INS_mechanization(gyr, acc, dt_INS/1000) ##################
+			cd.INS_mechanization(gyr, acc, dt_INS)
 
 
 			if cd.newGnsNP:
 				cd.newGnsNP = False
 				gnss = np.array([[cd.GnsNP.lat], [cd.GnsNP.lon], [cd.GnsNP.height], [cd.GnsNP.vel_e], [cd.GnsNP.vel_n], [cd.GnsNP.vel_d]])
 				
-#				cd.lines_gnss.set_xdata(np.append(cd.lines_gnss.get_xdata(), gnss[1]))
-#				cd.lines_gnss.set_ydata(np.append(cd.lines_gnss.get_ydata(), gnss[0]))
-#				cd.lines_alti_gnss.set_xdata(np.append(cd.lines_alti_gnss.get_xdata(), cd.count))
-#				cd.lines_alti_gnss.set_ydata(np.append(cd.lines_alti_gnss.get_ydata(), gnss[2]))
 			else:
 				gnss = []
 			
@@ -626,42 +505,12 @@ def main(args=None):
 			# Update figues with XSENS KF data		
 			if cd.newPosPL:
 				cd.newPosPL = False
-#				cd.lines.set_xdata(np.append(cd.lines.get_xdata(), cd.PosPL.longitude))
-#				cd.lines.set_ydata(np.append(cd.lines.get_ydata(), cd.PosPL.latitude))
-#				cd.ax[0].set_ylim(cd.PosPL.latitude-1e-5, cd.PosPL.latitude+1e-5)
-#				cd.ax[0].set_xlim(cd.PosPL.longitude-1e-5, cd.PosPL.longitude+1e-5)
 			
 			if cd.newPosPA:
 				cd.newPosPA = False
-#				cd.lines_alti.set_xdata(np.append(cd.lines_alti.get_xdata(), cd.count))
-#				cd.lines_alti.set_ydata(np.append(cd.lines_alti.get_ydata(), cd.PosPA.alt_ell))
-#				cd.ax[1].set_ylim(cd.PosPA.alt_ell-2, cd.PosPA.alt_ell+2)
-#				cd.ax[1].set_xlim(cd.count-10, cd.count+10)  
 			
 			if cd.newOriOE:
 				cd.newOriOE = False
-				#roll
-#				cd.lines_attitude_roll.set_xdata(np.append(cd.lines_attitude_roll.get_xdata(), cd.count))
-#				cd.lines_attitude_roll.set_ydata(np.append(cd.lines_attitude_roll.get_ydata(), np.radians(cd.OriOE.roll)))
-#				cd.ax2[0].set_ylim(np.radians(cd.OriOE.roll)-0.2, np.radians(cd.OriOE.roll)+0.2)
-#				cd.ax2[0].set_xlim(cd.count-10, cd.count+10)
-				#pitch
-#				cd.lines_attitude_pitch.set_xdata(np.append(cd.lines_attitude_pitch.get_xdata(), cd.count))
-#				cd.lines_attitude_pitch.set_ydata(np.append(cd.lines_attitude_pitch.get_ydata(), np.radians(cd.OriOE.pitch)))
-#				cd.ax2[1].set_ylim(np.radians(cd.OriOE.pitch)-0.2, np.radians(cd.OriOE.pitch)+0.2)
-#				cd.ax2[1].set_xlim(cd.count-10, cd.count+10) 
-				#yaw
-#				cd.lines_attitude_yaw.set_xdata(np.append(cd.lines_attitude_yaw.get_xdata(), cd.count))
-#				cd.lines_attitude_yaw.set_ydata(np.append(cd.lines_attitude_yaw.get_ydata(), np.radians(cd.OriOE.yaw)))
-#				cd.ax2[2].set_ylim(np.radians(cd.OriOE.yaw)-0.2, np.radians(cd.OriOE.yaw)+0.2)
-#				cd.ax2[2].set_xlim(cd.count-10, cd.count+10)
-
-#				cd.figure.canvas.draw()
-#				cd.figure.canvas.flush_events()
-#				cd.figure2.canvas.draw()
-#				cd.figure2.canvas.flush_events()	
-			
-			#print(-1/(time_S-time.time()))
 
 			cd.count += 1
 

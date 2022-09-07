@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Encoding=UTF-8
-Name=Tcam-Capture
-Comment=The Imaging Source Live Stream Viewer
-Exec=/usr/bin/tcam-capture
-Icon=/usr/share/theimagingsource/tiscamera/images/tiscamera_logo.jpg
-Terminal=false

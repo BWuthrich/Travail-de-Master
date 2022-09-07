@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -Wextra -pedantic -pthread -fPIC -O3 -DNDEBUG  -rdynamic CMakeFiles/dfk73udev.dir/dfk73udev.c.o  -o dfk73udev  -Wl,-rpath,/app/dev_ws/tiscamera/build/src/v4l2: ../../src/v4l2/libtcam-dfk73.so.0.14.0 -ludev -lrt -lusb-1.0 

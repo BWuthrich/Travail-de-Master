@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++11 -Wall -Wextra -pedantic -pthread -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libtcam-uvc-extension.so -o libtcam-uvc-extension.so CMakeFiles/tcam-uvc-extension.dir/uvc-extension-loader.cpp.o  -luuid 

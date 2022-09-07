@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC  -Wall -Wextra -pedantic -pthread -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libtcamprop.so.0.1 -o libtcamprop.so.0.1 CMakeFiles/tcamprop.dir/tcamprop.c.o  -lglib-2.0 
