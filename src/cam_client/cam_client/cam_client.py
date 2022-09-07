@@ -9,7 +9,7 @@ import os.path as op
 import tifffile as tif
 from cv_bridge import CvBridge
 
-from xsens_msgs.msg import ConfigCam, StaCT, CamImage, CamBatch
+from xsens_msgs.msg import ConfigCam, StaCT, CamImage, CamBatch, TrgSP
 from .utils.myTIS import TIS, SinkFormats, listCamerasAvailable
 
 class Camera(Node):
@@ -19,57 +19,32 @@ class Camera(Node):
 	  self.imageCounter = 0
 	  self.cameraName = cameraName
 	  self.outputDir = outputDir
-	  self.busy = True
 	  self.tis = TIS()
 	  self.tis.showLive(False)
 	  self.bridge = CvBridge()
+	  self.time_xsens = 0
+	  self.time_cpu = 0
+	  self.time = time.time()
 	  
 	  if serial is not None:
-	      cam_format = SinkFormats.GRAY16_LE
+	      cam_format = SinkFormats.GRAY8
 	      if serial.startswith("41"):
 	          cam_format = SinkFormats.BGRA
 	      self.tis.openDevice(serial, width, height, framerate, cam_format)
-		
-	  # Set Callback - trigger - start pipeline
-	  self.tis.setProperty("Trigger Mode", False)
-	  self.tis.setImageCallback(self.onNewImage)
-	  self.tis.startPipeline()
-	  self.tis.setProperty("Trigger Mode", True)
 	  
 	  # Create publisher for images
 	  self.img_msg = CamImage()
 	  self.Image_pub = self.create_publisher(CamImage, 'cam/image', 10)
+	  
+	  # Create timestamp subscriber
+	  self.cam_time_sub = self.create_subscription(TrgSP, 'mti/timestamp', self.setTime, 10)
+	  self.cam_time_sub
+	  
+	  
+	def setTime(self, msg):
+	  self.time_xsens = 3600*msg.stamp[0] + 60*msg.stamp[1] + msg.stamp[2] + msg.stamp[3]/1e9
+	  self.time_cpu = time.time()
 
-  
-	def onNewImage(self, tis):
-      
-		# Avoid being called, while the callback is busy
-		if self.busy is True:
-			return
-		start = time.time()
-		self.busy = True
-		image = tis.getImage()
-
-		# Publish image
-		self.imageCounter += 1
-		self.img_msg.cam_id = int(self.cameraName[-1])
-		self.img_msg.data = self.bridge.cv2_to_imgmsg(np.array(image), "mono8")
-		self.Image_pub.publish(self.img_msg)
-		print(f"camera {self.cameraName[-1]} image n°{self.imageCounter} temps {time.time()-start}")
-		
-		
-		filename = op.join(self.outputDir, f"{self.cameraName}_{self.imageCounter:04}.tif")
-		print("NewImage", filename)
-		tif.imsave(filename, image)
-		self.busy = False
-
-	def startLog(self, outputDir=None):
-		print("startLog", outputDir)
-		if outputDir:
-			self.outputDir = outputDir
-		self.imageCounter = 0
-		self.busy = False        
-     
 
 class camClient(Node):
 
@@ -81,8 +56,8 @@ class camClient(Node):
 		self.width = None
 		self.framerate = None
 		self.cam_status = 'Inactive'
-		self.cam_config = []
 		self.cam_number = 4
+
 		
 		# Initial status message
 		self.sta_msg = StaCT()
@@ -100,7 +75,7 @@ class camClient(Node):
 		# Publish "Inactive"
 		self.Status_pub.publish(self.sta_msg)
 		
-    # Create publisher for images batch
+    # Create publisher for images batch (not used)
 		self.Images_pub = self.create_publisher(CamBatch, 'cam/image_batch', 10)
 	
 	def setConfig(self, msg):
@@ -112,14 +87,14 @@ class camClient(Node):
 		self.width = msg.width
 		self.framerate = msg.framerate
 		
-		
+		# Check for cameras availability
 		lstCamTemp = listCamerasAvailable()
 		self.get_logger().info(f"listCamerasAvailable {lstCamTemp}")
 		if len(lstCamTemp) == 0:
 			self.get_logger().error('pipeline not started')
 			return
     
-    # If not all camera connected   
+    # Wait if not all camera connected   
 		while len(lstCamTemp) < self.cam_number:
 			self.get_logger().info("Connecting... found cameras: " + str(len(lstCamTemp)) + "/" + str(self.cam_number))
 			time.sleep(2)
@@ -134,12 +109,39 @@ class camClient(Node):
 		time.sleep(0.1)
 		self.publishStatus("Connected")
 
-
 	def publishStatus(self, status):
 		self.cam_status = status
 		self.sta_msg.cam_status = self.cam_status
 		self.Status_pub.publish(self.sta_msg)
+
+
+
+def onNewImage(tis, mc):
 		
+		# Avoid being called, while the callback is busy
+		if mc.busy is True:
+			return
+			
+		mc.busy = True
+		image = tis.getImage()
+		timestamp = mc.time_xsens + (time.time() - mc.time_cpu)
+
+		# Publish image
+		mc.imageCounter += 1
+		mc.img_msg.cam_id = int(mc.cameraName[-1])
+		mc.img_msg.data = mc.bridge.cv2_to_imgmsg(np.array(image), "mono8")
+		mc.img_msg.stamp = timestamp
+		mc.Image_pub.publish(mc.img_msg)
+		
+		#print(f"camera {mc.cameraName[-1]} image n°{mc.imageCounter} temps {timestamp}")
+		#filename = op.join(mc.outputDir, f"{mc.cameraName}_{mc.imageCounter:04}.tif")
+		#tif.imsave(filename, image)
+		
+		print(1/(time.time()-mc.time)) 
+		mc.time = time.time()
+		mc.busy = False
+
+	
 		
 def main(args=None):
 	
@@ -150,12 +152,29 @@ def main(args=None):
 	while cc.cam_status == "Inactive":
 		rclpy.spin_once(cc, timeout_sec=5)
 	
-	# Activate callbak function
+	# Activate trigger and set callbak function
+	for mc in cc.lstCam:
+		
+		# Set Set callback - 
+		mc.tis.setImageCallback(onNewImage, mc)
+		
+		# Trigger OFF - start pipeline - trigger ON
+		mc.tis.setProperty("Trigger Mode", False) # "Trigger Mode" or "TriggerMode"
+		mc.busy = True
+		mc.tis.startPipeline()
+		mc.tis.setProperty("Trigger Mode", True) # "Trigger Mode" or "TriggerMode"
+	  
+	  # Wait a moment, for the camera accepting trigger mode and also emptying the pipeline
+		time.sleep(1)
+	
+	# Activate callback
 	for mc in cc.lstCam:
 		mc.busy = False  
 	
 	while True:
-		pass
+		for mc in cc.lstCam:
+			rclpy.spin_once(mc, timeout_sec=0)
+
 	
 
 		

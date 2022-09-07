@@ -90,8 +90,6 @@ class TIS:
             p += " t. ! queue ! appsink name=sink"
         else:
             p += ' ! appsink name=sink'
-
-        print(p)
         try:
             self.pipeline = Gst.parse_launch(p)
         except GLib.Error as error:
@@ -134,17 +132,10 @@ class TIS:
         """
         caps = Gst.Caps.new_empty()
         
-        #format = 'video/x-raw,format=%s,width=%d,height=%d,framerate=%s' % \
-        #    (SinkFormats.toString(self.sinkformat),
-        #        self.width, self.height, self.framerate,)
-        #structure = Gst.Structure.new_from_string(format)
-
-        #caps.append_structure(structure)
-        
         structure = Gst.Structure.new_from_string("video/x-raw")
-        #structure.set_value("format", 'gbrg')
-        structure.set_value("width", 640)
-        structure.set_value("height", 480)
+        structure.set_value("format", SinkFormats.toString(self.sinkformat))
+        structure.set_value("width", self.width)
+        structure.set_value("height", self.height)
         
         try:
         	fraction = Gst.Fraction(self.framerate, 1)
@@ -156,9 +147,7 @@ class TIS:
           structure, end = structure.from_string(struc_string)
       		
         caps.append_structure(structure)
-
-        
-        
+        print(caps)
 
         structure.free()
         capsfilter = self.pipeline.get_by_name("caps")
@@ -206,7 +195,6 @@ class TIS:
 
             bpp = 4
             dtype = numpy.uint8
-            # bla = caps.get_structure(0).get_value('height')
             if(caps.get_structure(0).get_value('format') == "BGRx"):
                 bpp = 4
 
@@ -350,7 +338,6 @@ class TIS:
             return False
 
         framerate = formats[format].res_list[i-1].fps[o-1]
-        # print(format,width,height,framerate )
         self.openDevice(self.serialnumber, width, height,
                         framerate, SinkFormats.BGRA)
         return True
